@@ -1,0 +1,45 @@
+{
+  "name": "mip2-ui-components",
+  "version": "0.0.1",
+  "description": "Custom MIP UI Components Repository",
+  "scripts": {
+    "dev": "mip2 dev -i",
+    "build": "rm -rf dist && mip2 build -i",
+    "site": "npm run build && node tools/site",
+    "lint": "eslint --ext .vue,.js .",
+    "fix:js": "eslint --ext .vue,.js . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mipengine/mip2-ui-components.git"
+  },
+  "keywords": [
+    "MIP"
+  ],
+  "author": "MIP",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mipengine/mip2-ui-components/issues"
+  },
+  "homepage": "https://github.com/mipengine/mip2-ui-components#readme",
+  "dependencies": {
+    "mip-sandbox": "^1.0.21",
+    "vuetify": "^1.1.9"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsdoc": "^3.7.1",
+    "eslint-plugin-local-rules": "^0.1.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-typescript": "^0.12.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "husky": "^1.0.0-rc.8",
+    "mip2": "^1.1.3"
+  }
+}
