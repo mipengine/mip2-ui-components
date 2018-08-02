@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 import '../../../src/stylus/components/_dialogs.styl';
 // Mixins
 import Dependent from '../../mixins/dependent';
@@ -179,9 +177,10 @@ export default {
         }
         children.push(h('div', {
             'class': this.contentClasses,
-            attrs: _extends({
-                tabIndex: '-1'
-            }, this.getScopeIdAttrs()),
+            attrs: {
+                tabIndex: '-1',
+                ...this.getScopeIdAttrs()
+            },
             style: { zIndex: this.activeZIndex },
             ref: 'content'
         }, [dialog]));

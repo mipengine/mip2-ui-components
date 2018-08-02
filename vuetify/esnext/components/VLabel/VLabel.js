@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 // Styles
 import '../../../src/stylus/components/_labels.styl';
 // Mixins
@@ -34,10 +32,11 @@ export default {
     render(h, { children, listeners, props }) {
         const data = {
             staticClass: 'v-label',
-            'class': _extends({
+            'class': {
                 'v-label--active': props.value,
-                'v-label--is-disabled': props.disabled
-            }, Themeable.options.computed.themeClasses.call(props)),
+                'v-label--is-disabled': props.disabled,
+                ...Themeable.options.computed.themeClasses.call(props)
+            },
             attrs: {
                 for: props.for,
                 'aria-hidden': !props.for

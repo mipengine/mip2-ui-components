@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 /* eslint-disable no-multi-spaces */
 const THEME_DEFAULTS = {
     primary: '#1976D2',
@@ -12,6 +10,9 @@ const THEME_DEFAULTS = {
 };
 export default function theme(theme = {}) {
     if (theme === false) return false;
-    return _extends({}, THEME_DEFAULTS, theme);
+    return {
+        ...THEME_DEFAULTS,
+        ...theme
+    };
 }
 //# sourceMappingURL=theme.js.map

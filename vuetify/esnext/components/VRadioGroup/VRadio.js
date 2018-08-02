@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 // Styles
 import '../../../src/stylus/components/_radios.styl';
 // Components
@@ -119,9 +117,10 @@ export default {
         genRadio() {
             return this.$createElement('div', {
                 staticClass: 'v-input--selection-controls__input'
-            }, [this.genInput('radio', _extends({
-                'aria-checked': this.isActive.toString()
-            }, this.$attrs)), !this.isDisabled && this.genRipple({
+            }, [this.genInput('radio', {
+                'aria-checked': this.isActive.toString(),
+                ...this.$attrs
+            }), !this.isDisabled && this.genRipple({
                 'class': this.classesSelectable
             }), this.$createElement(VIcon, {
                 'class': this.classesSelectable,

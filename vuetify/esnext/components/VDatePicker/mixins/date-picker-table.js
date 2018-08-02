@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 import '../../../../src/stylus/components/_date-picker-table.styl';
 // Directives
 import Touch from '../../../directives/touch';
@@ -56,15 +54,16 @@ export default {
         genButtonClasses(value, isAllowed, isFloating) {
             const isSelected = value === this.value;
             const isCurrent = value === this.current;
-            const classes = _extends({
+            const classes = {
                 'v-btn--active': isSelected,
                 'v-btn--flat': !isSelected,
                 'v-btn--icon': isSelected && isAllowed && isFloating,
                 'v-btn--floating': isFloating,
                 'v-btn--depressed': !isFloating && isSelected,
                 'v-btn--disabled': !isAllowed || this.disabled && isSelected,
-                'v-btn--outline': isCurrent && !isSelected
-            }, this.themeClasses);
+                'v-btn--outline': isCurrent && !isSelected,
+                ...this.themeClasses
+            };
             if (isSelected) return this.addBackgroundColorClassChecks(classes);
             if (isCurrent) return this.addTextColorClassChecks(classes);
             return classes;

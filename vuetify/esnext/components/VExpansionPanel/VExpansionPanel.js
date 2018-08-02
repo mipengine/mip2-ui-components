@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 import '../../../src/stylus/components/_expansion-panel.styl';
 import Themeable from '../../mixins/themeable';
 import { provide as RegistrableProvide } from '../../mixins/registrable';
@@ -30,11 +28,12 @@ export default mixins(Themeable, RegistrableProvide('expansionPanel')).extend({
     }),
     computed: {
         classes() {
-            return _extends({
+            return {
                 'v-expansion-panel--focusable': this.focusable,
                 'v-expansion-panel--popout': this.popout,
-                'v-expansion-panel--inset': this.inset
-            }, this.themeClasses);
+                'v-expansion-panel--inset': this.inset,
+                ...this.themeClasses
+            };
         }
     },
     watch: {

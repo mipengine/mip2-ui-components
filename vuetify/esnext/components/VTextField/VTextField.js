@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 // Styles
 import '../../../src/stylus/components/_text-fields.styl';
 // Extensions
@@ -256,14 +254,14 @@ export default {
                 domProps: {
                     value: this.maskText(this.lazyValue)
                 },
-                attrs: _extends({
-                    'aria-label': (!this.$attrs || !this.$attrs.id) && this.label
-                }, this.$attrs, {
+                attrs: {
+                    'aria-label': (!this.$attrs || !this.$attrs.id) && this.label,
+                    ...this.$attrs,
                     autofocus: this.autofocus,
                     disabled: this.disabled,
                     readonly: this.readonly,
                     type: this.type
-                }),
+                },
                 on: Object.assign(listeners, {
                     blur: this.onBlur,
                     input: this.onInput,

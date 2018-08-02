@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 // Mixins
 import Colorable from '../../mixins/colorable';
 import Routable from '../../mixins/routable';
@@ -58,7 +56,9 @@ export default {
             attrs: {
                 disabled: this.disabled
             },
-            on: _extends({}, this.$listeners)
+            on: {
+                ...this.$listeners
+            }
         }, [h(tag, data, this.$slots.default)]);
     }
 };

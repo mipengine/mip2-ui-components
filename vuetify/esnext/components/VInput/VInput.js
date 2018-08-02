@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 // Styles
 import '../../../src/stylus/components/_inputs.styl';
 // Components
@@ -44,7 +42,8 @@ export default {
     }),
     computed: {
         classesInput() {
-            return _extends({}, this.classes, {
+            return {
+                ...this.classes,
                 'v-input--has-state': this.hasState,
                 'v-input--hide-details': this.hideDetails,
                 'v-input--is-label-active': this.isLabelActive,
@@ -52,8 +51,10 @@ export default {
                 'v-input--is-disabled': this.disabled,
                 'v-input--is-focused': this.isFocused,
                 'v-input--is-loading': this.loading !== false,
-                'v-input--is-readonly': this.readonly
-            }, this.addTextColorClassChecks({}, this.validationState), this.themeClasses);
+                'v-input--is-readonly': this.readonly,
+                ...this.addTextColorClassChecks({}, this.validationState),
+                ...this.themeClasses
+            };
         },
         directivesInput() {
             return [];

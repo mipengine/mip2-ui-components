@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 export function createSimpleFunctional(c, el = 'div', name) {
     return {
         name: name || c.replace(/__/g, '-'),
@@ -25,7 +23,7 @@ export function createSimpleTransition(name, origin = 'top center 0', mode) {
             context.data.props = { name };
             context.data.on = context.data.on || {};
             if (!Object.isExtensible(context.data.on)) {
-                context.data.on = _extends({}, context.data.on);
+                context.data.on = { ...context.data.on };
             }
             if (mode) context.data.props.mode = mode;
             context.data.on.beforeEnter = el => {
@@ -52,9 +50,10 @@ export function createJavaScriptTransition(name, functions, css = false, mode = 
         },
         render(h, context) {
             const data = {
-                props: _extends({}, context.props, {
+                props: {
+                    ...context.props,
                     name
-                }),
+                },
                 on: functions
             };
             return h('transition', data, context.children);
@@ -62,9 +61,12 @@ export function createJavaScriptTransition(name, functions, css = false, mode = 
     };
 }
 export function directiveConfig(binding, defaults = {}) {
-    return _extends({}, defaults, binding.modifiers, {
-        value: binding.arg
-    }, binding.value || {});
+    return {
+        ...defaults,
+        ...binding.modifiers,
+        value: binding.arg,
+        ...(binding.value || {})
+    };
 }
 export function addOnceEventListener(el, event, cb) {
     var once = () => {

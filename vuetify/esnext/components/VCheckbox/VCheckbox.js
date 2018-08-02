@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 // Styles
 import '../../../src/stylus/components/_selection-controls.styl';
 // Components
@@ -55,9 +53,10 @@ export default {
         genCheckbox() {
             return this.$createElement('div', {
                 staticClass: 'v-input--selection-controls__input'
-            }, [this.genInput('checkbox', _extends({}, this.$attrs, {
+            }, [this.genInput('checkbox', {
+                ...this.$attrs,
                 'aria-checked': this.inputIndeterminate ? 'mixed' : this.isActive.toString()
-            })), !this.disabled && this.genRipple({
+            }), !this.disabled && this.genRipple({
                 'class': this.classesSelectable
             }), this.$createElement(VIcon, {
                 'class': this.classesSelectable,

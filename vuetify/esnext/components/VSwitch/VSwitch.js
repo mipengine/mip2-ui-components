@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 import '../../../src/stylus/components/_selection-controls.styl';
 import '../../../src/stylus/components/_switch.styl';
 // Mixins
@@ -43,7 +41,10 @@ export default {
         genSwitchPart(target) {
             return this.$createElement('div', {
                 staticClass: `v-input--switch__${target}`,
-                'class': _extends({}, this.classesSelectable, this.themeClasses),
+                'class': {
+                    ...this.classesSelectable,
+                    ...this.themeClasses
+                },
                 // Avoid cache collision
                 key: target
             });

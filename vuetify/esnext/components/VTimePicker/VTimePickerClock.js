@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 import '../../../src/stylus/components/_time-picker-clock.styl';
 // Mixins
 import Colorable from '../../mixins/colorable';
@@ -192,9 +190,10 @@ export default {
     render() {
         const data = {
             staticClass: 'v-time-picker-clock',
-            class: _extends({
-                'v-time-picker-clock--indeterminate': this.value == null
-            }, this.themeClasses),
+            class: {
+                'v-time-picker-clock--indeterminate': this.value == null,
+                ...this.themeClasses
+            },
             on: {
                 mousedown: this.onMouseDown,
                 mouseup: this.onMouseUp,

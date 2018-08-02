@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 import '../../../src/stylus/components/_icons.styl';
 // Mixins
 import Themeable from '../../mixins/themeable';
@@ -58,7 +56,7 @@ export default mixins(Colorable, Themeable).extend({
         const explicitSize = keys(sizes).find(key => sizes[key] && !!key);
         const fontSize = explicitSize && SIZE_MAP[explicitSize] || convertToUnit(props.size);
         const newChildren = [];
-        if (fontSize) data.style = _extends({ fontSize }, data.style);
+        if (fontSize) data.style = { fontSize, ...data.style };
         let iconName = '';
         if (children.length) iconName = children[0].text;
         // Support usage of v-text and v-html
@@ -86,14 +84,15 @@ export default mixins(Colorable, Themeable).extend({
         if (!('aria-hidden' in data.attrs)) {
             data.attrs['aria-hidden'] = true;
         }
-        const classes = _extends({}, props.color && addTextColorClassChecks.call(props, {}, props.color), {
+        const classes = {
+            ...(props.color && addTextColorClassChecks.call(props, {}, props.color)),
             'v-icon--disabled': props.disabled,
             'v-icon--left': props.left,
             'v-icon--link': listeners.click || listeners['!click'],
             'v-icon--right': props.right,
             'theme--dark': props.dark,
             'theme--light': props.light
-        });
+        };
         // Order classes
         // * Component class
         // * Vuetify classes

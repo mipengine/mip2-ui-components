@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 import Vue from 'vue';
 import Ripple from '../directives/ripple';
 export default Vue.extend({
@@ -38,9 +36,10 @@ export default Vue.extend({
                     name: 'ripple',
                     value: this.ripple && !this.disabled ? this.ripple : false
                 }],
-                [this.to ? 'nativeOn' : 'on']: _extends({}, this.$listeners, {
+                [this.to ? 'nativeOn' : 'on']: {
+                    ...this.$listeners,
                     click: this.click
-                })
+                }
             };
             if (typeof this.exact === 'undefined') {
                 exact = this.to === '/' || this.to === Object(this.to) && this.to.path === '/';

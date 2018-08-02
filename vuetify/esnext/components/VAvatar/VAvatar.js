@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 import '../../../src/stylus/components/_avatars.styl';
 // Mixins
 import Colorable from '../../mixins/colorable';
@@ -22,10 +20,11 @@ export default mixins(Colorable).extend({
         data.staticClass = `v-avatar ${data.staticClass || ''}`.trim();
         if (props.tile) data.staticClass += ' v-avatar--tile';
         const size = convertToUnit(props.size);
-        data.style = _extends({
+        data.style = {
             height: size,
-            width: size
-        }, data.style);
+            width: size,
+            ...data.style
+        };
         data.class = [data.class, Colorable.options.methods.addBackgroundColorClassChecks.call(props, {}, props.color)];
         return h('div', data, children);
     }

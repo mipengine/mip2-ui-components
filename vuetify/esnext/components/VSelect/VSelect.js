@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 // Styles
 import '../../../src/stylus/components/_text-fields.styl';
 import '../../../src/stylus/components/_select.styl';
@@ -340,7 +338,9 @@ export default {
             // Requires destructuring due to Vue
             // modifying the `on` property when passed
             // as a referenced object
-            return this.$createElement(VSelectList, _extends({}, this.listData), [this.$createElement('template', {
+            return this.$createElement(VSelectList, {
+                ...this.listData
+            }, [this.$createElement('template', {
                 slot: 'no-data'
             }, this.$slots['no-data'])]);
         },

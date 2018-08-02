@@ -1,5 +1,3 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 // Styles
 import '../../../src/stylus/components/_textarea.styl';
 // Extensions
@@ -26,11 +24,12 @@ export default {
     },
     computed: {
         classes() {
-            return _extends({
+            return {
                 'v-textarea': true,
                 'v-textarea--auto-grow': this.autoGrow,
-                'v-textarea--no-resize': this.noResizeHandle
-            }, VTextField.computed.classes.call(this, null));
+                'v-textarea--no-resize': this.noResizeHandle,
+                ...VTextField.computed.classes.call(this, null)
+            };
         },
         dynamicHeight() {
             return this.autoGrow ? this.inputHeight : 'auto';
