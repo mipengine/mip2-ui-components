@@ -1,13 +1,4 @@
 {
-  "presets": [
-    ["env", {
-      "targets": {
-        "browsers": [">0.5%", "last 2 versions", "not dead", "not op_mini all"],
-        "node": 8
-      },
-      "modules": false
-    }]
-  ],
   "plugins": [
     ["transform-define", "./build/babel-transform-define.js"],
     "transform-object-rest-spread"
@@ -39,6 +30,19 @@
             "browsers": [">0.5%", "last 2 versions", "not dead", "not op_mini all"],
             "node": 8
           }
+        }]
+      ],
+      "plugins": [
+        "./build/babel-transform-stylus-paths.js"
+      ]
+    },
+    "esnext": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 Chrome versions"]
+          },
+          "modules": false
         }]
       ],
       "plugins": [

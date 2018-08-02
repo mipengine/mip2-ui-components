@@ -1,0 +1,59 @@
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+import '../../../src/stylus/components/_selection-controls.styl';
+import '../../../src/stylus/components/_switch.styl';
+// Mixins
+import Selectable from '../../mixins/selectable';
+// Directives
+import Touch from '../../directives/touch';
+/* @vue/component */
+export default {
+    name: 'v-switch',
+    directives: { Touch },
+    mixins: [Selectable],
+    computed: {
+        classes() {
+            return {
+                'v-input--selection-controls v-input--switch': true
+            };
+        }
+    },
+    methods: {
+        genDefaultSlot() {
+            return [this.genSwitch(), this.genLabel()];
+        },
+        genSwitch() {
+            return this.$createElement('div', {
+                staticClass: 'v-input--selection-controls__input'
+            }, [this.genInput('checkbox', this.$attrs), !this.disabled && this.genRipple({
+                'class': this.classesSelectable,
+                directives: [{
+                    name: 'touch',
+                    value: {
+                        left: this.onSwipeLeft,
+                        right: this.onSwipeRight
+                    }
+                }]
+            }), this.genSwitchPart('track'), this.genSwitchPart('thumb')]);
+        },
+        // Switches have default colors for thumb/track
+        // that do not tie into theme colors
+        // this avoids a visual issue where
+        // the color takes too long to transition
+        genSwitchPart(target) {
+            return this.$createElement('div', {
+                staticClass: `v-input--switch__${target}`,
+                'class': _extends({}, this.classesSelectable, this.themeClasses),
+                // Avoid cache collision
+                key: target
+            });
+        },
+        onSwipeLeft() {
+            if (this.isActive) this.onChange();
+        },
+        onSwipeRight() {
+            if (!this.isActive) this.onChange();
+        }
+    }
+};
+//# sourceMappingURL=VSwitch.js.map
