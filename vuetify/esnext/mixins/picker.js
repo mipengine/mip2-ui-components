@@ -43,4 +43,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=picker.js.map

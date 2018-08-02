@@ -124,4 +124,3 @@ export default {
     unbind,
     update
 };
-//# sourceMappingURL=ripple.js.map

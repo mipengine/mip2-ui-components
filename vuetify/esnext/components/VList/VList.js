@@ -59,4 +59,3 @@ export default {
         return h('div', data, [this.$slots.default]);
     }
 };
-//# sourceMappingURL=VList.js.map

@@ -35,4 +35,3 @@ export default Vue.extend({
         }
     }
 });
-//# sourceMappingURL=colorable.js.map

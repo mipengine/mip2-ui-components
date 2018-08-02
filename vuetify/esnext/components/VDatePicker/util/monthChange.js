@@ -13,4 +13,3 @@ export default ((value, sign) => {
         return `${year}-${pad(month + sign)}`;
     }
 });
-//# sourceMappingURL=monthChange.js.map

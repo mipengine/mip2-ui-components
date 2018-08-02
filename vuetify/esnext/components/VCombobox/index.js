@@ -5,4 +5,3 @@ VCombobox.install = function install(Vue) {
 };
 export { VCombobox };
 export default VCombobox;
-//# sourceMappingURL=index.js.map

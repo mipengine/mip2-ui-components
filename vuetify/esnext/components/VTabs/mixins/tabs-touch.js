@@ -37,4 +37,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=tabs-touch.js.map

@@ -5,4 +5,3 @@ VAvatar.install = function install(Vue) {
 };
 export { VAvatar };
 export default VAvatar;
-//# sourceMappingURL=index.js.map

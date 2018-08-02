@@ -106,4 +106,3 @@ export default mixins(Themeable, RegistrableProvide('expansionPanel')).extend({
         }, this.$slots.default);
     }
 });
-//# sourceMappingURL=VExpansionPanel.js.map

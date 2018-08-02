@@ -115,4 +115,3 @@ export default mixins(Colorable, Routable, Positionable, Themeable, ToggleableFa
         return h(tag, data, children);
     }
 });
-//# sourceMappingURL=VBtn.js.map

@@ -65,4 +65,3 @@ export default {
         }, [div]);
     }
 };
-//# sourceMappingURL=VTabItem.js.map

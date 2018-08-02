@@ -62,4 +62,3 @@ export default {
         }, [h(tag, data, this.$slots.default)]);
     }
 };
-//# sourceMappingURL=VListTile.js.map

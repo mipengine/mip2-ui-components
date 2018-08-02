@@ -388,4 +388,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=data-iterable.js.map

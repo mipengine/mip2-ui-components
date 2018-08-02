@@ -28,4 +28,3 @@ export default {
         }, content);
     }
 };
-//# sourceMappingURL=VCounter.js.map

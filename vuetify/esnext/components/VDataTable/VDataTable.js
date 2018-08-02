@@ -83,4 +83,3 @@ export default {
         return h('div', [tableOverflow, this.genActionsFooter()]);
     }
 };
-//# sourceMappingURL=VDataTable.js.map

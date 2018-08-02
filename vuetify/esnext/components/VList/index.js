@@ -22,4 +22,3 @@ VList.install = function install(Vue) {
     Vue.component(VListTileTitle.name, VListTileTitle);
 };
 export default VList;
-//# sourceMappingURL=index.js.map

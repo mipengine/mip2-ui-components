@@ -20,4 +20,3 @@ export default {
     inserted,
     unbind
 };
-//# sourceMappingURL=resize.js.map

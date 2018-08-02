@@ -5,4 +5,3 @@ VApp.install = function install(Vue) {
 };
 export { VApp };
 export default VApp;
-//# sourceMappingURL=index.js.map

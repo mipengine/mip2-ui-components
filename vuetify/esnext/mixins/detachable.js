@@ -79,4 +79,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=detachable.js.map

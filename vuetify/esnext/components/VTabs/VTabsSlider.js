@@ -13,4 +13,3 @@ export default {
         });
     }
 };
-//# sourceMappingURL=VTabsSlider.js.map

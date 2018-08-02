@@ -5,4 +5,3 @@ VBtn.install = function install(Vue) {
 };
 export { VBtn };
 export default VBtn;
-//# sourceMappingURL=index.js.map

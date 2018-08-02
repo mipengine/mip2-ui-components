@@ -105,4 +105,3 @@ export default mixins(RegistrableProvide('buttonGroup')).extend({
         }
     }
 });
-//# sourceMappingURL=button-group.js.map

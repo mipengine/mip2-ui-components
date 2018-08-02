@@ -51,4 +51,3 @@ export default function applicationable(value, events = []) {
         }
     });
 }
-//# sourceMappingURL=applicationable.js.map

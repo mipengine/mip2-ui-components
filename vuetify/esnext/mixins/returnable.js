@@ -23,4 +23,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=returnable.js.map

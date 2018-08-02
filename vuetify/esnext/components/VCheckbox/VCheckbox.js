@@ -71,4 +71,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=VCheckbox.js.map

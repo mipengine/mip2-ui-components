@@ -32,4 +32,3 @@ export default Vue.extend().extend({
         }
     }
 });
-//# sourceMappingURL=bootable.js.map

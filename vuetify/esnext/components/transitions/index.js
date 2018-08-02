@@ -41,4 +41,3 @@ function install(Vue) {
     Vue.component('v-expand-transition', VExpandTransition);
     Vue.component('v-row-expand-transition', VRowExpandTransition);
 }
-//# sourceMappingURL=index.js.map

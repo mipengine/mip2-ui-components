@@ -87,4 +87,3 @@ export default {
         }, [this.genHeader(), this.genContent(), this.genFooter()]);
     }
 };
-//# sourceMappingURL=VDataIterator.js.map

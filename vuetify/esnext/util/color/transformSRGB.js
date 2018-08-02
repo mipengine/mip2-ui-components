@@ -34,4 +34,3 @@ export function toXYZ(rgb) {
     }
     return xyz;
 }
-//# sourceMappingURL=transformSRGB.js.map

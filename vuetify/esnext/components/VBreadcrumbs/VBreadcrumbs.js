@@ -63,4 +63,3 @@ export default {
         }, this.genChildren());
     }
 };
-//# sourceMappingURL=VBreadcrumbs.js.map

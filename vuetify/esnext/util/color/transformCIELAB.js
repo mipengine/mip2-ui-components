@@ -11,4 +11,3 @@ export function toXYZ(lab) {
     const Ln = (lab[0] + 16) / 116;
     return [transform(Ln + lab[1] / 500) * 0.95047, transform(Ln), transform(Ln - lab[2] / 200) * 1.08883];
 }
-//# sourceMappingURL=transformCIELAB.js.map

@@ -5,4 +5,3 @@ VPagination.install = function install(Vue) {
 };
 export { VPagination };
 export default VPagination;
-//# sourceMappingURL=index.js.map

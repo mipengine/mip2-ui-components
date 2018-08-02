@@ -116,4 +116,3 @@ export default {
         return h('div', data, this.$slots.default);
     }
 };
-//# sourceMappingURL=VTabsItems.js.map

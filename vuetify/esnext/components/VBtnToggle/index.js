@@ -5,4 +5,3 @@ VBtnToggle.install = function install(Vue) {
 };
 export { VBtnToggle };
 export default VBtnToggle;
-//# sourceMappingURL=index.js.map

@@ -99,4 +99,3 @@ export default {
         return h('div', data, [step, label]);
     }
 };
-//# sourceMappingURL=VStepperStep.js.map

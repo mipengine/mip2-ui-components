@@ -34,4 +34,3 @@ wrapper.install = function install(Vue) {
 };
 export { wrapper as VTextField };
 export default wrapper;
-//# sourceMappingURL=index.js.map

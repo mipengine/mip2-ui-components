@@ -5,4 +5,3 @@ VProgressLinear.install = function install(Vue) {
 };
 export { VProgressLinear };
 export default VProgressLinear;
-//# sourceMappingURL=index.js.map

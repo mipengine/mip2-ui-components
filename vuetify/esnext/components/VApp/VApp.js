@@ -44,4 +44,3 @@ export default {
         return h('div', data, [wrapper]);
     }
 };
-//# sourceMappingURL=VApp.js.map

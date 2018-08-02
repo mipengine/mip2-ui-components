@@ -5,4 +5,3 @@ VFooter.install = function install(Vue) {
 };
 export { VFooter };
 export default VFooter;
-//# sourceMappingURL=index.js.map

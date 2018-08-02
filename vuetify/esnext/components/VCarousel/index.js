@@ -7,4 +7,3 @@ VCarousel.install = function install(Vue) {
     Vue.component(VCarouselItem.name, VCarouselItem);
 };
 export default VCarousel;
-//# sourceMappingURL=index.js.map

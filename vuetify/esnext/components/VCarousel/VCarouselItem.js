@@ -55,4 +55,3 @@ export default {
         return h('transition', { props: { name: this.computedTransition } }, [item]);
     }
 };
-//# sourceMappingURL=VCarouselItem.js.map

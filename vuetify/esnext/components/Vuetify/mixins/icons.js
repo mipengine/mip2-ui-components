@@ -111,4 +111,3 @@ const iconSets = {
 export default function icons(iconfont = 'md', icons = {}) {
     return Object.assign({}, iconSets[iconfont] || iconSets.md, icons);
 }
-//# sourceMappingURL=icons.js.map

@@ -7,4 +7,3 @@ const OPTIONS_DEFAULTS = {
 export default function options(options = {}) {
     return Object.assign({}, OPTIONS_DEFAULTS, options);
 }
-//# sourceMappingURL=options.js.map

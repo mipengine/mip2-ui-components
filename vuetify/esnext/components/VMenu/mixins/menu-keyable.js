@@ -51,4 +51,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=menu-keyable.js.map

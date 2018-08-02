@@ -54,4 +54,3 @@ export default {
         return h('label', data, children);
     }
 };
-//# sourceMappingURL=VLabel.js.map

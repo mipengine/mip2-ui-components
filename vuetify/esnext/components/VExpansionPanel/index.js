@@ -7,4 +7,3 @@ VExpansionPanel.install = function install(Vue) {
     Vue.component(VExpansionPanelContent.options.name, VExpansionPanelContent);
 };
 export default VExpansionPanel;
-//# sourceMappingURL=index.js.map

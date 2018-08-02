@@ -32,4 +32,3 @@ export default {
         return h(this.tag, data, [h('div', { staticClass: 'v-content__wrap' }, this.$slots.default)]);
     }
 };
-//# sourceMappingURL=VContent.js.map

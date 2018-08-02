@@ -15,4 +15,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=picker-button.js.map

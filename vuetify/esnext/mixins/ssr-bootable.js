@@ -22,4 +22,3 @@ export default Vue.extend({
         });
     }
 });
-//# sourceMappingURL=ssr-bootable.js.map

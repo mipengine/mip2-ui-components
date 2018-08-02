@@ -8,4 +8,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=filterable.js.map

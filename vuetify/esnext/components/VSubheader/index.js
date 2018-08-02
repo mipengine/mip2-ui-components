@@ -5,4 +5,3 @@ VSubheader.install = function install(Vue) {
 };
 export { VSubheader };
 export default VSubheader;
-//# sourceMappingURL=index.js.map

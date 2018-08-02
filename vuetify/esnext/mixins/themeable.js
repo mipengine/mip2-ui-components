@@ -14,4 +14,3 @@ export default Vue.extend({
         }
     }
 });
-//# sourceMappingURL=themeable.js.map

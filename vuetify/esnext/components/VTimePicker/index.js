@@ -9,4 +9,3 @@ VTimePicker.install = function install(Vue) {
     Vue.component(VTimePickerTitle.name, VTimePickerTitle);
 };
 export default VTimePicker;
-//# sourceMappingURL=index.js.map

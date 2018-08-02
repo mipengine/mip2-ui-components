@@ -269,4 +269,3 @@ export default {
         return h('aside', data, [this.$slots.default, h('div', { 'class': 'v-navigation-drawer__border' })]);
     }
 };
-//# sourceMappingURL=VNavigationDrawer.js.map

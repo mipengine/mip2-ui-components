@@ -72,4 +72,3 @@ export default Vue.extend({
         }
     }
 });
-//# sourceMappingURL=routable.js.map

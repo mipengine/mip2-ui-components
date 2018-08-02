@@ -27,4 +27,3 @@ export default Vue.extend({
         onChange() {}
     }
 });
-//# sourceMappingURL=rippleable.js.map

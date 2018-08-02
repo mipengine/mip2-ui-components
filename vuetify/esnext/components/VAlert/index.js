@@ -5,4 +5,3 @@ VAlert.install = function install(Vue) {
 };
 export { VAlert };
 export default VAlert;
-//# sourceMappingURL=index.js.map

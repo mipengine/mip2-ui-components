@@ -192,4 +192,3 @@ export default {
         }, children);
     }
 };
-//# sourceMappingURL=VDialog.js.map

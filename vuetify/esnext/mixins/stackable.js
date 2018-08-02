@@ -48,4 +48,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=stackable.js.map

@@ -15,4 +15,3 @@ VCard.install = function install(Vue) {
     Vue.component(VCardText.options.name, VCardText);
 };
 export default VCard;
-//# sourceMappingURL=index.js.map

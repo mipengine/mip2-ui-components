@@ -134,4 +134,3 @@ export default {
         }, [this.genGroup(), h(VExpandTransition, [this.genItems()])]);
     }
 };
-//# sourceMappingURL=VListGroup.js.map

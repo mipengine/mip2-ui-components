@@ -7,4 +7,3 @@ VRadioGroup.install = function install(Vue) {
     Vue.component(VRadio.name, VRadio);
 };
 export default VRadioGroup;
-//# sourceMappingURL=index.js.map

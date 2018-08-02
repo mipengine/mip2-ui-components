@@ -115,4 +115,3 @@ export default mixins(Bootable, Toggleable, Rippleable, RegistrableInject('expan
         }, children);
     }
 });
-//# sourceMappingURL=VExpansionPanelContent.js.map

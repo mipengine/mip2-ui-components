@@ -68,4 +68,3 @@ wrapper.install = function install(Vue) {
 };
 export { wrapper as VSelect };
 export default wrapper;
-//# sourceMappingURL=index.js.map

@@ -53,4 +53,3 @@ export default mixins(Colorable, Routable, Themeable).extend({
         return h(tag, data, this.$slots.default);
     }
 });
-//# sourceMappingURL=VCard.js.map

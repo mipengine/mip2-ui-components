@@ -70,4 +70,3 @@ export default {
         return h('div', data, [this.$slots.activator, list]);
     }
 };
-//# sourceMappingURL=VSpeedDial.js.map

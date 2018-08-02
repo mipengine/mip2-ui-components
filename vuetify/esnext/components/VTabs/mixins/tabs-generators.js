@@ -87,4 +87,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=tabs-generators.js.map

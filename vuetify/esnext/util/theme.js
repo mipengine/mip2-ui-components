@@ -68,4 +68,3 @@ function darken(value, amount) {
     lab[0] = lab[0] - amount * 10;
     return sRGB.fromXYZ(LAB.toXYZ(lab));
 }
-//# sourceMappingURL=theme.js.map

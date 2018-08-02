@@ -31,4 +31,3 @@ export default function lang(config = {}) {
         }
     };
 }
-//# sourceMappingURL=lang.js.map

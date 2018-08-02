@@ -14,4 +14,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=progress.js.map

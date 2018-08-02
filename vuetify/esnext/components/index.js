@@ -55,4 +55,3 @@ export { default as VTimePicker } from './VTimePicker';
 export { default as VToolbar } from './VToolbar';
 export { default as VTooltip } from './VTooltip';
 export { default as Transitions } from './transitions';
-//# sourceMappingURL=index.js.map

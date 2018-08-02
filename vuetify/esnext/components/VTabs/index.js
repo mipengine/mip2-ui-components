@@ -13,4 +13,3 @@ VTabs.install = function install(Vue) {
     Vue.component(VTabsSlider.name, VTabsSlider);
 };
 export default VTabs;
-//# sourceMappingURL=index.js.map

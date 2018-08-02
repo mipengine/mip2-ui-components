@@ -12,4 +12,3 @@ VToolbar.install = function install(Vue) {
     Vue.component(VToolbarSideIcon.name, VToolbarSideIcon);
 };
 export default VToolbar;
-//# sourceMappingURL=index.js.map

@@ -5,4 +5,3 @@ VPicker.install = function install(Vue) {
 };
 export { VPicker };
 export default VPicker;
-//# sourceMappingURL=index.js.map

@@ -5,4 +5,3 @@ VDivider.install = function install(Vue) {
 };
 export { VDivider };
 export default VDivider;
-//# sourceMappingURL=index.js.map

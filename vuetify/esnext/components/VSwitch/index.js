@@ -5,4 +5,3 @@ VSwitch.install = function install(Vue) {
 };
 export { VSwitch };
 export default VSwitch;
-//# sourceMappingURL=index.js.map

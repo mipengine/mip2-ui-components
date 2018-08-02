@@ -5,4 +5,3 @@ VNavigationDrawer.install = function install(Vue) {
 };
 export { VNavigationDrawer };
 export default VNavigationDrawer;
-//# sourceMappingURL=index.js.map

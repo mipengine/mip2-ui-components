@@ -226,4 +226,3 @@ export default {
         }, this.genContent());
     }
 };
-//# sourceMappingURL=VInput.js.map

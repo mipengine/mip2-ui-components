@@ -5,4 +5,3 @@ VBottomNav.install = function install(Vue) {
 };
 export { VBottomNav };
 export default VBottomNav;
-//# sourceMappingURL=index.js.map

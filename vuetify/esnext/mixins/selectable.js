@@ -129,4 +129,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=selectable.js.map

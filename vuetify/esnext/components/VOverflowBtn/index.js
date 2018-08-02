@@ -5,4 +5,3 @@ VOverflowBtn.install = function install(Vue) {
 };
 export { VOverflowBtn };
 export default VOverflowBtn;
-//# sourceMappingURL=index.js.map

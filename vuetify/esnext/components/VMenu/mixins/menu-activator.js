@@ -48,4 +48,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=menu-activator.js.map

@@ -12,4 +12,3 @@ export default {
     },
     noDataText: 'No data available'
 };
-//# sourceMappingURL=en.js.map

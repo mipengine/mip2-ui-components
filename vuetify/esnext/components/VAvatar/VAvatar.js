@@ -29,4 +29,3 @@ export default mixins(Colorable).extend({
         return h('div', data, children);
     }
 });
-//# sourceMappingURL=VAvatar.js.map

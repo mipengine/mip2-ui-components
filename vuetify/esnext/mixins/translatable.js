@@ -41,4 +41,3 @@ export default Vue.extend({
         }
     }
 });
-//# sourceMappingURL=translatable.js.map

@@ -360,4 +360,3 @@ export default {
         return this.genPicker('v-picker--date');
     }
 };
-//# sourceMappingURL=VDatePicker.js.map

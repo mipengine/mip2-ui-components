@@ -5,4 +5,3 @@ VMenu.install = function install(Vue) {
 };
 export { VMenu };
 export default VMenu;
-//# sourceMappingURL=index.js.map

@@ -69,4 +69,3 @@ export default {
         return h('footer', data, this.$slots.default);
     }
 };
-//# sourceMappingURL=VFooter.js.map

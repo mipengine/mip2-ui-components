@@ -49,4 +49,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=dependent.js.map

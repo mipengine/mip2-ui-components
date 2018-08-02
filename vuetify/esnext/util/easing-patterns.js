@@ -24,4 +24,3 @@ export const easeInQuint = t => t * t * t * t * t;
 export const easeOutQuint = t => 1 + --t * t * t * t * t;
 // acceleration until halfway, then deceleration
 export const easeInOutQuint = t => t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;
-//# sourceMappingURL=easing-patterns.js.map

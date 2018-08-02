@@ -10,4 +10,3 @@ VDataTable.install = function install(Vue) {
     Vue.component(VTableOverflow.name, VTableOverflow);
 };
 export default VDataTable;
-//# sourceMappingURL=index.js.map

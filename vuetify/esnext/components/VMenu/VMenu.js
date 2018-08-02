@@ -158,4 +158,3 @@ export default {
         return h('div', data, [this.genActivator(), this.genTransition()]);
     }
 };
-//# sourceMappingURL=VMenu.js.map

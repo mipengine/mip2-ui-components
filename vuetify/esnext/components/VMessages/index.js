@@ -5,4 +5,3 @@ VMessages.install = function install(Vue) {
 };
 export { VMessages };
 export default VMessages;
-//# sourceMappingURL=index.js.map

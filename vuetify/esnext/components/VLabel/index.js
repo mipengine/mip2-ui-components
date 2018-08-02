@@ -5,4 +5,3 @@ VLabel.install = function install(Vue) {
 };
 export { VLabel };
 export default VLabel;
-//# sourceMappingURL=index.js.map

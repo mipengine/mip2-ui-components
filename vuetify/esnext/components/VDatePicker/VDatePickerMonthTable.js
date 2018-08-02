@@ -39,4 +39,3 @@ export default {
         return this.genTable('v-date-picker-table v-date-picker-table--month', [this.genTBody()]);
     }
 };
-//# sourceMappingURL=VDatePickerMonthTable.js.map

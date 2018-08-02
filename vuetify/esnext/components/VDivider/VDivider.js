@@ -21,4 +21,3 @@ export default Vue.extend({
         return h('hr', data);
     }
 });
-//# sourceMappingURL=VDivider.js.map

@@ -73,4 +73,3 @@ export default {
         return h(tag, data, [this.genWrapper()]);
     }
 };
-//# sourceMappingURL=VJumbotron.js.map

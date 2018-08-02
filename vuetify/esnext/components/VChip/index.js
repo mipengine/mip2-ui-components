@@ -5,4 +5,3 @@ VChip.install = function install(Vue) {
 };
 export { VChip };
 export default VChip;
-//# sourceMappingURL=index.js.map

@@ -48,4 +48,3 @@ export default {
         }, [this.genChildren()]);
     }
 };
-//# sourceMappingURL=VMessages.js.map

@@ -15,4 +15,3 @@ VDatePicker.install = function install(Vue) {
     Vue.component(VDatePickerYears.name, VDatePickerYears);
 };
 export default VDatePicker;
-//# sourceMappingURL=index.js.map

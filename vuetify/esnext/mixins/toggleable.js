@@ -24,4 +24,3 @@ export function factory(prop = 'value', event = 'input') {
 /* eslint-disable-next-line no-redeclare */
 const Toggleable = factory();
 export default Toggleable;
-//# sourceMappingURL=toggleable.js.map

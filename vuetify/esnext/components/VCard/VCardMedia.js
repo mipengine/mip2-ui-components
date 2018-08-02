@@ -38,4 +38,3 @@ export default Vue.extend({
         return h('div', data, children);
     }
 });
-//# sourceMappingURL=VCardMedia.js.map

@@ -112,4 +112,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=date-picker-table.js.map

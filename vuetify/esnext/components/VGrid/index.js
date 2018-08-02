@@ -15,4 +15,3 @@ VGrid.install = function install(Vue) {
     Vue.component(VSpacer.name, VSpacer);
 };
 export default VGrid;
-//# sourceMappingURL=index.js.map

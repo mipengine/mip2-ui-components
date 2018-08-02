@@ -55,4 +55,3 @@ export default mixins(Colorable, Toggleable, PositionableFactory(['left', 'botto
         }, badge)]);
     }
 });
-//# sourceMappingURL=VBadge.js.map

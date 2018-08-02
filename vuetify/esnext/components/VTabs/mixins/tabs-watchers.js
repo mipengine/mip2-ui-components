@@ -36,4 +36,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=tabs-watchers.js.map

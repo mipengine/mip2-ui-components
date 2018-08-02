@@ -213,4 +213,3 @@ export default {
         return this.$createElement('div', data, [this.genHand(), this.genValues()]);
     }
 };
-//# sourceMappingURL=VTimePickerClock.js.map

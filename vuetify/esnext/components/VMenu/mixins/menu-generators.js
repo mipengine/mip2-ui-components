@@ -79,4 +79,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=menu-generators.js.map

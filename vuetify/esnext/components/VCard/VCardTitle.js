@@ -13,4 +13,3 @@ export default Vue.extend({
         return h('div', data, children);
     }
 });
-//# sourceMappingURL=VCardTitle.js.map

@@ -5,4 +5,3 @@ VIcon.install = function install(Vue) {
 };
 export { VIcon };
 export default VIcon;
-//# sourceMappingURL=index.js.map

@@ -27,4 +27,3 @@ export default {
         this[target] = Object.values(this.components[target]).reduce((acc, cur) => acc + cur, 0);
     }
 };
-//# sourceMappingURL=application.js.map

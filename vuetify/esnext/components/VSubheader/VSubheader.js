@@ -16,4 +16,3 @@ export default {
         return h('div', data, children);
     }
 };
-//# sourceMappingURL=VSubheader.js.map

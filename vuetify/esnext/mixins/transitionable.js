@@ -7,4 +7,3 @@ export default Vue.extend({
         transition: String
     }
 });
-//# sourceMappingURL=transitionable.js.map

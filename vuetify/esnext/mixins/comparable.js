@@ -9,4 +9,3 @@ export default Vue.extend({
         }
     }
 });
-//# sourceMappingURL=comparable.js.map

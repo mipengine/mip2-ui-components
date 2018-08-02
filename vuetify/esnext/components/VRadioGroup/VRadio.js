@@ -151,4 +151,3 @@ export default {
         }, [this.genRadio(), this.genLabel()]);
     }
 };
-//# sourceMappingURL=VRadio.js.map

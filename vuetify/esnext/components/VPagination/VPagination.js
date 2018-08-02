@@ -135,4 +135,3 @@ export default {
         }, children);
     }
 };
-//# sourceMappingURL=VPagination.js.map

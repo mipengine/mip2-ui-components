@@ -7,4 +7,3 @@ VBreadcrumbs.install = function install(Vue) {
     Vue.component(VBreadcrumbsItem.name, VBreadcrumbsItem);
 };
 export default VBreadcrumbs;
-//# sourceMappingURL=index.js.map

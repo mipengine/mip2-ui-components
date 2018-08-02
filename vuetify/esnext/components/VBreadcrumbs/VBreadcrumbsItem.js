@@ -24,4 +24,3 @@ export default {
         return h('li', [h(tag, data, this.$slots.default)]);
     }
 };
-//# sourceMappingURL=VBreadcrumbsItem.js.map

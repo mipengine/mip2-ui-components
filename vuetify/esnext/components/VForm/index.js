@@ -5,4 +5,3 @@ VForm.install = function install(Vue) {
 };
 export { VForm };
 export default VForm;
-//# sourceMappingURL=index.js.map

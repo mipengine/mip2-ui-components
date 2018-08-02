@@ -5,4 +5,3 @@ VDataIterator.install = function install(Vue) {
 };
 export { VDataIterator };
 export default VDataIterator;
-//# sourceMappingURL=index.js.map

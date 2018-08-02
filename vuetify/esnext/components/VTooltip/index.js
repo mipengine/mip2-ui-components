@@ -5,4 +5,3 @@ VTooltip.install = function install(Vue) {
 };
 export { VTooltip };
 export default VTooltip;
-//# sourceMappingURL=index.js.map

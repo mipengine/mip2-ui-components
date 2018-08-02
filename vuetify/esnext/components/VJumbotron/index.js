@@ -5,4 +5,3 @@ VJumbotron.install = function install(Vue) {
 };
 export { VJumbotron };
 export default VJumbotron;
-//# sourceMappingURL=index.js.map

@@ -15,4 +15,3 @@ export default function theme(theme = {}) {
         ...theme
     };
 }
-//# sourceMappingURL=theme.js.map

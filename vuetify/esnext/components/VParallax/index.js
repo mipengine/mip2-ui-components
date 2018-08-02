@@ -5,4 +5,3 @@ VParallax.install = function install(Vue) {
 };
 export { VParallax };
 export default VParallax;
-//# sourceMappingURL=index.js.map

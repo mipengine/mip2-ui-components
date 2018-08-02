@@ -73,4 +73,3 @@ export default {
         }, [this.$slots.title ? this.genTitle() : null, this.genBody(), this.$slots.actions ? this.genActions() : null]);
     }
 };
-//# sourceMappingURL=VPicker.js.map

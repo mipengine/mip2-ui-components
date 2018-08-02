@@ -11,4 +11,3 @@ export default ((locale, options, { start, length } = { start: 0, length: 0 }) =
         return start || length ? dateString => makeIsoString(dateString).substr(start, length) : null;
     }
 });
-//# sourceMappingURL=createNativeLocaleFormatter.js.map

@@ -119,4 +119,3 @@ export default mixins(Colorable).extend({
         }, [background, bar]);
     }
 });
-//# sourceMappingURL=VProgressLinear.js.map

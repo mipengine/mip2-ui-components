@@ -116,4 +116,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=head.js.map

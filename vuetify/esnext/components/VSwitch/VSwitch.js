@@ -57,4 +57,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=VSwitch.js.map

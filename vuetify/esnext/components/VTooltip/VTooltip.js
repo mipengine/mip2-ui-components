@@ -139,4 +139,3 @@ export default {
         }, this.$slots.activator)]);
     }
 };
-//# sourceMappingURL=VTooltip.js.map

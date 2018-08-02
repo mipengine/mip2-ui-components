@@ -41,4 +41,3 @@ export default {
         }, [this.genTime(), this.ampm ? this.genAmPm() : null]);
     }
 };
-//# sourceMappingURL=VTimePickerTitle.js.map

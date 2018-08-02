@@ -21,4 +21,3 @@ export default {
     inserted,
     unbind
 };
-//# sourceMappingURL=scroll.js.map

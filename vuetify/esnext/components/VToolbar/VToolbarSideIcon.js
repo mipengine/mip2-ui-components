@@ -17,4 +17,3 @@ export default {
         return h(VBtn, d, defaultSlot || [h(VIcon, '$vuetify.icons.menu')]);
     }
 };
-//# sourceMappingURL=VToolbarSideIcon.js.map

@@ -5,4 +5,3 @@ VCounter.install = function install(Vue) {
 };
 export { VCounter };
 export default VCounter;
-//# sourceMappingURL=index.js.map

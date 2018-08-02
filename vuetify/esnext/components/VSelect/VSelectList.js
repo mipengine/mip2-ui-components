@@ -174,4 +174,3 @@ export default {
         }, children)]);
     }
 };
-//# sourceMappingURL=VSelectList.js.map

@@ -5,4 +5,3 @@ VSystemBar.install = function install(Vue) {
 };
 export { VSystemBar };
 export default VSystemBar;
-//# sourceMappingURL=index.js.map

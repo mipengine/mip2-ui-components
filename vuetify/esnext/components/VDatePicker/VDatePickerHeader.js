@@ -112,4 +112,3 @@ export default {
         }, [this.genBtn(-1), this.genHeader(), this.genBtn(+1)]);
     }
 };
-//# sourceMappingURL=VDatePickerHeader.js.map

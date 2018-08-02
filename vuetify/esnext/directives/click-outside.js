@@ -70,4 +70,3 @@ export default {
         delete el._clickOutside;
     }
 };
-//# sourceMappingURL=click-outside.js.map

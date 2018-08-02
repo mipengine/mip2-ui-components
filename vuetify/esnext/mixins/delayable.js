@@ -40,4 +40,3 @@ export default Vue.extend({
         }
     }
 });
-//# sourceMappingURL=delayable.js.map

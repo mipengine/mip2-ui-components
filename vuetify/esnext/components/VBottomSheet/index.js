@@ -5,4 +5,3 @@ VBottomSheet.install = function install(Vue) {
 };
 export { VBottomSheet };
 export default VBottomSheet;
-//# sourceMappingURL=index.js.map

@@ -5,4 +5,3 @@ VAutocomplete.install = function install(Vue) {
 };
 export { VAutocomplete };
 export default VAutocomplete;
-//# sourceMappingURL=index.js.map

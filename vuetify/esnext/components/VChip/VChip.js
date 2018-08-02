@@ -73,4 +73,3 @@ export default mixins(Colorable, Themeable, Toggleable).extend({
         return h('span', data, [this.genContent(h)]);
     }
 });
-//# sourceMappingURL=VChip.js.map

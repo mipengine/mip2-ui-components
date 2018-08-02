@@ -30,4 +30,3 @@ export default function (expandedParentClass = '') {
         }
     };
 }
-//# sourceMappingURL=expand-transition.js.map

@@ -13,4 +13,3 @@ export default function rebuildFunctionalSlots(slots, h) {
     }
     return children;
 }
-//# sourceMappingURL=rebuildFunctionalSlots.js.map

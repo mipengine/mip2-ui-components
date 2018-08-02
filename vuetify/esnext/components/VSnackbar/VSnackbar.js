@@ -74,4 +74,3 @@ export default mixins(Colorable, Toggleable, PositionableFactory(['absolute', 't
         }, children);
     }
 });
-//# sourceMappingURL=VSnackbar.js.map

@@ -62,4 +62,3 @@ export function checkVueVersion(Vue, requiredVue) {
     }
 }
 export default Vuetify;
-//# sourceMappingURL=index.js.map

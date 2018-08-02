@@ -39,4 +39,3 @@ export default {
         value: [Number, String]
     }
 };
-//# sourceMappingURL=tabs-props.js.map

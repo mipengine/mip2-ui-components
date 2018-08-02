@@ -184,4 +184,3 @@ export default {
         return this.genPicker('v-picker--time');
     }
 };
-//# sourceMappingURL=VTimePicker.js.map

@@ -111,4 +111,3 @@ export default mixins(Colorable).extend({
         }, [svg, info]);
     }
 });
-//# sourceMappingURL=VProgressCircular.js.map

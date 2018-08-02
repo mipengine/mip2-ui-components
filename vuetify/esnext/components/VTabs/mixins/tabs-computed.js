@@ -49,4 +49,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=tabs-computed.js.map

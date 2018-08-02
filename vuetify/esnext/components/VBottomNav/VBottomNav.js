@@ -62,4 +62,3 @@ export default mixins(Applicationable('bottom', ['height', 'value']), ButtonGrou
         }, this.$slots.default);
     }
 });
-//# sourceMappingURL=VBottomNav.js.map

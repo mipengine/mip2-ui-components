@@ -54,4 +54,3 @@ export default function goTo(target, options) {
         window.requestAnimationFrame(step);
     });
 }
-//# sourceMappingURL=goTo.js.map

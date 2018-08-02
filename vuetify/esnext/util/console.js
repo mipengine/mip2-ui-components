@@ -71,4 +71,3 @@ function generateComponentTrace(vm) {
         return `\n\n(found in ${formatComponentName(vm)})`;
     }
 }
-//# sourceMappingURL=console.js.map

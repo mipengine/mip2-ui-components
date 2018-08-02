@@ -34,4 +34,3 @@ export function provide(namespace) {
         }
     });
 }
-//# sourceMappingURL=registrable.js.map

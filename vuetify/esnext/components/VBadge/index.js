@@ -5,4 +5,3 @@ VBadge.install = function install(Vue) {
 };
 export { VBadge };
 export default VBadge;
-//# sourceMappingURL=index.js.map

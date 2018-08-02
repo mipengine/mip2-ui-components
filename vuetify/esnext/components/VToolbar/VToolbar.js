@@ -201,4 +201,3 @@ export default {
         return h('nav', data, children);
     }
 };
-//# sourceMappingURL=VToolbar.js.map

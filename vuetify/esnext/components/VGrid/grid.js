@@ -31,4 +31,3 @@ export default function Grid(name) {
         }
     };
 }
-//# sourceMappingURL=grid.js.map

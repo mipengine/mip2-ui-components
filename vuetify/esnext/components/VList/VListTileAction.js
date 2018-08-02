@@ -8,4 +8,3 @@ export default {
         return h('div', data, children);
     }
 };
-//# sourceMappingURL=VListTileAction.js.map

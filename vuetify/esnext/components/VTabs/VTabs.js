@@ -213,4 +213,3 @@ export default {
         }, [this.genBar([this.hideSlider ? null : this.genSlider(slider), tab]), this.genItems(items, item)]);
     }
 };
-//# sourceMappingURL=VTabs.js.map

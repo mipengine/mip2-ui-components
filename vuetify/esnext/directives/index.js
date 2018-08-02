@@ -11,4 +11,3 @@ export default function install(Vue) {
     Vue.directive('scroll', Scroll);
     Vue.directive('touch', Touch);
 }
-//# sourceMappingURL=index.js.map

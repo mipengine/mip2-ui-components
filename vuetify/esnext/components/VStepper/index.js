@@ -14,4 +14,3 @@ VStepper.install = function install(Vue) {
     Vue.component(VStepperItems.name, VStepperItems);
 };
 export default VStepper;
-//# sourceMappingURL=index.js.map

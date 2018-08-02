@@ -5,4 +5,3 @@ VDialog.install = function install(Vue) {
 };
 export { VDialog };
 export default VDialog;
-//# sourceMappingURL=index.js.map

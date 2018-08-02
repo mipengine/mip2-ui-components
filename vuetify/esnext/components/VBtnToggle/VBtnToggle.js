@@ -87,4 +87,3 @@ export default mixins(ButtonGroup, Themeable).extend({
         return h('div', { class: this.classes }, this.$slots.default);
     }
 });
-//# sourceMappingURL=VBtnToggle.js.map

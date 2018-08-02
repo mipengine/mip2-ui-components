@@ -24,4 +24,3 @@ export default {
         return h('div', data, [avatar]);
     }
 };
-//# sourceMappingURL=VListTileAvatar.js.map

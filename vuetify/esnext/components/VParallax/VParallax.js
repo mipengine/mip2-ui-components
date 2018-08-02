@@ -77,4 +77,3 @@ export default mixins(Translatable).extend({
         }, [container, content]);
     }
 });
-//# sourceMappingURL=VParallax.js.map

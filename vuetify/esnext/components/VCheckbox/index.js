@@ -5,4 +5,3 @@ VCheckbox.install = function install(Vue) {
 };
 export { VCheckbox };
 export default VCheckbox;
-//# sourceMappingURL=index.js.map

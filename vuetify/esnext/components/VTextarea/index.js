@@ -5,4 +5,3 @@ VTextarea.install = function install(Vue) {
 };
 export { VTextarea };
 export default VTextarea;
-//# sourceMappingURL=index.js.map

@@ -101,4 +101,3 @@ export default mixins(Colorable, Themeable).extend({
         return h('i', data, newChildren);
     }
 });
-//# sourceMappingURL=VIcon.js.map

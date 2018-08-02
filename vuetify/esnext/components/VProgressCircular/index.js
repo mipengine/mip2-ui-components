@@ -5,4 +5,3 @@ VProgressCircular.install = function install(Vue) {
 };
 export { VProgressCircular };
 export default VProgressCircular;
-//# sourceMappingURL=index.js.map

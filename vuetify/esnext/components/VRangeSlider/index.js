@@ -5,4 +5,3 @@ VRangeSlider.install = function install(Vue) {
 };
 export { VRangeSlider };
 export default VRangeSlider;
-//# sourceMappingURL=index.js.map

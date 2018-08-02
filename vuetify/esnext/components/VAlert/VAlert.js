@@ -85,4 +85,3 @@ export default mixins(Colorable, Toggleable, Transitionable).extend({
         }, [alert]);
     }
 });
-//# sourceMappingURL=VAlert.js.map

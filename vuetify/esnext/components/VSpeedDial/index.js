@@ -5,4 +5,3 @@ VSpeedDial.install = function install(Vue) {
 };
 export { VSpeedDial };
 export default VSpeedDial;
-//# sourceMappingURL=index.js.map

@@ -5,4 +5,3 @@ VSlider.install = function install(Vue) {
 };
 export { VSlider };
 export default VSlider;
-//# sourceMappingURL=index.js.map

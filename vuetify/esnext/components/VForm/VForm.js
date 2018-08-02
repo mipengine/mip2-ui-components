@@ -95,4 +95,3 @@ export default {
         }, this.$slots.default);
     }
 };
-//# sourceMappingURL=VForm.js.map

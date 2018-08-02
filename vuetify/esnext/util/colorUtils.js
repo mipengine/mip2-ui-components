@@ -29,4 +29,3 @@ export function intToHex(color) {
     if (hexColor.length < 6) hexColor = '0'.repeat(6 - hexColor.length) + hexColor;
     return '#' + hexColor;
 }
-//# sourceMappingURL=colorUtils.js.map

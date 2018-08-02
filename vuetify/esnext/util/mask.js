@@ -124,4 +124,3 @@ export const maskText = (text, masked, dontFillMaskBlanks) => {
 export const unmaskText = text => {
     return text ? String(text).replace(new RegExp(defaultDelimiters, 'g'), '') : text;
 };
-//# sourceMappingURL=mask.js.map

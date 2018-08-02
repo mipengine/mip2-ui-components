@@ -42,4 +42,3 @@ let all = factory().extend({
   }
 })
 /**/
-//# sourceMappingURL=positionable.js.map

@@ -104,4 +104,3 @@ export default {
         return this.genTable('v-date-picker-table v-date-picker-table--date', [this.genTHead(), this.genTBody()]);
     }
 };
-//# sourceMappingURL=VDatePickerDateTable.js.map

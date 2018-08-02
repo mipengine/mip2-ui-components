@@ -115,4 +115,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=VRangeSlider.js.map

@@ -103,4 +103,3 @@ export default {
         }, this.$slots.default), this.genContent(), this.large ? this.genActions() : null]);
     }
 };
-//# sourceMappingURL=VEditDialog.js.map

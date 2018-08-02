@@ -16,4 +16,3 @@ if (typeof window !== 'undefined' && window.Vue) {
     window.Vue.use(Vuetify);
 }
 export default Vuetify;
-//# sourceMappingURL=index.js.map

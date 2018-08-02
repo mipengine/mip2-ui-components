@@ -539,4 +539,3 @@ export default {
         }
     }
 };
-//# sourceMappingURL=VSelect.js.map

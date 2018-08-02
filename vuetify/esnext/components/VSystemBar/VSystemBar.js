@@ -51,4 +51,3 @@ export default {
         return h('div', data, this.$slots.default);
     }
 };
-//# sourceMappingURL=VSystemBar.js.map

@@ -84,4 +84,3 @@ export default {
     inserted,
     unbind
 };
-//# sourceMappingURL=touch.js.map

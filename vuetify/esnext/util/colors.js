@@ -317,4 +317,3 @@ export default Object.freeze({
     grey,
     shades
 });
-//# sourceMappingURL=colors.js.map

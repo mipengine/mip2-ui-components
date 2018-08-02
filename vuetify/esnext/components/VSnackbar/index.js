@@ -5,4 +5,3 @@ VSnackbar.install = function install(Vue) {
 };
 export { VSnackbar };
 export default VSnackbar;
-//# sourceMappingURL=index.js.map

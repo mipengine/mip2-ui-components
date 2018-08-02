@@ -37,4 +37,3 @@ export default {
         }, [activator, this.$slots.default]);
     }
 };
-//# sourceMappingURL=VBottomSheet.js.map

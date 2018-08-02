@@ -31,4 +31,3 @@ export default Vue.extend().extend({
         }
     }
 });
-//# sourceMappingURL=loadable.js.map
