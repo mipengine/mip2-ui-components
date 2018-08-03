@@ -1,3 +1,3 @@
-export default function component(options) {
-    return options;
+export default function component (options) {
+  return options
 }

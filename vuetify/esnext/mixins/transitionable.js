@@ -1,9 +1,9 @@
-import Vue from 'vue';
+import Vue from 'vue'
 export default Vue.extend({
-    name: 'transitionable',
-    props: {
-        mode: String,
-        origin: String,
-        transition: String
-    }
-});
+  name: 'Transitionable',
+  props: {
+    mode: String,
+    origin: String,
+    transition: String
+  }
+})

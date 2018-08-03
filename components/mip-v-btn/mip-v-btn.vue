@@ -1,5 +1,5 @@
 <script>
-import {VBtn} from '@/vuetify/es5/components/VBtn'
-console.log(VBtn)
+import '@/vuetify/src/stylus/app.styl'
+import { VBtn } from '@/vuetify/esnext/components/VBtn'
 export default VBtn
 </script>

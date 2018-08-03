@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from 'vue'
 /**
  * Bootable
  * @mixin
@@ -9,26 +9,26 @@ import Vue from 'vue';
  */
 /* @vue/component */
 export default Vue.extend().extend({
-    name: 'bootable',
-    props: {
-        lazy: Boolean
-    },
-    data: () => ({
-        isBooted: false
-    }),
-    computed: {
-        hasContent() {
-            return this.isBooted || !this.lazy || this.isActive;
-        }
-    },
-    watch: {
-        isActive() {
-            this.isBooted = true;
-        }
-    },
-    methods: {
-        showLazyContent(content) {
-            return this.hasContent ? content : undefined;
-        }
+  name: 'Bootable',
+  props: {
+    lazy: Boolean
+  },
+  data: () => ({
+    isBooted: false
+  }),
+  computed: {
+    hasContent () {
+      return this.isBooted || !this.lazy || this.isActive
     }
-});
+  },
+  watch: {
+    isActive () {
+      this.isBooted = true
+    }
+  },
+  methods: {
+    showLazyContent (content) {
+      return this.hasContent ? content : undefined
+    }
+  }
+})

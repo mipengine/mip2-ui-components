@@ -1,65 +1,65 @@
-import '../../../src/stylus/components/_breadcrumbs.styl';
+import '../../../src/stylus/components/_breadcrumbs.styl'
 /* @vue/component */
 export default {
-    name: 'v-breadcrumbs',
-    props: {
-        divider: {
-            type: String,
-            default: '/'
-        },
-        large: Boolean,
-        justifyCenter: Boolean,
-        justifyEnd: Boolean
+  name: 'VBreadcrumbs',
+  props: {
+    divider: {
+      type: String,
+      default: '/'
     },
-    computed: {
-        classes() {
-            return {
-                'v-breadcrumbs--large': this.large
-            };
-        },
-        computedDivider() {
-            return this.$slots.divider ? this.$slots.divider : this.divider;
-        },
-        styles() {
-            const justify = this.justifyCenter ? 'center' : this.justifyEnd ? 'flex-end' : 'flex-start';
-            return {
-                'justify-content': justify
-            };
-        }
+    large: Boolean,
+    justifyCenter: Boolean,
+    justifyEnd: Boolean
+  },
+  computed: {
+    classes () {
+      return {
+        'v-breadcrumbs--large': this.large
+      }
     },
-    methods: {
-        /**
+    computedDivider () {
+      return this.$slots.divider ? this.$slots.divider : this.divider
+    },
+    styles () {
+      const justify = this.justifyCenter ? 'center' : this.justifyEnd ? 'flex-end' : 'flex-start'
+      return {
+        'justify-content': justify
+      }
+    }
+  },
+  methods: {
+    /**
          * Add dividers between
          * v-breadcrumbs-item
          *
-         * @return {array}
+         * @return {Array}
          */
-        genChildren() {
-            if (!this.$slots.default) return null;
-            const h = this.$createElement;
-            const children = [];
-            const dividerData = { staticClass: 'v-breadcrumbs__divider' };
-            let createDividers = false;
-            for (let i = 0; i < this.$slots.default.length; i++) {
-                const elm = this.$slots.default[i];
-                if (!elm.componentOptions || elm.componentOptions.Ctor.options.name !== 'v-breadcrumbs-item') {
-                    children.push(elm);
-                } else {
-                    if (createDividers) {
-                        children.push(h('li', dividerData, this.computedDivider));
-                    }
-                    children.push(elm);
-                    createDividers = true;
-                }
-            }
-            return children;
+    genChildren () {
+      if (!this.$slots.default) return null
+      const h = this.$createElement
+      const children = []
+      const dividerData = { staticClass: 'v-breadcrumbs__divider' }
+      let createDividers = false
+      for (let i = 0; i < this.$slots.default.length; i++) {
+        const elm = this.$slots.default[i]
+        if (!elm.componentOptions || elm.componentOptions.Ctor.options.name !== 'v-breadcrumbs-item') {
+          children.push(elm)
+        } else {
+          if (createDividers) {
+            children.push(h('li', dividerData, this.computedDivider))
+          }
+          children.push(elm)
+          createDividers = true
         }
-    },
-    render(h) {
-        return h('ul', {
-            staticClass: 'v-breadcrumbs',
-            'class': this.classes,
-            style: this.styles
-        }, this.genChildren());
+      }
+      return children
     }
-};
+  },
+  render (h) {
+    return h('ul', {
+      staticClass: 'v-breadcrumbs',
+      'class': this.classes,
+      style: this.styles
+    }, this.genChildren())
+  }
+}
