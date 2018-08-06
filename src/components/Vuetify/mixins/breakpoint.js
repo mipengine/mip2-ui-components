@@ -1,4 +1,4 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 /**
  * A modified version of https://gist.github.com/cb109/b074a65f7595cffc21cea59ce8d15f9b
  */
@@ -8,7 +8,7 @@ import Vue from 'vue'
  *   <div v-if="$breakpoint.smAndDown">...</div>
  *
  */
-export default Vue.extend({
+export default {
   data: () => ({
     clientHeight: getClientHeight(),
     clientWidth: getClientWidth(),
@@ -99,7 +99,7 @@ export default Vue.extend({
       this.clientWidth = getClientWidth()
     }
   }
-})
+}
 // Cross-browser support as described in:
 // https://stackoverflow.com/questions/1248081
 function getClientWidth () {

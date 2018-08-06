@@ -58,7 +58,7 @@ export default mixins(Colorable, Themeable).extend({
     const newChildren = []
     if (fontSize) data.style = { fontSize, ...data.style }
     let iconName = ''
-    if (children.length) iconName = children[0].text
+    if (children.length) iconName = children[0].text || children[0].textContent
     // Support usage of v-text and v-html
     else if (data.domProps) {
       iconName = data.domProps.textContent || data.domProps.innerHTML || iconName

@@ -1,4 +1,4 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 import VProgressLinear from '../components/VProgressLinear'
 /**
  * Loadable
@@ -10,7 +10,7 @@ import VProgressLinear from '../components/VProgressLinear'
  * or designate a custom progress linear bar
  */
 /* @vue/component */
-export default Vue.extend().extend({
+export default {
   name: 'Loadable',
   props: {
     loading: {
@@ -30,4 +30,4 @@ export default Vue.extend().extend({
       })
     }
   }
-})
+}

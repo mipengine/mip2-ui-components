@@ -1,5 +1,5 @@
-import Vue from 'vue'
-export default Vue.extend({
+// import Vue from 'vue'
+export default {
   name: 'Translatable',
   props: {
     height: Number
@@ -40,4 +40,4 @@ export default Vue.extend({
       this.parallax = Math.round(this.parallaxDist * this.percentScrolled)
     }
   }
-})
+}

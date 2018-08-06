@@ -1,4 +1,4 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 /**
  * Delayable
  *
@@ -6,7 +6,7 @@ import Vue from 'vue'
  *
  * Changes the open or close delay time for elements
  */
-export default Vue.extend({
+export default {
   name: 'Delayable',
   props: {
     openDelay: {
@@ -39,4 +39,4 @@ export default Vue.extend({
       this[`${type}Timeout`] = setTimeout(cb, delay)
     }
   }
-})
+}

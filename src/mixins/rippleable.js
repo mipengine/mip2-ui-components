@@ -1,7 +1,7 @@
 import Ripple from '../directives/ripple'
 // Types
-import Vue from 'vue'
-export default Vue.extend({
+// import Vue from 'vue'
+export default {
   name: 'Rippleable',
   directives: { Ripple },
   props: {
@@ -26,4 +26,4 @@ export default Vue.extend({
     },
     onChange () {}
   }
-})
+}

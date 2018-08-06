@@ -21,9 +21,11 @@ export default mixins(Colorable, Toggleable, Transitionable).extend({
       }
     }
   },
-  data: () => ({
-    defaultColor: 'error'
-  }),
+  data () {
+    return {
+      defaultColor: 'error'
+    }
+  },
   computed: {
     classes () {
       const color = this.type && !this.color ? this.type : this.computedColor

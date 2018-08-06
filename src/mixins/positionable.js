@@ -1,4 +1,4 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 import { filterObjectOnKeys } from '../util/helpers'
 const availableProps = {
   absolute: Boolean,

@@ -1,4 +1,4 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 /**
  * Bootable
  * @mixin
@@ -8,7 +8,7 @@ import Vue from 'vue'
  * Otherwise can be set manually
  */
 /* @vue/component */
-export default Vue.extend().extend({
+export default {
   name: 'Bootable',
   props: {
     lazy: Boolean
@@ -31,4 +31,4 @@ export default Vue.extend().extend({
       return this.hasContent ? content : undefined
     }
   }
-})
+}

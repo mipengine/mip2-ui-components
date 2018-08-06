@@ -1,4 +1,4 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 import { consoleWarn } from '../util/console'
 function generateWarning (child, parent) {
   return () => consoleWarn(`The ${child} component must be used inside a ${parent}`)

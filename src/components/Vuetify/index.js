@@ -63,7 +63,8 @@ const Vuetify = {
   version: '1.1.9'
 }
 
-function generateTheme ({theme: rawTheme, options}) {
+function generateTheme ({theme: rawTheme, options, dark}) {
+  // 1. convert theme variables to CSS strings
   const theme = Theme.parse(rawTheme)
   let css
   const colors = Object.keys(theme)
@@ -85,6 +86,7 @@ function generateTheme ({theme: rawTheme, options}) {
     options.themeCache.set(theme, css)
   }
 
+  // 2. append <style> contains CSS strings
   let style = document.getElementById('vuetify-theme-stylesheet')
   if (!style) {
     style = document.createElement('style')
@@ -93,6 +95,9 @@ function generateTheme ({theme: rawTheme, options}) {
     document.head.appendChild(style)
   }
   style.innerHTML = css
+
+  // 3. add theme CSS classes to <body>
+  document.body.classList.add(`theme--${dark ? 'dark' : 'light'}`)
 }
 
 export function checkVueVersion (Vue, requiredVue) {

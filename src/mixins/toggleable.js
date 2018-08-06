@@ -1,6 +1,7 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 export function factory (prop = 'value', event = 'input') {
-  return Vue.extend({
+  // return Vue.extend({
+  return {
     name: 'Toggleable',
     model: { prop, event },
     props: {
@@ -19,7 +20,7 @@ export function factory (prop = 'value', event = 'input') {
         !!val !== this[prop] && this.$emit(event, val)
       }
     }
-  })
+  }
 }
 /* eslint-disable-next-line no-redeclare */
 const Toggleable = factory()
