@@ -1,7 +1,5 @@
 <template>
-  <mip-v-app>
-    <mip-v-btn color="info">button in .vue</mip-v-btn>
-  </mip-v-app>
+  <mip-v-btn color="info">button in .vue</mip-v-btn>
 </template>
 
 <style scoped>
