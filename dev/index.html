@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Vuetify</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="./dist/mip.css">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true,
+                "title": "MIP Page"
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-v-app>
+      <mip-v-btn color="info">INFO</mip-v-btn>
+      <mip-v-btn color="success">SUCCESS</mip-v-btn>
+      <mip-v-btn color="error">ERROR</mip-v-btn>
+      <mip-v-btn color="warning">WARNING</mip-v-btn>
+      <!-- <mip-v-alert>This is </mip-v-alert> -->
+    </mip-v-app>
+    <script src="./dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

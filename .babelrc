@@ -1,0 +1,55 @@
+{
+  "plugins": [
+    ["transform-object-rest-spread", "transform-define", "./build/babel-transform-define.js"]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["env", {
+          "targets": { "node": true }
+        }]
+      ],
+      "plugins": [
+        "transform-object-rest-spread",
+        ["module-resolver", {
+          "root": ["./src"],
+          "alias": {
+            "~components": "components",
+            "~directives": "directives",
+            "~mixins": "mixins",
+            "~stylus": "stylus",
+            "~util": "util"
+          }
+        }]
+      ]
+    },
+    "es5": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": [">0.5%", "last 2 versions", "not dead", "not op_mini all"],
+            "node": 8
+          }
+        }]
+      ],
+      "plugins": [
+        "transform-object-rest-spread",
+        "./build/babel-transform-stylus-paths.js"
+      ]
+    },
+    "esnext": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 Chrome versions"]
+          },
+          "modules": false
+        }]
+      ],
+      "plugins": [
+        "syntax-object-rest-spread",
+        "./build/babel-transform-stylus-paths.js"
+      ]
+    }
+  }
+}
