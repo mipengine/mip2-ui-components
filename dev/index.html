@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <link rel="stylesheet" href="./dist/mip.css">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./mip/mip.css">
   </head>
   <body>
     <mip-shell>
@@ -37,9 +36,15 @@
       <mip-v-btn color="success">SUCCESS</mip-v-btn>
       <mip-v-btn color="error">ERROR</mip-v-btn>
       <mip-v-btn color="warning">WARNING</mip-v-btn>
-      <!-- <mip-v-alert>This is </mip-v-alert> -->
+      <mip-v-btn color="info" small="true">INFO</mip-v-btn>
+      <mip-v-btn color="info" large="true">INFO</mip-v-btn>
+      <mip-v-btn color="info" large="true" fab="true">INFO</mip-v-btn>
+      <mip-v-alert value="true" type="success">
+        This is a success alert.
+      </mip-v-alert>
     </mip-v-app>
-    <script src="./dist/mip.js"></script>
+
+    <script src="./mip/mip.js"></script>
     <script src="/dev/main.js"></script>
   </body>
 </html>

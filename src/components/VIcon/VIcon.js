@@ -29,7 +29,7 @@ function remapInternalIcon (parent, iconName) {
   // Now look up icon indirection name, e.g. '$vuetify.icons.cancel':
   return getObjectValueByPath(parent, iconName) || iconName
 }
-const addTextColorClassChecks = Colorable.options.methods.addTextColorClassChecks
+const addTextColorClassChecks = Colorable.methods.addTextColorClassChecks
 /* @vue/component */
 export default mixins(Colorable, Themeable).extend({
   name: 'VIcon',

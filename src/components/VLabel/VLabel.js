@@ -49,7 +49,7 @@ export default {
       }
     }
     if (props.focused) {
-      data.class = Colorable.options.methods.addTextColorClassChecks(data.class, props.color)
+      data.class = Colorable.methods.addTextColorClassChecks(data.class, props.color)
     }
     return h('label', data, children)
   }

@@ -1,5 +1,3 @@
-import App from './App'
-// import Boilerplate from './Boilerplate'
 import Vuetify from 'vuetify'
 import '@mdi/font/css/materialdesignicons.css'
 
