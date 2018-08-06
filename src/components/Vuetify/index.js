@@ -6,6 +6,8 @@ import options from './mixins/options'
 import genLang from './mixins/lang'
 import { consoleWarn } from '../../util/console'
 import goTo from './util/goTo'
+import { intToHex } from '../../util/colorUtils'
+import * as Theme from '../../util/theme'
 
 function camelCaseToDash (str) {
   return str.replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase()
@@ -46,9 +48,8 @@ const Vuetify = {
       })
     }
     if (opts.components) {
-      // Object.values(opts.components).forEach(component => {
-      //   Vue.use(component)
-      // })
+      // generate theme styles without <v-app>
+      generateTheme(Vue.prototype.$vuetify)
 
       let component
       Object.keys(opts.components).forEach(key => {
@@ -61,6 +62,39 @@ const Vuetify = {
   },
   version: '1.1.9'
 }
+
+function generateTheme ({theme: rawTheme, options}) {
+  const theme = Theme.parse(rawTheme)
+  let css
+  const colors = Object.keys(theme)
+  if (!colors.length) return ''
+  css = `a { color: ${intToHex(theme.primary)}; }`
+  for (let i = 0; i < colors.length; ++i) {
+    const name = colors[i]
+    const value = theme[name]
+    if (options.themeVariations.includes(name)) {
+      css += Theme.genVariations(name, value).join('')
+    } else {
+      css += Theme.genBaseColor(name, value)
+    }
+  }
+  if (options.minifyTheme != null) {
+    css = this.$vuetify.options.minifyTheme(css)
+  }
+  if (options.themeCache != null) {
+    options.themeCache.set(theme, css)
+  }
+
+  let style = document.getElementById('vuetify-theme-stylesheet')
+  if (!style) {
+    style = document.createElement('style')
+    style.type = 'text/css'
+    style.id = 'vuetify-theme-stylesheet'
+    document.head.appendChild(style)
+  }
+  style.innerHTML = css
+}
+
 export function checkVueVersion (Vue, requiredVue) {
   const vueDep = requiredVue || '^2.5.10'
   const required = vueDep.split('.', 3).map(v => v.replace(/\D/g, '')).map(Number)
