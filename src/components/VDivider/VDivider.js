@@ -1,14 +1,14 @@
 // Styles
 import '../../../src/stylus/components/_dividers.styl'
 // Types
-import Vue from 'vue'
+// import Vue from 'vue'
 // Mixins
 import Themeable from '../../mixins/themeable'
-export default Vue.extend({
+export default {
   name: 'VDivider',
   functional: true,
   props: {
-    ...Themeable.options.props,
+    ...Themeable.props,
     inset: Boolean,
     vertical: Boolean
   },
@@ -20,4 +20,4 @@ export default Vue.extend({
     if (props.dark) data.staticClass += ' theme--dark'
     return h('hr', data)
   }
-})
+}

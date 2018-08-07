@@ -63,14 +63,24 @@ export default {
     },
     value: [Number, String]
   },
-  data: vm => ({
-    app: {},
-    defaultColor: 'primary',
-    isActive: false,
-    keyPressed: 0,
-    lazyValue: typeof vm.value !== 'undefined' ? vm.value : Number(vm.min),
-    oldValue: null
-  }),
+  data () {
+    let vm = this
+    return {
+      app: {},
+      defaultColor: 'primary',
+      isActive: false,
+      keyPressed: 0,
+      lazyValue: typeof vm.value !== 'undefined' ? vm.value : Number(vm.min),
+      oldValue: null
+    }
+  // }: vm => ({
+  //   app: {},
+  //   defaultColor: 'primary',
+  //   isActive: false,
+  //   keyPressed: 0,
+  //   lazyValue: typeof vm.value !== 'undefined' ? vm.value : Number(vm.min),
+  //   oldValue: null
+  },
   computed: {
     classes () {
       return {

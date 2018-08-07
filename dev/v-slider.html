@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Welcome to Vuetify</title>
+    <title>VSlider</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="./mip/mip.css">
-    <style>
-      .ui-link {
-        display: block;
-        font-size: 20px;
-        padding: 16px;
-      }
-    </style>
   </head>
   <body>
     <mip-shell>
@@ -38,10 +31,18 @@
       }
       </script>
     </mip-shell>
-    
-    <a class="ui-link" href="./v-btn.html" mip-link>VBtn</a>
-    <a class="ui-link" href="./v-input.html" mip-link>VInput</a>
-    <a class="ui-link" href="./v-slider.html" mip-link>VSlider</a>
+    <mip-data>
+      <script type="application/json">
+      {
+        "slider": "45"
+      }
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <mip-v-slider m-bind:value="slider"></mip-v-slider>
+
+    <mip-v-divider></mip-v-divider>
 
     <script src="./mip/mip.js"></script>
     <script src="/dev/main.js"></script>

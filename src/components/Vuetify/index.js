@@ -51,6 +51,9 @@ const Vuetify = {
       // generate theme styles without <v-app>
       generateTheme(Vue.prototype.$vuetify)
 
+      // add [data-app] attr to <body>, which is required in some components such as v-slider
+      document.body.setAttribute('data-app', '')
+
       let component
       Object.keys(opts.components).forEach(key => {
         component = opts.components[key]

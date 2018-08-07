@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VBtn</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="./mip/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true,
+                "title": "MIP Page"
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+      <script type="application/json">
+      {
+        "toggle_exclusive": 2,
+        "show_alert": "true",
+        "alert_type": "warning",
+        "alert_dismissible": "true",
+        "dropdown_font": ["Arial", "Calibri", "Courier", "Verdana"]
+      }
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <!-- <mip-v-btn color="info">INFO</mip-v-btn>
+    <mip-v-btn color="success">SUCCESS</mip-v-btn>
+    <mip-v-btn color="error">ERROR</mip-v-btn>
+    <mip-v-btn color="warning">WARNING</mip-v-btn>
+    <mip-v-btn color="info" small="true">INFO</mip-v-btn>
+    <mip-v-btn color="info" large="true">INFO</mip-v-btn>
+    <mip-v-btn depressed="true" color="info">INFO</mip-v-btn>
+    <mip-v-btn color="info" large="true" fab="true">INFO</mip-v-btn>
+    <mip-v-btn fab="true" dark="true" small="true" color="pink">
+      <mip-v-icon dark="true">favorite</mip-v-icon>
+    </mip-v-btn>
+    <mip-v-btn outline="true" large="true" fab="true" color="indigo"
+      on="tap:MIP.setData({alert_type:'success'})">
+      <mip-v-icon>edit</mip-v-icon>
+    </mip-v-btn> -->
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>按钮下拉菜单</h2>
+    <!-- <mip-v-overflow-btn
+      m-bind:items="dropdown_font"
+      label="Overflow Btn"
+      target="#dropdown-example"
+    ></mip-v-overflow-btn> -->
+    
+
+    <!-- 虽然绑定成功，但是 btn 的点击事件无法传递到父组件 -->
+    <mip-v-btn-toggle m-bind:input-value="toggle_exclusive">
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_left</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_center</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_right</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_justify</mip-v-icon>
+      </mip-v-btn>
+    </mip-v-btn-toggle>
+
+    <!-- <mip-v-alert m-bind:value="show_alert" m-bind:type="alert_type" m-bind:dismissible="alert_dismissible">
+      This is a success alert.
+    </mip-v-alert> -->
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

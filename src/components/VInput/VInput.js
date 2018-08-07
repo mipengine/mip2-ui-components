@@ -36,10 +36,12 @@ export default {
     readonly: Boolean,
     value: { required: false }
   },
-  data: vm => ({
-    lazyValue: vm.value,
-    isFocused: false
-  }),
+  data () {
+    return {
+      lazyValue: this.value,
+      isFocused: false
+    }
+  },
   computed: {
     classesInput () {
       return {

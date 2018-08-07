@@ -35,7 +35,7 @@ export default {
       'class': {
         'v-label--active': props.value,
         'v-label--is-disabled': props.disabled,
-        ...Themeable.options.computed.themeClasses.call(props)
+        ...Themeable.computed.themeClasses.call(props)
       },
       attrs: {
         for: props.for,
