@@ -55,8 +55,7 @@ const Vuetify = {
       document.body.setAttribute('data-app', '')
 
       let component
-      Object.keys(opts.components).forEach(key => {
-        component = opts.components[key]
+      Object.values(opts.components).forEach(component => {
         if (component.name && component.name.startsWith('V')) {
           window.MIP.registerVueCustomElement(`mip-${camelCaseToDash(component.name)}`, component)
         }

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <link rel="stylesheet" href="./mip/mip.css">
     <style>
       .ui-link {
         display: block;
@@ -15,6 +14,8 @@
         padding: 16px;
       }
     </style>
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
   </head>
   <body>
     <mip-shell>
@@ -38,12 +39,62 @@
       }
       </script>
     </mip-shell>
-    
+
     <a class="ui-link" href="./v-btn.html" mip-link>VBtn</a>
     <a class="ui-link" href="./v-input.html" mip-link>VInput</a>
     <a class="ui-link" href="./v-slider.html" mip-link>VSlider</a>
+    <mip-v-btn color="info">INFO</mip-v-btn>
+    <mip-v-btn color="success">SUCCESS</mip-v-btn>
+    <mip-v-btn color="error">ERROR</mip-v-btn>
+    <mip-v-btn color="warning">WARNING</mip-v-btn>
+    <mip-v-btn color="info" small="true">INFO</mip-v-btn>
+    <mip-v-btn color="info" large="true">INFO</mip-v-btn>
+    <mip-v-btn color="info" large="true" fab="true">INFO</mip-v-btn>
+    <mip-v-btn fab="true" dark="true" small="true" color="pink">
+      <mip-v-icon dark="true">favorite</mip-v-icon>
+    </mip-v-btn>
+    <mip-v-btn outline="true" large="true" fab="true" color="indigo"
+      on="tap:MIP.setData({alert_type:'success'})">
+      <mip-v-icon>edit</mip-v-icon>
+    </mip-v-btn>
 
-    <script src="./mip/mip.js"></script>
+    <mip-data>
+      <script type="application/json">
+      {
+        "show_alert": "true",
+        "alert_type": "warning",
+        "alert_dismissible": "true",
+        "dialog": false
+      }
+      </script>
+    </mip-data>
+
+    <!-- 虽然绑定成功，但是 btn 的点击事件无法传递到父组件 -->
+    <mip-v-btn-toggle>
+      <script type="application/json">
+        {
+          "inputValue": 2
+        }
+      </script>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_left</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_center</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_right</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_justify</mip-v-icon>
+      </mip-v-btn>
+    </mip-v-btn-toggle>
+
+    <mip-v-alert m-bind:value="show_alert" m-bind:type="alert_type" m-bind:dismissible="alert_dismissible">
+      This is a success alert.
+    </mip-v-alert>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
   </body>
 </html>
