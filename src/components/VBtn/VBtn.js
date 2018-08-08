@@ -9,6 +9,8 @@ import Routable from '../../mixins/routable'
 import Themeable from '../../mixins/themeable'
 import { factory as ToggleableFactory } from '../../mixins/toggleable'
 import { inject as RegistrableInject } from '../../mixins/registrable'
+import { moveClass } from '../../util/class'
+
 export default {
   mixins: [
     Colorable, Routable, Positionable, Themeable,
@@ -113,6 +115,8 @@ export default {
     tag === 'button' && (data.attrs.type = this.type)
     this.loading && children.push(this.genLoader())
     data.attrs.value = ['string', 'number'].includes(typeof this.value) ? this.value : JSON.stringify(this.value)
+    moveClass(this.$element, data)
+
     return h(tag, data, children)
   }
 }
