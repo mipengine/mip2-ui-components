@@ -6,6 +6,8 @@ import VIcon from '../VIcon'
 import Colorable from '../../mixins/colorable'
 import Themeable from '../../mixins/themeable'
 import Toggleable from '../../mixins/toggleable'
+import { fixClass } from '../../util/class'
+
 /* @vue/component */
 export default mixins(Colorable, Themeable, Toggleable).extend({
   name: 'VChip',
@@ -60,6 +62,7 @@ export default mixins(Colorable, Themeable, Toggleable).extend({
     }
   },
   render (h) {
+    this.classes = fixClass(this.$element, this.classes)
     const data = {
       staticClass: 'v-chip',
       'class': this.classes,

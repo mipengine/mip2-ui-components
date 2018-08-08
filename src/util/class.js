@@ -1,7 +1,6 @@
-export function moveClass (mipNode, data) {
-  // 移动 class 到正确的位置
+export function fixClass (mipNode, classes = {}) {
   let classArray = [...mipNode.classList]
-  let classes = data.class
+
   classArray.forEach(c => {
     if (!/^mip-/.test(c)) {
       mipNode.classList.remove(c)
@@ -14,4 +13,5 @@ export function moveClass (mipNode, data) {
       }
     }
   })
+  return classes
 }

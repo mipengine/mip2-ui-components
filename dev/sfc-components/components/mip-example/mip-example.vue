@@ -7,6 +7,8 @@
       <mip-v-avatar class="green">A</mip-v-avatar>ANZ Bank
     </mip-v-chip>
 
+    <mip-v-chip class="blue white--text">Example Chip</mip-v-chip>
+
   </div>
 </template>
 

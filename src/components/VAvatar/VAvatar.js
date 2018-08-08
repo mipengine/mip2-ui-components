@@ -3,7 +3,7 @@ import '../../../src/stylus/components/_avatars.styl'
 import Colorable from '../../mixins/colorable'
 import { convertToUnit } from '../../util/helpers'
 import mixins from '../../util/mixins'
-import { moveClass } from '../../util/class'
+import { fixClass } from '../../util/class'
 
 /* @vue/component */
 export default mixins(Colorable).extend({
@@ -28,9 +28,10 @@ export default mixins(Colorable).extend({
       width: size,
       ...data.style
     }
-    data.class = [data.class, Colorable.methods.addBackgroundColorClassChecks.call(props, {}, props.color)]
-
-    moveClass(ctx.parent.$el.parentNode, data)
+    data.class = fixClass(
+      ctx.parent.$el.parentNode,
+      [data.class, Colorable.methods.addBackgroundColorClassChecks.call(props, {}, props.color)]
+    )
 
     return h('div', data, children)
   }
