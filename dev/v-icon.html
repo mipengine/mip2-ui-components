@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VBtn</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true,
+                "title": "MIP Page"
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+
+    <h2>基础样式</h2>
+    <div class="group pa-2">
+      <mip-v-icon>home</mip-v-icon>
+      <mip-v-icon>event</mip-v-icon>
+      <mip-v-icon>info</mip-v-icon>
+    </div>
+    <mip-v-divider></mip-v-divider>
+
+    <h2>dark</h2>
+    <div class="group pa-2 teal">
+      <mip-v-icon dark="true">folder_open</mip-v-icon>
+      <mip-v-icon dark="true">widgets</mip-v-icon>
+      <mip-v-icon dark="true">gavel</mip-v-icon>
+    </div>
+    <mip-v-divider></mip-v-divider>
+
+    <h2>medium size</h2>
+    <div class="group pa-2">
+      <mip-v-icon medium="true">home</mip-v-icon>
+      <mip-v-icon medium="true">event</mip-v-icon>
+      <mip-v-icon medium="true">info</mip-v-icon>
+    </div>
+    <mip-v-divider></mip-v-divider>
+
+    <h2>large size</h2>
+    <div class="group pa-2 teal">
+      <mip-v-icon dark="true" large="true">folder_open</mip-v-icon>
+      <mip-v-icon dark="true" large="true">widgets</mip-v-icon>
+      <mip-v-icon dark="true" large="true">gavel</mip-v-icon>
+    </div>
+    <mip-v-divider></mip-v-divider>
+
+    <h2>x-large size</h2>
+    <div class="group pa-2">
+      <mip-v-icon x-large="true">home</mip-v-icon>
+      <mip-v-icon x-large="true">event</mip-v-icon>
+      <mip-v-icon x-large="true">info</mip-v-icon>
+    </div>
+    <mip-v-divider></mip-v-divider>
+
+    <h2>彩色</h2>
+    <div class="group pa-2">
+      <mip-v-icon x-large="true" color="teal darken-2">info</mip-v-icon>
+    </div>
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

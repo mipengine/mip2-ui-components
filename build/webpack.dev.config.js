@@ -54,8 +54,9 @@ module.exports = merge(baseWebpackConfig, {
     contentBase: resolve('../dev'),
     publicPath: '/dev/',
     host: process.env.HOST || 'localhost',
-    port: process.env.PORT || '8080',
-    disableHostCheck: true
+    port: process.env.PORT || '8888',
+    disableHostCheck: true,
+    open: true
   },
   plugins: [
     new VueLoaderPlugin(),
