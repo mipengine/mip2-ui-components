@@ -71,27 +71,6 @@
       </script>
     </mip-data>
 
-    <!-- 虽然绑定成功，但是 btn 的点击事件无法传递到父组件 -->
-    <mip-v-btn-toggle>
-      <script type="application/json">
-        {
-          "inputValue": 2
-        }
-      </script>
-      <mip-v-btn flat>
-        <mip-v-icon>format_align_left</mip-v-icon>
-      </mip-v-btn>
-      <mip-v-btn flat>
-        <mip-v-icon>format_align_center</mip-v-icon>
-      </mip-v-btn>
-      <mip-v-btn flat>
-        <mip-v-icon>format_align_right</mip-v-icon>
-      </mip-v-btn>
-      <mip-v-btn flat>
-        <mip-v-icon>format_align_justify</mip-v-icon>
-      </mip-v-btn>
-    </mip-v-btn-toggle>
-
     <mip-v-alert m-bind:value="show_alert" m-bind:type="alert_type" m-bind:dismissible="alert_dismissible">
       This is a success alert.
     </mip-v-alert>

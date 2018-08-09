@@ -54,7 +54,6 @@ const Vuetify = {
       // add [data-app] attr to <body>, which is required in some components such as v-slider
       document.body.setAttribute('data-app', '')
 
-      let component
       Object.values(opts.components).forEach(component => {
         if (component.name && component.name.startsWith('V')) {
           window.MIP.registerVueCustomElement(`mip-${camelCaseToDash(component.name)}`, component)

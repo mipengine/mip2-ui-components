@@ -65,23 +65,23 @@
       label="Overflow Btn"
       target="#dropdown-example"
     ></mip-v-overflow-btn> -->
-    
+
 
     <!-- 虽然绑定成功，但是 btn 的点击事件无法传递到父组件 -->
     <mip-v-btn-toggle m-bind:input-value="toggle_exclusive">
-      <mip-v-btn flat>
-        <mip-v-icon>format_align_left</mip-v-icon>
-      </mip-v-btn>
-      <mip-v-btn flat>
-        <mip-v-icon>format_align_center</mip-v-icon>
-      </mip-v-btn>
-      <mip-v-btn flat>
-        <mip-v-icon>format_align_right</mip-v-icon>
-      </mip-v-btn>
-      <mip-v-btn flat>
-        <mip-v-icon>format_align_justify</mip-v-icon>
-      </mip-v-btn>
-    </mip-v-btn-toggle>
+        <mip-v-btn flat on="click:MIP.setData({'toggle_exclusive': 0})">
+          <mip-v-icon>format_align_left</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat on="click:MIP.setData({'toggle_exclusive': 1})">
+          <mip-v-icon>format_align_center</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat on="click:MIP.setData({'toggle_exclusive': 2})">
+          <mip-v-icon>format_align_right</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat on="click:MIP.setData({'toggle_exclusive': 3})">
+          <mip-v-icon>format_align_justify</mip-v-icon>
+        </mip-v-btn>
+      </mip-v-btn-toggle>
 
     <mip-v-alert m-bind:value="show_alert" m-bind:type="alert_type" m-bind:dismissible="alert_dismissible">
       This is a success alert.
