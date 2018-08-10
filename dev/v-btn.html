@@ -69,16 +69,16 @@
 
     <!-- btn-toggle 的 change 事件在这里拿不到参数 -->
     <mip-v-btn-toggle m-bind:input-value="toggle_exclusive">
-      <mip-v-btn flat on="click:MIP.setData({'toggle_exclusive': 0})">
+      <mip-v-btn flat on="tap:MIP.setData({'toggle_exclusive': 0})">
         <mip-v-icon>format_align_left</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn flat on="click:MIP.setData({'toggle_exclusive': 1})">
+      <mip-v-btn flat on="tap:MIP.setData({'toggle_exclusive': 1})">
         <mip-v-icon>format_align_center</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn flat on="click:MIP.setData({'toggle_exclusive': 2})">
+      <mip-v-btn flat on="tap:MIP.setData({'toggle_exclusive': 2})">
         <mip-v-icon>format_align_right</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn flat on="click:MIP.setData({'toggle_exclusive': 3})">
+      <mip-v-btn flat on="tap:MIP.setData({'toggle_exclusive': 3})">
         <mip-v-icon>format_align_justify</mip-v-icon>
       </mip-v-btn>
     </mip-v-btn-toggle>
