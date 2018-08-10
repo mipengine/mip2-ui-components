@@ -1,8 +1,9 @@
 import { createSimpleFunctional } from '../../util/helpers'
 import VToolbar from './VToolbar'
 import VToolbarSideIcon from './VToolbarSideIcon'
-const VToolbarTitle = createSimpleFunctional('v-toolbar__title')
-const VToolbarItems = createSimpleFunctional('v-toolbar__items')
+const VToolbarTitle = createSimpleFunctional('v-toolbar__title', 'div', 'VToolbarTitle')
+const VToolbarItems = createSimpleFunctional('v-toolbar__items', 'div', 'VToolbarItems')
+
 export { VToolbar, VToolbarSideIcon, VToolbarTitle, VToolbarItems }
 /* istanbul ignore next */
 VToolbar.install = function install (Vue) {

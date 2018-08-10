@@ -1,6 +1,9 @@
 export function fixClass (mipNode, classes = {}) {
-  let classArray = [...mipNode.classList]
+  if (!mipNode) {
+    return classes
+  }
 
+  let classArray = [...mipNode.classList]
   classArray.forEach(c => {
     if (!/^mip-/.test(c)) {
       mipNode.classList.remove(c)

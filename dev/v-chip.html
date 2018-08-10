@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VChip</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./mip/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+
+    <h2>基础样式</h2>
+    <div class="group pa-2">
+      <mip-v-chip close="true">Example Chip</mip-v-chip>
+      <mip-v-chip>Example Chip</mip-v-chip>
+      <mip-v-chip close="true">
+        <mip-v-avatar class="green">A</mip-v-avatar>ANZ Bank
+      </mip-v-chip>
+      <mip-v-chip outline="true" color="primary" text-color="red">Outline</mip-v-chip>
+      <mip-v-chip label="true" color="pink" text-color="white">
+          <mip-v-icon left>label</mip-v-icon>Tags
+      </mip-v-chip>
+    </div>
+    <mip-v-divider></mip-v-divider>
+
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
