@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VFooter</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="./mip/mip.css">
+    <style>
+      .section {
+      text-align: center;
+      margin-top: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true,
+                "title": "MIP Page"
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+
+    <h2>基础用法</h2>
+    <mip-v-divider></mip-v-divider>
+
+    <div class="section">
+      <mip-v-footer dark="true">
+        hello
+      </mip-v-footer>
+    </div>
+    
+    <div class="section">
+      <mip-v-footer light="true" height=60>
+        hello
+      </mip-v-footer>
+    </div>
+
+    <div class="section">
+      <mip-v-footer light="true" app="true" fixed="true" height=60>
+        hello
+      </mip-v-footer>
+    </div>
+
+    <div class="section">
+      <mip-v-footer>
+        <mip-v-btn color="info">INFO</mip-v-btn>
+        <mip-v-btn color="success">SUCCESS</mip-v-btn>
+        <mip-v-btn color="error">ERROR</mip-v-btn>
+        <mip-v-btn color="warning">WARNING</mip-v-btn>
+      </mip-v-footer>
+    </div>
+    
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

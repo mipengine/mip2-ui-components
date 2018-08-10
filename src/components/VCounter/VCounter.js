@@ -23,7 +23,7 @@ export default {
       staticClass: 'v-counter',
       class: {
         'error--text': isGreater,
-        ...Themeable.options.computed.themeClasses.call(props)
+        ...Themeable.computed.themeClasses.call(props)
       }
     }, content)
   }
