@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+    <style>
+      h2 {
+        padding: 16px;
+      }
+      body > p {
+        padding: 4px 16px;
+        margin-bottom: 0;
+      }
+    </style>
   </head>
   <body>
     <mip-shell>
@@ -30,6 +39,7 @@
     </mip-shell>
 
     <h2>基础样式</h2>
+    <p>默认引入 material-icons，也可以使用 fontawesome，但需要手动在项目中引入</p>
     <div class="group pa-2">
       <mip-v-icon>home</mip-v-icon>
       <mip-v-icon>event</mip-v-icon>
@@ -37,7 +47,7 @@
     </div>
     <mip-v-divider></mip-v-divider>
 
-    <h2>dark</h2>
+    <h2>主题 light|dark 默认 light</h2>
     <div class="group pa-2 teal">
       <mip-v-icon dark="true">folder_open</mip-v-icon>
       <mip-v-icon dark="true">widgets</mip-v-icon>
@@ -45,7 +55,7 @@
     </div>
     <mip-v-divider></mip-v-divider>
 
-    <h2>medium size</h2>
+    <h2>尺寸 medium size</h2>
     <div class="group pa-2">
       <mip-v-icon medium="true">home</mip-v-icon>
       <mip-v-icon medium="true">event</mip-v-icon>
@@ -53,7 +63,7 @@
     </div>
     <mip-v-divider></mip-v-divider>
 
-    <h2>large size</h2>
+    <h2>尺寸 large size</h2>
     <div class="group pa-2 teal">
       <mip-v-icon dark="true" large="true">folder_open</mip-v-icon>
       <mip-v-icon dark="true" large="true">widgets</mip-v-icon>
@@ -61,7 +71,7 @@
     </div>
     <mip-v-divider></mip-v-divider>
 
-    <h2>x-large size</h2>
+    <h2>尺寸 x-large size</h2>
     <div class="group pa-2">
       <mip-v-icon x-large="true">home</mip-v-icon>
       <mip-v-icon x-large="true">event</mip-v-icon>
@@ -73,6 +83,7 @@
     <div class="group pa-2">
       <mip-v-icon x-large="true" color="teal darken-2">info</mip-v-icon>
     </div>
+    <mip-v-divider></mip-v-divider>
 
     <script src="./mip/mip.js"></script>
     <script src="/dev/main.js"></script>

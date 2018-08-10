@@ -39,11 +39,62 @@
     </mip-shell>
 
     <h2>基础样式</h2>
-    <p>栅格结构：container -> layout -> flex</p>
+    <p>栅格结构：container -> layout -> flex，其中 flex 和 layout 可以互相嵌套</p>
     <p>响应式断点定义如下：</p>
     <div class="mb-5 v-card"><div class="v-table__overflow"><table class="v-table"><caption class="mt-3"><strong>Material Design Viewport Breakpoints</strong></caption><thead><tr class="text-xs-left"><th>Device</th><th>Code</th><th>Types</th><th>Range</th></tr></thead><tbody><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">phone_iphone</i><span>Extra small</span></td><td><strong>xs</strong></td><td>small to large handset</td><td>&lt; 600px</td></tr><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">tablet</i><span>Small</span></td><td><strong>sm</strong></td><td>small to medium tablet</td><td>600px &gt; &lt; 960px</td></tr><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">laptop</i><span>Medium</span></td><td><strong>md</strong></td><td>large tablet to laptop</td><td>960px &gt; &lt; 1264*</td></tr><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">desktop_windows</i><span>Large</span></td><td><strong>lg</strong></td><td>desktop</td><td>1264 &gt; &lt; 1904px*</td></tr><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">tv</i><span>Extra large</span></td><td><strong>xl</strong></td><td>4k and ultra-wides</td><td>&gt; 1904px*</td></tr></tbody><tfoot><tr><td colspan="4" class="text-xs-center"><small><em class="grey--text">* -16px on Desktop</em></small></td></tr></tfoot></table></div></div>
-    <h2>栅格尺寸</h2>
-    <p>.flex.xs1</p>
+    
+    <h2>container 可以调整基础间距</h2>
+    <p>例如 .container.grid-list-md 下间距为 8px，而 .container.grid-list-xs 下为 2px</p>
+    <div class="container grid-list-md text-xs-center">
+      <div class="layout row wrap">
+        <div class="flex xs12">
+          <div class="v-card theme--dark primary">
+            <div class="v-card__text px-0">12</div>
+          </div>
+        </div>
+        <div class="flex xs6">
+          <div class="v-card theme--dark secondary">
+            <div class="v-card__text px-0">6</div>
+          </div>
+        </div>
+        <div class="flex xs6">
+          <div class="v-card theme--dark secondary">
+            <div class="v-card__text px-0">6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mip-v-divider></mip-v-divider>
+
+    <h2>layout 可以调整排列方向</h2>
+    <p>例如 .layout.row .layout.column</p>
+    <div class="container grid-list-md text-xs-center">
+      <div class="layout row wrap">
+        <div class="flex xs6">
+          <div class="layout column wrap">
+            <div class="flex">
+              <div class="v-card theme--dark primary">
+                <div class="v-card__text px-0">6</div>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="v-card theme--dark primary">
+                <div class="v-card__text px-0">6</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex xs6">
+          <div class="v-card theme--dark primary">
+            <div class="v-card__text px-0">Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonLorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidon</div>
+          </div>
+        </div>
+      </div>
+      <div class="layout column wrap"></div>
+    </div>
+
+    <h2>flex 栅格尺寸</h2>
+    <p>定义在 flex 上分成 12 等份，例如 .flex.xs1 .flex.md2 .flex.lg6。可以同时定义多个适应不同屏幕宽度</p>
     <div class="container grid-list-xs text-xs-center">
       <div class="layout row wrap">
         <div class="flex xs12">
@@ -160,130 +211,13 @@
     </div>
     <mip-v-divider></mip-v-divider>
 
-    <h2>调整间距 grid-list-{断点}</h2>
-    <p>.container.grid-list-md</p>
-    <div class="container grid-list-md text-xs-center">
-      <div class="layout row wrap">
-        <div class="flex xs12">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">12</div>
-          </div>
-        </div>
-        <div class="flex xs6">
-          <div class="v-card theme--dark secondary">
-            <div class="v-card__text px-0">6</div>
-          </div>
-        </div>
-        <div class="flex xs6">
-          <div class="v-card theme--dark secondary">
-            <div class="v-card__text px-0">6</div>
-          </div>
-        </div>
-        <div class="flex xs4">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">4</div>
-          </div>
-        </div>
-        <div class="flex xs4">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">4</div>
-          </div>
-        </div>
-        <div class="flex xs4">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">4</div>
-          </div>
-        </div>
-        <div class="flex xs3">
-          <div class="v-card theme--dark secondary">
-            <div class="v-card__text px-0">3</div>
-          </div>
-        </div>
-        <div class="flex xs3">
-          <div class="v-card theme--dark secondary">
-            <div class="v-card__text px-0">3</div>
-          </div>
-        </div>
-        <div class="flex xs3">
-          <div class="v-card theme--dark secondary">
-            <div class="v-card__text px-0">3</div>
-          </div>
-        </div>
-        <div class="flex xs3">
-          <div class="v-card theme--dark secondary">
-            <div class="v-card__text px-0">3</div>
-          </div>
-        </div>
-        <div class="flex xs2">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">2</div>
-          </div>
-        </div>
-        <div class="flex xs2">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">2</div>
-          </div>
-        </div>
-        <div class="flex xs2">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">2</div>
-          </div>
-        </div>
-        <div class="flex xs2">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">2</div>
-          </div>
-        </div>
-        <div class="flex xs2">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">2</div>
-          </div>
-        </div>
-        <div class="flex xs2">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">2</div>
-          </div>
-        </div>
-        <div class="flex xs1">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">1</div>
-          </div>
-        </div>
-        <div class="flex xs1">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">1</div>
-          </div>
-        </div>
-        <div class="flex xs1">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">1</div>
-          </div>
-        </div>
-        <div class="flex xs1">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">1</div>
-          </div>
-        </div>
-        <div class="flex xs1">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">1</div>
-          </div>
-        </div>
-        <div class="flex xs1">
-          <div class="v-card theme--dark primary">
-            <div class="v-card__text px-0">1</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <mip-v-divider></mip-v-divider>
-
-    <h2>偏移 offset-{断点}{偏移量}</h2>
-    <p>.flex.offset-xs1</p>
+    <h2>flex 偏移</h2>
+    <p>定义在 flex 上，例如 .flex.offset-xs1 .flex.offset-md2</p>
     <div class="container grid-list-xl text-xs-center"><div class="layout row wrap"><div class="flex xs10 offset-xs1"><div class="v-card theme--dark purple"><div class="v-card__text">xs10 offset-xs1</div></div></div><div class="flex xs7 offset-xs5 offset-md2 offset-lg5"><div class="v-card theme--dark secondary"><div class="v-card__text">xs7 offset-(xs5 | md2 | lg5)</div></div></div><div class="flex xs12 sm5 md3"><div class="v-card theme--dark primary"><div class="v-card__text">(xs12 | sm5 | md3)</div></div></div><div class="flex xs12 sm5 md5 offset-xs0 offset-lg2"><div class="v-card theme--dark green"><div class="v-card__text">(xs12 | sm5 | md5) offset-(xs0 | lg2)</div></div></div></div></div>
     <mip-v-divider></mip-v-divider>
 
-    <h2>文本对齐 text-{断点}-{方向}</h2>
+    <h2>文本对齐</h2>
+    <p>例如 大尺寸屏幕上右对齐.p.text-lg-right 小尺寸屏幕居中.p.text-xs-center</p>
     <div class="container">
       <p class="text-lg-right">Right align on large viewport sizes</p>
       <p class="text-md-center">Center align on medium viewport sizes</p>
