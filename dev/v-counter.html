@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VCounter</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="./mip/mip.css">
+    <style>
+    .avatar-size-input {
+      margin: 10px;
+      padding-left: 10px;
+      line-height: 40px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+    }
+
+    .section {
+      text-align: center;
+      margin-top: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true,
+                "title": "MIP Page"
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <h2>基础样式</h2>
+    <mip-v-divider></mip-v-divider>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        "value": 1
+      }
+      </script>
+    </mip-data>
+
+    <mip-v-btn on="tap:MIP.setData({value: m.value+1})" color="primary">Value + 1</mip-v-btn>
+    <mip-v-btn on="tap:MIP.setData({value: m.value-1})" color="primary">Value - 1</mip-v-btn>
+    <input m-bind:value="value" class="avatar-size-input" />
+    <div class="section">
+      <mip-v-counter
+        m-bind:value="value"
+        max=5
+      >
+      </mip-v-counter>
+
+    </div>
+
+    <div class="section">
+      <mip-v-counter
+        m-bind:value="value"
+        max=1
+      >
+      </mip-v-counter>
+    </div>
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
