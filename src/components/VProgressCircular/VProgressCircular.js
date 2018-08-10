@@ -16,7 +16,8 @@ export default mixins(Colorable).extend({
       type: [Number, String],
       default: 32
     },
-    width: {
+    // width 会和 MIP CustomElement 属性冲突，需要更换一个属性名
+    lineWidth: {
       type: Number,
       default: 4
     },
@@ -26,6 +27,9 @@ export default mixins(Colorable).extend({
     }
   },
   computed: {
+    width () {
+      return this.lineWidth
+    },
     calculatedSize () {
       return Number(this.size) + (this.button ? 8 : 0)
     },

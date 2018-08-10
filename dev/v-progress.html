@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VProgress</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./mip/mip.css">
+    <style>
+      h2 {
+        padding: 16px;
+      }
+      body > p {
+        padding: 4px 16px;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        "value1": 20,
+        "value2": 100,
+        "line_indeterminate": true
+      }
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <mip-v-progress-circular m-bind:value="value1"></mip-v-progress-circular>
+    <mip-v-progress-circular m-bind:value="value2"></mip-v-progress-circular>
+
+    <h2>颜色 & 运动</h2>
+    <mip-v-progress-circular m-bind:value="value2" indeterminate></mip-v-progress-circular>
+    <mip-v-progress-circular m-bind:value="value2" indeterminate color="primary"></mip-v-progress-circular>
+    <mip-v-progress-circular m-bind:value="value2" indeterminate color="red"></mip-v-progress-circular>
+    <mip-v-progress-circular m-bind:value="value2" indeterminate color="green"></mip-v-progress-circular>
+    
+    <h2>大小 & 线条宽度</h2>
+    <p>大小 size，线条宽度 line-width</p>
+    <mip-v-progress-circular m-bind:value="value2" indeterminate color="primary" size="70" line-width="7"></mip-v-progress-circular>
+
+    <h2>进度条</h2>
+    <mip-v-progress-linear m-bind:indeterminate="line_indeterminate"></mip-v-progress-linear>
+
+    <h2>圆环</h2>
+    <mip-v-progress-circular
+      rotate="360"
+      size="100"
+      line-width="15"
+      m-bind:value="value1"
+      color="teal"
+    >
+      <span m-text="value1"></span>
+    </mip-v-progress-circular>
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
