@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VDialog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./mip/mip.css">
+    <style>
+      h2 {
+        padding: 16px;
+      }
+      body > p {
+        padding: 4px 16px;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        "show": false,
+        "show2": false,
+        "show3": false
+      }
+      </script>
+    </mip-data>
+
+    <h2>目前只能通过按钮关闭，点击蒙层不行</h2>
+    <p>https://github.com/mipengine/mip2/issues/162</p>
+
+    <mip-v-btn outline large fab color="indigo"
+      on="tap:MIP.setData({show:true})">
+      <mip-v-icon>edit</mip-v-icon>
+    </mip-v-btn>
+
+    <mip-v-dialog
+      m-bind:value="show"
+      max-width="290">
+      <div class="v-card">
+        <div class="v-card__title headline">Use Google's location service?</div>
+        <div class="v-card__text">
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+        </div>
+        <div class="v-card__actions">
+          <div class="spacer"></div>
+          <mip-v-btn outline large fab color="indigo"
+            on="tap:MIP.setData({show:false})">
+            <mip-v-icon>close</mip-v-icon>
+          </mip-v-btn>
+        </div>
+      </div>
+    </mip-v-dialog>
+
+    <h2>可滚动</h2>
+    <mip-v-btn outline large fab color="indigo"
+      on="tap:MIP.setData({show2:true})">
+      <mip-v-icon>edit</mip-v-icon>
+    </mip-v-btn>
+
+    <mip-v-dialog
+      m-bind:value="show2"
+      scrollable
+      max-width="290">
+      <div class="v-card">
+        <div class="v-card__title headline">Use Google's location service?</div>
+        <div class="v-card__text" style="height: 300px;">
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+        </div>
+        <div class="v-card__actions">
+          <div class="spacer"></div>
+          <mip-v-btn outline large fab color="indigo"
+            on="tap:MIP.setData({show2:false})">
+            <mip-v-icon>close</mip-v-icon>
+          </mip-v-btn>
+        </div>
+      </div>
+    </mip-v-dialog>
+
+    <h2>Loading 效果</h2>
+    <p>使用 hide-overlay 隐藏蒙层</p>
+    <p>使用 persistent 点击对话框外部不能使其关闭</p>
+    <mip-v-btn outline large fab color="indigo"
+      on="tap:MIP.setData({show3:true})">
+      <mip-v-icon>edit</mip-v-icon>
+    </mip-v-btn>
+
+    <mip-v-dialog
+      m-bind:value="show3"
+      hide-overlay
+      persistent
+      max-width="290">
+      <div class="v-card">
+        <div class="v-card__text">
+          Loading...
+        </div>
+      </div>
+    </mip-v-dialog>
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

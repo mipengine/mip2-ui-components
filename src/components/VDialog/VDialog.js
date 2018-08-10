@@ -142,7 +142,7 @@ export default {
       }, { name: 'show', value: this.isActive }],
       on: {
         click: e => {
-          e.stopPropagation()
+          // e.stopPropagation()
         }
       }
     }

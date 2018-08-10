@@ -5,7 +5,7 @@ export function factory (prop = 'value', event = 'input') {
     name: 'Toggleable',
     model: { prop, event },
     props: {
-      [prop]: { required: false }
+      [prop]: { required: false, type: Boolean }
     },
     data () {
       return {
