@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VParallax</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+      <script type="application/json">
+      {
+        show: true
+      }
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <mip-v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"></mip-v-parallax>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>内容伴随</h2>
+    <mip-v-parallax
+      dark
+      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+    >
+      <mip-v-layout
+        align-center
+        column
+        justify-center
+      >
+        <h1 class="display-2 font-weight-thin mb-3">Vuetify.js</h1>
+        <h4 class="subheading">Build your application today!</h4>
+      </mip-v-layout>
+    </mip-v-parallax>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
