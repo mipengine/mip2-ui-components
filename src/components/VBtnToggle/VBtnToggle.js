@@ -57,7 +57,9 @@ export default mixins(ButtonGroup, Themeable).extend({
       const item = this.getValue(i)
       if (!this.multiple) {
         if (this.mandatory && this.inputValue === item) return
-        this.$emit('change', this.inputValue === item ? null : item)
+        const nextValue = this.inputValue === item ? null : item;
+        this.$emit('change', nextValue)
+        this.$emit('update:inputValue', nextValue)
         return
       }
       const items = this.inputValue.slice()
@@ -69,6 +71,7 @@ export default mixins(ButtonGroup, Themeable).extend({
         items.push(item)
       }
       this.$emit('change', items)
+      this.$emit('update:inputValue', items)
     },
     updateAllValues () {
       if (!this.multiple) return

@@ -32,6 +32,11 @@
       <script type="application/json">
       {
         "toggle_exclusive": 2,
+        "toggle_multiple": [0, 1, 2],
+        "toggle_none": null,
+        "toggle_one": 0,
+        "text": "center",
+        "icon": "justify",
         "show_alert": "true",
         "alert_type": "warning",
         "alert_dismissible": "true",
@@ -67,18 +72,104 @@
     ></mip-v-overflow-btn> -->
 
 
-    <!-- btn-toggle 的 change 事件在这里拿不到参数 -->
-    <mip-v-btn-toggle m-bind:input-value="toggle_exclusive">
-      <mip-v-btn flat on="tap:MIP.setData({'toggle_exclusive': 0})">
+    <h2>按钮切换</h2>
+
+    <h4>Exclusive</h4>
+    <mip-v-btn-toggle m-bind:input-value.sync="toggle_exclusive">
+      <mip-v-btn flat>
         <mip-v-icon>format_align_left</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn flat on="tap:MIP.setData({'toggle_exclusive': 1})">
+      <mip-v-btn flat>
         <mip-v-icon>format_align_center</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn flat on="tap:MIP.setData({'toggle_exclusive': 2})">
+      <mip-v-btn flat>
         <mip-v-icon>format_align_right</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn flat on="tap:MIP.setData({'toggle_exclusive': 3})">
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_justify</mip-v-icon>
+      </mip-v-btn>
+    </mip-v-btn-toggle>
+
+    <h4>Multiple</h4>
+    <mip-v-btn-toggle m-bind:input-value.sync="toggle_multiple" multiple>
+      <mip-v-btn flat>
+        <mip-v-icon>format_bold</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_italic</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_underlined</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_color_fill</mip-v-icon>
+      </mip-v-btn>
+    </mip-v-btn-toggle>
+
+    <h4>No Options Selected</h4>
+    <mip-v-btn-toggle m-bind:input-value.sync="toggle_none">
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_left</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_center</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_right</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_justify</mip-v-icon>
+      </mip-v-btn>
+    </mip-v-btn-toggle>
+
+    <h4>Mandatory</h4>
+    <mip-v-btn-toggle m-bind:input-value.sync="toggle_one" mandatory>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_left</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_center</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_right</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat>
+        <mip-v-icon>format_align_justify</mip-v-icon>
+      </mip-v-btn>
+    </mip-v-btn-toggle>
+
+    <h4>Text Options</h4>
+    <mip-v-btn-toggle m-bind:input-value.sync="text">
+      <mip-v-btn flat value="left">
+        Left
+      </mip-v-btn>
+      <mip-v-btn flat value="center">
+        Center
+      </mip-v-btn>
+      <mip-v-btn flat value="right">
+        Right
+      </mip-v-btn>
+      <mip-v-btn flat value="justify">
+        Justify
+      </mip-v-btn>
+    </mip-v-btn-toggle>
+
+    <h4>Text &amp; Icon Options</h4>
+    <mip-v-btn-toggle m-bind:input-value.sync="icon">
+      <mip-v-btn flat value="left">
+        <span>Left</span>
+        <mip-v-icon>format_align_left</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat value="center">
+        <span>Center</span>
+        <mip-v-icon>format_align_center</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat value="right">
+        <span>Right</span>
+        <mip-v-icon>format_align_right</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat value="justify">
+        <span>Justify</span>
         <mip-v-icon>format_align_justify</mip-v-icon>
       </mip-v-btn>
     </mip-v-btn-toggle>
