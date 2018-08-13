@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VBadge</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+    <style mip-custom>
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+      <script type="application/json">
+      {
+        show: true
+      }
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <div class="container">
+      <mip-v-badge left>
+        <span slot="badge">6</span>
+        <mip-v-icon
+          large
+          color="grey lighten-1"
+        >
+          shopping_cart
+        </mip-v-icon>
+      </mip-v-badge>
+      <mip-v-badge color="red">
+        <span slot="badge">!</span>
+        <mip-v-icon
+          large
+          color="grey"
+        >
+          mail
+        </mip-v-icon>
+      </mip-v-badge>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>重叠</h2>
+    <div class="container">
+      <mip-v-badge
+        color="purple"
+        left
+        overlap
+      >
+        <mip-v-icon
+          slot="badge"
+          dark
+          small
+        >
+          done
+        </mip-v-icon>
+        <mip-v-icon
+          color="grey lighten-1"
+          large
+        >
+          account_circle
+        </mip-v-icon>
+      </mip-v-badge>
+
+      <mip-v-badge
+        overlap
+        color="orange"
+      >
+        <mip-v-icon
+          slot="badge"
+          dark
+          small
+        >
+          notifications
+        </mip-v-icon>
+        <mip-v-icon
+          large
+          color="grey darken-1"
+        >
+          account_box
+        </mip-v-icon>
+      </mip-v-badge>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>内联</h2>
+    <div class="container">
+      <mip-v-badge left>
+        <span slot="badge">2</span>
+        <span>Examples</span>
+      </mip-v-badge>
+
+      &nbsp;&nbsp;
+
+      <mip-v-badge color="green">
+        <mip-v-icon slot="badge" dark small>list</mip-v-icon>
+        <span>Lists</span>
+      </mip-v-badge>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>图标</h2>
+    <div class="container">
+      <mip-v-badge left color="purple">
+        <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
+        <span>
+          MDI icon
+        </span>
+      </mip-v-badge>
+
+      &nbsp;&nbsp;
+
+      <mip-v-badge color="orange">
+        <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>
+        <span>
+          Font Awesome icon
+        </span>
+      </mip-v-badge>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>可见性</h2>
+    <div class="container">
+      <mip-v-btn
+        color="indigo"
+        class="white--text"
+        on="tap:MIP.setData({ show: !m.show })"
+      >
+        Toggle
+      </mip-v-btn>
+    </div>
+
+    <div class="container">
+      <mip-v-badge
+        m-bind:value="show"
+        color="cyan"
+        left
+      >
+        <span slot="badge">6</span>
+        <mip-v-icon
+          large
+          color="grey lighten-1"
+        >
+          shopping_cart
+        </mip-v-icon>
+      </mip-v-badge>
+
+      <mip-v-badge
+        m-bind:value="show"
+        color="purple"
+      >
+        <span slot="badge">6</span>
+        <mip-v-icon large color="grey">
+          mail
+        </mip-v-icon>
+      </mip-v-badge>
+    </div>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
