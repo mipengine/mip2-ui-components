@@ -79,14 +79,18 @@ export default {
       const width = this.$el && this.$el.parentNode ? this.$el.parentNode.clientWidth : window.innerWidth
       this.maxButtons = Math.floor((width - 96) / 42)
     },
+    updateValue(value) {
+      this.$emit('input', value)
+      this.$emit('update:value', value)
+    },
     next (e) {
       e.preventDefault()
-      this.$emit('input', this.value + 1)
+      this.updateValue(this.value + 1)
       this.$emit('next')
     },
     previous (e) {
       e.preventDefault()
-      this.$emit('input', this.value - 1)
+      this.updateValue(this.value - 1)
       this.$emit('previous')
     },
     range (from, to) {
@@ -113,7 +117,7 @@ export default {
           'v-pagination__item--active': true
         }) : {},
         on: {
-          click: () => this.$emit('input', i)
+          click: this.updateValue.bind(this, i)
         }
       }, [i])
     },
