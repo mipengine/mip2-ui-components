@@ -21,7 +21,6 @@ VCardActions.install = function install (Vue) {
   Vue.component(VCardActions.name, VCardActions)
 }
 VCardText.install = function install (Vue) {
-  debugger
   Vue.component(VCardText.name, VCardText)
 }
 
