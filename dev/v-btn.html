@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+    <style mip-custom>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
   </head>
   <body>
     <mip-shell>
@@ -36,41 +42,90 @@
         "toggle_none": null,
         "toggle_one": 0,
         "text": "center",
-        "icon": "justify",
-        "show_alert": "true",
-        "alert_type": "warning",
-        "alert_dismissible": "true",
-        "dropdown_font": ["Arial", "Calibri", "Courier", "Verdana"]
+        "icon": "justify"
       }
       </script>
     </mip-data>
 
     <h2>基础样式</h2>
-    <mip-v-btn color="info">INFO</mip-v-btn>
-    <mip-v-btn color="success">SUCCESS</mip-v-btn>
-    <mip-v-btn color="error">ERROR</mip-v-btn>
-    <mip-v-btn color="warning">WARNING</mip-v-btn>
-    <mip-v-btn color="info" small="true">INFO</mip-v-btn>
-    <mip-v-btn color="info" large="true">INFO</mip-v-btn>
-    <mip-v-btn depressed="true" color="info">INFO</mip-v-btn>
-    <mip-v-btn color="info" large="true" fab="true">INFO</mip-v-btn>
-    <mip-v-btn fab="true" dark="true" small="true" color="pink">
-      <mip-v-icon dark="true">favorite</mip-v-icon>
-    </mip-v-btn>
-    <mip-v-btn outline="true" large="true" fab="true" color="indigo"
-      on="tap:MIP.setData({alert_type:'success'})">
-      <mip-v-icon>edit</mip-v-icon>
-    </mip-v-btn>
+    <div class="container">
+      <mip-v-btn color="success">Success</mip-v-btn>
+      <mip-v-btn color="error">Error</mip-v-btn>
+      <mip-v-btn color="warning">Warning</mip-v-btn>
+      <mip-v-btn color="info">Info</mip-v-btn>
+    </div>
 
     <mip-v-divider></mip-v-divider>
 
-    <h2>按钮下拉菜单</h2>
-    <!-- <mip-v-overflow-btn
-      m-bind:items="dropdown_font"
-      label="Overflow Btn"
-      target="#dropdown-example"
-    ></mip-v-overflow-btn> -->
+    <h2>扁平</h2>
+    <div class="container">
+      <mip-v-btn flat small>Normal</mip-v-btn>
+      <mip-v-btn flat small color="primary">Primary</mip-v-btn>
+      <mip-v-btn flat small color="error">Error</mip-v-btn>
+      <mip-v-btn flat small disabled>Disabled</mip-v-btn>
+    </div>
+    <div class="container">
+      <mip-v-btn flat>Normal</mip-v-btn>
+      <mip-v-btn flat color="primary">Primary</mip-v-btn>
+      <mip-v-btn flat color="error">Error</mip-v-btn>
+      <mip-v-btn flat disabled>Disabled</mip-v-btn>
+    </div>
+    <div class="container">
+      <mip-v-btn flat large>Normal</mip-v-btn>
+      <mip-v-btn flat large color="primary">Primary</mip-v-btn>
+      <mip-v-btn flat large color="error">Error</mip-v-btn>
+      <mip-v-btn flat large disabled>Disabled</mip-v-btn>
+    </div>
 
+    <mip-v-divider></mip-v-divider>
+
+    <h2>凸起</h2>
+    <div class="container">
+      <mip-v-btn small>Normal</mip-v-btn>
+      <mip-v-btn small color="primary">Primary</mip-v-btn>
+      <mip-v-btn small color="error">Error</mip-v-btn>
+      <mip-v-btn small disabled>Disabled</mip-v-btn>
+    </div>
+    <div class="container">
+      <mip-v-btn>Normal</mip-v-btn>
+      <mip-v-btn color="primary">Primary</mip-v-btn>
+      <mip-v-btn color="error">Error</mip-v-btn>
+      <mip-v-btn disabled>Disabled</mip-v-btn>
+    </div>
+    <div class="container">
+      <mip-v-btn large>Normal</mip-v-btn>
+      <mip-v-btn large color="primary">Primary</mip-v-btn>
+      <mip-v-btn large color="error">Error</mip-v-btn>
+      <mip-v-btn large disabled>Disabled</mip-v-btn>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>凹陷</h2>
+    <div class="container">
+      <mip-v-btn depressed small>Normal</mip-v-btn>
+      <mip-v-btn depressed small color="primary">Primary</mip-v-btn>
+      <mip-v-btn depressed small color="error">Error</mip-v-btn>
+      <mip-v-btn depressed small disabled>Disabled</mip-v-btn>
+    </div>
+    <div class="container">
+      <mip-v-btn depressed>Normal</mip-v-btn>
+      <mip-v-btn depressed color="primary">Primary</mip-v-btn>
+      <mip-v-btn depressed color="error">Error</mip-v-btn>
+      <mip-v-btn depressed disabled>Disabled</mip-v-btn>
+    </div>
+    <div class="container">
+      <mip-v-btn depressed large>Normal</mip-v-btn>
+      <mip-v-btn depressed large color="primary">Primary</mip-v-btn>
+      <mip-v-btn depressed large color="error">Error</mip-v-btn>
+      <mip-v-btn depressed large disabled>Disabled</mip-v-btn>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <!-- <h2>按钮下拉菜单</h2> -->
+
+    <mip-v-divider></mip-v-divider>
 
     <h2>按钮切换</h2>
 
@@ -174,9 +229,117 @@
       </mip-v-btn>
     </mip-v-btn-toggle>
 
-    <mip-v-alert m-bind:value="show_alert" m-bind:type="alert_type" m-bind:dismissible="alert_dismissible">
-      This is a success alert.
-    </mip-v-alert>
+    <mip-v-divider></mip-v-divider>
+
+    <h2>图标</h2>
+
+    <h4>Normal</h4>
+    <div class="container">
+      <mip-v-btn flat icon color="pink">
+        <mip-v-icon>favorite</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat icon color="indigo">
+        <mip-v-icon>star</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat icon color="green">
+        <mip-v-icon>cached</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn flat icon color="deep-orange">
+        <mip-v-icon>thumb_up</mip-v-icon>
+      </mip-v-btn>
+    </div>
+
+    <h4>Disabled</h4>
+    <div class="container">
+      <mip-v-btn icon disabled>
+        <mip-v-icon>favorite</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn icon disabled>
+        <mip-v-icon>star</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn icon disabled>
+        <mip-v-icon>cached</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn icon disabled>
+        <mip-v-icon>thumb_up</mip-v-icon>
+      </mip-v-btn>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>浮动</h2>
+    <div class="container">
+      <mip-v-btn fab dark small color="primary">
+        <mip-v-icon dark>remove</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn fab dark small color="pink">
+        <mip-v-icon dark>favorite</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn fab dark color="indigo">
+        <mip-v-icon dark>add</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn fab dark color="teal">
+        <mip-v-icon dark>list</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn fab dark large color="cyan">
+        <mip-v-icon dark>edit</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn fab dark large color="purple">
+        <mip-v-icon dark>android</mip-v-icon>
+      </mip-v-btn>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <!-- <h2>加载器</h2> -->
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>大小</h2>
+    <div class="container">
+      <mip-v-btn small color="primary" dark>Small Button</mip-v-btn>
+      <mip-v-btn color="warning" dark>Normal Button</mip-v-btn>
+      <mip-v-btn color="error" dark large>Large Button</mip-v-btn>
+    </div>
+    <div class="container">
+      <mip-v-btn color="primary" fab small dark>
+        <mip-v-icon>edit</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn color="warning" fab dark>
+        <mip-v-icon>account_circle</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn color="error" fab large dark>
+        <mip-v-icon>alarm</mip-v-icon>
+      </mip-v-btn>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>轮廓</h2>
+    <div class="container">
+      <mip-v-btn outline color="indigo">Outline Button</mip-v-btn>
+      <mip-v-btn outline fab color="teal">
+        <mip-v-icon>list</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn outline large fab color="indigo">
+        <mip-v-icon>edit</mip-v-icon>
+      </mip-v-btn>
+    </div>
+
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>圆角</h2>
+    <mip-v-btn round color="primary" dark>Rounded Button</mip-v-btn>
+
+    <mip-v-divider></mip-v-divider>
+
+    <h2>块状</h2>
+    <mip-v-btn block color="secondary" dark>Block Button</mip-v-btn>
+
+    <mip-v-divider></mip-v-divider>
+
+    <!-- <h2>In toolbar</h2> -->
 
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
