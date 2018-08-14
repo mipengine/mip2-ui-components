@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VCard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./mip/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+
+    <h2>基础样式</h2>
+    <div class="group pa-2">
+      <mip-v-card>
+        <mip-v-card-media
+          src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+          height="200px"
+        ></mip-v-card-media>
+
+        <mip-v-card-title primary-title>
+          <div>
+          <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
+          <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
+          </div>
+        </mip-v-card-title>
+
+        <mip-v-card-actions>
+          <mip-v-btn color="orange">Share</mip-v-btn>
+          <mip-v-btn flat color="orange">Explore</mip-v-btn>
+        </mip-v-card-actions>
+      </mip-v-card>
+    </div>
+    <div class="group pa-2">
+      <mip-v-card dark ripple tile height="400" hover>
+        <mip-v-card-media
+          src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+          height="200px"
+        ></mip-v-card-media>
+  
+        <mip-v-card-title primary-title>
+          <div>
+          <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
+          <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
+          </div>
+        </mip-v-card-title>
+  
+        <mip-v-card-actions>
+          <mip-v-btn flat color="orange">Share</mip-v-btn>
+          <mip-v-btn flat color="orange">Explore</mip-v-btn>
+        </mip-v-card-actions>
+      </mip-v-card>
+    </div>
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

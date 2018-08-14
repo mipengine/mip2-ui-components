@@ -40,10 +40,11 @@
     </mip-shell>
     <a class="ui-link" href="./grid.html" mip-link>Grid</a>
     <a class="ui-link" href="./elevation.html" mip-link>Elevation</a>
-
     <a class="ui-link" href="./v-avatar.html" mip-link>VAvatar</a>
     <a class="ui-link" href="./v-badge.html" mip-link>VBadge</a>
     <a class="ui-link" href="./v-btn.html" mip-link>VBtn</a>
+    <a class="ui-link" href="./v-card.html" mip-link>VCard</a>
+    <a class="ui-link" href="./v-chip.html" mip-link>VChip</a>
     <a class="ui-link" href="./v-counter.html" mip-link>VCounter</a>
     <a class="ui-link" href="./v-data-table.html" mip-link>VDataTable</a>
     <a class="ui-link" href="./v-dialog.html" mip-link>VDialog</a>
@@ -56,7 +57,35 @@
     <a class="ui-link" href="./v-progress.html" mip-link>VProgress</a>
     <a class="ui-link" href="./v-slider.html" mip-link>VSlider</a>
     <a class="ui-link" href="./v-toolbar.html" mip-link>VToolbar</a>
-    <a class="ui-link" href="./v-chip.html" mip-link>VChip</a>
+    <mip-v-btn color="info">INFO</mip-v-btn>
+    <mip-v-btn color="success">SUCCESS</mip-v-btn>
+    <mip-v-btn color="error">ERROR</mip-v-btn>
+    <mip-v-btn color="warning">WARNING</mip-v-btn>
+    <mip-v-btn color="info" small="true">INFO</mip-v-btn>
+    <mip-v-btn color="info" large="true">INFO</mip-v-btn>
+    <mip-v-btn color="info" large="true" fab="true">INFO</mip-v-btn>
+    <mip-v-btn fab="true" dark="true" small="true" color="pink">
+      <mip-v-icon dark="true">favorite</mip-v-icon>
+    </mip-v-btn>
+    <mip-v-btn outline="true" large="true" fab="true" color="indigo"
+      on="tap:MIP.setData({alert_type:'success'})">
+      <mip-v-icon>edit</mip-v-icon>
+    </mip-v-btn>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        "show_alert": true,
+        "alert_type": "warning",
+        "alert_dismissible": true,
+        "dialog": false
+      }
+      </script>
+    </mip-data>
+
+    <mip-v-alert m-bind:value="show_alert" m-bind:type="alert_type" m-bind:dismissible="alert_dismissible">
+      This is a success alert.
+    </mip-v-alert>
 
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>

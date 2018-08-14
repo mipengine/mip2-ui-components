@@ -1,7 +1,5 @@
-// Types
-import Vue from 'vue'
 /* @vue/component */
-export default Vue.extend({
+export default {
   name: 'VCardTitle',
   functional: true,
   props: {
@@ -12,4 +10,4 @@ export default Vue.extend({
     if (props.primaryTitle) data.staticClass += ' v-card__title--primary'
     return h('div', data, children)
   }
-})
+}

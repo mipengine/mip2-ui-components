@@ -1,9 +1,8 @@
 // Helpers
 import { convertToUnit } from '../../util/helpers'
-// Types
-import Vue from 'vue'
+
 /* @vue/component */
-export default Vue.extend({
+export default {
   name: 'VCardMedia',
   props: {
     contain: Boolean,
@@ -23,6 +22,7 @@ export default Vue.extend({
       },
       on: this.$listeners
     }
+
     const children = []
     if (this.src) {
       children.push(h('div', {
@@ -37,4 +37,4 @@ export default Vue.extend({
     }, this.$slots.default))
     return h('div', data, children)
   }
-})
+}
