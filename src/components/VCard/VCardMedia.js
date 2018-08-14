@@ -1,6 +1,5 @@
 // Helpers
 import { convertToUnit } from '../../util/helpers'
-
 /* @vue/component */
 export default {
   name: 'VCardMedia',

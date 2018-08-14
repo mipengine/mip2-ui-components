@@ -17,7 +17,11 @@ export function factory (prop = 'value', event = 'input') {
         this.isActive = !!val
       },
       isActive (val) {
-        !!val !== this[prop] && this.$emit(event, val)
+        if (!!val === this[prop]) {
+          return
+        }
+        this.$emit(event, val)
+        this.$emit(`update:${prop}`, val)
       }
     }
   }

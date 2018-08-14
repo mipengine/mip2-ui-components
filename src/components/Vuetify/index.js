@@ -55,9 +55,10 @@ const Vuetify = {
       document.body.setAttribute('data-app', '')
 
       Object.values(opts.components).forEach(component => {
-        if (component.name && component.name.startsWith('V')) {
-          window.MIP.registerVueCustomElement(`mip-${camelCaseToDash(component.name)}`, component)
+        if (!component.name || !component.name.toLowerCase().startsWith('v')) {
+          return
         }
+        MIP.registerVueCustomElement(`mip-${camelCaseToDash(component.name)}`, component)
       })
     }
   },
