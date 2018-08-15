@@ -27,7 +27,7 @@ export default mixins(Colorable, Themeable, Toggleable).extend({
   },
   computed: {
     classes () {
-      const classes = this.addBackgroundColorClassChecks({
+      let classes = this.addBackgroundColorClassChecks({
         'v-chip--disabled': this.disabled,
         'v-chip--selected': this.selected && !this.disabled,
         'v-chip--label': this.label,
@@ -37,6 +37,8 @@ export default mixins(Colorable, Themeable, Toggleable).extend({
         'theme--light': this.light,
         'theme--dark': this.dark
       })
+      classes = fixClass(this.$element, classes)
+
       return this.textColor || this.outline ? this.addTextColorClassChecks(classes, this.textColor || this.color) : classes
     }
   },
@@ -62,7 +64,6 @@ export default mixins(Colorable, Themeable, Toggleable).extend({
     }
   },
   render (h) {
-    this.classes = fixClass(this.$element, this.classes)
     const data = {
       staticClass: 'v-chip',
       'class': this.classes,
