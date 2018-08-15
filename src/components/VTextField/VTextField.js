@@ -143,7 +143,7 @@ export default {
       if (val) {
         this.initialValue = this.lazyValue
       } else if (this.initialValue !== this.lazyValue) {
-        this.$emit('change', this.lazyValue)
+        this.$emit('update:value', this.lazyValue)
       }
     },
     value (val) {
@@ -153,7 +153,7 @@ export default {
         // Emit when the externally set value was modified internally
         String(val) !== this.lazyValue && this.$nextTick(() => {
           this.$refs.input.value = masked
-          this.$emit('input', this.lazyValue)
+          this.$emit('update:value', this.lazyValue)
         })
       } else this.lazyValue = val
     }
@@ -322,7 +322,7 @@ export default {
     },
     onKeyDown (e) {
       this.internalChange = true
-      if (e.keyCode === keyCodes.enter) this.$emit('change', this.internalValue)
+      if (e.keyCode === keyCodes.enter) this.$emit('update:value', this.internalValue)
       this.$emit('keydown', e)
     },
     onMouseDown (e) {

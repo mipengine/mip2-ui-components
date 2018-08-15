@@ -4,8 +4,10 @@ import VAutocomplete from '../VAutocomplete'
 import VCombobox from '../VCombobox'
 import rebuildSlots from '../../util/rebuildFunctionalSlots'
 import { deprecate } from '../../util/console'
+import { camelize } from '../../util/helpers'
 /* @vue/component */
 const wrapper = {
+  name: VSelect.name,
   functional: true,
   $_wrapperFor: VSelect,
   props: {
@@ -23,29 +25,46 @@ const wrapper = {
     /** @deprecated */
     overflow: Boolean,
     /** @deprecated */
-    segmented: Boolean
+    segmented: Boolean,
+    value: null
   },
-  render (h, { props, data, slots, parent }) {
+  render (h, { props, data, slots, parent, listeners = {} }) {
     delete data.model
     const children = rebuildSlots(slots(), h)
+    const rootEl = parent.$el.parentElement
     if (props.autocomplete) {
-      deprecate('<v-select autocomplete>', '<v-autocomplete>', wrapper, parent)
+      deprecate('<mip-v-select autocomplete>', '<mip-v-autocomplete>', wrapper, parent)
     }
     if (props.combobox) {
-      deprecate('<v-select combobox>', '<v-combobox>', wrapper, parent)
+      deprecate('<mip-v-select combobox>', '<mip-v-combobox>', wrapper, parent)
     }
     if (props.tags) {
-      deprecate('<v-select tags>', '<v-combobox multiple>', wrapper, parent)
+      deprecate('<mip-v-select tags>', '<mip-v-combobox multiple>', wrapper, parent)
     }
     if (props.overflow) {
-      deprecate('<v-select overflow>', '<v-overflow-btn>', wrapper, parent)
+      deprecate('<mip-v-select overflow>', '<mip-v-overflow-btn>', wrapper, parent)
     }
     if (props.segmented) {
-      deprecate('<v-select segmented>', '<v-overflow-btn segmented>', wrapper, parent)
+      deprecate('<mip-v-select segmented>', '<mip-v-overflow-btn segmented>', wrapper, parent)
     }
     if (props.editable) {
-      deprecate('<v-select editable>', '<v-overflow-btn editable>', wrapper, parent)
+      deprecate('<mip-v-select editable>', '<mip-v-overflow-btn editable>', wrapper, parent)
     }
+    data.on = Object.assign({}, data.on || {}, listeners)
+    data.attrs = data.attrs || {}
+    let attributes = rootEl.attributes;
+    [].slice.call(attributes).forEach(attr => {
+      let name = camelize(attr.name)
+      if (/(class|style)/.test(name)) {
+        return
+      }
+      data.props[name] = (
+        rootEl.attrValues &&
+        rootEl.attrValues[name] &&
+        rootEl.attrValues[name].val) ||
+        props[name] ||
+        attr.value
+    })
     if (props.combobox || props.tags) {
       data.attrs.multiple = props.tags
       return h(VCombobox, data, children)

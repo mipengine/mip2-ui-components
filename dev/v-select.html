@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VSelect</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="./mip/mip.css">
+    <style mip-custom>
+    </style>
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true,
+                "title": "MIP Page"
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <h2>基础样式</h2>
+    <mip-v-divider></mip-v-divider>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        items: ['foo', 'bar', 'fizz', 'buzz'],
+        value: ['foo', 'bar', 'fizz', 'buzz'],
+        e1: 'Florida',
+        e2: 'Texas',
+        e3: [],
+        e4: [],
+        select: { state: 'Florida', abbr: 'FL' },
+        states: [
+          'Alabama', 'Alaska', 'American Samoa', 'Arizona',
+          'Arkansas', 'California', 'Colorado', 'Connecticut',
+          'Delaware', 'District of Columbia', 'Federated States of Micronesia',
+          'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho',
+          'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+          'Louisiana', 'Maine', 'Marshall Islands', 'Maryland',
+          'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+          'Missouri', 'Montana', 'Nebraska', 'Nevada',
+          'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
+          'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio',
+          'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico',
+          'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
+          'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia',
+          'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+        ]
+      }
+      </script>
+    </mip-data>
+
+    <h2>亮色主题</h2>
+    <mip-v-flex xs12 sm6>
+      <mip-v-select
+        m-bind:value.sync="value"
+        m-bind:items="items"
+        attach
+        chips
+        label="Chips"
+        multiple
+      ></mip-v-select>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-select
+        m-bind:value.sync="value"
+        m-bind:items="items"
+        box
+        chips
+        label="Chips"
+        multiple
+      ></mip-v-select>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-select
+        m-bind:value.sync="value"
+        m-bind:items="items"
+        chips
+        label="Chips"
+        multiple
+        outline
+      ></mip-v-select>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-select
+        m-bind:value.sync="value"
+        m-bind:items="items"
+        chips
+        label="Chips"
+        multiple
+        solo
+      ></mip-v-select>
+    </mip-v-flex>
+
+    <mip-v-card>
+      <h2>图标</h2>
+      <h3>prepend-icon</h3>
+      <mip-v-flex xs6>
+        <mip-v-select
+          m-bind:items="states"
+          m-bind:value.sync="e1"
+          auto
+          label="Select"
+          hide-details
+          prepend-icon="map"
+          single-line
+        ></mip-v-select>
+      </mip-v-flex>
+      <h3>append-icon</h3>
+      <mip-v-flex xs6>
+        <mip-v-select
+          m-bind:items="states"
+          m-bind:value.sync="e2"
+          append-outer-icon="map"
+          auto
+          hide-details
+          label="Select"
+          single-line
+        ></mip-v-select>
+      </mip-v-flex>
+    </mip-v-card>
+
+    <mip-v-card>
+      <h2>多选</h2>
+      <h3>Multiple with persistent hint</h3>
+      <mip-v-select
+        m-bind:items="states"
+        m-bind:value.sync="e3"
+        label="Select"
+        multiple
+        max-height="400"
+        hint="Pick your favorite states"
+        persistent-hint
+      ></mip-v-select>
+      <h3>Multiple (Chips) with persistent hint</h3>
+      <mip-v-select
+        m-bind:items="states"
+        m-bind:value.sync="e4"
+        label="Select"
+        multiple
+        chips
+        hint="What are the target regions"
+        persistent-hint
+      ></mip-v-select>
+    </mip-v-card>
+
+    <mip-v-card>
+      <h2>自定义选项的文本和值</h2>
+      <mip-v-select
+        m-bind:hint="`${select.state}, ${select.abbr}`"
+        m-bind:items="states"
+        m-bind:value.sync="select"
+        item-text="state"
+        item-value="abbr"
+        label="Select"
+        persistent-hint
+        return-object
+        single-line
+      ></mip-v-select>
+    </mip-v-card>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

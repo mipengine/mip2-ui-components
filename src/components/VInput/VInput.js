@@ -110,7 +110,7 @@ export default {
     // TODO: remove shouldDeprecate (2.0), used for clearIcon
     genIcon (type, cb, shouldDeprecate = true) {
       const icon = this[`${type}Icon`]
-      const eventName = `click:${kebabCase(type)}`
+      const eventName = `click-${kebabCase(type)}`
       cb = cb || this[`${type}IconCb`]
       if (shouldDeprecate && type && cb) {
         deprecate(`:${type}-icon-cb`, `@${eventName}`, this)

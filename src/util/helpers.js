@@ -1,3 +1,5 @@
+const camelizeRE = /-+(\w)/g
+export const camelize = (str) => str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : '')
 export function createSimpleFunctional (c, el = 'div', name) {
   return {
     name: name || c.replace(/__/g, '-'),

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VTextField</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="./mip/mip.css">
+    <style mip-custom>
+    </style>
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true,
+                "title": "MIP Page"
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <h2>基础样式</h2>
+    <mip-v-divider></mip-v-divider>
+
+    <h2>单行亮色主题</h2>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Regular"
+        single-line
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Solo"
+        single-line
+        solo
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Box"
+        single-line
+        box
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Outline"
+        single-line
+        outline
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <h2>Disabled and readonly</h2>
+    <mip-v-flex xs12 sm6>
+      <v-text-field
+        value="John Doe"
+        label="Regular"
+        disabled
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        value="John Doe"
+        label="Regular"
+        readonly
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        value="John Doe"
+        label="Solo"
+        solo
+        disabled
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        value="John Doe"
+        label="Solo"
+        solo
+        readonly
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        value="John Doe"
+        label="Box"
+        box
+        disabled
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        value="John Doe"
+        label="Box"
+        box
+        readonly
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        value="John Doe"
+        label="Outline"
+        outline
+        disabled
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        value="John Doe"
+        label="Outline"
+        outline
+        readonly
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <h2>带图标</h2>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Prepend"
+        prepend-icon="place"
+      ></mip-v-text-field>
+      <mip-v-text-field
+        label="Append"
+        append-icon="place"
+      ></mip-v-text-field>
+      <mip-v-text-field
+        label="Append outer"
+        append-outer-icon="place"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        solo
+        label="Prepend"
+        prepend-icon="place"
+      ></mip-v-text-field>
+      <mip-v-text-field
+        solo
+        label="Append"
+        append-icon="place"
+      ></mip-v-text-field>
+      <mip-v-text-field
+        solo
+        label="Append outer"
+        append-outer-icon="place"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        box
+        label="Prepend"
+        prepend-icon="place"
+      ></mip-v-text-field>
+      <mip-v-text-field
+        box
+        label="Append"
+        append-icon="place"
+      ></mip-v-text-field>
+      <mip-v-text-field
+        box
+        label="Append outer"
+        append-outer-icon="place"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        outline
+        label="Prepend"
+        prepend-icon="place"
+      ></mip-v-text-field>
+      <mip-v-text-field
+        outline
+        label="Append"
+        append-icon="place"
+      ></mip-v-text-field>
+      <mip-v-text-field
+        outline
+        label="Append outer"
+        append-outer-icon="place"
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        message1: 'Hey!',
+        message2: 'Hey!',
+        message3: 'Hey!',
+        message4: 'Hey!',
+        password: 'Password',
+        show: false,
+        message: 'Hey!',
+        marker: true,
+        iconIndex: 0,
+        icons: [
+          'mdi-emoticon',
+          'mdi-emoticon-cool',
+          'mdi-emoticon-dead',
+          'mdi-emoticon-excited',
+          'mdi-emoticon-happy',
+          'mdi-emoticon-neutral',
+          'mdi-emoticon-sad',
+          'mdi-emoticon-tongue'
+        ]
+      }
+      </script>
+    </mip-data>
+
+    <h2>Clearable</h2>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="message1"
+        label="Regular"
+        clearable
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="message2"
+        solo
+        label="Solo"
+        clearable
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="message3"
+        box
+        label="Box"
+        clearable
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="message4"
+        label="Outline"
+        outline
+        clearable
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <!-- <h2>Icon events</h2>
+    <mip-v-flex xs12>
+      <mip-v-text-field
+        m-bind:value.sync="message"
+        m-bind:append-icon="marker ? 'mdi-map-marker' : 'mdi-map-marker-off'"
+        m-bind:append-outer-icon="message ? 'mdi-send' : 'mdi-microphone'"
+        m-bind:prepend-icon="icons[iconIndex]"
+        box
+        clear-icon="mdi-close-circle"
+        clearable
+        label="Message"
+        type="text"
+        @click:append="toggleMarker"
+        @click:append-outer="sendMessage"
+        @click:prepend="changeIcon"
+        @click:clear="clearMessage"
+      ></mipv-text-field>
+    </mip-v-flex> -->
+
+    <mip-data>
+      <script type="application/json">
+      {
+        title: 'Preliminary report',
+        description: 'California is a state in the western United States'
+      }
+      </script>
+    </mip-data>
+
+    <h2>字符计数器</h2>
+    <!-- :rules="rules" -->
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="title"
+        counter="25"
+        hint="This field uses counter prop"
+        label="Regular"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="description"
+        counter
+        maxlength="25"
+        hint="This field uses maxlength attribute"
+        label="Limit exceeded"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="title"
+        counter="25"
+        box
+        label="Box"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="title"
+        counter="25"
+        label="Outline"
+        outline
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        show1: false,
+        show2: true,
+        show3: false,
+        show4: false,
+        password: 'Password'
+      }
+      </script>
+    </mip-data>
+
+    <h2>密码输入</h2>
+    <!-- :rules="[rules.required, rules.min]" -->
+    <!-- @click:append="show1 = !show1" -->
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="password"
+        m-bind:append-icon="show1 ? 'visibility_off' : 'visibility'"
+        m-bind:type="show1 ? 'text' : 'password'"
+        name="input-10-1"
+        label="Normal with hint text"
+        hint="At least 8 characters"
+        counter
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:append-icon="show2 ? 'visibility_off' : 'visibility'"
+        m-bind:type="show2 ? 'text' : 'password'"
+        name="input-10-2"
+        label="Visible"
+        hint="At least 8 characters"
+        value="wqfasds"
+        class="input-group--focused"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:append-icon="show3 ? 'visibility_off' : 'visibility'"
+        m-bind:type="show3 ? 'text' : 'password'"
+        name="input-10-2"
+        label="Not visible"
+        hint="At least 8 characters"
+        value="wqfasds"
+        class="input-group--focused"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:append-icon="show4 ? 'visibility_off' : 'visibility'"
+        m-bind:type="show4 ? 'text' : 'password'"
+        name="input-10-2"
+        label="Error"
+        hint="At least 8 characters"
+        value="Pa"
+        error
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <h2>验证</h2>
+
+    <h2>带计数器的全宽文本框</h2>
+
+    <h2>提示文本</h2>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Your product or service"
+        value="Grocery delivery"
+        hint="For example, flowers or used cars"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Your landing page"
+        hint="www.example.com/page"
+        persistent-hint
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Your product or service"
+        value="Grocery delivery"
+        hint="For example, flowers or used cars"
+        box
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Your landing page"
+        hint="www.example.com/page"
+        persistent-hint
+        box
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Your product or service"
+        value="Grocery delivery"
+        hint="For example, flowers or used cars"
+        outline
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        label="Your landing page"
+        hint="www.example.com/page"
+        persistent-hint
+        outline
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <h2>前缀和后缀</h2>
+    <h3>Prefix for dollar currency</h3>
+    <mip-v-flex xs8>
+      <mip-v-text-field
+        label="Amount"
+        value="10.00"
+        prefix="$"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <h3>Suffix for weight</h3>
+    <mip-v-flex xs8>
+      <mip-v-text-field
+        label="Weight"
+        value="28.00"
+        suffix="lbs"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <h3>Suffix for email domain</h3>
+    <mip-v-flex xs8>
+      <mip-v-text-field
+        label="Email address"
+        value="example"
+        suffix="@gmail.com"
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <h3>Suffix for time zone</h3>
+    <mip-v-flex xs8>
+      <mip-v-text-field
+        label="Label Text"
+        value="12:30:00"
+        type="time"
+        suffix="PST"
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <h2>自定义验证</h2>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        first: 'John',
+        last: 'Doe'
+      }
+      </script>
+    </mip-data>
+    
+    <h2>盒子样式</h2>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="first"
+        label="First Name"
+        box
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="last"
+        label="Last Name"
+        box
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <h2>Solo style</h2>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="first"
+        label="First Name"
+        solo
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="last"
+        label="Last Name"
+        solo-inverted
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <h2>Outline style</h2>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="first"
+        label="First Name"
+        outline
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="last"
+        label="Last Name"
+        outline
+      ></mip-v-text-field>
+    </mip-v-flex>
+
+    <h2>自定义颜色</h2>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        mask: 'John',
+        maskValue: 'Doe'
+      }
+      </script>
+    </mip-data>
+
+    <h2>掩码</h2>
+    <mip-v-card>
+      <mip-v-card-text>
+        <mip-v-text-field
+          m-bind:value.sync="mask"
+          label="Mask"
+        ></mip-v-text-field>
+      </mip-v-card-text>
+      <mip-v-card-text>
+        <mip-v-text-field 
+          m-bind:mask="mask"
+          m-bind:value.sync="maskValue"
+          label="Value"
+        ></mip-v-text-field>
+      </mip-v-card-text>
+    </mip-v-card>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
