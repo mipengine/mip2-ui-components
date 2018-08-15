@@ -45,7 +45,42 @@
       }
       </script>
     </mip-shell>
+    <mip-data>
+      <script type="application/json">
+        {
+          slider: 56,
+          min: 16,
+          max: 256,
+          tile: false
+        }
+      </script>
+    </mip-data>
     <h2>基础样式</h2>
+    <div class="container grid-list-md">
+      <div class="layout row wrap">
+        <div class="flex xs12 sm6 md4">
+          <mip-v-slider
+            m-bind:value.sync="slider"
+          ></mip-v-slider>
+
+          <mip-v-switch
+            m-bind:value.sync="tile"
+            label="Tile"
+          ></mip-v-switch>
+        </div>
+
+        <div class="flex xs12 sm6 md8 align-center justify-center layout text-xs-center">
+          <mip-v-avatar
+            tile="tile"
+            size="slider"
+            color="grey lighten-4"
+          >
+            <img src="https://avatars2.githubusercontent.com/u/4878697?s=400&v=4" alt="avatar">
+          </mip-v-avatar>
+        </div>
+      </div>
+    </div>
+
     <mip-v-divider></mip-v-divider>
 
     <mip-data>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <link rel="stylesheet" href="./mip/mip.css">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
   </head>
   <body>
     <mip-shell>
@@ -34,7 +34,7 @@
     <mip-data>
       <script type="application/json">
       {
-        "slider": "45"
+        "slider": 45
       }
       </script>
     </mip-data>
@@ -42,9 +42,7 @@
     <h2>基础样式</h2>
     <mip-v-slider m-bind:value="slider"></mip-v-slider>
 
-    <mip-v-divider></mip-v-divider>
-
-    <script src="./mip/mip.js"></script>
+    <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
   </body>
 </html>
