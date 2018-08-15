@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VTooltip</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./mip/mip.css">
+    <style>
+      h2 {
+        padding: 16px;
+      }
+      body > p {
+        padding: 4px 16px;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+
+    <mip-data>
+      <script type="application/json">
+      {
+        "show": false
+      }
+      </script>
+    </mip-data>
+
+    <h2>方向</h2>
+    <mip-v-tooltip top>
+      <mip-v-btn
+        slot="activator"
+        color="primary"
+        dark>Top
+      </mip-v-btn>
+      <span>Tooltip</span>
+    </mip-v-tooltip>
+    <mip-v-tooltip right>
+      <mip-v-btn
+        slot="activator"
+        color="primary"
+        dark>Right
+      </mip-v-btn>
+      <span>Tooltip</span>
+    </mip-v-tooltip>
+    <mip-v-tooltip bottom>
+      <mip-v-btn
+        slot="activator"
+        color="primary"
+        dark>Bottom
+      </mip-v-btn>
+      <span>Tooltip</span>
+    </mip-v-tooltip>
+    <mip-v-tooltip left>
+      <mip-v-btn
+        slot="activator"
+        color="primary"
+        dark>Left
+      </mip-v-btn>
+      <span>Tooltip</span>
+    </mip-v-tooltip>
+
+    <mip-v-tooltip bottom>
+      <mip-v-icon
+        slot="activator"
+        color="primary"
+        dark>home
+      </mip-v-icon>
+      <span>Tooltip</span>
+    </mip-v-tooltip>
+
+    <mip-v-tooltip bottom>
+      <span slot="activator">text...</span>
+      <span>Tooltip</span>
+    </mip-v-tooltip>
+
+    <h2>控制是否可见</h2>
+    <p>`show`</p>
+    <mip-v-btn
+      color="primary"
+      dark
+      on="tap:MIP.setData({show:!m.show})"
+      >edit
+    </mip-v-btn>
+    <mip-v-tooltip bottom m-bind:value.sync="show">
+      <mip-v-btn
+        slot="activator"
+        color="primary"
+        dark>Bottom
+      </mip-v-btn>
+      <span>Tooltip</span>
+    </mip-v-tooltip>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

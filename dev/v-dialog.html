@@ -96,7 +96,7 @@
     </mip-v-btn>
 
     <mip-v-dialog
-      m-bind:value="show2"
+      m-bind:value.sync="show2"
       scrollable
       max-width="290">
       <div class="v-card">
@@ -140,7 +140,7 @@
       </div>
     </mip-v-dialog>
 
-    <script src="./mip/mip.js"></script>
+    <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
   </body>
 </html>

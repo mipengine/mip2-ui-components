@@ -21,6 +21,10 @@ button($material)
 theme(button, "v-btn")
 
 /** Base Spec */
+// override default `.mip-layout-container`
+mip-v-btn.mip-layout-container
+  display: inline-flex
+
 .v-btn
   align-items: center
   border-radius: $button-border-radius
