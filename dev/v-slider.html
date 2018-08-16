@@ -34,13 +34,39 @@
     <mip-data>
       <script type="application/json">
       {
-        "slider": 45
+        "slider": 45,
+        "volume": 10
       }
       </script>
     </mip-data>
 
     <h2>基础样式</h2>
-    <mip-v-slider m-bind:value="slider"></mip-v-slider>
+    <mip-v-slider m-bind:value.sync="slider"></mip-v-slider>
+    <mip-v-slider
+      disabled
+      label="Disabled"
+      inverse-label
+      value="30"
+    ></mip-v-slider>
+    <mip-v-slider
+      label="Readonly"
+      readonly
+      value="30"
+    ></mip-v-slider>
+    <mip-v-slider
+      m-bind:value.sync="slider"
+      label="Label"
+    ></mip-v-slider>
+    <mip-v-slider
+      m-bind:value.sync="slider"
+      inverse-label
+      label="Inverse label"
+    ></mip-v-slider>
+    <mip-v-slider
+      m-bind:value.sync="volume"
+      append-icon="volume_up"
+      prepend-icon="volume_down"
+    ></mip-v-slider>
 
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
