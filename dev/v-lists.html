@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VLists</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./mip/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+        <script type="application/json">
+          {
+            "avatar": 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+            "title": 'Brunch this weekend?',
+            "subtitle": "I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
+          }
+        </script>
+      </mip-data>
+
+    <h2>基础样式</h2>
+    <div class="group pa-2">
+    <div class="layout row wrap">
+        <div class="flex xs12">
+        <mip-v-card>
+          <mip-v-toolbar color="cyan" dark>
+            <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
+
+            <mip-v-toolbar-title>Inbox</mip-v-toolbar-title>
+
+            <mip-v-spacer></mip-v-spacer>
+
+            <mip-v-btn icon>
+              <mip-v-icon>search</mip-v-icon>
+            </mip-v-btn>
+          </mip-v-toolbar>
+
+          <mip-v-list two-line>
+              <mip-v-subheader>
+                Subheader Messages
+              </mip-v-subheader>
+              <mip-v-list-tile
+                avatar
+                href="#"
+                ripple
+              >
+                <mip-v-list-tile-avatar>
+                  <mip-img m-bind:src="avatar"/>
+                </mip-v-list-tile-avatar>
+
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="subtitle"></mip-v-list-tile-sub-title>
+                </mip-v-list-tile-content>
+              </mip-v-list-tile>
+
+              <mip-v-divider inset></mip-v-divider>
+              <mip-v-subheader>
+                Subheader Messages
+              </mip-v-subheader>
+              <mip-v-list-tile
+                avatar
+                ripple
+                href="#"
+              >
+                <mip-v-list-tile-avatar>
+                  <mip-img m-bind:src="avatar"/>
+                </mip-v-list-tile-avatar>
+
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="subtitle"></mip-v-list-tile-sub-title>
+                </mip-v-list-tile-content>
+
+                <mip-v-list-tile-action>
+                  <mip-v-list-tile-action-text>15min</mip-v-list-tile-action-text>
+                  <mip-v-btn icon ripple>
+                    <mip-v-icon color="grey lighten-1">info</mip-v-icon>
+                  </mip-v-btn>
+                </mip-v-list-tile-action>
+              </mip-v-list-tile>
+
+              <mip-v-divider></mip-v-divider>
+              <mip-v-subheader>
+                Subheader Messages
+              </mip-v-subheader>
+              <mip-v-list-tile
+                avatar
+                ripple
+                href="#"
+              >
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="subtitle"></mip-v-list-tile-sub-title>
+                </mip-v-list-tile-content>
+
+                <mip-v-list-tile-action>
+                  <mip-v-list-tile-action-text>15min</mip-v-list-tile-action-text>
+                  <mip-v-btn icon ripple>
+                    <mip-v-icon color="grey lighten-1">info</mip-v-icon>
+                  </mip-v-btn>
+                </mip-v-list-tile-action>
+              </mip-v-list-tile>
+
+          </mip-v-list>
+        </mip-v-card>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
