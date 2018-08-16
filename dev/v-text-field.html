@@ -255,8 +255,8 @@
       ></mip-v-text-field>
     </mip-v-flex>
 
-    <!-- <h2>Icon events</h2>
-    <mip-v-flex xs12>
+    <h2>Icon events</h2>
+    <!-- <mip-v-flex xs12>
       <mip-v-text-field
         m-bind:value.sync="message"
         m-bind:append-icon="marker ? 'mdi-map-marker' : 'mdi-map-marker-off'"
@@ -381,7 +381,14 @@
 
     <h2>验证</h2>
 
-    <h2>带计数器的全宽文本框</h2>
+    <h2>全宽文本框</h2>
+    <mip-v-text-field
+      label="Subject"
+      value="Plans for the weekend"
+      single-line
+      full-width
+      hide-details
+    ></mip-v-text-field>
 
     <h2>提示文本</h2>
     <mip-v-flex xs12 sm6>
@@ -476,7 +483,6 @@
       }
       </script>
     </mip-data>
-    
     <h2>盒子样式</h2>
     <mip-v-flex xs12 sm6>
       <mip-v-text-field
@@ -525,17 +531,43 @@
       ></mip-v-text-field>
     </mip-v-flex>
 
+    <mip-data>
+      <script type="application/json">
+      {
+        form: {
+          first: '',
+          last: ''
+        }
+      }
+      </script>
+    </mip-data>
     <h2>自定义颜色</h2>
+    <!-- :rules="rules.name" -->
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="form.first"
+        color="purple darken-2"
+        label="First name"
+        required
+      ></mip-v-text-field>
+    </mip-v-flex>
+    <mip-v-flex xs12 sm6>
+      <mip-v-text-field
+        m-bind:value.sync="form.last"
+        color="blue darken-2"
+        label="Last name"
+        required
+      ></mip-v-text-field>
+    </mip-v-flex>
 
     <mip-data>
       <script type="application/json">
       {
-        mask: 'John',
-        maskValue: 'Doe'
+        mask: 'credit-card',
+        maskValue: '4444444444444444'
       }
       </script>
     </mip-data>
-
     <h2>掩码</h2>
     <mip-v-card>
       <mip-v-card-text>
@@ -553,7 +585,46 @@
       </mip-v-card-text>
     </mip-v-card>
 
+    <mip-data>
+      <script type="application/json">
+      {
+        progressValue: '',
+        custom: true,
+        progress: '',
+        color: ''
+      }
+      </script>
+    </mip-data>
+
+    <h2>进度条</h2>
+    <mip-v-checkbox m-bind:value.sync="custom" label="Custom progress bar"></mip-v-checkbox>
+    <mip-v-text-field
+      m-bind:value.sync="progressValue"
+      color="cyan darken"
+      label="Text field"
+      placeholder="Start typing..."
+      loading
+    >
+      <mip-v-progress-linear
+        m-bind:class="{hide: !custom}"
+        slot="progress"
+        m-bind:value="progress"
+        m-bind:color="color"
+        height="7"
+      ></mip-v-progress-linear>
+    </mip-v-text-field>
+    <mip-script>
+      MIP.watch('progressValue', function (val) {
+        let progress = Math.min(100, val.length * 10)
+        MIP.setData({
+          progress,
+          color: ['error', 'warning', 'success'][Math.floor(progress / 40)]
+        })
+      })
+    </mip-script>
+
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
+    <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
   </body>
 </html>
