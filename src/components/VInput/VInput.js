@@ -122,10 +122,9 @@ export default {
           disabled: this.disabled,
           light: this.light
         },
-        on: !(this.$listeners[eventName] || cb) ? null : {
+        on: {
           click: e => {
             e.preventDefault()
-            e.stopPropagation()
             this.$emit(eventName, e)
             cb && cb(e)
           },
