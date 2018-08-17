@@ -120,7 +120,7 @@ export default {
         const value = this.roundValue(Math.min(Math.max(val, min), max))
         if (value === this.lazyValue) return
         this.lazyValue = value
-        this.$emit('input', value)
+        this.onInput(value)
         this.validate()
       }
     },
@@ -177,10 +177,10 @@ export default {
   },
   watch: {
     min (val) {
-      val > this.internalValue && this.$emit('input', parseFloat(val))
+      val > this.internalValue && this.onInput(parseFloat(val))
     },
     max (val) {
-      val < this.internalValue && this.$emit('input', parseFloat(val))
+      val < this.internalValue && this.onInput(parseFloat(val))
     },
     value (val) {
       this.internalValue = val
@@ -321,6 +321,10 @@ export default {
     },
     getLabel (value) {
       return this.$scopedSlots['thumb-label'] ? this.$scopedSlots['thumb-label']({ value }) : this.$createElement('span', value)
+    },
+    onInput(value) {
+      this.$emit('input', value)
+      this.$emit('update:value', value)
     },
     onBlur (e) {
       if (this.keyPressed === 2) return
