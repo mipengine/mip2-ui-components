@@ -28,13 +28,14 @@ theme(v-input, "v-input")
   margin-top: 16px // 12px for label, 16px for spec
   text-align: left
 
-  mip-v-progress-linear
-    top: calc(100% - 1px)
   mip-v-progress-linear,
   .v-progress-linear
+    top: calc(100% - 1px)
     left: 0
     margin: 0
     position: absolute
+  mip-v-progress-linear .v-progress-linear
+    top: 0
 
   input
     max-height: 32px

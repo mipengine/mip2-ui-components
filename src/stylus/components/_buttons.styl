@@ -155,7 +155,7 @@ mip-v-btn.mip-layout-container
       border-radius: 50%
 
     .v-btn__content
-      :not(:only-child)
+      :not(.hide:only-child)
         transition: $primary-transition
 
         &:first-child
@@ -175,7 +175,7 @@ mip-v-btn.mip-layout-container
 
     &.v-btn--active
       .v-btn__content
-        :not(:only-child)
+        :not(.hide:only-child)
           &:first-child
             opacity: 0
             transform: rotate(45deg)
