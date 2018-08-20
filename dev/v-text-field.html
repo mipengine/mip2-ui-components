@@ -202,26 +202,10 @@
         message1: 'Hey!',
         message2: 'Hey!',
         message3: 'Hey!',
-        message4: 'Hey!',
-        password: 'Password',
-        show: false,
-        message: 'Hey!',
-        marker: true,
-        iconIndex: 0,
-        icons: [
-          'mdi-emoticon',
-          'mdi-emoticon-cool',
-          'mdi-emoticon-dead',
-          'mdi-emoticon-excited',
-          'mdi-emoticon-happy',
-          'mdi-emoticon-neutral',
-          'mdi-emoticon-sad',
-          'mdi-emoticon-tongue'
-        ]
+        message4: 'Hey!'
       }
       </script>
     </mip-data>
-
     <h2>Clearable</h2>
     <mip-v-flex xs12 sm6>
       <mip-v-text-field
@@ -255,8 +239,31 @@
       ></mip-v-text-field>
     </mip-v-flex>
 
+    <mip-data>
+        <script type="application/json">
+        {
+          password: 'Password',
+          show: false,
+          message: 'Hey!',
+          marker: true,
+          iconIndex: 0,
+          icons: [
+            'mdi-emoticon',
+            'mdi-emoticon-cool',
+            'mdi-emoticon-dead',
+            'mdi-emoticon-excited',
+            'mdi-emoticon-happy',
+            'mdi-emoticon-neutral',
+            'mdi-emoticon-sad',
+            'mdi-emoticon-tongue'
+          ],
+          sendMessage: false,
+          changeIcon: false
+        }
+        </script>
+      </mip-data>
     <h2>Icon events</h2>
-    <!-- <mip-v-flex xs12>
+    <mip-v-flex xs12>
       <mip-v-text-field
         m-bind:value.sync="message"
         m-bind:append-icon="marker ? 'mdi-map-marker' : 'mdi-map-marker-off'"
@@ -267,12 +274,35 @@
         clearable
         label="Message"
         type="text"
-        @click:append="toggleMarker"
-        @click:append-outer="sendMessage"
-        @click:prepend="changeIcon"
-        @click:clear="clearMessage"
+        on="click-append:MIP.setData({marker: !m.marker}) 
+            click-append-outer:MIP.setData({sendMessage: true})
+            click-prepend=MIP.setData({changeIcon: true})
+            click-clear=MIP.setData({message: ''})"
       ></mipv-text-field>
-    </mip-v-flex> -->
+    </mip-v-flex>
+    <mip-script>
+      MIP.watch('sendMessage', val => {
+        MIP.setData({
+          iconIndex: 0,
+          message: '',
+          sendMessage: false
+        })
+      })
+
+      MIP.watch('changeIcon', val => {
+        if (val) {
+          let iconIndex = MIP.getData('iconIndex')
+          let icons = MIP.getData('icons')
+          console.log((iconIndex === icons.length - 1) ? 0 : ++iconIndex)
+          MIP.setData({
+            iconIndex: (iconIndex === icons.length - 1) ? 0 : ++iconIndex
+          })
+        }
+        MIP.setData({
+          changeIcon: false
+        })
+      })
+    </mip-script>
 
     <mip-data>
       <script type="application/json">
@@ -333,7 +363,6 @@
 
     <h2>密码输入</h2>
     <!-- :rules="[rules.required, rules.min]" -->
-    <!-- @click:append="show1 = !show1" -->
     <mip-v-flex xs12 sm6>
       <mip-v-text-field
         m-bind:value.sync="password"
@@ -343,6 +372,7 @@
         label="Normal with hint text"
         hint="At least 8 characters"
         counter
+        on="click-append:MIP.setData({show1: !m.show1})"
       ></mip-v-text-field>
     </mip-v-flex>
     <mip-v-flex xs12 sm6>
@@ -354,6 +384,7 @@
         hint="At least 8 characters"
         value="wqfasds"
         class="input-group--focused"
+        on="click-append:MIP.setData({show2: !m.show2})"
       ></mip-v-text-field>
     </mip-v-flex>
     <mip-v-flex xs12 sm6>
@@ -365,6 +396,7 @@
         hint="At least 8 characters"
         value="wqfasds"
         class="input-group--focused"
+        on="click-append:MIP.setData({show3: !m.show3})"
       ></mip-v-text-field>
     </mip-v-flex>
     <mip-v-flex xs12 sm6>
@@ -376,6 +408,7 @@
         hint="At least 8 characters"
         value="Pa"
         error
+        on="click-append:MIP.setData({show4: !m.show4})"
       ></mip-v-text-field>
     </mip-v-flex>
 
@@ -614,7 +647,7 @@
       ></mip-v-progress-linear>
     </mip-v-text-field>
     <mip-script>
-      MIP.watch('progressValue', function (val) {
+      MIP.watch('progressValue', val => {
         let progress = Math.min(100, val.length * 10)
         MIP.setData({
           progress,

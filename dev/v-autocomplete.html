@@ -64,7 +64,7 @@
       return-object
     ></mip-v-autocomplete>
     <mip-script>
-      MIP.watch('entries', function (val) {
+      MIP.watch('entries', val => {
         let descriptionLimit = MIP.getData('descriptionLimit')
         let items = val.map(entry => {
           const Description = entry.Description.length > descriptionLimit
@@ -77,7 +77,7 @@
         MIP.setData({items})
       })
 
-      MIP.watch('search', function (val) {
+      MIP.watch('search', val => {
         // Items have already been loaded
         if (MIP.getData('items').length > 0) return
   
@@ -220,12 +220,10 @@
       Save
     </mip-v-btn>
     <mip-script>
-      MIP.watch('toSave', () => {
+      MIP.watch('toSave', val => {
         // do sth like set-data/ajax-put
-        MIP.setData({
-          isEditing: !MIP.getData('isEditing'),
-          toSave: false
-        })
+        val && MIP.setData({isEditing: !MIP.getData('isEditing')})
+        MIP.setData({toSave: false})
       })
     </mip-script>
 
@@ -330,7 +328,7 @@
         }, 500)
       }
 
-      MIP.watch('searchVal', function (val) {
+      MIP.watch('searchVal', val => {
         val && val !== MIP.getData('select') && querySelections(val)
       })
     </mip-script>
