@@ -49,20 +49,22 @@
       </script>
     </mip-data>
     <h2>Search for Public APIs</h2>
-    <mip-v-autocomplete
-      m-bind:value.sync="model"
-      m-bind:items="items"
-      m-bind:loading="isLoading"
-      m-bind:search-input.sync="search"
-      hide-no-data
-      hide-selected
-      item-text="Description"
-      item-value="API"
-      label="Public APIs"
-      placeholder="Start typing to Search"
-      prepend-icon="mdi-database-search"
-      return-object
-    ></mip-v-autocomplete>
+    <div class="container grid-list-xl">
+      <mip-v-autocomplete
+        m-bind:value.sync="model"
+        m-bind:items="items"
+        m-bind:loading="isLoading"
+        m-bind:search-input.sync="search"
+        hide-no-data
+        hide-selected
+        item-text="Description"
+        item-value="API"
+        label="Public APIs"
+        placeholder="Start typing to Search"
+        prepend-icon="mdi-database-search"
+        return-object
+      ></mip-v-autocomplete>
+    </div>
     <mip-script>
       MIP.watch('entries', val => {
         let descriptionLimit = MIP.getData('descriptionLimit')
@@ -195,30 +197,32 @@
       </script>
     </mip-data>
     <h2>Custom filter on autocomplete</h2>
+    <div class="container grid-list-xl">
     <!-- :filter="customFilter" -->
-    <mip-v-autocomplete
-      m-bind:disabled="!isEditing"
-      m-bind:items="states"
-      color="white"
-      item-text="name"
-      label="State"
-    ></mip-v-autocomplete>
-    <mip-v-btn
-      color="purple darken-3 white--text"
-      fab
-      small
-      on="tap:MIP.setData({isEditing: !m.isEditing})"
-    >
-      <mip-v-icon m-bind:class="{hide:!isEditing}">mdi-close</mip-v-icon>
-      <mip-v-icon m-bind:class="{hide:isEditing}">mdi-pencil</mip-v-icon>
-    </mip-v-btn>
-    <mip-v-btn
-      m-bind:disabled="!isEditing"
-      color="success"
-      on="tap:MIP.setData({toSave: true})"
-    >
-      Save
-    </mip-v-btn>
+      <mip-v-autocomplete
+        m-bind:disabled="!isEditing"
+        m-bind:items="states"
+        color="white"
+        item-text="name"
+        label="State"
+      ></mip-v-autocomplete>
+      <mip-v-btn
+        color="purple darken-3 white--text"
+        fab
+        small
+        on="tap:MIP.setData({isEditing: !m.isEditing})"
+      >
+        <mip-v-icon m-bind:class="{hide:!isEditing}">mdi-close</mip-v-icon>
+        <mip-v-icon m-bind:class="{hide:isEditing}">mdi-pencil</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn
+        m-bind:disabled="!isEditing"
+        color="success"
+        on="tap:MIP.setData({toSave: true})"
+      >
+        Save
+      </mip-v-btn>
+    </div>
     <mip-script>
       MIP.watch('toSave', val => {
         // do sth like set-data/ajax-put
@@ -299,19 +303,21 @@
       </script>
     </mip-data>
     <h2>Asynchronous items</h2>
-    <mip-v-autocomplete
-      m-bind:loading="loading"
-      m-bind:items="asyncItems"
-      m-bind:search-input.sync="searchVal"
-      m-bind:value.sync="select"
-      cache-items
-      class="mx-3"
-      flat
-      hide-no-data
-      hide-details
-      label="What state are you from?"
-      solo-inverted
-    ></mip-v-autocomplete>
+    <div class="container grid-list-xl">
+      <mip-v-autocomplete
+        m-bind:loading="loading"
+        m-bind:items="asyncItems"
+        m-bind:search-input.sync="searchVal"
+        m-bind:value.sync="select"
+        cache-items
+        class="mx-3"
+        flat
+        hide-no-data
+        hide-details
+        label="What state are you from?"
+        solo-inverted
+      ></mip-v-autocomplete>
+    </div>
     <mip-script>
       function querySelections (v) {
         MIP.setData({loading: true})
@@ -333,7 +339,7 @@
       })
     </mip-script>
 
-    <h2>Advanced slots</h2>
+    <!-- <h2>Advanced slots</h2> -->
 
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
