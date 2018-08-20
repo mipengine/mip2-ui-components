@@ -64,10 +64,10 @@ export default {
       return this.hideSelected ? this.filteredItems.length - this.selectedItems.length : this.filteredItems.length
     },
     /**
-         * The range of the current input text
-         *
-         * @return {number}
-         */
+     * The range of the current input text
+     *
+     * @return {number}
+     */
     currentRange () {
       if (this.selectedItem == null) return 0
       return this.getText(this.selectedItem).toString().length
