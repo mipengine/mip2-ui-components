@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VSnackbar</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./mip/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+        <script type="application/json">
+          {
+            "snackbar": false
+          }
+        </script>
+      </mip-data>
+
+    <h2>基础样式</h2>
+    <div class="group pa-2">
+      <mip-v-snackbar m-bind:value.sync="snackbar" timeout="3000" bottom multi-line vertical>
+        出现了 snackbar 的内容，设置了 timeout 时间后，自动隐藏
+        <mip-v-btn
+          color="pink"
+          flat
+          on="tap:MIP.setData({snackbar:false})"
+        >
+          Close
+        </mip-v-btn>
+      </mip-v-snackbar>
+      <mip-v-btn
+        block
+        color="primary"
+        dark
+        on="tap:MIP.setData({snackbar:true})"
+      >
+        Show Snackbar
+      </mip-v-btn>
+    </div>
+    </div>
+
+
+    <script src="./mip/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
