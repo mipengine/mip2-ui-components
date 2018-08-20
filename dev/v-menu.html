@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vmenu</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+        <script type="application/json">
+          {
+            "text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            "showMenu": false
+          }
+        </script>
+      </mip-data>
+
+    <h2>基础样式</h2>
+    <div class="group pa-2">
+      <mip-v-menu offset-y>
+        <mip-v-btn
+          slot="activator"
+          color="primary"
+          dark
+        >
+          Dropdown
+        </mip-v-btn>
+        <mip-v-list>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
+          </mip-v-list-tile>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
+          </mip-v-list-tile>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
+          </mip-v-list-tile>
+        </mip-v-list>
+      </mip-v-menu>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+    <div class="group pa-2">
+      <h2>Hover</h2>
+      <mip-v-menu open-on-hover offset-x>
+        <mip-v-btn
+          slot="activator"
+          color="primary"
+          dark
+        >
+          Hover
+        </mip-v-btn>
+
+        <mip-v-list>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
+          </mip-v-list-tile>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
+          </mip-v-list-tile>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
+          </mip-v-list-tile>
+        </mip-v-list>
+      </mip-v-menu>
+    </div>
+
+    <div class="group pa-2">
+      <h2>Transitions</h2>
+      <mip-v-menu bottom origin="center center" transition="scale-transition">
+        <mip-v-btn
+          slot="activator"
+          color="primary"
+          dark
+        >
+          Dropdown
+        </mip-v-btn>
+        <mip-v-list>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
+          </mip-v-list-tile>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
+          </mip-v-list-tile>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
+          </mip-v-list-tile>
+        </mip-v-list>
+      </mip-v-menu>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+    <div class="group pa-2">
+      <h2>Menus with other component</h2>
+
+       <mip-v-card height="200px">
+        <mip-v-card-title class="blue white--text">
+          <span class="headline">Menu</span>
+
+          <mip-v-spacer></mip-v-spacer>
+
+          <mip-v-menu bottom left>
+            <mip-v-btn
+              slot="activator"
+              dark
+              icon
+            >
+              <mip-v-icon>more_vert</mip-v-icon>
+            </mip-v-btn>
+
+            <mip-v-list>
+              <mip-v-list-tile href="#" ripple>
+                <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
+              </mip-v-list-tile>
+              <mip-v-list-tile href="#" ripple>
+                <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
+              </mip-v-list-tile>
+              <mip-v-list-tile href="#" ripple>
+                <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
+              </mip-v-list-tile>
+            </mip-v-list>
+          </mip-v-menu>
+        </mip-v-card-title>
+
+        <mip-v-card-text>Lorem Ipsum</mip-v-card-text>
+      </mip-v-card>
+    </div>
+
+    <mip-v-divider></mip-v-divider>
+    <div class="group pa-2">
+      <h2>Absolute position</h2>
+      <mip-v-menu
+        absolute
+        offset-y
+        style="max-width: 600px"
+      >
+        <mip-v-card
+          slot="activator"
+          class="portrait"
+          img="https://cdn.vuetifyjs.com/images/cards/girl.jpg"
+          height="300"
+          width="600"
+        ></mip-v-card>
+  
+        <mip-v-list>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
+          </mip-v-list-tile>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
+          </mip-v-list-tile>
+          <mip-v-list-tile href="#" ripple>
+            <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
+          </mip-v-list-tile>
+        </mip-v-list>
+      </mip-v-menu>
+    </div>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>

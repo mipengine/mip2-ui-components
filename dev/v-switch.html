@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VSwitch</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+      <script type="application/json">
+        {
+          "switch": true,
+          "people": [],
+          "ex11": ["red", "indigo", "orange", "primary", "secondary", "success", "info", "warning", "error", "red darken-3", "indigo darken-3", "orange darken-3"]
+        }
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <mip-v-switch
+      label="Switch"
+      m-bind:input-value.sync="switch"
+    ></mip-v-switch>
+
+    <h2>数组</h2>
+    <mip-v-switch
+      m-bind:input-value.sync="people"
+      label="John"
+      value="John"
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="people"
+      label="Jacob"
+      value="Jacob"
+    ></mip-v-switch>
+
+    <h2>开关</h2>
+    <mip-v-switch
+      label="on"
+      value
+      input-value="true"
+    ></mip-v-switch>
+    <mip-v-switch
+      label="off"
+    ></mip-v-switch>
+    <mip-v-switch
+      label="on disabled"
+      value
+      input-value="true"
+      disabled
+    ></mip-v-switch>
+    <mip-v-switch
+      label="off disabled"
+      disabled
+    ></mip-v-switch>
+
+    <h2>色彩</h2>
+
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="red"
+      color="red"
+      value="red"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="red darken-3"
+      color="red darken-3"
+      value="red darken-3"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="indigo"
+      color="indigo"
+      value="indigo"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="indigo darken-3"
+      color="indigo darken-3"
+      value="indigo darken-3"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="orange"
+      color="orange"
+      value="orange"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="orange darken-3"
+      color="orange darken-3"
+      value="orange darken-3"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="primary"
+      color="primary"
+      value="primary"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="secondary"
+      color="secondary"
+      value="secondary"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="success"
+      color="success"
+      value="success"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="info"
+      color="info"
+      value="info"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="warning"
+      color="warning"
+      value="warning"
+      hide-details
+    ></mip-v-switch>
+    <mip-v-switch
+      m-bind:input-value.sync="ex11"
+      label="error"
+      color="error"
+      value="error"
+      hide-details
+    ></mip-v-switch>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
