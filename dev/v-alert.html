@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VAlert</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+      <script type="application/json">
+        {
+          "alert": true
+        }
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <mip-v-alert
+      value="true"
+      type="success"
+    >
+      This is a success alert.
+    </mip-v-alert>
+    <mip-v-alert
+      value="true"
+      type="info"
+    >
+      This is a info alert.
+    </mip-v-alert>
+    <mip-v-alert
+      value="true"
+      type="warning"
+    >
+      This is a warning alert.
+    </mip-v-alert>
+    <mip-v-alert
+      value="true"
+      type="error"
+    >
+      This is a error alert.
+    </mip-v-alert>
+
+    <h2>可关闭</h2>
+    <mip-v-alert
+      m-bind:value.sync="alert"
+      dismissible
+      type="success"
+    >
+      This is a success alert that is closable.
+    </mip-v-alert>
+
+    <h2>自定义图标/无图标</h2>
+    <mip-v-alert
+      value="true"
+      color="success"
+      icon="new_releases"
+    >
+      This is a success alert with a custom icon.
+    </mip-v-alert>
+    <mip-v-alert
+      value="true"
+      color="error"
+    >
+      This is an error alert with no icon.
+    </mip-v-alert>
+
+    <h2>过渡显示</h2>
+    <mip-v-btn
+      color="primary"
+      on="tap:MIP.setData({alert: !m.alert})"
+    >
+      Toggle
+    </mip-v-btn>
+    <mip-v-alert
+      m-bind:value="alert"
+      type="success"
+      transition="scale-transition"
+    >
+      This is a success alert.
+    </mip-v-alert>
+
+    <h2>轮廓</h2>
+    <mip-v-alert
+      value="true"
+      color="success"
+      icon="check_circle"
+      outline
+    >
+      This is a success alert.
+    </mip-v-alert>
+
+    <mip-v-alert
+      value="true"
+      color="info"
+      icon="info"
+      outline
+    >
+      This is an info alert.
+    </mip-v-alert>
+
+    <mip-v-alert
+      value="true"
+      color="warning"
+      icon="priority_high"
+      outline
+    >
+      This is a warning alert.
+    </mip-v-alert>
+
+    <mip-v-alert
+      value="true"
+      color="error"
+      icon="warning"
+      outline
+    >
+      This is a error alert.
+    </mip-v-alert>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
