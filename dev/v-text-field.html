@@ -281,8 +281,8 @@
         type="text"
         on="click-append:MIP.setData({marker: !m.marker}) 
             click-append-outer:MIP.setData({sendMessage: true})
-            click-prepend=MIP.setData({changeIcon: true})
-            click-clear=MIP.setData({message: ''})"
+            click-prepend:MIP.setData({changeIcon: true})
+            click-clear:MIP.setData({message: ''})"
       ></mipv-text-field>
     </mip-v-flex>
     <mip-script>
@@ -298,7 +298,6 @@
         if (val) {
           let iconIndex = MIP.getData('iconIndex')
           let icons = MIP.getData('icons')
-          console.log((iconIndex === icons.length - 1) ? 0 : ++iconIndex)
           MIP.setData({
             iconIndex: (iconIndex === icons.length - 1) ? 0 : ++iconIndex
           })
@@ -640,10 +639,9 @@
       }
       </script>
     </mip-data>
-
     <h2>进度条</h2>
     <div class="container grid-list-xl">
-      <mip-v-checkbox m-bind:value.sync="custom" label="Custom progress bar"></mip-v-checkbox>
+      <mip-v-checkbox m-bind:input-value.sync="custom" label="Custom progress bar"></mip-v-checkbox>
       <mip-v-text-field
         m-bind:value.sync="progressValue"
         color="cyan darken"
