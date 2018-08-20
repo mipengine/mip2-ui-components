@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VTextarea</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+      <script type="application/json">
+      {}
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <mip-v-textarea
+      name="input-7-1"
+      label="Default style"
+      value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+      hint="Hint text"
+    ></mip-v-textarea>
+    <mip-v-textarea
+      solo
+      name="input-7-2"
+      label="Solo textarea"
+      value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+    ></mip-v-textarea>
+    <mip-v-textarea
+      box
+      name="input-7-3"
+      label="Box textarea"
+      value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+    ></mip-v-textarea>
+    <mip-v-textarea
+      outline
+      name="input-7-4"
+      label="Outline textarea"
+      value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+    ></mip-v-textarea>
+
+    <h2>Auto grow</h2>
+    <mip-v-textarea
+      name="input-7-5"
+      box
+      label="Label"
+      auto-grow
+      value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
+    ></mip-v-textarea>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="/dev/main.js"></script>
+  </body>
+</html>
