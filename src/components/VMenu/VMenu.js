@@ -49,7 +49,7 @@ export default {
       default: 'top left'
     },
     transition: {
-      type: [Boolean, String],
+      type: [String, Boolean],
       default: 'v-menu-transition'
     }
   },
