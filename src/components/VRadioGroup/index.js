@@ -1,9 +1,10 @@
+import { createComponent } from '../../util/helpers'
+
 import VRadioGroup from './VRadioGroup'
 import VRadio from './VRadio'
+
+const components = [VRadioGroup, VRadio]
+
+components.forEach(createComponent)
+
 export { VRadioGroup, VRadio }
-/* istanbul ignore next */
-VRadioGroup.install = function install (Vue) {
-  Vue.component(VRadioGroup.name, VRadioGroup)
-  Vue.component(VRadio.name, VRadio)
-}
-export default VRadioGroup

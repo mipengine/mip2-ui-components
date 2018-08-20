@@ -115,6 +115,7 @@ export default {
       this.validate(true, input)
       this.lazyValue = input
       this.$emit('change', input)
+      this.$emit('update:inputValue', input)
     },
     onFocus () {
       this.isFocused = true
