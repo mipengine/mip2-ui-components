@@ -50,6 +50,7 @@ export default mixins(Colorable, Themeable, Toggleable).extend({
           click: e => {
             e.stopPropagation()
             this.$emit('input', false)
+            this.$emit('update:value', false)
           }
         }
       }
