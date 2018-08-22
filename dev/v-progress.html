@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="./mip/mip.css">
+    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
     <style>
       h2 {
         padding: 16px;
@@ -42,6 +42,7 @@
       <script type="application/json">
       {
         "value": 0,
+        "valueDeterminate": 50,
         "value1": 20,
         "value2": 100,
         "line_indeterminate": true
@@ -99,6 +100,7 @@
     ></mip-v-progress-circular>
 
     <h2>圆环环绕</h2>
+    <mip-v-btn on="click:MIP.setData({value: (m.value + 10) % 100})">Progress</mip-v-btn>
     <mip-v-progress-circular
       rotate="360"
       size="100"
@@ -107,21 +109,57 @@
       color="teal"
     ></mip-v-progress-circular>
 
-    <h2>进度条</h2>
-    <mip-v-progress-linear m-bind:indeterminate="line_indeterminate"></mip-v-progress-linear>
+    <h2>定制线条</h2>
+    <mip-v-progress-linear m-bind:value.sync="valueDeterminate"></mip-v-progress-linear>
 
-    <h2>圆环</h2>
-    <mip-v-progress-circular
-      rotate="360"
-      size="100"
-      line-width="15"
-      m-bind:value="value1"
-      color="teal"
-    >
-      <span m-text="value1"></span>
-    </mip-v-progress-circular>
+    <h2>不定线条</h2>
+    <mip-v-progress-linear indeterminate="true"></mip-v-progress-linear>
 
-    <script src="./mip/mip.js"></script>
+    <h2>自定义高度和上下文色彩</h2>
+    <mip-v-progress-linear
+      color="secondary"
+      line-height="2"
+      value="15"
+    ></mip-v-progress-linear>
+    <mip-v-progress-linear
+      color="success"
+      line-height="5"
+      value="30"
+    ></mip-v-progress-linear>
+    <mip-v-progress-linear
+      color="info"
+      line-height="10"
+      value="45"
+    ></mip-v-progress-linear>
+    <mip-v-progress-linear
+      color="warning"
+      line-height="15"
+      value="60"
+    ></mip-v-progress-linear>
+    <mip-v-progress-linear
+      color="error"
+      line-height="20"
+      value="75"
+    ></mip-v-progress-linear>
+
+    <h2>自定义色彩</h2>
+    <mip-v-progress-linear
+      background-color="pink lighten-3"
+      color="pink lighten-1"
+      value="15"
+    ></mip-v-progress-linear>
+    <mip-v-progress-linear
+      background-color="blue-grey"
+      color="lime"
+      value="30"
+    ></mip-v-progress-linear>
+    <mip-v-progress-linear
+      background-color="success"
+      color="error"
+      value="45"
+    ></mip-v-progress-linear>
+
+    <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
   </body>
 </html>
