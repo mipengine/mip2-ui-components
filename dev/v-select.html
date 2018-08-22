@@ -40,32 +40,10 @@
       <script type="application/json">
       {
         items: ['foo', 'bar', 'fizz', 'buzz'],
-        value: ['foo', 'bar', 'fizz', 'buzz'],
-        e1: 'Florida',
-        e2: 'Texas',
-        e3: [],
-        e4: [],
-        select: { state: 'Florida', abbr: 'FL' },
-        states: [
-          'Alabama', 'Alaska', 'American Samoa', 'Arizona',
-          'Arkansas', 'California', 'Colorado', 'Connecticut',
-          'Delaware', 'District of Columbia', 'Federated States of Micronesia',
-          'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho',
-          'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
-          'Louisiana', 'Maine', 'Marshall Islands', 'Maryland',
-          'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-          'Missouri', 'Montana', 'Nebraska', 'Nevada',
-          'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
-          'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio',
-          'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico',
-          'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
-          'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia',
-          'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-        ]
+        value: ['foo', 'bar', 'fizz', 'buzz']
       }
       </script>
     </mip-data>
-
     <h2>亮色主题</h2>
     <div class="container grid-list-xl">
       <div class="layout row wrap">
@@ -108,6 +86,30 @@
       </div>
     </div>
 
+    <mip-data>
+        <script type="application/json">
+        {
+          e1: 'Florida',
+          e2: 'Texas',
+          states: [
+            'Alabama', 'Alaska', 'American Samoa', 'Arizona',
+            'Arkansas', 'California', 'Colorado', 'Connecticut',
+            'Delaware', 'District of Columbia', 'Federated States of Micronesia',
+            'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho',
+            'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+            'Louisiana', 'Maine', 'Marshall Islands', 'Maryland',
+            'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+            'Missouri', 'Montana', 'Nebraska', 'Nevada',
+            'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
+            'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio',
+            'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico',
+            'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
+            'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia',
+            'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+          ]
+        }
+        </script>
+      </mip-data>
     <h2>图标</h2>
     <div class="container grid-list-xl">
       <div class="layout row wrap">
@@ -138,6 +140,14 @@
       </div>
     </div>
 
+    <mip-data>
+        <script type="application/json">
+        {
+          e3: [],
+          e4: []
+        }
+        </script>
+      </mip-data>
     <h2>多选</h2>
     <div class="container grid-list-xl">
       <div class="layout row wrap">
@@ -168,11 +178,25 @@
       </div>
     </div>
 
+    <mip-data>
+        <script type="application/json">
+        {
+          select: { state: 'Florida', abbr: 'FL' },
+          items2: [
+            { state: 'Florida', abbr: 'FL' },
+            { state: 'Georgia', abbr: 'GA' },
+            { state: 'Nebraska', abbr: 'NE' },
+            { state: 'California', abbr: 'CA' },
+            { state: 'New York', abbr: 'NY' }
+          ]
+        }
+        </script>
+      </mip-data>
     <h2>自定义选项的文本和值</h2>
     <div class="container grid-list-xl">
       <mip-v-select
         m-bind:hint="`${select.state}, ${select.abbr}`"
-        m-bind:items="states"
+        m-bind:items="items2"
         m-bind:value.sync="select"
         item-text="state"
         item-value="abbr"
