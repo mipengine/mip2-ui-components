@@ -29,7 +29,8 @@ export default mixins(Colorable).extend({
       type: String,
       default: 'primary'
     },
-    height: {
+    // height 会和 MIP CustomElement 属性冲突，需要更换一个属性名
+    lineHeight: {
       type: [Number, String],
       default: 7
     },
@@ -60,7 +61,7 @@ export default mixins(Colorable).extend({
     backgroundStyle () {
       const backgroundOpacity = this.backgroundOpacity == null ? this.backgroundColor ? 1 : 0.3 : parseFloat(this.backgroundOpacity)
       return {
-        height: this.active ? convertToUnit(this.height) : 0,
+        height: this.active ? convertToUnit(this.lineHeight) : 0,
         opacity: backgroundOpacity,
         width: `${this.bufferValue}%`
       }
@@ -113,7 +114,7 @@ export default mixins(Colorable).extend({
         'v-progress-linear--query': this.query
       },
       style: {
-        height: convertToUnit(this.height)
+        height: convertToUnit(this.lineHeight)
       },
       on: this.$listeners
     }, [background, bar])

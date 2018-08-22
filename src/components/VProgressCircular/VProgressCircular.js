@@ -62,7 +62,7 @@ export default mixins(Colorable).extend({
       return (100 - this.normalizedValue) / 100 * this.circumference + 'px'
     },
     strokeWidth () {
-      return this.width / +this.size * this.viewBoxSize * 2
+      return this.lineWidth / +this.size * this.viewBoxSize * 2
     },
     styles () {
       return {
@@ -76,7 +76,7 @@ export default mixins(Colorable).extend({
       }
     },
     viewBoxSize () {
-      return this.radius / (1 - this.width / +this.size)
+      return this.radius / (1 - this.lineWidth / +this.size)
     }
   },
   methods: {
