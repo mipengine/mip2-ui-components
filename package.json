@@ -25,7 +25,6 @@
   "homepage": "https://github.com/mipengine/mip2-ui-components#readme",
   "dependencies": {},
   "devDependencies": {
-    "@mdi/font": "^2.4.85",
     "autoprefixer": "^8.5.1",
     "avoriaz": "^6.3.0",
     "babel-cli": "^6.26.0",

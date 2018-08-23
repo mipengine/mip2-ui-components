@@ -41,7 +41,7 @@ module.exports = merge(baseWebpackConfig, {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         query: {
           limit: 10000,
