@@ -13,8 +13,7 @@ const builds = {
       devtool: 'source-map',
       mode: 'development',
       output: {
-        filename: 'vuetify.js',
-        libraryTarget: 'umd'
+        filename: 'vuetify.js'
       },
       plugins: [
         new MiniCssExtractPlugin({
@@ -27,8 +26,7 @@ const builds = {
     config: {
       mode: 'production',
       output: {
-        filename: 'vuetify.min.js',
-        libraryTarget: 'umd'
+        filename: 'vuetify.min.js'
       },
       plugins: [
         new MiniCssExtractPlugin({
@@ -55,15 +53,15 @@ function genConfig (opts) {
 
   if (opts.env) {
     config.plugins = config.plugins.concat([
-      new webpack.BannerPlugin({
-        banner: `/*!
-* Vuetify v${version}
-* Forged by John Leider
-* Released under the MIT License.
-*/     `,
-        raw: true,
-        entryOnly: true
-      })
+//       new webpack.BannerPlugin({
+//         banner: `/*!
+// * Vuetify v${version}
+// * Forged by John Leider
+// * Released under the MIT License.
+// */     `,
+//         raw: true,
+//         entryOnly: true
+//       })
     ])
     config.optimization = {
       minimizer: [

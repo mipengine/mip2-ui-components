@@ -12,4 +12,9 @@ const Vuetify = {
   },
   version: '1.1.9'
 }
-export default Vuetify
+
+const Vue = window.MIP.Vue
+
+Vue.config.performance = true
+
+Vue.use(Vuetify)
