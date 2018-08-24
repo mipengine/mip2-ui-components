@@ -77,11 +77,32 @@ export default {
   mounted () {
     if (this.buttonGroup) {
       this.buttonGroup.register(this)
+      return
     }
+
+    this.$nextTick(() => {
+      if (!this.$element) {
+        return
+      }
+      let element = this.$element.parentElement
+      while (element) {
+        const tagName = element.tagName.toLowerCase()
+        if (tagName === 'body') {
+          return
+        }
+        if (tagName === 'mip-v-btn-toggle') {
+          this.customButtonGroup = element.customElement.vm
+          this.customButtonGroup.register(this)
+          return
+        }
+        element = element.parentElement
+      }
+    })
   },
   beforeDestroy () {
-    if (this.buttonGroup) {
-      this.buttonGroup.unregister(this)
+    const buttonGroup = this.buttonGroup || this.customButtonGroup;
+    if (buttonGroup) {
+      buttonGroup.unregister(this)
     }
   },
   methods: {

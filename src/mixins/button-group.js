@@ -16,15 +16,10 @@ export default mixins(RegistrableProvide('buttonGroup')).extend({
     buttons: 'update'
   },
   mounted () {
-    if (!this.buttons.length) {
-      const buttons = [...this.$el.querySelectorAll('mip-v-btn')].map(({ customElement: { vm } }) => vm)
-      buttons.forEach(this.register)
-    }
-    this.update()
+    this.$nextTick(this.update)
   },
   beforeDestroy () {
     this.isDestroying = true
-    this.buttons.forEach(unregister)
   },
   methods: {
     /** @abstract */

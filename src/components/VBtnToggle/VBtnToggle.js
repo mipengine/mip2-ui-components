@@ -53,13 +53,16 @@ export default mixins(ButtonGroup, Themeable).extend({
       }
       return this.inputValue.includes(item)
     },
+    onChange (nextValue) {
+      this.$emit('change', nextValue)
+      this.$emit('update:inputValue', nextValue)
+    },
     updateValue (i) {
       const item = this.getValue(i)
       if (!this.multiple) {
         if (this.mandatory && this.inputValue === item) return
         const nextValue = this.inputValue === item ? null : item;
-        this.$emit('change', nextValue)
-        this.$emit('update:inputValue', nextValue)
+        this.onChange(nextValue)
         return
       }
       const items = this.inputValue.slice()
@@ -70,8 +73,7 @@ export default mixins(ButtonGroup, Themeable).extend({
       } else {
         items.push(item)
       }
-      this.$emit('change', items)
-      this.$emit('update:inputValue', items)
+      this.onChange(items)
     },
     updateAllValues () {
       if (!this.multiple) return
@@ -83,7 +85,7 @@ export default mixins(ButtonGroup, Themeable).extend({
           items.push(item)
         }
       }
-      this.$emit('change', items)
+      this.onChange(items)
     }
   },
   render (h) {
