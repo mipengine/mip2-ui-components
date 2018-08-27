@@ -13,11 +13,11 @@ import { keyCodes } from '../../util/helpers'
 /* @vue/component */
 export default {
   name: 'VRadio',
-  mixins: [Colorable, Rippleable, RegistrableInject('radio', 'v-radio', 'v-radio-group'), Themeable],
+  mixins: [Colorable, Rippleable, RegistrableInject('radio'), Themeable],
   inheritAttrs: false,
   props: {
     color: {
-      type: [Boolean, String],
+      type: [String],
       default: 'accent'
     },
     disabled: Boolean,
@@ -52,33 +52,58 @@ export default {
       return classes
     },
     classesSelectable () {
-      return this.addTextColorClassChecks({}, this.isActive ? this.color : this.radio.validationState || false)
+      return this.addTextColorClassChecks({}, this.isActive ? this.color : this.computedRadio.validationState || false)
     },
     computedIcon () {
       return this.isActive ? this.onIcon : this.offIcon
     },
+    computedRadio () {
+      return this.radio || this.customRadio || {}
+    },
     hasState () {
-      return this.isActive || !!this.radio.validationState
+      return this.isActive || (this.computedRadio && !!this.computedRadio.validationState)
     },
     isDisabled () {
-      return this.disabled || !!this.radio.disabled
+      return this.disabled || (this.computedRadio && !!this.computedRadio.disabled)
     },
     isReadonly () {
-      return this.readonly || !!this.radio.readonly
+      return this.readonly || (this.computedRadio && !!this.computedRadio.readonly)
     }
   },
   mounted () {
-    this.radio.register(this)
+    if (this.radio) {
+      this.radio.register(this)
+      return
+    }
+
+    this.$nextTick(() => {
+      if (!this.$element) {
+        return
+      }
+      let element = this.$element.parentElement
+      while (element) {
+        const tagName = element.tagName.toLowerCase()
+        if (tagName === 'body') {
+          return
+        }
+        if (tagName === 'mip-v-radio-group') {
+          this.customRadio = element.customElement.vm
+          this.customRadio.register(this)
+          return
+        }
+        element = element.parentElement
+      }
+    })
   },
   beforeDestroy () {
-    this.radio.unregister(this)
+    this.computedRadio.unregister(this)
   },
   methods: {
     genInput (type, attrs) {
       return this.$createElement('input', {
         attrs: Object.assign({}, attrs, {
           'aria-label': this.label,
-          name: this.radio.name || (this.radio._uid ? 'v-radio-' + this.radio._uid : false),
+          name: this.computedRadio.name || (this.computedRadio._uid ? 'v-radio-' + this.computedRadio._uid : false),
           value: this.value,
           role: type,
           type
@@ -107,7 +132,7 @@ export default {
           for: this.id
         },
         props: {
-          color: this.radio.validationState || false,
+          color: this.computedRadio.validationState || false,
           dark: this.dark,
           focused: this.hasState,
           light: this.light
@@ -139,7 +164,7 @@ export default {
     },
     onChange () {
       if (this.isDisabled || this.isReadonly) return
-      if (!this.isDisabled && (!this.isActive || !this.radio.mandatory)) {
+      if (!this.isDisabled && (!this.isActive || !this.computedRadio.mandatory)) {
         this.$emit('change', this.value)
       }
     }

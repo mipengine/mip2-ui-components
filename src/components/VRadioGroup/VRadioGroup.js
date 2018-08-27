@@ -72,11 +72,15 @@ export default {
         }
       }, VInput.methods.genDefaultSlot.call(this))
     },
+    onChange (value) {
+      this.$emit('change', value)
+      this.$emit('update:value', value)
+    },
     onRadioChange (value) {
       if (this.disabled) return
       this.hasInput = true
       this.internalValue = value
-      this.$emit('change', value)
+      this.onChange(value)
       this.setActiveRadio()
       this.$nextTick(this.validate)
     },
