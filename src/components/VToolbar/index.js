@@ -1,11 +1,7 @@
-import { createSimpleFunctional, createComponent } from '../../util/helpers'
-import VToolbar from './VToolbar'
-import VToolbarSideIcon from './VToolbarSideIcon'
-const VToolbarTitle = createSimpleFunctional('v-toolbar__title', 'div', 'VToolbarTitle')
-const VToolbarItems = createSimpleFunctional('v-toolbar__items', 'div', 'VToolbarItems')
+import { createSimpleFunctional } from '../../util/helpers'
 
-const components = [VToolbar, VToolbarItems, VToolbarTitle, VToolbarSideIcon]
+export { default as VToolbar } from './VToolbar'
+export { default as VToolbarSideIcon } from './VToolbarSideIcon'
 
-components.forEach(createComponent)
-
-export { VToolbar, VToolbarSideIcon, VToolbarTitle, VToolbarItems }
+export const VToolbarTitle = createSimpleFunctional('v-toolbar__title', 'div', 'VToolbarTitle')
+export const VToolbarItems = createSimpleFunctional('v-toolbar__items', 'div', 'VToolbarItems')

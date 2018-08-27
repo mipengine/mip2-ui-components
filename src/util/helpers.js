@@ -62,12 +62,6 @@ export function createJavaScriptTransition (name, functions, css = false, mode =
     }
   }
 }
-export function createComponent(Component) {
-  Component.install = function install (Vue) {
-    const name = Component.name || Component.options.name
-    Vue.component(name.toLowerCase().startsWith('v') ? name : `v-${name}`, Component)
-  }
-}
 export function directiveConfig (binding, defaults = {}) {
   return {
     ...defaults,

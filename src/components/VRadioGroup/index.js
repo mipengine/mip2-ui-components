@@ -1,10 +1,3 @@
-import { createComponent } from '../../util/helpers'
+export { default as VRadioGroup } from './VRadioGroup'
+export { default as VRadio } from './VRadio'
 
-import VRadioGroup from './VRadioGroup'
-import VRadio from './VRadio'
-
-const components = [VRadioGroup, VRadio]
-
-components.forEach(createComponent)
-
-export { VRadioGroup, VRadio }

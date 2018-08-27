@@ -1,13 +1,9 @@
-import { createSimpleFunctional, createComponent } from '../../util/helpers'
-import VCard from './VCard'
-import VCardMedia from './VCardMedia'
-import VCardTitle from './VCardTitle'
+import { createSimpleFunctional } from '../../util/helpers'
 
-const VCardActions = createSimpleFunctional('v-card__actions')
-const VCardText = createSimpleFunctional('v-card__text')
+export { default as VCard } from './VCard'
+export { default as VCardMedia } from './VCardMedia'
+export { default as VCardTitle } from './VCardTitle'
 
-const components = [VCard, VCardMedia, VCardTitle, VCardActions, VCardText]
+export const VCardActions = createSimpleFunctional('v-card__actions')
+export const VCardText = createSimpleFunctional('v-card__text')
 
-components.forEach(createComponent)
-
-export { VCard, VCardMedia, VCardTitle, VCardActions, VCardText }
