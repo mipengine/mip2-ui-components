@@ -42,7 +42,20 @@
         "toggle_none": null,
         "toggle_one": 0,
         "text": "center",
-        "icon": "justify"
+        "icon": "justify",
+        "dropdown_font": [
+          { text: "Arial" },
+          { text: "Calibri" },
+          { text: "Courier" },
+          { text: "Verdana" }
+        ],
+        "dropdown_edit": [
+          { text: "100%" },
+          { text: "75%" },
+          { text: "50%" },
+          { text: "25%" },
+          { text: "0%" }
+        ]
       }
       </script>
     </mip-data>
@@ -212,19 +225,15 @@
     <h4>Text &amp; Icon Options</h4>
     <mip-v-btn-toggle m-bind:input-value.sync="icon">
       <mip-v-btn flat value="left">
-        <!-- <span>Left</span> -->
         <mip-v-icon>format_align_left</mip-v-icon>
       </mip-v-btn>
       <mip-v-btn flat value="center">
-        <!-- <span>Center</span> -->
         <mip-v-icon>format_align_center</mip-v-icon>
       </mip-v-btn>
       <mip-v-btn flat value="right">
-        <!-- <span>Right</span> -->
         <mip-v-icon>format_align_right</mip-v-icon>
       </mip-v-btn>
       <mip-v-btn flat value="justify">
-        <!-- <span>Justify</span> -->
         <mip-v-icon>format_align_justify</mip-v-icon>
       </mip-v-btn>
     </mip-v-btn-toggle>
@@ -339,7 +348,65 @@
 
     <mip-v-divider></mip-v-divider>
 
-    <!-- <h2>In toolbar</h2> -->
+    <h2>In toolbar</h2>
+    <mip-v-toolbar dense>
+      <mip-v-overflow-btn
+        m-bind:items="dropdown_font"
+        label="Select font"
+        hide-details
+      ></mip-v-overflow-btn>
+      <mip-v-divider vertical></mip-v-divider>
+      <mip-v-overflow-btn
+        m-bind:items="dropdown_edit"
+        editable
+        label="Select size"
+        hide-details
+        overflow
+      ></mip-v-overflow-btn>
+      <mip-v-divider
+        class="mr-2"
+        vertical
+      ></mip-v-divider>
+      <mip-v-btn-toggle
+        m-bind:input-value.sync="toggle_multiple"
+        class="transparent"
+        multiple
+      >
+        <mip-v-btn flat>
+          <mip-v-icon>format_bold</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat>
+          <mip-v-icon>format_italic</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat>
+          <mip-v-icon>format_underlined</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat>
+          <mip-v-icon>format_color_fill</mip-v-icon>
+        </mip-v-btn>
+      </mip-v-btn-toggle>
+      <mip-v-divider
+        class="mx-2"
+        vertical
+      ></mip-v-divider>
+      <mip-v-btn-toggle
+        m-bind:input-value.sync="toggle_exclusive"
+        class="transparent"
+      >
+        <mip-v-btn flat value="left">
+          <mip-v-icon>format_align_left</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat value="center">
+          <mip-v-icon>format_align_center</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat value="right">
+          <mip-v-icon>format_align_right</mip-v-icon>
+        </mip-v-btn>
+        <mip-v-btn flat value="justify">
+          <mip-v-icon>format_align_justify</mip-v-icon>
+        </mip-v-btn>
+      </mip-v-btn-toggle>
+    </mip-v-toolbar>
 
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
