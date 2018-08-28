@@ -22,19 +22,21 @@
 
 ## API
 
-props|含义|默认值|类型
-----|----|----|----
-close|添加删除按钮|false|boolean
-color|将指定的色彩应用于控件|undefined|string
-dark|应用暗色主题|false|boolean
-disabled|禁用，使其不可选择|false|boolean
-label|移除圆形边缘|false|boolean
-light|应用明亮主题|false|boolean
-outline|删除背景并应用边框和文本颜色|false|boolean
-selected|将选择框颜色应用于v-chip，主要用于在v-select中显示高亮上下文|false|boolean
-small|减小v-chip的尺寸|false|boolean
-text-color|将指定的颜色应用于控件文本|undefined|string
-value|控制可见性|true|boolean
+### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+close|boolean|false|添加删除按钮
+color|string|undefined|将指定的色彩应用于控件
+dark|boolean|false|应用暗色主题
+disabled|boolean|false|禁用，使其不可选择
+label|boolean|false|移除圆形边缘
+light|boolean|false|应用明亮主题
+outline|boolean|false|删除背景并应用边框和文本颜色
+selected|boolean|false|将选择框颜色应用于 v-chip，主要用于在 v-select 中显示高亮上下文
+small|boolean|false|减小 v-chip 的尺寸
+text-color|string|undefined|将指定的颜色应用于控件文本
+value|boolean|true|控制可见性
 
 ## 示例
 
