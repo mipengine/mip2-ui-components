@@ -6,6 +6,8 @@ import Themeable from '../../mixins/themeable'
 // Helpers
 import { convertToUnit } from '../../util/helpers'
 import mixins from '../../util/mixins'
+import { fixClass } from '../../util/class'
+
 /* @vue/component */
 export default mixins(Colorable, Routable, Themeable).extend({
   name: 'VCard',
@@ -24,7 +26,7 @@ export default mixins(Colorable, Routable, Themeable).extend({
   },
   computed: {
     classes () {
-      return this.addBackgroundColorClassChecks({
+      let classes = this.addBackgroundColorClassChecks({
         'v-card': true,
         'v-card--flat': this.flat,
         'v-card--hover': this.hover,
@@ -33,6 +35,8 @@ export default mixins(Colorable, Routable, Themeable).extend({
         'theme--light': this.light,
         'theme--dark': this.dark
       })
+
+      return fixClass(this.$element, classes)
     },
     styles () {
       const style = {

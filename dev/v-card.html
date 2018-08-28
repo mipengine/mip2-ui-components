@@ -30,8 +30,7 @@
     </mip-shell>
 
     <h2>基础样式</h2>
-    <mip-v-layout>
-      <mip-v-flex xs12 sm6 offset-sm3>
+    <div>
         <mip-v-card>
           <mip-v-card-media
             src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
@@ -50,8 +49,7 @@
             <mip-v-btn flat color="orange">Explore</mip-v-btn>
           </mip-v-card-actions>
         </mip-v-card>
-      </mip-v-flex>
-    </mip-v-layout>
+    </div>
 
     <h2>媒体与文字</h2>
     <mip-v-layout>
@@ -103,92 +101,211 @@
       </mip-v-toolbar>
 
       <mip-v-card>
-        <mip-v-container
-          fluid
-          grid-list-lg
-        >
-          <mip-v-layout row wrap>
-            <mip-v-flex xs12>
-              <mip-v-card color="blue-grey darken-2" class="white--text">
-                <mip-v-card-title primary-title>
-                  <div class="headline">Unlimited music now</div>
-                  <div>Listen to your favorite artists and albums whenever and wherever, online and offline.</div>
-                </mip-v-card-title>
-                <mip-v-card-actions>
-                  <mip-v-btn flat dark>Listen now</mip-v-btn>
-                </mip-v-card-actions>
-              </mip-v-card>
-            </mip-v-flex>
+          <div class="container fluid grid-list-lg">
+            <div class="layout row wrap">
+              <div class="flex xs12">
+                <mip-v-card color="blue-grey darken-2" class="white--text">
+                  <mip-v-card-title primary-title>
+                    <div class="headline">Unlimited music now</div>
+                    <div>Listen to your favorite artists and albums whenever and wherever, online and offline.</div>
+                  </mip-v-card-title>
+                  <mip-v-card-actions>
+                    <mip-v-btn flat dark>Listen now</mip-v-btn>
+                  </mip-v-card-actions>
+                </mip-v-card>
+              </div>
 
-            <mip-v-flex xs12>
-              <mip-v-card color="cyan darken-2" class="white--text">
-                <mip-v-layout>
-                  <mip-v-flex xs5>
-                    <mip-v-card-media
-                      src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
-                      height="125px"
-                      contain
-                    ></mip-v-card-media>
-                  </mip-v-flex>
-                  <mip-v-flex xs7>
-                    <mip-v-card-title primary-title>
-                      <div>
-                        <div class="headline">Supermodel</div>
-                        <div>Foster the People</div>
-                        <div>(2014)</div>
-                      </div>
-                    </mip-v-card-title>
-                  </mip-v-flex>
-                </mip-v-layout>
-                <mip-v-divider light></mip-v-divider>
-                <mip-v-card-actions class="pa-3">
-                  Rate this album
-                  <mip-v-spacer></mip-v-spacer>
-                  <mip-v-icon>star_border</mip-v-icon>
-                  <mip-v-icon>star_border</mip-v-icon>
-                  <mip-v-icon>star_border</mip-v-icon>
-                  <mip-v-icon>star_border</mip-v-icon>
-                  <mip-v-icon>star_border</mip-v-icon>
-                </mip-v-card-actions>
-              </mip-v-card>
-            </mip-v-flex>
+              <div class="flex xs12">
+                <mip-v-card color="cyan darken-2" class="white--text">
+                  <div class="layout">
+                    <div class="flex xs5">
+                      <mip-v-card-media
+                        src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+                        height="125px"
+                        contain
+                      ></mip-v-card-media>
+                    </div>
+                    <div class="flex xs7">
+                      <mip-v-card-title primary-title>
+                        <div>
+                          <div class="headline">Supermodel</div>
+                          <div>Foster the People</div>
+                          <div>(2014)</div>
+                        </div>
+                      </mip-v-card-title>
+                    </div>
+                  </div class="layout">
+                  <mip-v-divider light></mip-v-divider>
+                  <mip-v-card-actions class="pa-3">
+                    Rate this album
+                    <mip-v-spacer></mip-v-spacer>
+                    <mip-v-icon>star_border</mip-v-icon>
+                    <mip-v-icon>star_border</mip-v-icon>
+                    <mip-v-icon>star_border</mip-v-icon>
+                    <mip-v-icon>star_border</mip-v-icon>
+                    <mip-v-icon>star_border</mip-v-icon>
+                  </mip-v-card-actions>
+                </mip-v-card>
+              </div>
 
-            <mip-v-flex xs12>
-              <mip-v-card color="purple" class="white--text">
-                <mip-v-layout row>
-                  <mip-v-flex xs7>
-                    <mip-v-card-title primary-title>
-                      <div>
-                        <div class="headline">Halycon Days</div>
-                        <div>Ellie Goulding</div>
-                        <div>(2013)</div>
-                      </div>
-                    </mip-v-card-title>
-                  </mip-v-flex>
-                  <mip-v-flex xs5>
-                    <mip-v-card-media
-                      src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
-                      height="125px"
-                      contain
-                    ></mip-v-card-media>
-                  </mip-v-flex>
-                </mip-v-layout>
-                <mip-v-divider light></mip-v-divider>
-                <mip-v-card-actions class="pa-3">
-                  Rate this album
-                  <mip-v-spacer></mip-v-spacer>
-                  <mip-v-icon>star_border</mip-v-icon>
-                  <mip-v-icon>star_border</mip-v-icon>
-                  <mip-v-icon>star_border</mip-v-icon>
-                  <mip-v-icon>star_border</mip-v-icon>
-                  <mip-v-icon>star_border</mip-v-icon>
-                </mip-v-card-actions>
-              </mip-v-card>
-            </mip-v-flex>
-          </mip-v-layout>
-        </mip-v-container>
+              <div class="flex xs12">
+                <mip-v-card color="purple" class="white--text">
+                  <div class="layout row">
+                    <div class="flex xs7">
+                      <mip-v-card-title primary-title>
+                        <div>
+                          <div class="headline">Halycon Days</div>
+                          <div>Ellie Goulding</div>
+                          <div>(2013)</div>
+                        </div>
+                      </mip-v-card-title>
+                    </div>
+                    <div class="flex xs5">
+                      <mip-v-card-media
+                        src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
+                        height="125px"
+                        contain
+                      ></mip-v-card-media>
+                    </div>
+                  </div>
+                  <mip-v-divider light></mip-v-divider>
+                  <mip-v-card-actions class="pa-3">
+                    Rate this album
+                    <mip-v-spacer></mip-v-spacer>
+                    <mip-v-icon>star_border</mip-v-icon>
+                    <mip-v-icon>star_border</mip-v-icon>
+                    <mip-v-icon>star_border</mip-v-icon>
+                    <mip-v-icon>star_border</mip-v-icon>
+                    <mip-v-icon>star_border</mip-v-icon>
+                  </mip-v-card-actions>
+                </mip-v-card>
+              </div>
+            </div>
+          </div>
       </mip-v-card>
     </div>
+
+
+    <h2>栅格</h2>
+        <div class="layout column">
+          <div class="flex xs12 sm6 offset-sm3">
+            <mip-v-toolbar color="indigo" dark>
+              <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
+              <mip-v-toolbar-title>Discover</mip-v-toolbar-title>
+              <mip-v-spacer></mip-v-spacer>
+              <mip-v-btn icon>
+                <mip-v-icon>search</mip-v-icon>
+              </mip-v-btn>
+            </mip-v-toolbar>
+      
+            <mip-v-card>
+              <div class="container fluid grid-list-md">
+                <div class="layout row wrap">
+                  <div class="flex xs12">
+                    <mip-v-card>
+                      <mip-v-card-media
+                        src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
+                        height="200px"
+                      >
+                        <div class="container
+                          fill-height
+                          fluid
+                          pa-2"
+                        >
+                          <div class="layout fill-height">
+                            <div class="flex xs12 align-end flexbox">
+                              <span class="headline white--text">测试</span>
+                            </div>
+                          </div>
+                        </div>
+                      </mip-v-card-media>
+      
+                      <mip-v-card-actions>
+                        <mip-v-spacer></mip-v-spacer>
+                        <mip-v-btn icon>
+                          <mip-v-icon>favorite</mip-v-icon>
+                        </mip-v-btn>
+                        <mip-v-btn icon>
+                          <mip-v-icon>bookmark</mip-v-icon>
+                        </mip-v-btn>
+                        <mip-v-btn icon>
+                          <mip-v-icon>share</mip-v-icon>
+                        </mip-v-btn>
+                      </mip-v-card-actions>
+                    </mip-v-card>
+                  </div>
+                  <div class="flex xs6">
+                    <mip-v-card>
+                        <mip-v-card-media
+                          src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
+                          height="200px"
+                        >
+                          <div class="container
+                            fill-height
+                            fluid
+                            pa-2"
+                          >
+                            <div class="layout fill-height">
+                              <div class="flex xs12 align-end flexbox">
+                                <span class="headline white--text">测试</span>
+                              </div>
+                            </div>
+                          </div>
+                        </mip-v-card-media>
+        
+                        <mip-v-card-actions>
+                          <mip-v-spacer></mip-v-spacer>
+                          <mip-v-btn icon>
+                            <mip-v-icon>favorite</mip-v-icon>
+                          </mip-v-btn>
+                          <mip-v-btn icon>
+                            <mip-v-icon>bookmark</mip-v-icon>
+                          </mip-v-btn>
+                          <mip-v-btn icon>
+                            <mip-v-icon>share</mip-v-icon>
+                          </mip-v-btn>
+                        </mip-v-card-actions>
+                    </mip-v-card>
+                  </div>
+                  <div class="flex xs6">  
+                    <mip-v-card>
+                      <mip-v-card-media
+                        src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
+                        height="200px"
+                      >
+                        <div class="container
+                          fill-height
+                          fluid
+                          pa-2"
+                        >
+                          <div class="layout fill-height">
+                            <div class="flex xs12 align-end flexbox">
+                              <span class="headline white--text">测试</span>
+                            </div>
+                          </div>
+                        </div>
+                      </mip-v-card-media>
+      
+                      <mip-v-card-actions>
+                        <mip-v-spacer></mip-v-spacer>
+                        <mip-v-btn icon>
+                          <mip-v-icon>favorite</mip-v-icon>
+                        </mip-v-btn>
+                        <mip-v-btn icon>
+                          <mip-v-icon>bookmark</mip-v-icon>
+                        </mip-v-btn>
+                        <mip-v-btn icon>
+                          <mip-v-icon>share</mip-v-icon>
+                        </mip-v-btn>
+                      </mip-v-card-actions>
+                    </mip-v-card>
+                  </div>
+                </div>
+              </div>
+            </mip-v-card>
+          </div>
+        </div>
+
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
   </body>
