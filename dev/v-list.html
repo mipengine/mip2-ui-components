@@ -29,105 +29,304 @@
       </script>
     </mip-shell>
     <mip-data>
-        <script type="application/json">
-          {
-            "avatar": 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-            "title": 'Brunch this weekend?',
-            "subtitle": "I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
-          }
-        </script>
-      </mip-data>
+      <script type="application/json">
+        {
+          "header": "Today",
+          "items": [
+            {
+              icon: true,
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
+              title: 'Brunch this weekend?',
+              subtitle: "Ali Connors &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
+            },
+            {
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
+              title: 'Summer BBQ',
+              subtitle: "to Alex, Scott, Jennifer &mdash; Wish I could come, but I'm out of town this weekend."
+            },
+            {
+              avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
+              title: 'Oui oui',
+              subtitle: "Sandra Adams &mdash; Do you have Paris recommendations? Have you ever been?"
+            }
+          ],
+          "folderItems": [
+            {
+              icon: 'folder',
+              iconClass: 'grey lighten-1 white--text',
+              title: 'Photos', subtitle: 'Jan 9, 2014'
+            },
+            {
+              icon: 'folder',
+              iconClass: 'grey lighten-1 white--text',
+              title: 'Recipes',
+              subtitle: 'Jan 17, 2014'
+            }
+          ],
+          "fileItems": [
+            {
+              icon: 'assignment',
+              iconClass: 'blue white--text',
+              title: 'Vacation itinerary',
+              subtitle: 'Jan 20, 2014'
+            },
+            {
+              icon: 'call_to_action',
+              iconClass: 'amber white--text',
+              title: 'Kitchen remodel',
+              subtitle: 'Jan 10, 2014'
+            }
+          ]
+        }
+      </script>
+    </mip-data>
 
     <h2>基础样式</h2>
-    <div class="group pa-2">
-    <div class="layout row wrap">
-        <div class="flex xs12">
+    <div class="layout row">
+        <div class="flex xs12 sm6 offset-sm3">
         <mip-v-card>
           <mip-v-toolbar color="cyan" dark>
             <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
-
             <mip-v-toolbar-title>Inbox</mip-v-toolbar-title>
-
             <mip-v-spacer></mip-v-spacer>
-
             <mip-v-btn icon>
               <mip-v-icon>search</mip-v-icon>
             </mip-v-btn>
           </mip-v-toolbar>
 
           <mip-v-list two-line>
-              <mip-v-subheader>
-                Subheader Messages
-              </mip-v-subheader>
+              <mip-v-subheader m-text="header"></mip-v-subheader>
               <mip-v-list-tile
                 avatar
                 href="#"
                 ripple
               >
                 <mip-v-list-tile-avatar>
-                  <mip-img m-bind:src="avatar"/>
+                  <mip-img m-bind:src="items[0].avatar"/>
                 </mip-v-list-tile-avatar>
 
                 <mip-v-list-tile-content>
-                  <mip-v-list-tile-title m-text="title"></mip-v-list-tile-title>
-                  <mip-v-list-tile-sub-title m-text="subtitle"></mip-v-list-tile-sub-title>
+                  <mip-v-list-tile-title m-text="items[0].title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="items[0].subtitle"></mip-v-list-tile-sub-title>
                 </mip-v-list-tile-content>
               </mip-v-list-tile>
 
               <mip-v-divider inset></mip-v-divider>
-              <mip-v-subheader>
-                Subheader Messages
-              </mip-v-subheader>
               <mip-v-list-tile
                 avatar
-                ripple
                 href="#"
+                ripple
               >
                 <mip-v-list-tile-avatar>
-                  <mip-img m-bind:src="avatar"/>
+                  <mip-img m-bind:src="items[1].avatar"/>
                 </mip-v-list-tile-avatar>
 
                 <mip-v-list-tile-content>
-                  <mip-v-list-tile-title m-text="title"></mip-v-list-tile-title>
-                  <mip-v-list-tile-sub-title m-text="subtitle"></mip-v-list-tile-sub-title>
+                  <mip-v-list-tile-title m-text="items[1].title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="items[1].subtitle"></mip-v-list-tile-sub-title>
                 </mip-v-list-tile-content>
-
-                <mip-v-list-tile-action>
-                  <mip-v-list-tile-action-text>15min</mip-v-list-tile-action-text>
-                  <mip-v-btn icon ripple>
-                    <mip-v-icon color="grey lighten-1">info</mip-v-icon>
-                  </mip-v-btn>
-                </mip-v-list-tile-action>
               </mip-v-list-tile>
 
-              <mip-v-divider></mip-v-divider>
-              <mip-v-subheader>
-                Subheader Messages
-              </mip-v-subheader>
+              <mip-v-divider inset></mip-v-divider>
               <mip-v-list-tile
                 avatar
-                ripple
                 href="#"
+                ripple
               >
-                <mip-v-list-tile-content>
-                  <mip-v-list-tile-title m-text="title"></mip-v-list-tile-title>
-                  <mip-v-list-tile-sub-title m-text="subtitle"></mip-v-list-tile-sub-title>
-                </mip-v-list-tile-content>
+                <mip-v-list-tile-avatar>
+                  <mip-img m-bind:src="items[2].avatar"/>
+                </mip-v-list-tile-avatar>
 
-                <mip-v-list-tile-action>
-                  <mip-v-list-tile-action-text>15min</mip-v-list-tile-action-text>
-                  <mip-v-btn icon ripple>
-                    <mip-v-icon color="grey lighten-1">info</mip-v-icon>
-                  </mip-v-btn>
-                </mip-v-list-tile-action>
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="items[2].title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="items[2].subtitle"></mip-v-list-tile-sub-title>
+                </mip-v-list-tile-content>
               </mip-v-list-tile>
 
           </mip-v-list>
         </mip-v-card>
         </div>
     </div>
+
+    <h2>头像和列表项标题以及操作的组合</h2>
+    <div class="layout row">
+      <div class="flex xs12 sm6 offset-sm3">
+        <mip-v-card>
+            <mip-v-toolbar color="indigo" dark>
+              <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
+
+              <mip-v-toolbar-title>Inbox</mip-v-toolbar-title>
+
+              <mip-v-spacer></mip-v-spacer>
+
+              <mip-v-btn icon>
+                <mip-v-icon>search</mip-v-icon>
+              </mip-v-btn>
+
+              <mip-v-btn icon>
+                <mip-v-icon>more_vert</mip-v-icon>
+              </mip-v-btn>
+            </mip-v-toolbar>
+            <mip-v-list>
+              <mip-v-list-tile
+                avatar
+                href="#"
+              >
+                <mip-v-list-tile-action>
+                  <mip-v-icon color="pink">star</mip-v-icon>
+                </mip-v-list-tile-action>
+
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="items[0].title"></mip-v-list-tile-title>
+                </mip-v-list-tile-content>
+
+                <mip-v-list-tile-avatar>
+                  <img m-bind:src="items[0].avatar">
+                </mip-v-list-tile-avatar>
+              </mip-v-list-tile>
+              <mip-v-list-tile
+                avatar
+                href="#"
+              >
+                <mip-v-list-tile-action>
+                </mip-v-list-tile-action>
+
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="items[1].title"></mip-v-list-tile-title>
+                </mip-v-list-tile-content>
+
+                <mip-v-list-tile-avatar>
+                  <img m-bind:src="items[1].avatar">
+                </mip-v-list-tile-avatar>
+              </mip-v-list-tile>
+              <mip-v-list-tile
+                avatar
+                href="#"
+              >
+                <mip-v-list-tile-action>
+                </mip-v-list-tile-action>
+
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="items[2].title"></mip-v-list-tile-title>
+                </mip-v-list-tile-content>
+
+                <mip-v-list-tile-avatar>
+                  <img m-bind:src="items[2].avatar">
+                </mip-v-list-tile-avatar>
+              </mip-v-list-tile>
+            </mip-v-list>
+          </mip-v-card>
+      </div>
     </div>
 
+    <h2>图标加两行内容以及操作的组合</h2>
+    <div class="layout row">
+      <div class="flex xs12 sm6 offset-sm3">
+        <mip-v-card>
+            <mip-v-toolbar color="light-blue" dark>
+              <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
+    
+              <mip-v-toolbar-title>My files</mip-v-toolbar-title>
+    
+              <mip-v-spacer></mip-v-spacer>
+    
+              <mip-v-btn icon>
+                <mip-v-icon>search</mip-v-icon>
+              </mip-v-btn>
+    
+              <mip-v-btn icon>
+                <mip-v-icon>view_module</mip-v-icon>
+              </mip-v-btn>
+            </mip-v-toolbar>
+    
+            <mip-v-list two-line subheader>
+              <mip-v-subheader inset>Folders</mip-v-subheader>
+    
+              <mip-v-list-tile
+                avatar
+                href="#"
+              >
+                <mip-v-list-tile-avatar>
+                  <mip-v-icon class="grey lighten-1 white--text">folder</mip-v-icon>
+                </mip-v-list-tile-avatar>
+    
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="items[0].title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="folderItems[0].subtitle"></mip-v-list-tile-sub-title>
+                </mip-v-list-tile-content>
+    
+                <mip-v-list-tile-action>
+                  <mip-v-btn icon ripple>
+                    <mip-v-icon color="grey lighten-1">info</mip-v-icon>
+                  </mip-v-btn>
+                </mip-v-list-tile-action>
+              </mip-v-list-tile>
+              <mip-v-list-tile
+                avatar
+                href="#"
+              >
+                <mip-v-list-tile-avatar>
+                  <mip-v-icon class="grey lighten-1 white--text">folder</mip-v-icon>
+                </mip-v-list-tile-avatar>
+    
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="folderItems[1].title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="folderItems[1].subtitle"></mip-v-list-tile-sub-title>
+                </mip-v-list-tile-content>
+    
+                <mip-v-list-tile-action>
+                  <mip-v-btn icon ripple>
+                    <mip-v-icon color="grey lighten-1">info</mip-v-icon>
+                  </mip-v-btn>
+                </mip-v-list-tile-action>
+              </mip-v-list-tile>
+    
+              <mip-v-divider inset></mip-v-divider>
+
+              <mip-v-subheader inset>Files</mip-v-subheader>
+
+              <mip-v-list-tile
+                avatar
+                href="#"
+              >
+                <mip-v-list-tile-avatar>
+                  <mip-v-icon class="blue white--text" m-text="fileItems[0].icon"></mip-v-icon>
+                </mip-v-list-tile-avatar>
+
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="fileItems[0].title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="fileItems[0].subtitle"></mip-v-list-tile-sub-title>
+                </mip-v-list-tile-content>
+
+                <mip-v-list-tile-action>
+                  <mip-v-btn icon ripple>
+                    <mip-v-icon color="grey lighten-1">info</mip-v-icon>
+                  </mip-v-btn>
+                </mip-v-list-tile-action>
+              </mip-v-list-tile>
+              <mip-v-list-tile
+                avatar
+                href="#"
+              >
+                <mip-v-list-tile-avatar>
+                  <mip-v-icon class="amber white--text" m-text="fileItems[1].icon"></mip-v-icon>
+                </mip-v-list-tile-avatar>
+
+                <mip-v-list-tile-content>
+                  <mip-v-list-tile-title m-text="fileItems[1].title"></mip-v-list-tile-title>
+                  <mip-v-list-tile-sub-title m-text="fileItems[1].subtitle"></mip-v-list-tile-sub-title>
+                </mip-v-list-tile-content>
+
+                <mip-v-list-tile-action>
+                  <mip-v-btn icon ripple>
+                    <mip-v-icon color="grey lighten-1">info</mip-v-icon>
+                  </mip-v-btn>
+                </mip-v-list-tile-action>
+              </mip-v-list-tile>
+            </mip-v-list>
+          </mip-v-card>
+      </div>
+    </div>
 
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>

@@ -37,8 +37,28 @@ theme(v-list, "v-list")
 
 mip-v-list-tile-content.mip-layout-container
   overflow hidden
+  text-align: left
+  flex: 1 1 auto
+  overflow: hidden
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  flex-direction: column
 mip-v-list-tile-sub-title.mip-layout-container
   width 100%
+
+mip-v-list-tile-action.mip-layout-container
+  display: flex
+  justify-content: flex-start
+  min-width: 56px
+  align-items: center
+  .v-list__tile__action:not(.v-list__tile__action--stack)
+    justify-content: flex-end
+mip-v-list-tile-avatar.mip-layout-container
+  display: flex
+  justify-content: flex-start
+  min-width: 56px
+
 
 .v-list
   list-style-type: none

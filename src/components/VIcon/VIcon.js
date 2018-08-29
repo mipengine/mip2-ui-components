@@ -5,6 +5,8 @@ import Colorable from '../../mixins/colorable'
 // Util
 import { convertToUnit, getObjectValueByPath, keys } from '../../util/helpers'
 import mixins from '../../util/mixins'
+import { fixClass } from '../../util/class'
+
 let SIZE_MAP;
 (function (SIZE_MAP) {
   SIZE_MAP['small'] = '16px'
@@ -50,7 +52,8 @@ export default mixins(Colorable, Themeable).extend({
     small: Boolean,
     xLarge: Boolean
   },
-  render (h, { props, data, parent, listeners = {}, children = [] }) {
+  render (h, ctx) {
+    let { props, data, parent, listeners = {}, children = []} = ctx
     const { small, medium, large, xLarge } = props
     const sizes = { small, medium, large, xLarge }
     const explicitSize = keys(sizes).find(key => sizes[key] && !!key)
@@ -97,7 +100,9 @@ export default mixins(Colorable, Themeable).extend({
     // * Component class
     // * Vuetify classes
     // * Icon Classes
-    data.staticClass = ['v-icon', data.staticClass, Object.keys(classes).filter(k => classes[k]).join(' '), iconType, isCustomIcon ? iconName : null].filter(val => !!val).join(' ').trim()
+
+    // fix class
+    data.staticClass = fixClass(ctx.parent.$el.parentNode, ['v-icon', data.staticClass, Object.keys(classes).filter(k => classes[k]).join(' '), iconType, isCustomIcon ? iconName : null].filter(val => !!val).join(' ').trim())
     return h('i', data, newChildren)
   }
 })
