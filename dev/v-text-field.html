@@ -33,10 +33,53 @@
       }
       </script>
     </mip-shell>
-    <h2>基础样式</h2>
-    <mip-v-divider></mip-v-divider>
 
-    <h2>单行亮色主题</h2>
+    <mip-data>
+      <script type="application/json">
+      {
+        message1: 'Hey!',
+        message2: 'Hey!',
+        message3: 'Hey!',
+        message4: 'Hey!',
+        password: 'Password',
+        show: false,
+        message: 'Hey!',
+        marker: true,
+        iconIndex: 0,
+        icons: [
+          'mdi-emoticon',
+          'mdi-emoticon-cool',
+          'mdi-emoticon-dead',
+          'mdi-emoticon-excited',
+          'mdi-emoticon-happy',
+          'mdi-emoticon-neutral',
+          'mdi-emoticon-sad',
+          'mdi-emoticon-tongue'
+        ],
+        sendMessage: false,
+        changeIcon: false,
+        title: 'Preliminary report',
+        description: 'California is a state in the western United States',
+        show1: false,
+        show2: true,
+        show3: false,
+        show4: false,
+        first: 'John',
+        last: 'Doe',
+        form: {
+          first: '',
+          last: ''
+        },
+        mask: 'credit-card',
+        maskValue: '4444444444444444',
+        progressValue: '',
+        custom: true,
+        progress: '',
+        color: 'error'
+      }
+      </script>
+    </mip-data>
+    <h2>基础样式，单行亮色主题</h2>
     <div class="container grid-list-xl">
       <div class="layout row wrap">
         <mip-v-text-field
@@ -200,16 +243,6 @@
       </div>
     </div>
 
-    <mip-data>
-      <script type="application/json">
-      {
-        message1: 'Hey!',
-        message2: 'Hey!',
-        message3: 'Hey!',
-        message4: 'Hey!'
-      }
-      </script>
-    </mip-data>
     <h2>Clearable</h2>
     <div class="container grid-list-xl">
       <div class="layout row wrap">
@@ -244,29 +277,6 @@
       </div>
     </div>
 
-    <mip-data>
-        <script type="application/json">
-        {
-          password: 'Password',
-          show: false,
-          message: 'Hey!',
-          marker: true,
-          iconIndex: 0,
-          icons: [
-            'mdi-emoticon',
-            'mdi-emoticon-cool',
-            'mdi-emoticon-dead',
-            'mdi-emoticon-excited',
-            'mdi-emoticon-happy',
-            'mdi-emoticon-neutral',
-            'mdi-emoticon-sad',
-            'mdi-emoticon-tongue'
-          ],
-          sendMessage: false,
-          changeIcon: false
-        }
-        </script>
-      </mip-data>
     <h2>Icon events</h2>
     <mip-v-flex xs12>
       <mip-v-text-field
@@ -285,37 +295,6 @@
             click-clear:MIP.setData({message: ''})"
       ></mipv-text-field>
     </mip-v-flex>
-    <mip-script>
-      MIP.watch('sendMessage', val => {
-        MIP.setData({
-          iconIndex: 0,
-          message: '',
-          sendMessage: false
-        })
-      })
-
-      MIP.watch('changeIcon', val => {
-        if (val) {
-          let iconIndex = MIP.getData('iconIndex')
-          let icons = MIP.getData('icons')
-          MIP.setData({
-            iconIndex: (iconIndex === icons.length - 1) ? 0 : ++iconIndex
-          })
-        }
-        MIP.setData({
-          changeIcon: false
-        })
-      })
-    </mip-script>
-
-    <mip-data>
-      <script type="application/json">
-      {
-        title: 'Preliminary report',
-        description: 'California is a state in the western United States'
-      }
-      </script>
-    </mip-data>
 
     <h2>字符计数器</h2>
     <!-- :rules="rules" -->
@@ -352,18 +331,6 @@
         ></mip-v-text-field>
       </div>
     </div>
-
-    <mip-data>
-      <script type="application/json">
-      {
-        show1: false,
-        show2: true,
-        show3: false,
-        show4: false,
-        password: 'Password'
-      }
-      </script>
-    </mip-data>
 
     <h2>密码输入</h2>
     <!-- :rules="[rules.required, rules.min]" -->
@@ -416,7 +383,7 @@
       </div>
     </div>
 
-    <h2>验证</h2>
+    <!-- <h2>验证</h2> -->
 
     <h2>全宽文本框</h2>
     <div class="container grid-list-xl">
@@ -509,16 +476,8 @@
       </div>
     </div>
 
-    <h2>自定义验证</h2>
+    <!-- <h2>自定义验证</h2> -->
 
-    <mip-data>
-      <script type="application/json">
-      {
-        first: 'John',
-        last: 'Doe'
-      }
-      </script>
-    </mip-data>
     <h2>盒子样式</h2>
     <div class="container grid-list-xl">
       <div class="layout row wrap">
@@ -573,16 +532,6 @@
       </div>
     </div>
 
-    <mip-data>
-      <script type="application/json">
-      {
-        form: {
-          first: '',
-          last: ''
-        }
-      }
-      </script>
-    </mip-data>
     <h2>自定义颜色</h2>
     <!-- :rules="rules.name" -->
     <div class="container grid-list-xl">
@@ -604,14 +553,6 @@
       </div>
     </div>
 
-    <mip-data>
-      <script type="application/json">
-      {
-        mask: 'credit-card',
-        maskValue: '4444444444444444'
-      }
-      </script>
-    </mip-data>
     <h2>掩码</h2>
     <mip-v-card>
       <mip-v-card-text>
@@ -629,16 +570,6 @@
       </mip-v-card-text>
     </mip-v-card>
 
-    <mip-data>
-      <script type="application/json">
-      {
-        progressValue: '',
-        custom: true,
-        progress: '',
-        color: 'error'
-      }
-      </script>
-    </mip-data>
     <h2>进度条</h2>
     <div class="container grid-list-xl">
       <mip-v-checkbox m-bind:input-value.sync="custom" label="Custom progress bar"></mip-v-checkbox>
@@ -659,6 +590,26 @@
       </mip-v-text-field>
     </div>
     <mip-script>
+      MIP.watch('sendMessage', val => {
+        MIP.setData({
+          iconIndex: 0,
+          message: '',
+          sendMessage: false
+        })
+      })
+
+      MIP.watch('changeIcon', val => {
+        if (val) {
+          let iconIndex = MIP.getData('iconIndex')
+          let icons = MIP.getData('icons')
+          MIP.setData({
+            iconIndex: (iconIndex === icons.length - 1) ? 0 : ++iconIndex
+          })
+        }
+        MIP.setData({
+          changeIcon: false
+        })
+      })
       MIP.watch('progressValue', val => {
         let progress = Math.min(100, val.length * 10)
         MIP.setData({

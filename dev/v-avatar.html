@@ -51,7 +51,8 @@
           slider: 56,
           min: 16,
           max: 256,
-          tile: false
+          tile: false,
+          avatarSize: 160
         }
       </script>
     </mip-data>
@@ -81,17 +82,8 @@
       </div>
     </div>
 
+    <h2>数据绑定</h2>
     <mip-v-divider></mip-v-divider>
-
-    <mip-data>
-      <script type="application/json">
-      {
-        "tile": false,
-        "avatarSize": 160
-      }
-      </script>
-    </mip-data>
-
     <mip-v-btn on="tap:MIP.setData({tile: !m.tile})" color="primary">Toggle Tile</mip-v-btn>
     <input m-bind:value="avatarSize" class="avatar-size-input" />
     <div class="section">
