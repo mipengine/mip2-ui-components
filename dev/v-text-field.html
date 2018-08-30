@@ -36,47 +36,38 @@
 
     <mip-data>
       <script type="application/json">
-      {
-        message1: 'Hey!',
-        message2: 'Hey!',
-        message3: 'Hey!',
-        message4: 'Hey!',
-        password: 'Password',
-        show: false,
-        message: 'Hey!',
-        marker: true,
-        iconIndex: 0,
-        icons: [
-          'mdi-emoticon',
-          'mdi-emoticon-cool',
-          'mdi-emoticon-dead',
-          'mdi-emoticon-excited',
-          'mdi-emoticon-happy',
-          'mdi-emoticon-neutral',
-          'mdi-emoticon-sad',
-          'mdi-emoticon-tongue'
-        ],
-        sendMessage: false,
-        changeIcon: false,
-        title: 'Preliminary report',
-        description: 'California is a state in the western United States',
-        show1: false,
-        show2: true,
-        show3: false,
-        show4: false,
-        first: 'John',
-        last: 'Doe',
-        form: {
-          first: '',
-          last: ''
-        },
-        mask: 'credit-card',
-        maskValue: '4444444444444444',
-        progressValue: '',
-        custom: true,
-        progress: '',
-        color: 'error'
-      }
+        {
+          "message1": "Hey!",
+          "message2": "Hey!",
+          "message3": "Hey!",
+          "message4": "Hey!",
+          "password": "Password",
+          "show": false,
+          "message": "Hey!",
+          "marker": true,
+          "iconIndex": 0,
+          "icons": ["mdi-emoticon", "mdi-emoticon-cool", "mdi-emoticon-dead", "mdi-emoticon-excited", "mdi-emoticon-happy", "mdi-emoticon-neutral", "mdi-emoticon-sad", "mdi-emoticon-tongue"],
+          "sendMessage": false,
+          "changeIcon": false,
+          "title": "Preliminary report",
+          "description": "California is a state in the western United States",
+          "show1": false,
+          "show2": true,
+          "show3": false,
+          "show4": false,
+          "first": "John",
+          "last": "Doe",
+          "form": {
+            "first": "",
+            "last": ""
+          },
+          "mask": "credit-card",
+          "maskValue": "4444444444444444",
+          "progressValue": "",
+          "custom": true,
+          "progress": "",
+          "color": "error"
+        }
       </script>
     </mip-data>
     <h2>基础样式，单行亮色主题</h2>
@@ -289,7 +280,7 @@
         clearable
         label="Message"
         type="text"
-        on="click-append:MIP.setData({marker: !m.marker}) 
+        on="click-append:MIP.setData({marker: !m.marker})
             click-append-outer:MIP.setData({sendMessage: true})
             click-prepend:MIP.setData({changeIcon: true})
             click-clear:MIP.setData({message: ''})"
@@ -308,7 +299,7 @@
           label="Regular"
         ></mip-v-text-field>
         <mip-v-text-field
-          class="flex xs12 md6"  
+          class="flex xs12 md6"
           m-bind:value.sync="description"
           counter
           maxlength="25"
@@ -562,7 +553,7 @@
         ></mip-v-text-field>
       </mip-v-card-text>
       <mip-v-card-text>
-        <mip-v-text-field 
+        <mip-v-text-field
           m-bind:mask="mask"
           m-bind:value.sync="maskValue"
           label="Value"

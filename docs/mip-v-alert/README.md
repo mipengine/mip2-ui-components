@@ -1,0 +1,87 @@
+# mip-v-alert
+
+`v-alert`组件被用来向用户传达重要信息，它有4个变种，**成功（success）**，**信息（info）**，**警告（warning）**和**错误（error）**。它们被分配了可以修改的表示不同操作的默认图标
+
+## 用例
+
+```html
+<mip-v-alert value="true" type="success">
+  This is a success alert.
+</mip-v-alert>
+<mip-v-alert value="true" type="info">
+  This is a info alert.
+</mip-v-alert>
+<mip-v-alert value="true" type="warning">
+  This is a warning alert.
+</mip-v-alert>
+<mip-v-alert value="true" type="error">
+  This is a error alert.
+</mip-v-alert>
+```
+
+## API
+
+### mip-v-alert
+
+#### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+dismissible|boolean|undefined|指定提示框可以关闭
+icon|string|undefined|制定一个特定的图标
+outline|boolean|undefined|提示框将有一个轮廓
+type|string|undefined|指定**成功（success）**，**信息（info）**，**警告（warning*）*或者**错误（error）**提示框，使用上下文颜色和预定义的图标。
+color|string|undefined|将指定的色彩应用与控件
+value|boolean|undefined|控制可见性
+mode|string|undefined|设置过渡模式（不适用于“过渡组（transition-group）”）
+origin|string|undefined|设置过渡原点
+transition|string|undefined|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
+
+## 示例
+
+### 可关闭
+
+```html
+<mip-v-alert m-bind:value.sync="alert" dismissible="" type="success">
+  This is a success alert that is closable.
+</mip-v-alert>
+```
+
+### 自定义图标/无图标
+
+```html
+<mip-v-alert value="true" color="success" icon="new_releases">
+  This is a success alert with a custom icon.
+</mip-v-alert>
+<mip-v-alert value="true" color="error">
+  This is an error alert with no icon.
+</mip-v-alert>
+```
+
+### 过渡显示
+
+```html
+<mip-v-btn color="primary" on="tap:MIP.setData({alert: !m.alert})">
+  Toggle
+</mip-v-btn>
+<mip-v-alert m-bind:value="alert" type="success" transition="scale-transition">
+  This is a success alert.
+</mip-v-alert>
+```
+
+### 轮廓
+
+```html
+<mip-v-alert value="true" color="success" icon="check_circle" outline="">
+  This is a success alert.
+</mip-v-alert>
+<mip-v-alert value="true" color="info" icon="info" outline="">
+  This is an info alert.
+</mip-v-alert>
+<mip-v-alert value="true" color="warning" icon="priority_high" outline="">
+  This is a warning alert.
+</mip-v-alert>
+<mip-v-alert value="true" color="error" icon="warning" outline="">
+  This is a error alert.
+</mip-v-alert>
+```

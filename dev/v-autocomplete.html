@@ -39,12 +39,12 @@
     <mip-data>
       <script type="application/json">
       {
-        descriptionLimit: 60,
-        model: '',
-        search: '',
-        entries: [],
-        items: [],
-        isLoading: false,
+        "descriptionLimit": 60,
+        "model": "",
+        "search": "",
+        "entries": [],
+        "items": [],
+        "isLoading": false
       }
       </script>
     </mip-data>
@@ -82,9 +82,9 @@
       MIP.watch('search', val => {
         // Items have already been loaded
         if (MIP.getData('items').length > 0) return
-  
+
         MIP.setData({isLoading: true})
-  
+
         // Lazily load input items
         fetch('https://api.publicapis.org/entries')
           .then(res => {
