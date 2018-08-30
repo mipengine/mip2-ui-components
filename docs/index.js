@@ -113,7 +113,7 @@ const getPropType = (definition) => {
   }
 
   if (Array.isArray(definition)) {
-    return definition.map(getPropType).join(' \\| ')
+    return definition.map(getPropType).join(' / ')
   }
 
   if (typeof definition === 'object' && definition !== null) {

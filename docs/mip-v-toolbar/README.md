@@ -18,32 +18,7 @@
       <mip-v-btn flat="">Link Three</mip-v-btn>
     </mip-v-toolbar-items>
   </mip-v-toolbar>
-
-    <mip-v-toolbar dark="" color="primary">
-    <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
-
-    <mip-v-toolbar-title class="white--text">Title</mip-v-toolbar-title>
-
-    <mip-v-spacer></mip-v-spacer>
-
-    <mip-v-btn icon="">
-        <mip-v-icon>search</mip-v-icon>
-    </mip-v-btn>
-
-    <mip-v-btn icon="">
-        <mip-v-icon>apps</mip-v-icon>
-    </mip-v-btn>
-
-    <mip-v-btn icon="">
-        <mip-v-icon>refresh</mip-v-icon>
-    </mip-v-btn>
-
-    <mip-v-btn icon="">
-        <mip-v-icon>more_vert</mip-v-icon>
-    </mip-v-btn>
-  </mip-v-toolbar>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ## API
@@ -83,10 +58,10 @@ clippedLeft|boolean|undefined|指定`v-navigation-drawer`应用程序在工具�
 clippedRight|boolean|undefined|指定`v-navigation-drawer`应用程序在工具栏的右侧被剪切
 dense|boolean|undefined|减小工具栏内容和扩展的高度
 extended|boolean|undefined|强制工具栏生成扩展名而不使用插槽
-extensionHeight|number \| string|undefined|Specify an explicit height for the extended slot
+extensionHeight|number / string|undefined|Specify an explicit height for the extended slot
 flat|boolean|undefined|移除工具栏的盒子阴影
 floating|boolean|undefined|使工具栏内联浮动
-height|number \| string|undefined|为工具栏指定一个特定的高度
+height|number / string|undefined|为工具栏指定一个特定的高度
 invertedScroll|boolean|undefined|Will slide out of view when scrolling down and back into view when scrolling up
 manualScroll|boolean|undefined|手动应用**滚动屏幕**功能
 prominent|boolean|undefined|增加工具栏内容和扩展的高度
@@ -100,3 +75,92 @@ color|string|undefined|将指定的色彩应用与控件
 dark|boolean|undefined|应用暗黑主题变体
 light|boolean|undefined|应用明亮主题变体
 
+## 示例
+
+### 应用程序栏
+
+```html
+<div class="group pa-2">
+<mip-v-toolbar dark="" color="primary">
+  <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
+
+  <mip-v-toolbar-title class="white--text">Title</mip-v-toolbar-title>
+
+  <mip-v-spacer></mip-v-spacer>
+
+  <mip-v-btn icon="">
+      <mip-v-icon>search</mip-v-icon>
+  </mip-v-btn>
+
+  <mip-v-btn icon="">
+      <mip-v-icon>apps</mip-v-icon>
+  </mip-v-btn>
+
+  <mip-v-btn icon="">
+      <mip-v-icon>refresh</mip-v-icon>
+  </mip-v-btn>
+
+  <mip-v-btn icon="">
+      <mip-v-icon>more_vert</mip-v-icon>
+  </mip-v-btn>
+</mip-v-toolbar>
+</div>
+```
+
+### 具有层次结构的列宽
+
+```html
+<div class="group pa-2">
+  <div class="layout row child-flex wrap">
+      <div>
+        <mip-v-toolbar>
+          <mip-v-btn icon="" class="hidden-xs-only">
+            <mip-v-icon>arrow_back</mip-v-icon>
+          </mip-v-btn>
+
+          <mip-v-toolbar-title>Title</mip-v-toolbar-title>
+
+          <mip-v-spacer></mip-v-spacer>
+
+          <mip-v-btn icon="" class="hidden-xs-only">
+            <mip-v-icon>search</mip-v-icon>
+          </mip-v-btn>
+        </mip-v-toolbar>
+      </div>
+
+      <div style="flex-basis: 20%">
+        <mip-v-toolbar dark="">
+          <mip-v-spacer></mip-v-spacer>
+
+          <mip-v-btn icon="">
+            <mip-v-icon>reply</mip-v-icon>
+          </mip-v-btn>
+
+          <mip-v-btn icon="">
+            <mip-v-icon>more_vert</mip-v-icon>
+          </mip-v-btn>
+        </mip-v-toolbar>
+      </div>
+    </div>
+</div>
+```
+
+### 搜索时浮动
+
+```html
+<div class="group pa-2">
+  <mip-v-card class="pa-3" flat="" height="300px" img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg">
+    <mip-v-toolbar dense="" floating="">
+      <mip-v-text-field hide-details="" prepend-icon="search" single-line=""></mip-v-text-field>
+
+      <mip-v-btn icon="">
+        <mip-v-icon>my_location</mip-v-icon>
+      </mip-v-btn>
+
+      <mip-v-btn icon="">
+        <mip-v-icon>more_vert</mip-v-icon>
+      </mip-v-btn>
+    </mip-v-toolbar>
+  </mip-v-card>
+</div>
+```

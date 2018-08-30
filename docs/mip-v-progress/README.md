@@ -23,7 +23,7 @@
 button|boolean|undefined|Deprecated - Pending removal
 indeterminate|boolean|undefined|Constantly animates, use when loading progress is unknown.
 rotate|number|undefined|Rotates the circle start point in deg
-size|number \| string|32|Sets the diameter of the circle in pixels
+size|number / string|32|Sets the diameter of the circle in pixels
 lineWidth|number|4|
 value|number|undefined|The percentage value for current progress
 color|string|undefined|将指定的色彩应用与控件
@@ -36,13 +36,13 @@ color|string|undefined|将指定的色彩应用与控件
 :--:|:--:|:--:|:---
 active|boolean|true|Reduce the height to 0, hiding component
 backgroundColor|string|undefined|Background color, set to component's color if null
-backgroundOpacity|number \| string|undefined|Background opacity, if null it defaults to 0.3 if background color is not specified or 1 otherwise
-bufferValue|number \| string|100|The percentage value for the buffer
+backgroundOpacity|number / string|undefined|Background opacity, if null it defaults to 0.3 if background color is not specified or 1 otherwise
+bufferValue|number / string|100|The percentage value for the buffer
 color|string|undefined|将指定的色彩应用与控件
-lineHeight|number \| string|7|
+lineHeight|number / string|7|
 indeterminate|boolean|undefined|Constantly animates, use when loading progress is unknown.
 query|boolean|undefined|
-value|number \| string|undefined|The percentage value for current progress
+value|number / string|undefined|The percentage value for current progress
 
 ## 示例
 

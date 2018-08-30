@@ -7,7 +7,6 @@
 ```html
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="6">
 </mip-v-pagination>
-<mip-v-divider></mip-v-divider>
 ```
 
 ## API
@@ -21,7 +20,7 @@
 circle|boolean|undefined|Shape pagination elements as circles
 disabled|boolean|undefined|Disables component
 length|number|undefined|The length of the paginator
-totalVisible|number \| string|undefined|Specify the max total visible pagination numbers
+totalVisible|number / string|undefined|Specify the max total visible pagination numbers
 nextIcon|string|$vuetify.icons.next|Specify the icon to use for the next icon
 prevIcon|string|$vuetify.icons.prev|Specify the icon to use for the prev icon
 value|number|undefined|Current selected page
@@ -34,7 +33,6 @@ color|string|undefined|将指定的色彩应用与控件
 ```html
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="15">
 </mip-v-pagination>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 限制
@@ -42,7 +40,6 @@ color|string|undefined|将指定的色彩应用与控件
 ```html
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="15" m-bind:total-visible="5">
 </mip-v-pagination>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 圆形
@@ -50,7 +47,6 @@ color|string|undefined|将指定的色彩应用与控件
 ```html
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="4" circle="">
 </mip-v-pagination>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### Icons
@@ -58,7 +54,6 @@ color|string|undefined|将指定的色彩应用与控件
 ```html
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right">
 </mip-v-pagination>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 禁用

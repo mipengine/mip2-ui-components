@@ -31,7 +31,7 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 color|string|undefined|将指定的色彩应用与控件
-size|number \| string|48|设置元素的高度和宽度
+size|number / string|48|设置元素的高度和宽度
 tile|boolean|undefined|删除边看弧度
 
 ## 示例
@@ -39,7 +39,6 @@ tile|boolean|undefined|删除边看弧度
 ### 数据绑定
 
 ```html
-<mip-v-divider></mip-v-divider>
 <mip-v-btn on="tap:MIP.setData({tile: !m.tile})" color="primary">Toggle Tile</mip-v-btn>
 <input m-bind:value="avatarSize" class="avatar-size-input">
 <div class="section">

@@ -5,19 +5,7 @@ The `v-autocomplete` component offers simple and flexible type-ahead functionali
 ## 用例
 
 ```html
-<mip-v-divider></mip-v-divider>
-<mip-data>
-  <script type="application/json">
-  {
-    "descriptionLimit": 60,
-    "model": "",
-    "search": "",
-    "entries": [],
-    "items": [],
-    "isLoading": false
-  }
-  </script>
-</mip-data>
+<div></div>
 ```
 
 ## API
@@ -36,7 +24,7 @@ noFilter|boolean|undefined|Do not apply filtering when searching. Useful when da
 offsetY|boolean|true|
 offsetOverflow|boolean|true|
 searchInput|any|undefined|
-transition|boolean \| string|undefined|
+transition|boolean / string|undefined|
 value|any|undefined|控制可见性
 
 ## 示例

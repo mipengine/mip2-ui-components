@@ -11,7 +11,6 @@
   <mip-v-icon>event</mip-v-icon>
   <mip-v-icon>info</mip-v-icon>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ## API
@@ -30,7 +29,7 @@ large|boolean|undefined|设置图标为大型**（36px）**
 left|boolean|undefined|在按钮内部使用时，把图标放置在左侧
 medium|boolean|undefined|设置图标为中型**(28px)**
 right|boolean|undefined|在按钮内部使用时，把图标放置在右侧
-size|number \| string|undefined|设置元素的高度和宽度
+size|number / string|undefined|设置元素的高度和宽度
 small|boolean|undefined|设置图标为小型**(16px)**
 xLarge|boolean|undefined|设置图标为超大型**(40px)**
 
@@ -44,7 +43,6 @@ xLarge|boolean|undefined|设置图标为超大型**(40px)**
   <mip-v-icon dark="true">widgets</mip-v-icon>
   <mip-v-icon dark="true">gavel</mip-v-icon>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 尺寸 medium size
@@ -55,7 +53,6 @@ xLarge|boolean|undefined|设置图标为超大型**(40px)**
   <mip-v-icon medium="true">event</mip-v-icon>
   <mip-v-icon medium="true">info</mip-v-icon>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 尺寸 large size
@@ -66,7 +63,6 @@ xLarge|boolean|undefined|设置图标为超大型**(40px)**
   <mip-v-icon dark="true" large="true">widgets</mip-v-icon>
   <mip-v-icon dark="true" large="true">gavel</mip-v-icon>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 尺寸 x-large size
@@ -77,7 +73,6 @@ xLarge|boolean|undefined|设置图标为超大型**(40px)**
   <mip-v-icon x-large="true">event</mip-v-icon>
   <mip-v-icon x-large="true">info</mip-v-icon>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 彩色
@@ -86,5 +81,4 @@ xLarge|boolean|undefined|设置图标为超大型**(40px)**
 <div class="group pa-2">
   <mip-v-icon x-large="true" color="teal darken-2">info</mip-v-icon>
 </div>
-<mip-v-divider></mip-v-divider>
 ```

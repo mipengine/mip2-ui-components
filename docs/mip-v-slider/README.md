@@ -24,18 +24,18 @@
 alwaysDirty|boolean|undefined|When used with the **thumb-label** prop will always show the thumb label.
 inverseLabel|boolean|undefined|Reverse the label position. Works with **rtl**.
 label|string|undefined|
-min|number \| string|undefined|设置最小宽度
-max|number \| string|100|设置最大宽度
+min|number / string|undefined|设置最小宽度
+max|number / string|100|设置最大宽度
 range|boolean|undefined|
-step|number \| string|1|如果大于0，则为滑块上的点设置步骤间隔
-ticks|boolean \| string|undefined|
+step|number / string|1|如果大于0，则为滑块上的点设置步骤间隔
+ticks|boolean / string|undefined|
 tickLabels|any|[]|When provided with Array<string>, will attempt to map the labels to each step in index order
-tickSize|number \| string|1|Controls the size of **ticks**
+tickSize|number / string|1|Controls the size of **ticks**
 thumbColor|string|undefined|设置拇指和拇指标签颜色
-thumbLabel|boolean \| string|undefined|显示拇指标签
-thumbSize|number \| string|32|Controls the size of the **thumb-label**
+thumbLabel|boolean / string|undefined|显示拇指标签
+thumbSize|number / string|32|Controls the size of the **thumb-label**
 trackColor|string|undefined|设置曲目填充色彩
-value|number \| string|undefined|控制可见性
+value|number / string|undefined|控制可见性
 
 ## 示例
 

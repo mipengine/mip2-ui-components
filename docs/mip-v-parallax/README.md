@@ -6,7 +6,6 @@
 
 ```html
 <mip-v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"></mip-v-parallax>
-<mip-v-divider></mip-v-divider>
 ```
 
 ## API

@@ -19,7 +19,7 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-height|number \| string|32|设置组件高度
+height|number / string|32|设置组件高度
 inset|boolean|undefined|定位工具栏偏离应用程序的`v-navigation-drawer`的位置
 app|boolean|undefined|指定组件作为应用程序布局的一部分，用于动态调整内容的大小
 color|string|undefined|将指定的色彩应用与控件

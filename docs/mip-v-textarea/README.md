@@ -22,8 +22,8 @@ Textarea components are used for collecting large amounts of textual data.
 autoGrow|boolean|undefined|
 noResize|boolean|undefined|
 outline|boolean|undefined|
-rowHeight|number \| string|24|
-rows|number \| string|5|
+rowHeight|number / string|24|
+rows|number / string|5|
 
 ## 示例
 

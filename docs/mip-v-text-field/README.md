@@ -32,7 +32,7 @@ clearable|boolean|undefined|添加输入框清除功能，默认图标是 Materi
 clearIcon|string|$vuetify.icons.clear|Applied when using **clearable** and the input is dirty
 clearIconCb|any|undefined|Callback for clear icon when clicked
 color|string|primary|
-counter|boolean \| number \| string|undefined|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
+counter|boolean / number / string|undefined|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
 flat|boolean|undefined|Mixins.Soloable.props.flat
 fullWidth|boolean|undefined|指定输入框为全屏宽度。
 label|string|undefined|
@@ -49,7 +49,7 @@ suffix|string|undefined|显示后缀
 textarea|boolean|undefined|Textarea 使用备用样式
 type|string|text|设置输入类型
 dontFillMaskBlanks|boolean|undefined|键入时禁用自动字符显示
-mask|any \| string|undefined|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
+mask|any / string|undefined|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
 returnMaskedValue|boolean|undefined|返回未修改的掩码字符串
 
 ## 示例

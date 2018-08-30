@@ -19,7 +19,6 @@
     </mip-v-icon>
   </mip-v-badge>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ## API
@@ -63,7 +62,6 @@ origin|string|undefined|设置过渡原点
     </mip-v-icon>
   </mip-v-badge>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 内联
@@ -82,7 +80,6 @@ origin|string|undefined|设置过渡原点
     <span>Lists</span>
   </mip-v-badge>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 图标
@@ -105,7 +102,6 @@ origin|string|undefined|设置过渡原点
     </span>
   </mip-v-badge>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 可见性

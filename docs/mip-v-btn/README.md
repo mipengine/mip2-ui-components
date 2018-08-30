@@ -11,7 +11,6 @@
   <mip-v-btn color="warning">Warning</mip-v-btn>
   <mip-v-btn color="info">Info</mip-v-btn>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ## API
@@ -31,7 +30,7 @@ icon|boolean|undefined|
 large|boolean|undefined|
 loading|boolean|undefined|
 outline|boolean|undefined|
-ripple|boolean \| any|undefined|使用`v-ripple`指令
+ripple|boolean / any|undefined|使用`v-ripple`指令
 round|boolean|undefined|
 small|boolean|undefined|
 tag|string|undefined|指定要在组件上使用的自定义标签
@@ -42,8 +41,8 @@ append|boolean|undefined|Vue Router的router-link属性
 disabled|boolean|undefined|Route列表项是被禁用的
 exact|boolean|undefined|完全匹配链接，没有这个的话，“/”将匹配每一个路由
 exactActiveClass|string|undefined|Vue Router的 router-link属性
-href|string \| any|undefined|将组件标签指定为`<a>`
-to|string \| any|undefined|将组件标签指定为`<router-link>`
+href|string / any|undefined|将组件标签指定为`<a>`
+to|string / any|undefined|将组件标签指定为`<router-link>`
 nuxt|boolean|undefined|指定一个链接是nuxt链接（nuxt-link）
 replace|boolean|undefined|Vue Router router-link 属性
 target|string|undefined|指定目标属性，仅适用于猫标签。
@@ -92,7 +91,6 @@ light|boolean|undefined|应用明亮主题变体
   <mip-v-btn flat="" large="" color="error">Error</mip-v-btn>
   <mip-v-btn flat="" large="" disabled>Disabled</mip-v-btn>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 凸起
@@ -116,7 +114,6 @@ light|boolean|undefined|应用明亮主题变体
   <mip-v-btn large="" color="error">Error</mip-v-btn>
   <mip-v-btn large="" disabled>Disabled</mip-v-btn>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 凹陷
@@ -140,8 +137,6 @@ light|boolean|undefined|应用明亮主题变体
   <mip-v-btn depressed="" large="" color="error">Error</mip-v-btn>
   <mip-v-btn depressed="" large="" disabled>Disabled</mip-v-btn>
 </div>
-<mip-v-divider></mip-v-divider>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 按钮切换
@@ -237,7 +232,6 @@ light|boolean|undefined|应用明亮主题变体
     <mip-v-icon>format_align_justify</mip-v-icon>
   </mip-v-btn>
 </mip-v-btn-toggle>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 图标
@@ -273,7 +267,6 @@ light|boolean|undefined|应用明亮主题变体
     <mip-v-icon>thumb_up</mip-v-icon>
   </mip-v-btn>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 浮动
@@ -299,8 +292,6 @@ light|boolean|undefined|应用明亮主题变体
     <mip-v-icon dark="">android</mip-v-icon>
   </mip-v-btn>
 </div>
-<mip-v-divider></mip-v-divider>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 大小
@@ -322,7 +313,6 @@ light|boolean|undefined|应用明亮主题变体
     <mip-v-icon>alarm</mip-v-icon>
   </mip-v-btn>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 轮廓
@@ -337,21 +327,18 @@ light|boolean|undefined|应用明亮主题变体
     <mip-v-icon>edit</mip-v-icon>
   </mip-v-btn>
 </div>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 圆角
 
 ```html
 <mip-v-btn round="" color="primary" dark="">Rounded Button</mip-v-btn>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### 块状
 
 ```html
 <mip-v-btn block="" color="secondary" dark="">Block Button</mip-v-btn>
-<mip-v-divider></mip-v-divider>
 ```
 
 ### In toolbar

@@ -36,12 +36,12 @@ deletableChips|boolean|undefined|
 dense|boolean|undefined|
 hideSelected|boolean|undefined|
 items|any|[]|
-itemAvatar|string \| any \| any|avatar|
-itemDisabled|string \| any \| any|disabled|
-itemText|string \| any \| any|text|
-itemValue|string \| any \| any|value|
-maxHeight|number \| string|auto|设置内容的最大高度
-minWidth|number \| string|undefined|
+itemAvatar|string / any / any|avatar|
+itemDisabled|string / any / any|disabled|
+itemText|string / any / any|text|
+itemValue|string / any / any|value|
+maxHeight|number / string|auto|设置内容的最大高度
+minWidth|number / string|undefined|
 multiple|boolean|undefined|
 multiLine|boolean|undefined|
 openOnClear|boolean|undefined|
@@ -58,20 +58,20 @@ offsetY|boolean|undefined|
 openOnClick|boolean|true|
 openOnHover|boolean|undefined|
 origin|string|top left|
-transition|string \| boolean|v-menu-transition|
+transition|string / boolean|v-menu-transition|
 activator|any|undefined|
 allowOverflow|boolean|undefined|
 inputActivator|boolean|undefined|
-maxWidth|number \| string|auto|
-nudgeBottom|number \| string|undefined|
-nudgeLeft|number \| string|undefined|
-nudgeRight|number \| string|undefined|
-nudgeTop|number \| string|undefined|
-nudgeWidth|number \| string|undefined|
+maxWidth|number / string|auto|
+nudgeBottom|number / string|undefined|
+nudgeLeft|number / string|undefined|
+nudgeRight|number / string|undefined|
+nudgeTop|number / string|undefined|
+nudgeWidth|number / string|undefined|
 offsetOverflow|boolean|undefined|
 positionX|number|undefined|
 positionY|number|undefined|
-zIndex|number \| string|undefined|
+zIndex|number / string|undefined|
 valueComparator|any|true|Apply a custom value comparator function
 noDataText|string|$vuetify.noDataText|当没有数据时显示的文本
 

@@ -77,7 +77,7 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 color|string|undefined|
-size|number \| string|40|设置元素的高度和宽度
+size|number / string|40|设置元素的高度和宽度
 tile|boolean|undefined|删除边看弧度
 
 ### mip-v-list
@@ -125,11 +125,11 @@ append|boolean|undefined|Vue Router的router-link属性
 disabled|boolean|undefined|Route列表项是被禁用的
 exact|boolean|undefined|完全匹配链接，没有这个的话，“/”将匹配每一个路由
 exactActiveClass|string|undefined|Vue Router的 router-link属性
-href|string \| any|undefined|将组件标签指定为`<a>`
-to|string \| any|undefined|将组件标签指定为`<router-link>`
+href|string / any|undefined|将组件标签指定为`<a>`
+to|string / any|undefined|将组件标签指定为`<router-link>`
 nuxt|boolean|undefined|指定一个链接是nuxt链接（nuxt-link）
 replace|boolean|undefined|Vue Router router-link 属性
-ripple|boolean \| any|undefined|使用`v-ripple`指令
+ripple|boolean / any|undefined|使用`v-ripple`指令
 target|string|undefined|指定目标属性，仅适用于猫标签。
 value|boolean|undefined|Expands / Collapse list group
 

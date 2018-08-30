@@ -23,7 +23,6 @@
     
   </mip-v-card-actions></mip-v-card>
 </mip-v-dialog>
-<mip-v-divider></mip-v-divider>
 ```
 
 ## API
@@ -39,11 +38,11 @@ persistent|boolean|undefined|点击对话框外部不能使其关闭
 fullscreen|boolean|undefined|改变布局全屏显示
 fullWidth|boolean|undefined|指定模态框强制100%宽度
 noClickAnimation|boolean|undefined|Disables the bounce effect when clicking outside of a `v-dialog`'s content when using the **persistent** prop
-maxWidth|string \| number|none|内容的最大宽度
+maxWidth|string / number|none|内容的最大宽度
 origin|string|center center|Mixins.Transitionable.props.origin
-width|string \| number|auto|设置对话框的宽度
+width|string / number|auto|设置对话框的宽度
 scrollable|boolean|undefined|当包含card, card-title, card-text 以及 card-actions这几个的对话框可滚动设为 true 的时候； card-text 应该指定高度并且设置 overflow-y
-transition|string \| boolean|dialog-transition|Mixins.Transitionable.props.transition
+transition|string / boolean|dialog-transition|Mixins.Transitionable.props.transition
 attach|any|undefined|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
 contentClass|any|undefined|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
 hideOverlay|boolean|undefined|隐藏遮罩

@@ -27,7 +27,7 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 column|boolean|true|单选框列显示
-height|number \| string|auto|设置组件高度
+height|number / string|auto|设置组件高度
 mandatory|boolean|true|强制选择复选框组的一个子复选框 `v-radio` 
 name|string|undefined|设置组件的 name 属性
 row|boolean|undefined|单选框行显示
@@ -47,7 +47,7 @@ onIcon|string|$vuetify.icons.radioOn|
 offIcon|string|$vuetify.icons.radioOff|
 readonly|boolean|undefined|
 value|any|undefined|设置选择控件组件的值
-ripple|boolean \| any|true|应用`v-ripple`指令
+ripple|boolean / any|true|应用`v-ripple`指令
 dark|boolean|undefined|应用暗黑主题变体
 light|boolean|undefined|应用明亮主题变体
 
