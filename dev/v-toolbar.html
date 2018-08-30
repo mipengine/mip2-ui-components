@@ -72,6 +72,70 @@
     </mip-v-toolbar>
     </div>
 
+    <h2>具有层次结构的列宽</h2>
+    <div class="group pa-2">
+      <div class="layout row child-flex wrap">
+          <div>
+            <mip-v-toolbar>
+              <mip-v-btn icon class="hidden-xs-only">
+                <mip-v-icon>arrow_back</mip-v-icon>
+              </mip-v-btn>
+  
+              <mip-v-toolbar-title>Title</mip-v-toolbar-title>
+  
+              <mip-v-spacer></mip-v-spacer>
+  
+              <mip-v-btn icon class="hidden-xs-only">
+                <mip-v-icon>search</mip-v-icon>
+              </mip-v-btn>
+            </mip-v-toolbar>
+          </div>
+  
+          <div style="flex-basis: 20%">
+            <mip-v-toolbar dark>
+              <mip-v-spacer></mip-v-spacer>
+  
+              <mip-v-btn icon>
+                <mip-v-icon>reply</mip-v-icon>
+              </mip-v-btn>
+  
+              <mip-v-btn icon>
+                <mip-v-icon>more_vert</mip-v-icon>
+              </mip-v-btn>
+            </mip-v-toolbar>
+          </div>
+        </div>
+    </div>
+
+    <h2>搜索时浮动</h2>
+    <div class="group pa-2">
+      <mip-v-card
+        class="pa-3"
+        flat
+        height="300px"
+        img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg"
+      >
+        <mip-v-toolbar
+          dense
+          floating
+        >
+          <mip-v-text-field
+            hide-details
+            prepend-icon="search"
+            single-line
+          ></mip-v-text-field>
+
+          <mip-v-btn icon>
+            <mip-v-icon>my_location</mip-v-icon>
+          </mip-v-btn>
+
+          <mip-v-btn icon>
+            <mip-v-icon>more_vert</mip-v-icon>
+          </mip-v-btn>
+        </mip-v-toolbar>
+      </mip-v-card>
+    </div>
+
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
   </body>

@@ -102,7 +102,7 @@ export default mixins(Colorable, Themeable).extend({
     // * Icon Classes
 
     // fix class
-    data.staticClass = fixClass(ctx.parent.$el.parentNode, ['v-icon', data.staticClass, Object.keys(classes).filter(k => classes[k]).join(' '), iconType, isCustomIcon ? iconName : null].filter(val => !!val).join(' ').trim())
+    data.staticClass = fixClass(ctx.parent.$el ? ctx.parent.$el.parentNode : null, ['v-icon', data.staticClass, Object.keys(classes).filter(k => classes[k]).join(' '), iconType, isCustomIcon ? iconName : null].filter(val => !!val).join(' ').trim())
     return h('i', data, newChildren)
   }
 })
