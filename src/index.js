@@ -12,9 +12,13 @@ const Vuetify = {
   },
   version: '1.1.9'
 }
+if (typeof window !== 'undefined') {
+  const Vue = window.MIP.Vue
 
-const Vue = window.MIP.Vue
+  Vue.config.performance = true
 
-Vue.config.performance = true
-
-Vue.use(Vuetify)
+  Vue.use(Vuetify)
+}
+if (typeof global === 'object' && typeof global.window === 'undefined') {
+  global.components = components
+}
