@@ -68,7 +68,7 @@ debounce|number / string|/|Duration before tooltip is shown and hidden when hove
 disabled|boolean|/|Disables the tooltip
 fixed|boolean|true|
 tag|string|'span'|Specifies a custom tag for the activator wrapper
-transition|string|/|Mixins.Transitionable.props.transition
+transition|string|/|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 
 ## 示例
 

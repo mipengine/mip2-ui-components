@@ -141,6 +141,18 @@ const getDefaultValue = (definition) => {
   return definition.default || '/'
 }
 
+const getDescription = async (mergedDoc, prop) => {
+  const description = (mergedDoc.props || {})[prop] || ''
+
+  if (description.startsWith('Mixins')) {
+    const paths = description.split('.')
+
+    return (await getMixinDoc(paths[1])).props[paths[3]]
+  }
+
+  return description
+}
+
 const generateDoc = async (tagName) => {
   const mipTagName = getMIPTagName(tagName)
   const name = tagName.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join('')
@@ -183,16 +195,18 @@ const generateDoc = async (tagName) => {
     print('名称|类型|默认值|含义')
     print(':--:|:--:|:--:|:---')
 
-    println(Object.entries(mergedProps)
-      .map(([prop, definition]) =>
-        [
-          camelToDash(prop),
-          getPropType(definition),
-          getDefaultValue(definition),
-          (mergedDoc.props || {})[prop] || ''
-        ].join('|')
-      )
-      .join('\n'))
+    println(
+      (await Promise.all(Object.entries(mergedProps)
+        .map(async ([prop, definition]) =>
+          [
+            camelToDash(prop),
+            getPropType(definition),
+            getDefaultValue(definition),
+            await getDescription(mergedDoc, prop)
+          ].join('|')
+        ))
+      ).join('\n')
+    )
   }))
 
   if (examples.length <= 1) {

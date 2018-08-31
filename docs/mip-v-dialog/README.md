@@ -44,10 +44,10 @@ fullscreen|boolean|/|改变布局全屏显示
 full-width|boolean|/|指定模态框强制100%宽度
 no-click-animation|boolean|/|Disables the bounce effect when clicking outside of a `v-dialog`'s content when using the **persistent** prop
 max-width|string / number|'none'|内容的最大宽度
-origin|string|'center center'|Mixins.Transitionable.props.origin
+origin|string|'center center'|设置过渡原点
 width|string / number|'auto'|设置对话框的宽度
 scrollable|boolean|/|当包含card, card-title, card-text 以及 card-actions这几个的对话框可滚动设为 true 的时候； card-text 应该指定高度并且设置 overflow-y
-transition|string / boolean|'dialog-transition'|Mixins.Transitionable.props.transition
+transition|string / boolean|'dialog-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 
 ## 示例
 

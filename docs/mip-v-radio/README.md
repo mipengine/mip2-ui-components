@@ -44,8 +44,8 @@ color|string|'accent'|将指定的色彩应用与控件
 ripple|boolean / any|true|应用`v-ripple`指令
 dark|boolean|/|应用暗黑主题变体
 light|boolean|/|应用明亮主题变体
-disabled|boolean|/|Mixins.Input.props.disabled
-label|string|/|Mixins.Input.props.label
+disabled|boolean|/|输入框是禁用的
+label|string|/|设置输入框标签
 on-icon|string|'$vuetify.icons.radioOn'|
 off-icon|string|'$vuetify.icons.radioOff'|
 readonly|boolean|/|

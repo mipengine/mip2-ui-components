@@ -22,7 +22,7 @@ input-value|any|/|**v-model** 的绑定值
 false-value|any|/|设置虚假状态的值
 true-value|any|/|设置真值
 multiple|boolean|/|
-label|string|/|Mixins.Input.props.label
+label|string|/|设置输入框标签
 toggle-keys|any|[13,32]|
 indeterminate|boolean|/|为复选框设置不确定状态
 indeterminate-icon|string|'$vuetify.icons.checkboxIndeterminate'|

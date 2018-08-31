@@ -6,6 +6,8 @@
 
 ```html
 <div>
+<div class="layout">
+    <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>
       <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" height="200px"></mip-v-card-media>
 
@@ -21,6 +23,8 @@
         <mip-v-btn flat="" color="orange">Explore</mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
+    </div>
+  </div>
 </div>
 ```
 
@@ -78,17 +82,17 @@ width|string / number|/|内容的宽度
 ### 媒体与文字
 
 ```html
-<mip-v-layout>
-  <mip-v-flex xs12="" sm6="" offset-sm3="">
+<div class="layout">
+  <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>
       <mip-v-card-media class="white--text" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
-        <mip-v-container fill-height="" fluid="">
-          <mip-v-layout fill-height="">
-            <mip-v-flex xs12="" align-end="" flexbox="">
+        <div class="container fill-height fluid">
+          <div class="layout fill-height">
+            <div class="flex xs12 align-end flexbox">
               <span class="headline">Top 10 Australian beaches</span>
-            </mip-v-flex>
-          </mip-v-layout>
-        </mip-v-container>
+            </div>
+          </div>
+        </div>
       </mip-v-card-media>
       <mip-v-card-title>
         <div>
@@ -102,8 +106,13 @@ width|string / number|/|内容的宽度
         <mip-v-btn flat="" color="orange">Explore</mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
-  </mip-v-flex>
-</mip-v-layout>
+  </div>
+</div>
+```
+
+### 水平的卡片
+
+```html
 <div id="e3" style="max-width: 400px; margin: auto;" class="grey lighten-3">
   <mip-v-toolbar color="pink" dark="">
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
@@ -195,8 +204,8 @@ width|string / number|/|内容的宽度
 ### 栅格
 
 ```html
-<div class="layout column">
-  <div class="flex xs12 sm6 offset-sm3">
+<div class="layout justify-center">
+  <div class="flex xs12 sm6">
     <mip-v-toolbar color="indigo" dark="">
       <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
       <mip-v-toolbar-title>Discover</mip-v-toolbar-title>

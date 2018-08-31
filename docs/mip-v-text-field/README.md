@@ -36,7 +36,7 @@ clear-icon|string|'$vuetify.icons.clear'|Applied when using **clearable** and th
 clear-icon-cb|any|/|Callback for clear icon when clicked
 color|string|'primary'|
 counter|boolean / number / string|/|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
-flat|boolean|/|Mixins.Soloable.props.flat
+flat|boolean|/|当使用**solo**或者**solo-inverted**属性时，移除添加到元素的标高（阴影）
 full-width|boolean|/|指定输入框为全屏宽度。
 label|string|/|
 outline|boolean|/|Applies the outline style to the input
@@ -46,8 +46,8 @@ prepend-inner-icon|string|/|
 prepend-inner-icon-cb|any|/|
 reverse|boolean|/|Reverses the input orientation
 single-line|boolean|/|Label does not move on focus/dirty
-solo|boolean|/|Mixins.Soloable.props.solo
-solo-inverted|boolean|/|Mixins.Soloable.props.soloInverted
+solo|boolean|/|改变输入框的样式
+solo-inverted|boolean|/|减少元素的不透明度，知道获得焦点
 suffix|string|/|显示后缀
 textarea|boolean|/|Textarea 使用备用样式
 type|string|'text'|设置输入类型

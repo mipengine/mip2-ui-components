@@ -24,7 +24,7 @@
 color|string|/|将指定的色彩应用与控件
 dark|boolean|/|应用暗黑主题变体
 light|boolean|/|应用明亮主题变体
-disabled|boolean|/|Mixins.Input.props.disabled
+disabled|boolean|/|输入框是禁用的
 large|boolean|/|设置图标为大型**（36px）**
 left|boolean|/|在按钮内部使用时，把图标放置在左侧
 medium|boolean|/|设置图标为中型**(28px)**

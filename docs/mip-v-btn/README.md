@@ -15,18 +15,6 @@
 
 ## API
 
-### mip-v-btn-toggle
-
-#### Props
-
-名称|类型|默认值|含义
-:--:|:--:|:--:|:---
-mandatory|boolean|/|
-dark|boolean|/|应用暗黑主题变体
-light|boolean|/|应用明亮主题变体
-input-value|any|/|
-multiple|boolean|/|
-
 ### mip-v-btn
 
 #### Props
@@ -67,6 +55,18 @@ round|boolean|/|
 small|boolean|/|
 type|string|'button'|
 value|any|/|控制可见性
+
+### mip-v-btn-toggle
+
+#### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+mandatory|boolean|/|
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+input-value|any|/|
+multiple|boolean|/|
 
 ## 示例
 

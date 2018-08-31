@@ -8,14 +8,14 @@
 <div class="container grid-list-md">
   <div class="layout row wrap">
     <div class="flex xs12 sm6 md4">
-      <mip-v-slider m-bind:value.sync="slider"></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider" m-bind:min="min" m-bind:max="max"></mip-v-slider>
 
-      <mip-v-switch m-bind:value.sync="tile" label="Tile"></mip-v-switch>
+      <mip-v-switch m-bind:input-value.sync="tile" label="Tile"></mip-v-switch>
     </div>
 
     <div class="flex xs12 sm6 md8 align-center justify-center layout text-xs-center">
-      <mip-v-avatar tile="tile" size="slider" color="grey lighten-4">
-        <img src="https://avatars2.githubusercontent.com/u/4878697?s=400&amp;v=4" alt="avatar">
+      <mip-v-avatar m-bind:tile="tile" m-bind:size="slider" color="grey lighten-4">
+        <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
       </mip-v-avatar>
     </div>
   </div>
@@ -36,14 +36,44 @@ tile|boolean|/|删除边看弧度
 
 ## 示例
 
+### 图标和文本
+
+```html
+<div class="layout align-center justify-space-around wrap">
+  <mip-v-avatar color="indigo">
+    <mip-v-icon dark="">account_circle</mip-v-icon>
+  </mip-v-avatar>
+
+  <mip-v-avatar>
+    <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
+  </mip-v-avatar>
+
+  <mip-v-badge overlap="">
+    <span slot="badge">3</span>
+
+    <mip-v-avatar color="purple red--after">
+      <mip-v-icon dark="">notifications</mip-v-icon>
+    </mip-v-avatar>
+  </mip-v-badge>
+
+  <mip-v-avatar color="teal">
+    <span class="white--text headline">C</span>
+  </mip-v-avatar>
+
+  <mip-v-avatar color="red">
+    <span class="white--text headline">J</span>
+  </mip-v-avatar>
+</div>
+```
+
 ### 数据绑定
 
 ```html
 <mip-v-btn on="tap:MIP.setData({tile: !m.tile})" color="primary">Toggle Tile</mip-v-btn>
 <input m-bind:value="avatarSize" class="avatar-size-input">
 <div class="section">
-  <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block">
-    <img src="https://avatars2.githubusercontent.com/u/4878697?s=400&amp;v=4" alt="avatar">
+  <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="grey lighten-4">
+    <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
   </mip-v-avatar>
 
 </div>

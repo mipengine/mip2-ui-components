@@ -80,20 +80,6 @@ color|string|/|
 size|number / string|40|设置元素的高度和宽度
 tile|boolean|/|删除边看弧度
 
-### mip-v-list
-
-#### Props
-
-名称|类型|默认值|含义
-:--:|:--:|:--:|:---
-dark|boolean|/|应用暗黑主题变体
-light|boolean|/|应用明亮主题变体
-dense|boolean|/|减小列表块的最大宽度
-expand|boolean|/|将只有在明确关闭后才会折叠起来
-subheader|boolean|/|会移除上边距（top padding），当前面只有一个列表组标题的时候使用
-three-line|boolean|/|增加列表块的高度到3行
-two-line|boolean|/|增加列表块的高度到2行
-
 ### mip-v-list-group
 
 #### Props
@@ -109,6 +95,20 @@ group|string|/|Assign a route namespace. Accepts a string or regexp for determin
 no-action|boolean|/|Removes left padding assigned for action icons from group items
 prepend-icon|string|/|
 sub-group|boolean|/|Designate the component as nested list group
+
+### mip-v-list
+
+#### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+dense|boolean|/|减小列表块的最大宽度
+expand|boolean|/|将只有在明确关闭后才会折叠起来
+subheader|boolean|/|会移除上边距（top padding），当前面只有一个列表组标题的时候使用
+three-line|boolean|/|增加列表块的高度到3行
+two-line|boolean|/|增加列表块的高度到2行
 
 ### mip-v-list-tile
 

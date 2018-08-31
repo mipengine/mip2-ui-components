@@ -63,8 +63,8 @@ offset-x|boolean|/|在x轴上偏移菜单，与左/右方向一起工作
 offset-y|boolean|/|在y轴上偏移菜单，与上/下方向一起工作
 open-on-click|boolean|true|指定是否在激活器点击时打开菜单
 open-on-hover|boolean|/|指定是否在激活器悬停时打开菜单
-origin|string|'top left'|Mixins.Transitionable.props.origin
-transition|string / boolean|'v-menu-transition'|Mixins.Transitionable.props.transition
+origin|string|'top left'|设置过渡原点
+transition|string / boolean|'v-menu-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 
 ## 示例
 

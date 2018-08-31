@@ -6,18 +6,20 @@
 
 ```html
 <div class="container">
-  <mip-v-badge left="">
-    <span slot="badge">6</span>
-    <mip-v-icon large="" color="grey lighten-1">
-      shopping_cart
-    </mip-v-icon>
-  </mip-v-badge>
-  <mip-v-badge color="red">
-    <span slot="badge">!</span>
-    <mip-v-icon large="" color="grey">
-      mail
-    </mip-v-icon>
-  </mip-v-badge>
+  <div class="text-xs-center">
+    <mip-v-badge left="">
+      <span slot="badge">6</span>
+      <mip-v-icon large="" color="grey lighten-1">
+        shopping_cart
+      </mip-v-icon>
+    </mip-v-badge>
+    <mip-v-badge color="red">
+      <span slot="badge">!</span>
+      <mip-v-icon large="" color="grey">
+        mail
+      </mip-v-icon>
+    </mip-v-badge>
+  </div>
 </div>
 ```
 
@@ -31,11 +33,11 @@
 :--:|:--:|:--:|:---
 color|string|'primary'|将指定的色彩应用与控件
 value|boolean|true|控制可见性
-left|boolean|/|Mixins.Positionable.props.left
-bottom|boolean|/|Mixins.Positionable.props.bottom
+left|boolean|/|将组件向左边对齐
+bottom|boolean|/|将组件向底部对齐
 mode|string|/|设置过渡模式（不适用于“过渡组（transition-group）”）
 origin|string|/|设置过渡原点
-transition|string|'fab-transition'|Mixins.Transitionable.props.transition
+transition|string|'fab-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 overlap|boolean|/|组件将折叠插槽里的内容
 
 ## 示例
@@ -44,6 +46,7 @@ overlap|boolean|/|组件将折叠插槽里的内容
 
 ```html
 <div class="container">
+<div class="text-xs-center">
   <mip-v-badge color="purple" left="" overlap="">
     <mip-v-icon slot="badge" dark="" small="">
       done
@@ -62,12 +65,15 @@ overlap|boolean|/|组件将折叠插槽里的内容
     </mip-v-icon>
   </mip-v-badge>
 </div>
+</div>
 ```
 
 ### 内联
 
 ```html
 <div class="container">
+  <div class="text-xs-center">
+
   <mip-v-badge left="">
     <span slot="badge">2</span>
     <span>Examples</span>
@@ -79,6 +85,7 @@ overlap|boolean|/|组件将折叠插槽里的内容
     <mip-v-icon slot="badge" dark="" small="">list</mip-v-icon>
     <span>Lists</span>
   </mip-v-badge>
+  </div>
 </div>
 ```
 
@@ -86,21 +93,23 @@ overlap|boolean|/|组件将折叠插槽里的内容
 
 ```html
 <div class="container">
-  <mip-v-badge left="" color="purple">
-    <mip-v-icon slot="badge" dark="" small="">mdi-adjust</mip-v-icon>
-    <span>
-      MDI icon
-    </span>
-  </mip-v-badge>
+  <div class="text-xs-center">
+    <mip-v-badge left="" color="purple">
+      <mip-v-icon slot="badge" dark="" small="">mdi-adjust</mip-v-icon>
+      <span>
+        MDI icon
+      </span>
+    </mip-v-badge>
 
-  &#xA0;&#xA0;
+    &#xA0;&#xA0;
 
-  <mip-v-badge color="orange">
-    <mip-v-icon slot="badge" dark="" small="">fas fa-fighter-jet</mip-v-icon>
-    <span>
-      Font Awesome icon
-    </span>
-  </mip-v-badge>
+    <mip-v-badge color="orange">
+      <mip-v-icon slot="badge" dark="" small="">fas fa-fighter-jet</mip-v-icon>
+      <span>
+        Font Awesome icon
+      </span>
+    </mip-v-badge>
+  </div>
 </div>
 ```
 
@@ -108,11 +117,14 @@ overlap|boolean|/|组件将折叠插槽里的内容
 
 ```html
 <div class="container">
-  <mip-v-btn color="indigo" class="white--text" on="tap:MIP.setData({ show: !m.show })">
-    Toggle
-  </mip-v-btn>
+  <div class="text-xs-center">
+    <mip-v-btn color="indigo" class="white--text" on="tap:MIP.setData({ show: !m.show })">
+      Toggle
+    </mip-v-btn>
+  </div>
 </div>
 <div class="container">
+  <div class="text-xs-center">
   <mip-v-badge m-bind:value="show" color="cyan" left="">
     <span slot="badge">6</span>
     <mip-v-icon large="" color="grey lighten-1">
@@ -126,5 +138,6 @@ overlap|boolean|/|组件将折叠插槽里的内容
       mail
     </mip-v-icon>
   </mip-v-badge>
+  </div>
 </div>
 ```

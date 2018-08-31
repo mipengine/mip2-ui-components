@@ -26,7 +26,7 @@
 auto|boolean|/|在所选择的元素上居中列表
 close-on-click|boolean|true|
 close-on-content-click|boolean|true|
-disabled|boolean|/|Mixins.Input.props.disabled
+disabled|boolean|/|输入框是禁用的
 full-width|boolean|/|Forces 100% width
 max-height|number / string|300|设置内容的最大高度
 offset-x|boolean|/|
