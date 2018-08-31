@@ -110,6 +110,7 @@ const getPropType = (definition) => {
       case Boolean: return 'boolean'
       case Number: return 'number'
       case String: return 'string'
+      case Object: return 'object'
       default: return 'any'
     }
   }

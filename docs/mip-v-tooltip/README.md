@@ -5,35 +5,24 @@
 ## 用例
 
 ```html
-<mip-v-tooltip top="">
-  <mip-v-btn slot="activator" color="primary" dark="">Top
-  </mip-v-btn>
-  <span>Tooltip</span>
-</mip-v-tooltip>
-<mip-v-tooltip right="">
-  <mip-v-btn slot="activator" color="primary" dark="">Right
-  </mip-v-btn>
-  <span>Tooltip</span>
-</mip-v-tooltip>
-<mip-v-tooltip bottom="">
-  <mip-v-btn slot="activator" color="primary" dark="">Bottom
-  </mip-v-btn>
-  <span>Tooltip</span>
-</mip-v-tooltip>
-<mip-v-tooltip left="">
-  <mip-v-btn slot="activator" color="primary" dark="">Left
-  </mip-v-btn>
-  <span>Tooltip</span>
-</mip-v-tooltip>
-<mip-v-tooltip bottom="">
-  <mip-v-icon slot="activator" color="primary" dark="">home
-  </mip-v-icon>
-  <span>Tooltip</span>
-</mip-v-tooltip>
-<mip-v-tooltip bottom="">
-  <span slot="activator">text...</span>
-  <span>Tooltip</span>
-</mip-v-tooltip>
+<div class="text-xs-center d-flex align-center">
+  <mip-v-tooltip bottom="">
+    <mip-v-btn slot="activator" color="primary" dark="">
+      Button
+    </mip-v-btn>
+    <span>Tooltip</span>
+  </mip-v-tooltip>
+
+  <mip-v-tooltip bottom="">
+    <mip-v-icon slot="activator" color="primary" dark="">home</mip-v-icon>
+    <span>Tooltip</span>
+  </mip-v-tooltip>
+
+  <mip-v-tooltip bottom="">
+    <span slot="activator">This text has a tooltip</span>
+    <span>Tooltip</span>
+  </mip-v-tooltip>
+</div>
 ```
 
 ## API
@@ -72,15 +61,57 @@ transition|string|/|设置组件过渡效果，可以是内置的过渡配置或
 
 ## 示例
 
+### 方向
+
+```html
+<div class="text-xs-center">
+  <mip-v-tooltip left="">
+    <mip-v-btn slot="activator" color="primary" dark="">
+      Left
+    </mip-v-btn>
+    <span>Left tooltip</span>
+  </mip-v-tooltip>
+
+  <mip-v-tooltip top="">
+    <mip-v-btn slot="activator" color="primary" dark="">
+      Top
+    </mip-v-btn>
+    <span>Top tooltip</span>
+  </mip-v-tooltip>
+
+  <mip-v-tooltip bottom="">
+    <mip-v-btn slot="activator" color="primary" dark="">
+      Bottom
+    </mip-v-btn>
+    <span>Bottom tooltip</span>
+  </mip-v-tooltip>
+
+  <mip-v-tooltip right="">
+    <mip-v-btn slot="activator" color="primary" dark="">
+      Right
+    </mip-v-btn>
+    <span>Right tooltip</span>
+  </mip-v-tooltip>
+</div>
+```
+
 ### 控制是否可见
 
 ```html
-<p>`show`</p>
-<mip-v-btn color="primary" dark="" on="tap:MIP.setData({show:!m.show})">edit
-</mip-v-btn>
-<mip-v-tooltip bottom="" m-bind:value.sync="show">
-  <mip-v-btn slot="activator" color="primary" dark="">Bottom
-  </mip-v-btn>
-  <span>Tooltip</span>
-</mip-v-tooltip>
+<div class="container fluid text-xs-center">
+  <div class="layout flex justify-space-between row wrap">
+    <div class="flex xs12">
+      <mip-v-btn on="tap:MIP.setData({show: !m.show})">toggle</mip-v-btn>
+    </div>
+
+    <div class="flex xs12 mt-5">
+      <mip-v-tooltip m-bind:value.sync="show" top="">
+        <mip-v-btn slot="activator" icon="">
+          <mip-v-icon color="grey lighten-1">shopping_cart</mip-v-icon>
+        </mip-v-btn>
+        <span>Programmatic tooltip</span>
+      </mip-v-tooltip>
+    </div>
+  </div>
+</div>
 ```

@@ -80,6 +80,20 @@ color|string|/|
 size|number / string|40|设置元素的高度和宽度
 tile|boolean|/|删除边看弧度
 
+### mip-v-list
+
+#### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+dense|boolean|/|减小列表块的最大宽度
+expand|boolean|/|将只有在明确关闭后才会折叠起来
+subheader|boolean|/|会移除上边距（top padding），当前面只有一个列表组标题的时候使用
+three-line|boolean|/|增加列表块的高度到3行
+two-line|boolean|/|增加列表块的高度到2行
+
 ### mip-v-list-group
 
 #### Props
@@ -96,20 +110,6 @@ no-action|boolean|/|Removes left padding assigned for action icons from group it
 prepend-icon|string|/|
 sub-group|boolean|/|Designate the component as nested list group
 
-### mip-v-list
-
-#### Props
-
-名称|类型|默认值|含义
-:--:|:--:|:--:|:---
-dark|boolean|/|应用暗黑主题变体
-light|boolean|/|应用明亮主题变体
-dense|boolean|/|减小列表块的最大宽度
-expand|boolean|/|将只有在明确关闭后才会折叠起来
-subheader|boolean|/|会移除上边距（top padding），当前面只有一个列表组标题的时候使用
-three-line|boolean|/|增加列表块的高度到3行
-two-line|boolean|/|增加列表块的高度到2行
-
 ### mip-v-list-tile
 
 #### Props
@@ -122,11 +122,11 @@ append|boolean|/|Vue Router的router-link属性
 disabled|boolean|/|Route列表项是被禁用的
 exact|boolean|/|完全匹配链接，没有这个的话，“/”将匹配每一个路由
 exact-active-class|string|/|Vue Router的 router-link属性
-href|string / any|/|将组件标签指定为`<a>`
-to|string / any|/|将组件标签指定为`<router-link>`
+href|string / object|/|将组件标签指定为`<a>`
+to|string / object|/|将组件标签指定为`<router-link>`
 nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
 replace|boolean|/|Vue Router router-link 属性
-ripple|boolean / any|/|使用`v-ripple`指令
+ripple|boolean / object|/|使用`v-ripple`指令
 tag|string|/|指定要在组件上使用的自定义标签
 target|string|/|指定目标属性，仅适用于猫标签。
 value|boolean|/|Expands / Collapse list group

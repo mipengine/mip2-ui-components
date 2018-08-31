@@ -24,7 +24,7 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 dont-fill-mask-blanks|boolean|/|键入时禁用自动字符显示
-mask|any / string|/|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
+mask|object / string|/|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
 return-masked-value|boolean|/|返回未修改的掩码字符串
 append-outer-icon|string|/|Append an icon to the outside of `v-text-field`'s input, uses same syntax as `v-icon`
 append-outer-icon-cb|any|/|Callback for appended outer icon when clicked
@@ -136,8 +136,8 @@ type|string|'text'|设置输入类型
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 sm6" m-bind:value.sync="password" m-bind:append-icon="show1 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show1 ? &apos;text&apos; : &apos;password&apos;" name="input-10-1" label="Normal with hint text" hint="At least 8 characters" counter="" on="click-append:MIP.setData({show1: !m.show1})"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 sm6" m-bind:append-icon="show2 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show2 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Visible" hint="At least 8 characters" value="wqfasds" on="click-append:MIP.setData({show2: !m.show2})"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 sm6" m-bind:append-icon="show3 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show3 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Not visible" hint="At least 8 characters" value="wqfasds" on="click-append:MIP.setData({show3: !m.show3})"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 sm6 input-group--focused" m-bind:append-icon="show2 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show2 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Visible" hint="At least 8 characters" value="wqfasds" on="click-append:MIP.setData({show2: !m.show2})"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 sm6 input-group--focused" m-bind:append-icon="show3 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show3 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Not visible" hint="At least 8 characters" value="wqfasds" on="click-append:MIP.setData({show3: !m.show3})"></mip-v-text-field>
     <mip-v-text-field class="flex xs12 sm6" m-bind:append-icon="show4 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show4 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Error" hint="At least 8 characters" value="Pa" error="" on="click-append:MIP.setData({show4: !m.show4})"></mip-v-text-field>
   </div>
 </div>
