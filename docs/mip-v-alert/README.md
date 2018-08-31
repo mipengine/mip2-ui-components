@@ -1,6 +1,6 @@
 # mip-v-alert
 
-`v-alert`组件被用来向用户传达重要信息，它有4个变种，**成功（success）**，**信息（info）**，**警告（warning）**和**错误（error）**。它们被分配了可以修改的表示不同操作的默认图标
+`mip-v-alert`组件被用来向用户传达重要信息，它有4个变种，**成功（success）**，**信息（info）**，**警告（warning）**和**错误（error）**。它们被分配了可以修改的表示不同操作的默认图标
 
 ## 用例
 
@@ -27,15 +27,15 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-dismissible|boolean|undefined|指定提示框可以关闭
-icon|string|undefined|制定一个特定的图标
-outline|boolean|undefined|提示框将有一个轮廓
-type|string|undefined|指定**成功（success）**，**信息（info）**，**警告（warning*）*或者**错误（error）**提示框，使用上下文颜色和预定义的图标。
-color|string|undefined|将指定的色彩应用与控件
-value|boolean|undefined|控制可见性
-mode|string|undefined|设置过渡模式（不适用于“过渡组（transition-group）”）
-origin|string|undefined|设置过渡原点
-transition|string|undefined|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
+color|string|/|将指定的色彩应用与控件
+value|boolean|/|控制可见性
+mode|string|/|设置过渡模式（不适用于“过渡组（transition-group）”）
+origin|string|/|设置过渡原点
+transition|string|/|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
+dismissible|boolean|/|指定提示框可以关闭
+icon|string|/|制定一个特定的图标
+outline|boolean|/|提示框将有一个轮廓
+type|string|/|指定**成功（success）**，**信息（info）**，**警告（warning）**或者**错误（error）**提示框，使用上下文颜色和预定义的图标。
 
 ## 示例
 

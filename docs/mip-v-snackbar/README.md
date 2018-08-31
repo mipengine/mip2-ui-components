@@ -1,6 +1,6 @@
 # mip-v-snackbar
 
-`v-snackbar`组件用于向用户显示快速消息，小吃吧支持定位、删除延迟和回调。
+`mip-v-snackbar`组件用于向用户显示快速消息，小吃吧支持定位、删除延迟和回调。
 
 ## 用例
 
@@ -26,15 +26,15 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-autoHeight|boolean|undefined|Makes snackbar height dynamic
-multiLine|boolean|undefined|识小吃吧更高（移动设备）
+color|string|/|将指定的色彩应用与控件
+value|boolean|/|控制可见性
+absolute|boolean|/|给元素设置绝对定位
+top|boolean|/|将组件向顶部对齐
+bottom|boolean|/|将组件向底部对齐
+left|boolean|/|将组件向左边对齐
+right|boolean|/|将组件向右边对齐
+auto-height|boolean|/|Makes snackbar height dynamic
+multi-line|boolean|/|识小吃吧更高（移动设备）
 timeout|number|6000|等待小吃吧自动隐藏的时间
-vertical|boolean|undefined|垂直折叠小吃店的内容（移动设备）
-color|string|undefined|将指定的色彩应用与控件
-value|boolean|undefined|控制可见性
-absolute|boolean|undefined|给元素设置绝对定位
-top|boolean|undefined|将组件向顶部对齐
-bottom|boolean|undefined|将组件向底部对齐
-left|boolean|undefined|将组件向左边对齐
-right|boolean|undefined|将组件向右边对齐
+vertical|boolean|/|垂直折叠小吃店的内容（移动设备）
 

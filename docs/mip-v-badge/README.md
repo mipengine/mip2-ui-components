@@ -1,6 +1,6 @@
 # mip-v-badge
 
-`v-badge`组件可以包装任何类型的内容以突出显示用户的信息，或只提醒注意特定的元素。
+`mip-v-badge`组件可以包装任何类型的内容以突出显示用户的信息，或只提醒注意特定的元素。
 
 ## 用例
 
@@ -29,14 +29,14 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|undefined|将指定的色彩应用与控件
-overlap|boolean|undefined|组件将折叠插槽里的内容
-transition|string|undefined|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
+color|string|'primary'|将指定的色彩应用与控件
 value|boolean|true|控制可见性
-left|boolean|undefined|将组件向左边对齐
-bottom|boolean|undefined|将组件向底部对齐
-mode|string|undefined|设置过渡模式（不适用于“过渡组（transition-group）”）
-origin|string|undefined|设置过渡原点
+left|boolean|/|Mixins.Positionable.props.left
+bottom|boolean|/|Mixins.Positionable.props.bottom
+mode|string|/|设置过渡模式（不适用于“过渡组（transition-group）”）
+origin|string|/|设置过渡原点
+transition|string|'fab-transition'|Mixins.Transitionable.props.transition
+overlap|boolean|/|组件将折叠插槽里的内容
 
 ## 示例
 

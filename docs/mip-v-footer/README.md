@@ -1,6 +1,6 @@
 # mip-v-footer
 
-`v-footer`用于显示用户可能希望从站点内的所有页面访问到的公共信息。
+`mip-v-footer`用于显示用户可能希望从站点内的所有页面访问到的公共信息。
 
 ## 用例
 
@@ -19,12 +19,12 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
+app|boolean|/|指定组件作为应用程序布局的一部分，用于动态调整内容的大小
+color|string|/|将指定的色彩应用与控件
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
 height|number / string|32|设置组件高度
-inset|boolean|undefined|定位工具栏偏离应用程序的`v-navigation-drawer`的位置
-app|boolean|undefined|指定组件作为应用程序布局的一部分，用于动态调整内容的大小
-color|string|undefined|将指定的色彩应用与控件
-dark|boolean|undefined|应用暗黑主题变体
-light|boolean|undefined|应用明亮主题变体
+inset|boolean|/|定位工具栏偏离应用程序的`v-navigation-drawer`的位置
 
 ## 示例
 

@@ -23,34 +23,34 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-appendOuterIcon|string|undefined|Append an icon to the outside of `v-text-field`'s input, uses same syntax as `v-icon`
-appendOuterIconCb|any|undefined|Callback for appended outer icon when clicked
-autofocus|boolean|undefined|启用自动聚焦
-box|boolean|undefined|应用备用输入框样式
-browserAutocomplete|string|undefined|Configures the default `<input>` autocomplete attribute
-clearable|boolean|undefined|添加输入框清除功能，默认图标是 Material Icons **clear**
-clearIcon|string|$vuetify.icons.clear|Applied when using **clearable** and the input is dirty
-clearIconCb|any|undefined|Callback for clear icon when clicked
-color|string|primary|
-counter|boolean / number / string|undefined|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
-flat|boolean|undefined|Mixins.Soloable.props.flat
-fullWidth|boolean|undefined|指定输入框为全屏宽度。
-label|string|undefined|
-outline|boolean|undefined|Applies the outline style to the input
-placeholder|string|undefined|Sets the input’s placeholder text
-prefix|string|undefined|显示前缀
-prependInnerIcon|string|undefined|
-prependInnerIconCb|any|undefined|
-reverse|boolean|undefined|Reverses the input orientation
-singleLine|boolean|undefined|Label does not move on focus/dirty
-solo|boolean|undefined|Mixins.Soloable.props.solo
-soloInverted|boolean|undefined|Mixins.Soloable.props.soloInverted
-suffix|string|undefined|显示后缀
-textarea|boolean|undefined|Textarea 使用备用样式
-type|string|text|设置输入类型
-dontFillMaskBlanks|boolean|undefined|键入时禁用自动字符显示
-mask|any / string|undefined|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
-returnMaskedValue|boolean|undefined|返回未修改的掩码字符串
+dont-fill-mask-blanks|boolean|/|键入时禁用自动字符显示
+mask|any / string|/|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
+return-masked-value|boolean|/|返回未修改的掩码字符串
+append-outer-icon|string|/|Append an icon to the outside of `v-text-field`'s input, uses same syntax as `v-icon`
+append-outer-icon-cb|any|/|Callback for appended outer icon when clicked
+autofocus|boolean|/|启用自动聚焦
+box|boolean|/|应用备用输入框样式
+browser-autocomplete|string|/|Configures the default `<input>` autocomplete attribute
+clearable|boolean|/|添加输入框清除功能，默认图标是 Material Icons **clear**
+clear-icon|string|'$vuetify.icons.clear'|Applied when using **clearable** and the input is dirty
+clear-icon-cb|any|/|Callback for clear icon when clicked
+color|string|'primary'|
+counter|boolean / number / string|/|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
+flat|boolean|/|Mixins.Soloable.props.flat
+full-width|boolean|/|指定输入框为全屏宽度。
+label|string|/|
+outline|boolean|/|Applies the outline style to the input
+placeholder|string|/|Sets the input’s placeholder text
+prefix|string|/|显示前缀
+prepend-inner-icon|string|/|
+prepend-inner-icon-cb|any|/|
+reverse|boolean|/|Reverses the input orientation
+single-line|boolean|/|Label does not move on focus/dirty
+solo|boolean|/|Mixins.Soloable.props.solo
+solo-inverted|boolean|/|Mixins.Soloable.props.soloInverted
+suffix|string|/|显示后缀
+textarea|boolean|/|Textarea 使用备用样式
+type|string|'text'|设置输入类型
 
 ## 示例
 
