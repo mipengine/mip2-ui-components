@@ -100,7 +100,7 @@ export default {
           this.setSelectionRange()
         } else {
           this.lazyValue = val
-          this.$emit('input', this.lazyValue)
+          this.$emit('update:value', this.lazyValue)
         }
       }
     },
@@ -143,7 +143,7 @@ export default {
       if (val) {
         this.initialValue = this.lazyValue
       } else if (this.initialValue !== this.lazyValue) {
-        this.$emit('update:value', this.lazyValue)
+        this.$emit('change', this.lazyValue)
       }
     },
     value (val) {
@@ -322,7 +322,7 @@ export default {
     },
     onKeyDown (e) {
       this.internalChange = true
-      if (e.keyCode === keyCodes.enter) this.$emit('update:value', this.internalValue)
+      if (e.keyCode === keyCodes.enter) this.$emit('change', this.internalValue)
       this.$emit('keydown', e)
     },
     onMouseDown (e) {

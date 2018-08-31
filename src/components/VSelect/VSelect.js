@@ -196,7 +196,7 @@ export default {
   watch: {
     internalValue (val) {
       this.initialValue = val
-      this.$emit('update:value', this.internalValue)
+      this.$emit('change', this.internalValue)
       this.setSelectedItems()
     },
     isBooted () {

@@ -43,8 +43,7 @@ export default {
     transition: {
       type: [Boolean, String],
       default: false
-    },
-    value: null
+    }
   },
   data: vm => ({
     attrsInput: null,
@@ -270,7 +269,7 @@ export default {
     },
     setValue () {
       this.internalValue = this.internalSearch
-      this.$emit('update:value', this.internalSearch)
+      this.$emit('change', this.internalSearch)
     },
     updateSelf () {
       this.updateAutocomplete()

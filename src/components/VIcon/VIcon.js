@@ -102,7 +102,15 @@ export default mixins(Colorable, Themeable).extend({
     // * Icon Classes
 
     // fix class
-    data.staticClass = fixClass(ctx.parent.$el ? ctx.parent.$el.parentNode : null, ['v-icon', data.staticClass, Object.keys(classes).filter(k => classes[k]).join(' '), iconType, isCustomIcon ? iconName : null].filter(val => !!val).join(' ').trim())
+    let node = null
+    // in case of v-icon created as a slot,wrapped by other types of tag
+    if (ctx.parent.$el &&
+      ctx.parent.$el.parentNode &&
+      ctx.parent.$el.parentNode.tagName === 'MIP-V-ICON'
+    ) {
+      node = ctx.parent.$el.parentNode
+    }
+    data.staticClass = fixClass(node, ['v-icon', data.staticClass, Object.keys(classes).filter(k => classes[k]).join(' '), iconType, isCustomIcon ? iconName : null].filter(val => !!val).join(' ').trim())
     return h('i', data, newChildren)
   }
 })
