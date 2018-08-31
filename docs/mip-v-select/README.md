@@ -1,6 +1,6 @@
 # mip-v-select
 
-选择控制组件允许用户使用选择项，这些组件必须和 `v-model` 属性一起使用，因为他们无法保持自己的状态。
+选择控制组件允许用户使用选择项，这些组件必须和 `mip-v-model` 属性一起使用，因为他们无法保持自己的状态。
 
 ## 用例
 
@@ -23,57 +23,57 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-appendIcon|string|$vuetify.icons.dropdown|
-appendIconCb|any|undefined|
-attach|any|undefined|
-auto|boolean|undefined|在所选择的元素上居中列表
-browserAutocomplete|string|on|
-cacheItems|boolean|undefined|
-chips|boolean|undefined|
-clearable|boolean|undefined|添加输入框清除功能，默认图标是 Material Icons **clear**
-contentClass|string|undefined|
-deletableChips|boolean|undefined|
-dense|boolean|undefined|
-hideSelected|boolean|undefined|
+auto|boolean|/|在所选择的元素上居中列表
+close-on-click|boolean|true|
+close-on-content-click|boolean|true|
+disabled|boolean|/|Mixins.Input.props.disabled
+full-width|boolean|/|Forces 100% width
+max-height|number / string|300|设置内容的最大高度
+offset-x|boolean|/|
+offset-y|boolean|/|
+open-on-click|boolean|true|
+open-on-hover|boolean|/|
+origin|string|'top left'|
+transition|string / boolean|'v-menu-transition'|
+activator|any|/|
+allow-overflow|boolean|/|
+input-activator|boolean|/|
+max-width|number / string|'auto'|
+min-width|number / string|/|
+nudge-bottom|number / string|/|
+nudge-left|number / string|/|
+nudge-right|number / string|/|
+nudge-top|number / string|/|
+nudge-width|number / string|/|
+offset-overflow|boolean|/|
+position-x|number|/|
+position-y|number|/|
+z-index|number / string|/|
+value-comparator|any|true|Apply a custom value comparator function
+no-data-text|string|'$vuetify.noDataText'|当没有数据时显示的文本
+append-icon|string|'$vuetify.icons.dropdown'|
+append-icon-cb|any|/|
+attach|any|/|
+browser-autocomplete|string|'on'|
+cache-items|boolean|/|
+chips|boolean|/|
+clearable|boolean|/|添加输入框清除功能，默认图标是 Material Icons **clear**
+content-class|string|/|
+deletable-chips|boolean|/|
+dense|boolean|/|
+hide-selected|boolean|/|
 items|any|[]|
-itemAvatar|string / any / any|avatar|
-itemDisabled|string / any / any|disabled|
-itemText|string / any / any|text|
-itemValue|string / any / any|value|
-maxHeight|number / string|auto|设置内容的最大高度
-minWidth|number / string|undefined|
-multiple|boolean|undefined|
-multiLine|boolean|undefined|
-openOnClear|boolean|undefined|
-returnObject|boolean|undefined|
-searchInput|any|undefined|
-smallChips|boolean|undefined|
-singleLine|boolean|undefined|Label does not move on focus/dirty
-closeOnClick|boolean|true|
-closeOnContentClick|boolean|true|
-disabled|boolean|undefined|Mixins.Input.props.disabled
-fullWidth|boolean|undefined|Forces 100% width
-offsetX|boolean|undefined|
-offsetY|boolean|undefined|
-openOnClick|boolean|true|
-openOnHover|boolean|undefined|
-origin|string|top left|
-transition|string / boolean|v-menu-transition|
-activator|any|undefined|
-allowOverflow|boolean|undefined|
-inputActivator|boolean|undefined|
-maxWidth|number / string|auto|
-nudgeBottom|number / string|undefined|
-nudgeLeft|number / string|undefined|
-nudgeRight|number / string|undefined|
-nudgeTop|number / string|undefined|
-nudgeWidth|number / string|undefined|
-offsetOverflow|boolean|undefined|
-positionX|number|undefined|
-positionY|number|undefined|
-zIndex|number / string|undefined|
-valueComparator|any|true|Apply a custom value comparator function
-noDataText|string|$vuetify.noDataText|当没有数据时显示的文本
+item-avatar|string / any / any|'avatar'|
+item-disabled|string / any / any|'disabled'|
+item-text|string / any / any|'text'|
+item-value|string / any / any|'value'|
+multiple|boolean|/|
+multi-line|boolean|/|
+open-on-clear|boolean|/|
+return-object|boolean|/|
+search-input|any|/|
+small-chips|boolean|/|
+single-line|boolean|/|Label does not move on focus/dirty
 
 ## 示例
 

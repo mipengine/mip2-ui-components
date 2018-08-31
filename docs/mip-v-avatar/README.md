@@ -1,6 +1,6 @@
 # mip-v-avatar
 
-`v-avatar`组件被用来控制用于控制响应图像的大小和边界半径，通常用于显示个人介绍的图片。
+`mip-v-avatar`组件被用来控制用于控制响应图像的大小和边界半径，通常用于显示个人介绍的图片。
 
 ## 用例
 
@@ -30,9 +30,9 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|undefined|将指定的色彩应用与控件
+color|string|/|将指定的色彩应用与控件
 size|number / string|48|设置元素的高度和宽度
-tile|boolean|undefined|删除边看弧度
+tile|boolean|/|删除边看弧度
 
 ## 示例
 

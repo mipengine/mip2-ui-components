@@ -19,10 +19,10 @@ Textarea components are used for collecting large amounts of textual data.
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-autoGrow|boolean|undefined|
-noResize|boolean|undefined|
-outline|boolean|undefined|
-rowHeight|number / string|24|
+auto-grow|boolean|/|
+no-resize|boolean|/|
+outline|boolean|/|
+row-height|number / string|24|
 rows|number / string|5|
 
 ## 示例

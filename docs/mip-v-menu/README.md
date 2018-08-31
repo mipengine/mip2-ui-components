@@ -1,6 +1,6 @@
 # mip-v-menu
 
-`v-menu`组件展示一个菜单在用于激活它的元素的位置上。
+`mip-v-menu`组件展示一个菜单在用于激活它的元素的位置上。
 
 ## 用例
 
@@ -33,38 +33,38 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-auto|boolean|undefined|在所选择的元素上居中列表
-closeOnClick|boolean|true|指定菜应该在外部激活器被点击时关闭。
-closeOnContentClick|boolean|true|指定点击内容时菜单是否应该关闭。
-disabled|boolean|undefined|禁用菜单
-fullWidth|boolean|undefined|Forces 100% width
-maxHeight|any|auto|设置内容的最大高度
-offsetX|boolean|undefined|在x轴上偏移菜单，与左/右方向一起工作
-offsetY|boolean|undefined|在y轴上偏移菜单，与上/下方向一起工作
-openOnClick|boolean|true|指定是否在激活器点击时打开菜单
-openOnHover|boolean|undefined|指定是否在激活器悬停时打开菜单
-origin|string|top left|Mixins.Transitionable.props.origin
-transition|string / boolean|v-menu-transition|Mixins.Transitionable.props.transition
-openDelay|number / string|undefined|打开组件前等待的毫秒数
-closeDelay|number / string|200|关闭组件前等待的毫秒数
-attach|any|undefined|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
-contentClass|any|undefined|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
-activator|any|undefined|在未使用激活器插槽激活器4.字符串可以是任何有效的查询选择器（querySelector），对象（Object）可以是任何有效的Node对象。
-allowOverflow|boolean|undefined|移除内容的移除重新定位
-inputActivator|boolean|undefined|Sets a new activator target for the detached element. Use when placing detachable items in `v-input` slots
-maxWidth|number / string|auto|设置内容的最大宽度
-minWidth|number / string|undefined|设置内容的最小宽度
-nudgeBottom|number / string|undefined|向底部微调内容
-nudgeLeft|number / string|undefined|向左侧微调内容
-nudgeRight|number / string|undefined|向右侧微调内容
-nudgeTop|number / string|undefined|向顶部微调内容
-nudgeWidth|number / string|undefined|微调内容宽度
-offsetOverflow|boolean|undefined|当由于溢出而重新定位时，导致组件翻转到另一侧
-positionX|number|undefined|用于在不使用激活器插槽时定位内容
-positionY|number|undefined|用于在不使用激活器插槽时定位内容
-zIndex|number / string|undefined|用于组件的z-index
-returnValue|any|undefined|
-value|boolean|undefined|控制可见性
+open-delay|number / string|/|打开组件前等待的毫秒数
+close-delay|number / string|200|关闭组件前等待的毫秒数
+attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
+content-class|any|''|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
+activator|any|/|在未使用激活器插槽激活器4.字符串可以是任何有效的查询选择器（querySelector），对象（Object）可以是任何有效的Node对象。
+allow-overflow|boolean|/|移除内容的移除重新定位
+input-activator|boolean|/|Sets a new activator target for the detached element. Use when placing detachable items in `v-input` slots
+max-width|number / string|'auto'|设置内容的最大宽度
+min-width|number / string|/|设置内容的最小宽度
+nudge-bottom|number / string|/|向底部微调内容
+nudge-left|number / string|/|向左侧微调内容
+nudge-right|number / string|/|向右侧微调内容
+nudge-top|number / string|/|向顶部微调内容
+nudge-width|number / string|/|微调内容宽度
+offset-overflow|boolean|/|当由于溢出而重新定位时，导致组件翻转到另一侧
+position-x|number|/|用于在不使用激活器插槽时定位内容
+position-y|number|/|用于在不使用激活器插槽时定位内容
+z-index|number / string|/|用于组件的z-index
+return-value|any|/|
+value|boolean|/|控制可见性
+auto|boolean|/|在所选择的元素上居中列表
+close-on-click|boolean|true|指定菜应该在外部激活器被点击时关闭。
+close-on-content-click|boolean|true|指定点击内容时菜单是否应该关闭。
+disabled|boolean|/|禁用菜单
+full-width|boolean|/|Forces 100% width
+max-height|any|'auto'|设置内容的最大高度
+offset-x|boolean|/|在x轴上偏移菜单，与左/右方向一起工作
+offset-y|boolean|/|在y轴上偏移菜单，与上/下方向一起工作
+open-on-click|boolean|true|指定是否在激活器点击时打开菜单
+open-on-hover|boolean|/|指定是否在激活器悬停时打开菜单
+origin|string|'top left'|Mixins.Transitionable.props.origin
+transition|string / boolean|'v-menu-transition'|Mixins.Transitionable.props.transition
 
 ## 示例
 

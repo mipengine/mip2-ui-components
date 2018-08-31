@@ -45,28 +45,31 @@
 
     <h2>基础样式</h2>
     <div class="container">
-      <mip-v-badge left>
-        <span slot="badge">6</span>
-        <mip-v-icon
-          large
-          color="grey lighten-1"
-        >
-          shopping_cart
-        </mip-v-icon>
-      </mip-v-badge>
-      <mip-v-badge color="red">
-        <span slot="badge">!</span>
-        <mip-v-icon
-          large
-          color="grey"
-        >
-          mail
-        </mip-v-icon>
-      </mip-v-badge>
+      <div class="text-xs-center">
+        <mip-v-badge left>
+          <span slot="badge">6</span>
+          <mip-v-icon
+            large
+            color="grey lighten-1"
+          >
+            shopping_cart
+          </mip-v-icon>
+        </mip-v-badge>
+        <mip-v-badge color="red">
+          <span slot="badge">!</span>
+          <mip-v-icon
+            large
+            color="grey"
+          >
+            mail
+          </mip-v-icon>
+        </mip-v-badge>
+      </div>
     </div>
 
     <h2>重叠</h2>
     <div class="container">
+    <div class="text-xs-center">
       <mip-v-badge
         color="purple"
         left
@@ -106,9 +109,12 @@
         </mip-v-icon>
       </mip-v-badge>
     </div>
+    </div>
 
     <h2>内联</h2>
     <div class="container">
+      <div class="text-xs-center">
+
       <mip-v-badge left>
         <span slot="badge">2</span>
         <span>Examples</span>
@@ -120,39 +126,45 @@
         <mip-v-icon slot="badge" dark small>list</mip-v-icon>
         <span>Lists</span>
       </mip-v-badge>
+      </div>
     </div>
 
     <h2>图标</h2>
     <div class="container">
-      <mip-v-badge left color="purple">
-        <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
-        <span>
-          MDI icon
-        </span>
-      </mip-v-badge>
+      <div class="text-xs-center">
+        <mip-v-badge left color="purple">
+          <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
+          <span>
+            MDI icon
+          </span>
+        </mip-v-badge>
 
-      &nbsp;&nbsp;
+        &nbsp;&nbsp;
 
-      <mip-v-badge color="orange">
-        <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>
-        <span>
-          Font Awesome icon
-        </span>
-      </mip-v-badge>
+        <mip-v-badge color="orange">
+          <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>
+          <span>
+            Font Awesome icon
+          </span>
+        </mip-v-badge>
+      </div>
     </div>
 
     <h2>可见性</h2>
     <div class="container">
-      <mip-v-btn
-        color="indigo"
-        class="white--text"
-        on="tap:MIP.setData({ show: !m.show })"
-      >
-        Toggle
-      </mip-v-btn>
+      <div class="text-xs-center">
+        <mip-v-btn
+          color="indigo"
+          class="white--text"
+          on="tap:MIP.setData({ show: !m.show })"
+        >
+          Toggle
+        </mip-v-btn>
+      </div>
     </div>
 
     <div class="container">
+      <div class="text-xs-center">
       <mip-v-badge
         m-bind:value="show"
         color="cyan"
@@ -176,6 +188,7 @@
           mail
         </mip-v-icon>
       </mip-v-badge>
+      </div>
     </div>
 
     <script src="http://localhost:8080/dist/mip.js"></script>

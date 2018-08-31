@@ -1,6 +1,6 @@
 # mip-v-autocomplete
 
-The `v-autocomplete` component offers simple and flexible type-ahead functionality. This is useful when searching large sets of data or even dynamically requesting information from an API.
+The `mip-v-autocomplete` component offers simple and flexible type-ahead functionality. This is useful when searching large sets of data or even dynamically requesting information from an API.
 
 ## 用例
 
@@ -16,16 +16,16 @@ The `v-autocomplete` component offers simple and flexible type-ahead functionali
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-allowOverflow|boolean|true|
-browserAutocomplete|string|off|
+allow-overflow|boolean|true|
+browser-autocomplete|string|'off'|
 filter|any|true|
-hideNoData|boolean|undefined|
-noFilter|boolean|undefined|Do not apply filtering when searching. Useful when data is being filtered server side
-offsetY|boolean|true|
-offsetOverflow|boolean|true|
-searchInput|any|undefined|
-transition|boolean / string|undefined|
-value|any|undefined|控制可见性
+hide-no-data|boolean|/|
+no-filter|boolean|/|Do not apply filtering when searching. Useful when data is being filtered server side
+offset-y|boolean|true|
+offset-overflow|boolean|true|
+search-input|any|/|
+transition|boolean / string|/|
+value|any|/|控制可见性
 
 ## 示例
 

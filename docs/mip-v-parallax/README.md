@@ -1,6 +1,6 @@
 # mip-v-parallax
 
-`v-parallax`组件创建一个3d效果使图像显示俾窗口滚动更慢。
+`mip-v-parallax`组件创建一个3d效果使图像显示俾窗口滚动更慢。
 
 ## 用例
 
@@ -16,9 +16,9 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-alt|string|undefined|Attaches an alt property to the parallax image
-height|number|undefined|设置组件高度
-src|string|undefined|The image to parallax
+height|string / number|500|设置组件高度
+alt|string|/|Attaches an alt property to the parallax image
+src|string|/|The image to parallax
 
 ## 示例
 

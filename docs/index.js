@@ -8,7 +8,9 @@ require('../dist/vuetify')
 
 const fs = legacyFs.promises
 
-const camelToDash = camel => camel.match(/[A-Z][^A-Z]*/g).map(word => word.toLowerCase()).join('-')
+const camelToDash = camel => (camel[0].toUpperCase() + camel.slice(1))
+  .match(/[A-Z][^A-Z]*/g)
+  .map(word => word.toLowerCase()).join('-')
 
 const getMIPTagName = tagName => `mip-${tagName}`
 
@@ -125,14 +127,18 @@ const getPropType = (definition) => {
 
 const getDefaultValue = (definition) => {
   if (typeof definition !== 'object' || definition === null) {
-    return 'undefined'
+    return '/'
   }
 
   if (typeof definition.default === 'function') {
     return JSON.stringify(definition.default())
   }
 
-  return definition.default || 'undefined'
+  if (typeof definition.default === 'string') {
+    return `'${definition.default}'`
+  }
+
+  return definition.default || '/'
 }
 
 const generateDoc = async (tagName) => {
@@ -155,7 +161,7 @@ const generateDoc = async (tagName) => {
 
   println(`# ${mipTagName}`)
 
-  println(doc.headerText)
+  println(doc.headerText.replace('`v-', '`mip-v-'))
 
   println('## 用例')
 
@@ -167,8 +173,8 @@ const generateDoc = async (tagName) => {
     const genericProps = await getGenericProps()
     const mixinDocs = await Promise.all(mixins.map(({ name }) => getMixinDoc(name)))
 
-    const mergedProps = merge({}, props, ...mixins.map(({ props }) => props))
-    const mergedDoc = merge({}, {props: genericProps}, doc, ...mixinDocs)
+    const mergedProps = merge({}, ...mixins.map(({ props }) => props), props)
+    const mergedDoc = merge({}, {props: genericProps}, ...mixinDocs, doc)
 
     println(`### ${getMIPTagName(camelToDash(name))}`)
 
@@ -176,9 +182,15 @@ const generateDoc = async (tagName) => {
 
     print('名称|类型|默认值|含义')
     print(':--:|:--:|:--:|:---')
+
     println(Object.entries(mergedProps)
       .map(([prop, definition]) =>
-        [prop, getPropType(definition), getDefaultValue(definition), (mergedDoc.props || {})[prop] || ''].join('|')
+        [
+          camelToDash(prop),
+          getPropType(definition),
+          getDefaultValue(definition),
+          (mergedDoc.props || {})[prop] || ''
+        ].join('|')
       )
       .join('\n'))
   }))

@@ -1,6 +1,6 @@
 # mip-v-radio
 
-选择控制组件允许用户使用选择项，这些组件必须和 `v-model` 属性一起使用，因为他们无法保持自己的状态。
+选择控制组件允许用户使用选择项，这些组件必须和 `mip-v-model` 属性一起使用，因为他们无法保持自己的状态。
 
 ## 用例
 
@@ -26,13 +26,13 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
+value-comparator|any|true|Apply a custom value comparator function
 column|boolean|true|单选框列显示
-height|number / string|auto|设置组件高度
+height|number / string|'auto'|设置组件高度
 mandatory|boolean|true|强制选择复选框组的一个子复选框 `v-radio` 
-name|string|undefined|设置组件的 name 属性
-row|boolean|undefined|单选框行显示
-value|any|undefined|设置选择控件组件的值
-valueComparator|any|true|Apply a custom value comparator function
+name|string|/|设置组件的 name 属性
+row|boolean|/|单选框行显示
+value|any|/|设置选择控件组件的值
 
 ### mip-v-radio
 
@@ -40,16 +40,16 @@ valueComparator|any|true|Apply a custom value comparator function
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|undefined|将指定的色彩应用与控件
-disabled|boolean|undefined|Mixins.Input.props.disabled
-label|string|undefined|Mixins.Input.props.label
-onIcon|string|$vuetify.icons.radioOn|
-offIcon|string|$vuetify.icons.radioOff|
-readonly|boolean|undefined|
-value|any|undefined|设置选择控件组件的值
+color|string|'accent'|将指定的色彩应用与控件
 ripple|boolean / any|true|应用`v-ripple`指令
-dark|boolean|undefined|应用暗黑主题变体
-light|boolean|undefined|应用明亮主题变体
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+disabled|boolean|/|Mixins.Input.props.disabled
+label|string|/|Mixins.Input.props.label
+on-icon|string|'$vuetify.icons.radioOn'|
+off-icon|string|'$vuetify.icons.radioOff'|
+readonly|boolean|/|
+value|any|/|设置选择控件组件的值
 
 ## 示例
 

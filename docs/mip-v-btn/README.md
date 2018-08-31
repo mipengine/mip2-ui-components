@@ -1,6 +1,6 @@
 # mip-v-btn
 
-`v-btn`组件用一个material design主题和多个选项来替换标准的html按钮。任何色彩辅助类都可以用来改变背景或文字的颜色。
+`mip-v-btn`组件用一个material design主题和多个选项来替换标准的html按钮。任何色彩辅助类都可以用来改变背景或文字的颜色。
 
 ## 用例
 
@@ -15,58 +15,58 @@
 
 ## API
 
-### mip-v-btn
-
-#### Props
-
-名称|类型|默认值|含义
-:--:|:--:|:--:|:---
-activeClass|string|undefined|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
-block|boolean|undefined|
-depressed|boolean|undefined|
-fab|boolean|undefined|
-flat|boolean|undefined|
-icon|boolean|undefined|
-large|boolean|undefined|
-loading|boolean|undefined|
-outline|boolean|undefined|
-ripple|boolean / any|undefined|使用`v-ripple`指令
-round|boolean|undefined|
-small|boolean|undefined|
-tag|string|undefined|指定要在组件上使用的自定义标签
-type|string|button|
-value|any|undefined|控制可见性
-color|string|undefined|将指定的色彩应用与控件
-append|boolean|undefined|Vue Router的router-link属性
-disabled|boolean|undefined|Route列表项是被禁用的
-exact|boolean|undefined|完全匹配链接，没有这个的话，“/”将匹配每一个路由
-exactActiveClass|string|undefined|Vue Router的 router-link属性
-href|string / any|undefined|将组件标签指定为`<a>`
-to|string / any|undefined|将组件标签指定为`<router-link>`
-nuxt|boolean|undefined|指定一个链接是nuxt链接（nuxt-link）
-replace|boolean|undefined|Vue Router router-link 属性
-target|string|undefined|指定目标属性，仅适用于猫标签。
-absolute|boolean|undefined|给元素设置绝对定位
-bottom|boolean|undefined|将组件向底部对齐
-fixed|boolean|undefined|给元素设置固定定位
-left|boolean|undefined|将组件向左边对齐
-right|boolean|undefined|将组件向右边对齐
-top|boolean|undefined|将组件向顶部对齐
-dark|boolean|undefined|应用暗黑主题变体
-light|boolean|undefined|应用明亮主题变体
-inputValue|boolean|undefined|
-
 ### mip-v-btn-toggle
 
 #### Props
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-inputValue|any|undefined|
-mandatory|boolean|undefined|
-multiple|boolean|undefined|
-dark|boolean|undefined|应用暗黑主题变体
-light|boolean|undefined|应用明亮主题变体
+mandatory|boolean|/|
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+input-value|any|/|
+multiple|boolean|/|
+
+### mip-v-btn
+
+#### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+color|string|/|将指定的色彩应用与控件
+active-class|string|'v-btn--active'|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
+append|boolean|/|Vue Router的router-link属性
+disabled|boolean|/|Route列表项是被禁用的
+exact|boolean|/|完全匹配链接，没有这个的话，“/”将匹配每一个路由
+exact-active-class|string|/|Vue Router的 router-link属性
+href|string / any|/|将组件标签指定为`<a>`
+to|string / any|/|将组件标签指定为`<router-link>`
+nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
+replace|boolean|/|Vue Router router-link 属性
+ripple|boolean / any|true|使用`v-ripple`指令
+tag|string|'button'|指定要在组件上使用的自定义标签
+target|string|/|指定目标属性，仅适用于猫标签。
+absolute|boolean|/|给元素设置绝对定位
+bottom|boolean|/|将组件向底部对齐
+fixed|boolean|/|给元素设置固定定位
+left|boolean|/|将组件向左边对齐
+right|boolean|/|将组件向右边对齐
+top|boolean|/|将组件向顶部对齐
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+input-value|boolean|/|
+block|boolean|/|
+depressed|boolean|/|
+fab|boolean|/|
+flat|boolean|/|
+icon|boolean|/|
+large|boolean|/|
+loading|boolean|/|
+outline|boolean|/|
+round|boolean|/|
+small|boolean|/|
+type|string|'button'|
+value|any|/|控制可见性
 
 ## 示例
 

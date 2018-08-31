@@ -1,6 +1,6 @@
 # mip-v-switch
 
-选择控制组件允许用户使用选择项，这些组件必须和 `v-model` 属性一起使用，因为他们无法保持自己的状态。
+选择控制组件允许用户使用选择项，这些组件必须和 `mip-v-model` 属性一起使用，因为他们无法保持自己的状态。
 
 ## 用例
 
@@ -16,14 +16,14 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|accent|
-id|string|undefined|设置组件上的DOM id
-inputValue|any|undefined|**v-model** 的绑定值
-falseValue|any|undefined|设置虚假状态的值
-trueValue|any|undefined|设置真值
-multiple|boolean|undefined|
-label|string|undefined|Mixins.Input.props.label
-toggleKeys|any|[13,32]|
+color|string|'accent'|
+id|string|/|设置组件上的DOM id
+input-value|any|/|**v-model** 的绑定值
+false-value|any|/|设置虚假状态的值
+true-value|any|/|设置真值
+multiple|boolean|/|
+label|string|/|Mixins.Input.props.label
+toggle-keys|any|[13,32]|
 
 ## 示例
 

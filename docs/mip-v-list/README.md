@@ -1,6 +1,6 @@
 # mip-v-list
 
-`v-list` 组件用于显示信息，它可以包含一个头像、内容、操作、列表组标题等等。列表也可以包含子元素并在侧边栏（sidebar）使用。
+`mip-v-list` 组件用于显示信息，它可以包含一个头像、内容、操作、列表组标题等等。列表也可以包含子元素并在侧边栏（sidebar）使用。
 
 ## 用例
 
@@ -76,9 +76,9 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|undefined|
+color|string|/|
 size|number / string|40|设置元素的高度和宽度
-tile|boolean|undefined|删除边看弧度
+tile|boolean|/|删除边看弧度
 
 ### mip-v-list
 
@@ -86,13 +86,13 @@ tile|boolean|undefined|删除边看弧度
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-dense|boolean|undefined|减小列表块的最大宽度
-expand|boolean|undefined|将只有在明确关闭后才会折叠起来
-subheader|boolean|undefined|会移除上边距（top padding），当前面只有一个列表组标题的时候使用
-threeLine|boolean|undefined|增加列表块的高度到3行
-twoLine|boolean|undefined|增加列表块的高度到2行
-dark|boolean|undefined|应用暗黑主题变体
-light|boolean|undefined|应用明亮主题变体
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+dense|boolean|/|减小列表块的最大宽度
+expand|boolean|/|将只有在明确关闭后才会折叠起来
+subheader|boolean|/|会移除上边距（top padding），当前面只有一个列表组标题的时候使用
+three-line|boolean|/|增加列表块的高度到3行
+two-line|boolean|/|增加列表块的高度到2行
 
 ### mip-v-list-group
 
@@ -100,15 +100,15 @@ light|boolean|undefined|应用明亮主题变体
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-activeClass|string|primary--text|
-appendIcon|string|$vuetify.icons.expand|
-disabled|boolean|undefined|
-group|string|undefined|Assign a route namespace. Accepts a string or regexp for determining active state
-noAction|boolean|undefined|Removes left padding assigned for action icons from group items
-prependIcon|string|undefined|
-subGroup|boolean|undefined|Designate the component as nested list group
-lazy|boolean|undefined|有条件地渲染内容，只有激活时才会渲染内容
-value|boolean|undefined|Expands / Collapse list group
+lazy|boolean|/|有条件地渲染内容，只有激活时才会渲染内容
+value|boolean|/|Expands / Collapse list group
+active-class|string|'primary--text'|
+append-icon|string|'$vuetify.icons.expand'|
+disabled|boolean|/|
+group|string|/|Assign a route namespace. Accepts a string or regexp for determining active state
+no-action|boolean|/|Removes left padding assigned for action icons from group items
+prepend-icon|string|/|
+sub-group|boolean|/|Designate the component as nested list group
 
 ### mip-v-list-tile
 
@@ -116,22 +116,22 @@ value|boolean|undefined|Expands / Collapse list group
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-activeClass|string|undefined|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
-avatar|boolean|undefined|用来设置单行列表项的最小高度（即使用该属性后将有一个头像大小的最小高度）
-inactive|boolean|undefined|如果设置了该属性，即使有to/href或者@click，列表块也不会响应链接。
-tag|string|undefined|指定要在组件上使用的自定义标签
-color|string|undefined|将指定的色彩应用与控件
-append|boolean|undefined|Vue Router的router-link属性
-disabled|boolean|undefined|Route列表项是被禁用的
-exact|boolean|undefined|完全匹配链接，没有这个的话，“/”将匹配每一个路由
-exactActiveClass|string|undefined|Vue Router的 router-link属性
-href|string / any|undefined|将组件标签指定为`<a>`
-to|string / any|undefined|将组件标签指定为`<router-link>`
-nuxt|boolean|undefined|指定一个链接是nuxt链接（nuxt-link）
-replace|boolean|undefined|Vue Router router-link 属性
-ripple|boolean / any|undefined|使用`v-ripple`指令
-target|string|undefined|指定目标属性，仅适用于猫标签。
-value|boolean|undefined|Expands / Collapse list group
+color|string|/|将指定的色彩应用与控件
+active-class|string|'primary--text'|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
+append|boolean|/|Vue Router的router-link属性
+disabled|boolean|/|Route列表项是被禁用的
+exact|boolean|/|完全匹配链接，没有这个的话，“/”将匹配每一个路由
+exact-active-class|string|/|Vue Router的 router-link属性
+href|string / any|/|将组件标签指定为`<a>`
+to|string / any|/|将组件标签指定为`<router-link>`
+nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
+replace|boolean|/|Vue Router router-link 属性
+ripple|boolean / any|/|使用`v-ripple`指令
+tag|string|/|指定要在组件上使用的自定义标签
+target|string|/|指定目标属性，仅适用于猫标签。
+value|boolean|/|Expands / Collapse list group
+avatar|boolean|/|用来设置单行列表项的最小高度（即使用该属性后将有一个头像大小的最小高度）
+inactive|boolean|/|如果设置了该属性，即使有to/href或者@click，列表块也不会响应链接。
 
 ## 示例
 

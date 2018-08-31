@@ -1,6 +1,6 @@
 # mip-v-icon
 
-`v-icon`组件提供了大量的字形来为应用程序的各个方面提供上下文。Vuetify图标利用Google的Material图标字体库。有关所有可用图标的列表，请访问官方的<a href="https://material.io/icons/" target="_blank" rel="noopener">Material Icons</a>页面。
+`mip-v-icon`组件提供了大量的字形来为应用程序的各个方面提供上下文。Vuetify图标利用Google的Material图标字体库。有关所有可用图标的列表，请访问官方的<a href="https://material.io/icons/" target="_blank" rel="noopener">Material Icons</a>页面。
 
 ## 用例
 
@@ -21,17 +21,17 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|undefined|将指定的色彩应用与控件
-dark|boolean|undefined|应用暗黑主题变体
-light|boolean|undefined|应用明亮主题变体
-disabled|boolean|undefined|Mixins.Input.props.disabled
-large|boolean|undefined|设置图标为大型**（36px）**
-left|boolean|undefined|在按钮内部使用时，把图标放置在左侧
-medium|boolean|undefined|设置图标为中型**(28px)**
-right|boolean|undefined|在按钮内部使用时，把图标放置在右侧
-size|number / string|undefined|设置元素的高度和宽度
-small|boolean|undefined|设置图标为小型**(16px)**
-xLarge|boolean|undefined|设置图标为超大型**(40px)**
+color|string|/|将指定的色彩应用与控件
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+disabled|boolean|/|Mixins.Input.props.disabled
+large|boolean|/|设置图标为大型**（36px）**
+left|boolean|/|在按钮内部使用时，把图标放置在左侧
+medium|boolean|/|设置图标为中型**(28px)**
+right|boolean|/|在按钮内部使用时，把图标放置在右侧
+size|number / string|/|设置元素的高度和宽度
+small|boolean|/|设置图标为小型**(16px)**
+x-large|boolean|/|设置图标为超大型**(40px)**
 
 ## 示例
 

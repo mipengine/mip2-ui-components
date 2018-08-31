@@ -1,6 +1,6 @@
 # mip-v-slider
 
-`v-slider`组件是数字输入的更好的可视化，它用于收集数字用户数据。
+`mip-v-slider`组件是数字输入的更好的可视化，它用于收集数字用户数据。
 
 ## 用例
 
@@ -21,21 +21,21 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-alwaysDirty|boolean|undefined|When used with the **thumb-label** prop will always show the thumb label.
-inverseLabel|boolean|undefined|Reverse the label position. Works with **rtl**.
-label|string|undefined|
-min|number / string|undefined|设置最小宽度
+always-dirty|boolean|/|When used with the **thumb-label** prop will always show the thumb label.
+inverse-label|boolean|/|Reverse the label position. Works with **rtl**.
+label|string|/|
+min|number / string|/|设置最小宽度
 max|number / string|100|设置最大宽度
-range|boolean|undefined|
+range|boolean|/|
 step|number / string|1|如果大于0，则为滑块上的点设置步骤间隔
-ticks|boolean / string|undefined|
-tickLabels|any|[]|When provided with Array<string>, will attempt to map the labels to each step in index order
-tickSize|number / string|1|Controls the size of **ticks**
-thumbColor|string|undefined|设置拇指和拇指标签颜色
-thumbLabel|boolean / string|undefined|显示拇指标签
-thumbSize|number / string|32|Controls the size of the **thumb-label**
-trackColor|string|undefined|设置曲目填充色彩
-value|number / string|undefined|控制可见性
+ticks|boolean / string|/|
+tick-labels|any|[]|When provided with Array<string>, will attempt to map the labels to each step in index order
+tick-size|number / string|1|Controls the size of **ticks**
+thumb-color|string|/|设置拇指和拇指标签颜色
+thumb-label|boolean / string|/|显示拇指标签
+thumb-size|number / string|32|Controls the size of the **thumb-label**
+track-color|string|/|设置曲目填充色彩
+value|number / string|/|控制可见性
 
 ## 示例
 
