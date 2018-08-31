@@ -52,34 +52,68 @@
           "min": 16,
           "max": 256,
           "tile": false,
-          "avatarSize": 160
+          "avatarSize": 60
         }
       </script>
     </mip-data>
-    <h2>基础样式</h2>
+    <h2>用例</h2>
     <div class="container grid-list-md">
       <div class="layout row wrap">
         <div class="flex xs12 sm6 md4">
           <mip-v-slider
             m-bind:value.sync="slider"
+            m-bind:min="min"
+            m-bind:max="max"
           ></mip-v-slider>
 
           <mip-v-switch
-            m-bind:value.sync="tile"
+            m-bind:input-value.sync="tile"
             label="Tile"
           ></mip-v-switch>
         </div>
 
         <div class="flex xs12 sm6 md8 align-center justify-center layout text-xs-center">
           <mip-v-avatar
-            tile="tile"
-            size="slider"
+            m-bind:tile="tile"
+            m-bind:size="slider"
             color="grey lighten-4"
           >
-            <img src="https://avatars2.githubusercontent.com/u/4878697?s=400&v=4" alt="avatar">
+            <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
           </mip-v-avatar>
         </div>
       </div>
+    </div>
+
+    <h2>图标和文本</h2>
+    <div class="layout align-center justify-space-around wrap">
+      <mip-v-avatar color="indigo">
+        <mip-v-icon dark>account_circle</mip-v-icon>
+      </mip-v-avatar>
+  
+      <mip-v-avatar>
+        <img
+          src="https://cdn.vuetifyjs.com/images/john.jpg"
+          alt="John"
+        >
+      </mip-v-avatar>
+  
+      <mip-v-badge overlap>
+        <span slot="badge">3</span>
+  
+        <mip-v-avatar
+          color="purple red--after"
+        >
+          <mip-v-icon dark>notifications</mip-v-icon>
+        </mip-v-avatar>
+      </mip-v-badge>
+  
+      <mip-v-avatar color="teal">
+        <span class="white--text headline">C</span>
+      </mip-v-avatar>
+  
+      <mip-v-avatar color="red">
+        <span class="white--text headline">J</span>
+      </mip-v-avatar>
     </div>
 
     <h2>数据绑定</h2>
@@ -90,8 +124,9 @@
         m-bind:tile="tile"
         m-bind:size="avatarSize"
         style="display: inline-block"
+        color="grey lighten-4"
       >
-        <img src="https://avatars2.githubusercontent.com/u/4878697?s=400&v=4" alt="avatar">
+        <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
       </mip-v-avatar>
 
     </div>
