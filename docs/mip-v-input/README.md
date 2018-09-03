@@ -39,7 +39,7 @@ rules|any|[]|返回True或带有错误信息的字符串的函数数组。
 success|boolean|/|Puts the input in a manual success state
 success-messages|string / any|[]|Puts the input in a success state and passes through custom success messsages.
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
-append-icon|string|/|Append an icon to the component, uses same syntax as `v-icon`
+append-icon|string|/|Append an icon to the component, uses same syntax as `mip-v-icon`
 append-icon-cb|any|/|Callback for appended icon when clicked
 background-color|string|''|
 disabled|boolean|/|Input is disabled
@@ -48,7 +48,7 @@ hide-details|boolean|/|Hides hint, validation errors
 hint|string|/|Hint text
 label|string|/|Sets input label
 persistent-hint|boolean|/|Forces hint to always be visible
-prepend-icon|string|/|Prepend an icon to the component, uses same syntax as `v-icon`
+prepend-icon|string|/|Prepend an icon to the component, uses same syntax as `mip-v-icon`
 prepend-icon-cb|any|/|Callback for prepended icon when clicked
 readonly|boolean|/|Puts input in readonly state
 value|any|/|Input value

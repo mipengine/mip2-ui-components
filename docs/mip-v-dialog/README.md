@@ -42,7 +42,7 @@ disabled|boolean|/|禁用打开对话框
 persistent|boolean|/|点击对话框外部不能使其关闭
 fullscreen|boolean|/|改变布局全屏显示
 full-width|boolean|/|指定模态框强制100%宽度
-no-click-animation|boolean|/|Disables the bounce effect when clicking outside of a `v-dialog`'s content when using the **persistent** prop
+no-click-animation|boolean|/|Disables the bounce effect when clicking outside of a `mip-v-dialog`'s content when using the **persistent** prop
 max-width|string / number|'none'|内容的最大宽度
 origin|string|'center center'|设置过渡原点
 width|string / number|'auto'|设置对话框的宽度

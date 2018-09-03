@@ -31,7 +31,7 @@ href|string / object|/|将组件标签指定为`<a>`
 to|string / object|/|将组件标签指定为`<router-link>`
 nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
 replace|boolean|/|Vue Router router-link 属性
-ripple|boolean / object|true|使用`v-ripple`指令
+ripple|boolean / object|true|使用`mip-v-ripple`指令
 tag|string|'button'|指定要在组件上使用的自定义标签
 target|string|/|指定目标属性，仅适用于猫标签。
 absolute|boolean|/|给元素设置绝对定位
@@ -42,18 +42,18 @@ right|boolean|/|将组件向右边对齐
 top|boolean|/|将组件向顶部对齐
 dark|boolean|/|应用暗黑主题变体
 light|boolean|/|应用明亮主题变体
-input-value|boolean|/|
-block|boolean|/|
-depressed|boolean|/|
-fab|boolean|/|
-flat|boolean|/|
-icon|boolean|/|
-large|boolean|/|
-loading|boolean|/|
-outline|boolean|/|
-round|boolean|/|
-small|boolean|/|
-type|string|'button'|
+input-value|boolean|/|控制按钮的激活状态
+block|boolean|/|将按钮的扩展到可用空间的100%
+depressed|boolean|/|移除按钮的框阴影
+fab|boolean|/|使按钮变圆
+flat|boolean|/|移除按钮的背景色
+icon|boolean|/|将按钮指定为图标——原型和平面
+large|boolean|/|大型按钮
+loading|boolean|/|添加一个加载中的图标动画
+outline|boolean|/|按钮将拥有一个轮廓
+round|boolean|/|按钮两边会边圆
+small|boolean|/|小型按钮
+type|string|'button'|设置按钮的类型标签
 value|any|/|控制可见性
 
 ### mip-v-btn-toggle
@@ -65,7 +65,7 @@ value|any|/|控制可见性
 mandatory|boolean|/|
 dark|boolean|/|应用暗黑主题变体
 light|boolean|/|应用明亮主题变体
-input-value|any|/|
+input-value|any|/|控制按钮的激活状态
 multiple|boolean|/|
 
 ## 示例

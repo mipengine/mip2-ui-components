@@ -24,7 +24,7 @@ color|string|/|将指定的色彩应用与控件
 dark|boolean|/|应用暗黑主题变体
 light|boolean|/|应用明亮主题变体
 height|number / string|32|设置组件高度
-inset|boolean|/|定位工具栏偏离应用程序的`v-navigation-drawer`的位置
+inset|boolean|/|定位工具栏偏离应用程序的`mip-v-navigation-drawer`的位置
 
 ## 示例
 

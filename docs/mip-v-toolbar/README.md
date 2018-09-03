@@ -23,6 +23,42 @@
 
 ## API
 
+### mip-v-toolbar
+
+#### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+app|boolean|/|指定组件作为应用程序布局的一部分，用于动态调整内容的大小
+color|string|/|将指定的色彩应用与控件
+dark|boolean|/|应用暗黑主题变体
+light|boolean|/|应用明亮主题变体
+card|boolean|/|在`mip-v-card`中使用时继承边框半径
+clipped-left|boolean|/|指定`mip-v-navigation-drawer`应用程序在工具栏的左侧被剪切
+clipped-right|boolean|/|指定`mip-v-navigation-drawer`应用程序在工具栏的右侧被剪切
+dense|boolean|/|减小工具栏内容和扩展的高度
+extended|boolean|/|强制工具栏生成扩展名而不使用插槽
+extension-height|number / string|/|Specify an explicit height for the extended slot
+flat|boolean|/|移除工具栏的盒子阴影
+floating|boolean|/|使工具栏内联浮动
+height|number / string|/|为工具栏指定一个特定的高度
+inverted-scroll|boolean|/|Will slide out of view when scrolling down and back into view when scrolling up
+manual-scroll|boolean|/|手动应用**滚动屏幕**功能
+prominent|boolean|/|增加工具栏内容和扩展的高度
+scroll-off-screen|boolean|/|当向下滚动时工具栏会过渡到屏幕外。
+scroll-toolbar-off-screen|boolean|/|Will transition the toolbar off screen when scrolling down
+scroll-target|string|/|为滚动屏幕指定滚动目标
+scroll-threshold|number|300|工具栏使用滚动屏幕之前滚动的距离
+tabs|boolean|/|Will set an explicit **42px** height for extension. Useful when default `mip-v-tab`s are used in the extended slot. If you have a custom height `v-tab`, you should specify a height with **extensionHeight**.
+
+### mip-v-toolbar-side-icon
+
+#### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+
+
 ### mip-v-toolbar-title
 
 #### Props
@@ -38,42 +74,6 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 
-
-### mip-v-toolbar-side-icon
-
-#### Props
-
-名称|类型|默认值|含义
-:--:|:--:|:--:|:---
-
-
-### mip-v-toolbar
-
-#### Props
-
-名称|类型|默认值|含义
-:--:|:--:|:--:|:---
-app|boolean|/|指定组件作为应用程序布局的一部分，用于动态调整内容的大小
-color|string|/|将指定的色彩应用与控件
-dark|boolean|/|应用暗黑主题变体
-light|boolean|/|应用明亮主题变体
-card|boolean|/|在`v-card`中使用时继承边框半径
-clipped-left|boolean|/|指定`v-navigation-drawer`应用程序在工具栏的左侧被剪切
-clipped-right|boolean|/|指定`v-navigation-drawer`应用程序在工具栏的右侧被剪切
-dense|boolean|/|减小工具栏内容和扩展的高度
-extended|boolean|/|强制工具栏生成扩展名而不使用插槽
-extension-height|number / string|/|Specify an explicit height for the extended slot
-flat|boolean|/|移除工具栏的盒子阴影
-floating|boolean|/|使工具栏内联浮动
-height|number / string|/|为工具栏指定一个特定的高度
-inverted-scroll|boolean|/|Will slide out of view when scrolling down and back into view when scrolling up
-manual-scroll|boolean|/|手动应用**滚动屏幕**功能
-prominent|boolean|/|增加工具栏内容和扩展的高度
-scroll-off-screen|boolean|/|当向下滚动时工具栏会过渡到屏幕外。
-scroll-toolbar-off-screen|boolean|/|Will transition the toolbar off screen when scrolling down
-scroll-target|string|/|为滚动屏幕指定滚动目标
-scroll-threshold|number|300|工具栏使用滚动屏幕之前滚动的距离
-tabs|boolean|/|Will set an explicit **42px** height for extension. Useful when default `v-tab`s are used in the extended slot. If you have a custom height `v-tab`, you should specify a height with **extensionHeight**.
 
 ## 示例
 

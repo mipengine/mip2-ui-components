@@ -6,4 +6,3 @@ export { default as VCardTitle } from './VCardTitle'
 
 export const VCardActions = createSimpleFunctional('v-card__actions')
 export const VCardText = createSimpleFunctional('v-card__text')
-

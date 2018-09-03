@@ -14,6 +14,8 @@ const camelToDash = camel => (camel[0].toUpperCase() + camel.slice(1))
 
 const getMIPTagName = tagName => `mip-${tagName}`
 
+const replaceMIPTagName = text => text.replace('`v-', '`mip-v-')
+
 const getOfficialDoc = type => async (name) => {
   const getDocName = name => ({
     Btn: 'Buttons',
@@ -142,13 +144,30 @@ const getDefaultValue = (definition) => {
   return definition.default || '/'
 }
 
-const getDescription = async (mergedDoc, prop) => {
-  const description = (mergedDoc.props || {})[prop] || ''
+const getDescription = async (descriptor, prop) => {
+  if (!descriptor || typeof descriptor !== 'object') {
+    return ''
+  }
+  const keys = Object.keys(descriptor)
+
+  for (const key of keys) {
+    if (key.startsWith('v-') && typeof descriptor[key] === 'object') {
+      Object.assign(descriptor, descriptor[key])
+    }
+  }
+
+  const description = descriptor[prop] || ''
 
   if (description.startsWith('Mixins')) {
     const paths = description.split('.')
 
     return (await getMixinDoc(paths[1])).props[paths[3]]
+  }
+
+  if (description.startsWith('Components')) {
+    const paths = description.split('.')
+
+    return (await getComponentDoc(paths[1])).props[paths[3]]
   }
 
   return description
@@ -174,7 +193,7 @@ const generateDoc = async (tagName) => {
 
   println(`# ${mipTagName}`)
 
-  println(doc.headerText.replace('`v-', '`mip-v-'))
+  println(replaceMIPTagName(doc.headerText))
 
   println('## 用例')
 
@@ -182,7 +201,7 @@ const generateDoc = async (tagName) => {
 
   println('## API')
 
-  await Promise.all(components.map(async ({name, props, mixins = []}) => {
+  for (const {name, props, mixins = []} of components) {
     const genericProps = await getGenericProps()
     const mixinDocs = await Promise.all(mixins.map(({ name }) => getMixinDoc(name)))
 
@@ -203,12 +222,12 @@ const generateDoc = async (tagName) => {
             camelToDash(prop),
             getPropType(definition),
             getDefaultValue(definition),
-            await getDescription(mergedDoc, prop)
+            replaceMIPTagName(await getDescription(mergedDoc.props, prop))
           ].join('|')
         ))
       ).join('\n')
     )
-  }))
+  }
 
   if (examples.length <= 1) {
     return

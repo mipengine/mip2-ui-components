@@ -35,7 +35,7 @@ close|boolean|/|添加删除按钮
 disabled|boolean|/|禁用厚切薯条，使其不可选择
 label|boolean|/|移除圆形边缘
 outline|boolean|/|删除背景并应用边框和文本颜色
-selected|boolean|/|将选择框颜色应用于厚切薯条，主要用于在`v-select`中显示高亮上下文
+selected|boolean|/|将选择框颜色应用于厚切薯条，主要用于在`mip-v-select`中显示高亮上下文
 small|boolean|/|减少后期薯条的尺寸
 text-color|string|/|将指定的颜色应用于控件文本
 

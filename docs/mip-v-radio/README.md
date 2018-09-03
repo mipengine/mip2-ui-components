@@ -29,7 +29,7 @@
 value-comparator|any|true|Apply a custom value comparator function
 column|boolean|true|单选框列显示
 height|number / string|'auto'|设置组件高度
-mandatory|boolean|true|强制选择复选框组的一个子复选框 `v-radio` 
+mandatory|boolean|true|强制选择复选框组的一个子复选框 `mip-v-radio` 
 name|string|/|设置组件的 name 属性
 row|boolean|/|单选框行显示
 value|any|/|设置选择控件组件的值
@@ -41,7 +41,7 @@ value|any|/|设置选择控件组件的值
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 color|string|'accent'|将指定的色彩应用与控件
-ripple|boolean / object|true|应用`v-ripple`指令
+ripple|boolean / object|true|应用`mip-v-ripple`指令
 dark|boolean|/|应用暗黑主题变体
 light|boolean|/|应用明亮主题变体
 disabled|boolean|/|输入框是禁用的

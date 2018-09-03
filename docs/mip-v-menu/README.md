@@ -39,7 +39,7 @@ attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器�
 content-class|any|''|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
 activator|any|/|在未使用激活器插槽激活器4.字符串可以是任何有效的查询选择器（querySelector），对象（Object）可以是任何有效的Node对象。
 allow-overflow|boolean|/|移除内容的移除重新定位
-input-activator|boolean|/|Sets a new activator target for the detached element. Use when placing detachable items in `v-input` slots
+input-activator|boolean|/|Sets a new activator target for the detached element. Use when placing detachable items in `mip-v-input` slots
 max-width|number / string|'auto'|设置内容的最大宽度
 min-width|number / string|/|设置内容的最小宽度
 nudge-bottom|number / string|/|向底部微调内容

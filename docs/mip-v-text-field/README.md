@@ -26,7 +26,7 @@
 dont-fill-mask-blanks|boolean|/|键入时禁用自动字符显示
 mask|object / string|/|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
 return-masked-value|boolean|/|返回未修改的掩码字符串
-append-outer-icon|string|/|Append an icon to the outside of `v-text-field`'s input, uses same syntax as `v-icon`
+append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `v-icon`
 append-outer-icon-cb|any|/|Callback for appended outer icon when clicked
 autofocus|boolean|/|启用自动聚焦
 box|boolean|/|应用备用输入框样式
