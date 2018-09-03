@@ -26,15 +26,15 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|/|将指定的色彩应用与控件
-value|boolean|/|控制可见性
 absolute|boolean|/|给元素设置绝对定位
-top|boolean|/|将组件向顶部对齐
-bottom|boolean|/|将组件向底部对齐
-left|boolean|/|将组件向左边对齐
-right|boolean|/|将组件向右边对齐
 auto-height|boolean|/|Makes snackbar height dynamic
+bottom|boolean|/|将组件向底部对齐
+color|string|/|将指定的色彩应用与控件
+left|boolean|/|将组件向左边对齐
 multi-line|boolean|/|识小吃吧更高（移动设备）
+right|boolean|/|将组件向右边对齐
 timeout|number|6000|等待小吃吧自动隐藏的时间
+top|boolean|/|将组件向顶部对齐
+value|boolean|/|控制可见性
 vertical|boolean|/|垂直折叠小吃店的内容（移动设备）
 

@@ -36,27 +36,27 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|/|将指定的色彩应用与控件
 active-class|string|/|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
 append|boolean|/|Vue Router的router-link属性
+color|string|/|将指定的色彩应用与控件
+dark|boolean|/|应用暗黑主题变体
 disabled|boolean|/|Route列表项是被禁用的
 exact|boolean|/|完全匹配链接，没有这个的话，“/”将匹配每一个路由
 exact-active-class|string|/|Vue Router的 router-link属性
+flat|boolean|/|移除卡片的盒子阴影
+height|number / string|/|手动定义卡片的高度
+hover|boolean|/|在悬停上应用跟高的海拔
 href|string / object|/|将组件标签指定为`<a>`
-to|string / object|/|将组件标签指定为`<router-link>`
+img|string|/|指定一个图像背景
+light|boolean|/|应用明亮主题变体
 nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
+raised|boolean|/|指定更高的默认海拔
 replace|boolean|/|Vue Router router-link 属性
 ripple|boolean / object|/|使用`mip-v-ripple`指令
 tag|string|'div'|指定要在组件上使用的自定义标签
 target|string|/|指定目标属性，仅适用于猫标签。
-dark|boolean|/|应用暗黑主题变体
-light|boolean|/|应用明亮主题变体
-flat|boolean|/|移除卡片的盒子阴影
-height|number / string|/|手动定义卡片的高度
-hover|boolean|/|在悬停上应用跟高的海拔
-img|string|/|指定一个图像背景
-raised|boolean|/|指定更高的默认海拔
 tile|boolean|/|通过去除边界弧度将卡片卡如贴片。
+to|string / object|/|将组件标签指定为`<router-link>`
 width|string / number|/|内容的宽度
 
 ### mip-v-card-media
@@ -65,9 +65,9 @@ width|string / number|/|内容的宽度
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-contain|boolean|/|修改包含的背景大小来
-height|number / string|'auto'|手动定义卡片的高度
-src|string|/|被左为背景显示的图片
+contain|boolean|/|
+height|number / string|'auto'|设置组件高度
+src|string|/|
 
 ### mip-v-card-title
 
@@ -75,7 +75,7 @@ src|string|/|被左为背景显示的图片
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-primary-title|boolean|/|应用主标题特定的填充
+primary-title|boolean|/|
 
 ## 示例
 

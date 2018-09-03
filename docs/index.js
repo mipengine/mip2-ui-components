@@ -173,6 +173,23 @@ const getDescription = async (descriptor, prop) => {
   return description
 }
 
+const getMergedComponentInfo = async (component) => {
+  const { name, props, mixins = [] } = component
+  const doc = await getComponentDoc(name.slice(1))
+  const genericProps = await getGenericProps()
+  const mixinDocs = await Promise.all(mixins.map(({ name }) => getMixinDoc(name)))
+  let extendProps = {}
+  let extendDoc = {}
+  if (component.extends) {
+    const extendInfo = await getMergedComponentInfo(component.extends)
+    extendProps = merge({}, extendProps, extendInfo.mergedProps)
+    extendDoc = merge({}, extendDoc, extendInfo.mergedDoc)
+  }
+  const mergedProps = merge({}, extendProps, ...mixins.map(({ props }) => props), props)
+  const mergedDoc = merge({}, {props: genericProps}, extendDoc, ...mixinDocs, doc)
+  return { mergedProps, mergedDoc }
+}
+
 const generateDoc = async (tagName) => {
   const mipTagName = getMIPTagName(tagName)
   const name = tagName.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join('')
@@ -201,12 +218,9 @@ const generateDoc = async (tagName) => {
 
   println('## API')
 
-  for (const {name, props, mixins = []} of components) {
-    const genericProps = await getGenericProps()
-    const mixinDocs = await Promise.all(mixins.map(({ name }) => getMixinDoc(name)))
-
-    const mergedProps = merge({}, ...mixins.map(({ props }) => props), props)
-    const mergedDoc = merge({}, {props: genericProps}, ...mixinDocs, doc)
+  for (const component of components) {
+    const { name } = component
+    const { mergedProps, mergedDoc } = await getMergedComponentInfo(component)
 
     println(`### ${getMIPTagName(camelToDash(name))}`)
 
@@ -217,6 +231,7 @@ const generateDoc = async (tagName) => {
 
     println(
       (await Promise.all(Object.entries(mergedProps)
+        .sort(([a], [b]) => a < b ? -1 : 1)
         .map(async ([prop, definition]) =>
           [
             camelToDash(prop),

@@ -17,17 +17,17 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 color|string|'accent'|
-id|string|/|设置组件上的DOM id
-input-value|any|/|**v-model** 的绑定值
 false-value|any|/|设置虚假状态的值
-true-value|any|/|设置真值
-multiple|boolean|/|
-label|string|/|设置输入框标签
-toggle-keys|any|[13,32]|
+id|string|/|设置组件上的DOM id
 indeterminate|boolean|/|为复选框设置不确定状态
 indeterminate-icon|string|'$vuetify.icons.checkboxIndeterminate'|
-on-icon|string|'$vuetify.icons.checkboxOn'|
+input-value|any|/|**v-model** 的绑定值
+label|string|/|设置输入框标签
+multiple|boolean|/|
 off-icon|string|'$vuetify.icons.checkboxOff'|
+on-icon|string|'$vuetify.icons.checkboxOn'|
+toggle-keys|any|[13,32]|
+true-value|any|/|设置真值
 
 ## 示例
 

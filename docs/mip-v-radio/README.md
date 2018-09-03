@@ -26,13 +26,36 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-value-comparator|any|true|Apply a custom value comparator function
-column|boolean|true|单选框列显示
+append-icon|string|/|Append an icon to the component, uses same syntax as `mip-v-icon`
+append-icon-cb|any|/|Callback for appended icon when clicked
+background-color|string|''|
+color|string|/|将指定的色彩应用与控件
+column|boolean|true|
+dark|boolean|/|应用暗黑主题变体
+disabled|boolean|/|Input is disabled
+error|boolean|/|将输入框设置为手动错误状态。
+error-count|number / string|1|The total number of errors that should display at once
+error-messages|string / any|[]|将输入框置于错误状态，并传入自定义的错误信息。将与来自**规则（rules）**属性的任何验证相结合。这个字段不会触发验证。
 height|number / string|'auto'|设置组件高度
-mandatory|boolean|true|强制选择复选框组的一个子复选框 `mip-v-radio` 
-name|string|/|设置组件的 name 属性
-row|boolean|/|单选框行显示
-value|any|/|设置选择控件组件的值
+hide-details|boolean|/|Hides hint, validation errors
+hint|string|/|Hint text
+label|string|/|Sets input label
+light|boolean|/|应用明亮主题变体
+loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜色应用于进度条的字符串（任何material色彩——主要（primary）, 次要（secondary）, 成功（success）, 信息（info），警告（warning），错误（error）），或者使用组件的布尔值**颜色**（由色彩属性设置——如果它被组件支持的话）还可以是原色。
+mandatory|boolean|true|
+messages|string / any|[]|Displays a list of messages or message if using a string
+name|string|/|
+persistent-hint|boolean|/|Forces hint to always be visible
+prepend-icon|string|/|Prepend an icon to the component, uses same syntax as `mip-v-icon`
+prepend-icon-cb|any|/|Callback for prepended icon when clicked
+readonly|boolean|/|Puts input in readonly state
+row|boolean|/|
+rules|any|[]|返回True或带有错误信息的字符串的函数数组。
+success|boolean|/|Puts the input in a manual success state
+success-messages|string / any|[]|Puts the input in a success state and passes through custom success messsages.
+validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
+value|any|/|Input value
+value-comparator|any|true|Apply a custom value comparator function
 
 ### mip-v-radio
 
@@ -41,14 +64,14 @@ value|any|/|设置选择控件组件的值
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 color|string|'accent'|将指定的色彩应用与控件
-ripple|boolean / object|true|应用`mip-v-ripple`指令
 dark|boolean|/|应用暗黑主题变体
-light|boolean|/|应用明亮主题变体
 disabled|boolean|/|输入框是禁用的
 label|string|/|设置输入框标签
-on-icon|string|'$vuetify.icons.radioOn'|
+light|boolean|/|应用明亮主题变体
 off-icon|string|'$vuetify.icons.radioOff'|
+on-icon|string|'$vuetify.icons.radioOn'|
 readonly|boolean|/|
+ripple|boolean / object|true|应用`mip-v-ripple`指令
 value|any|/|设置选择控件组件的值
 
 ## 示例

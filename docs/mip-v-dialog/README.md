@@ -35,19 +35,19 @@
 :--:|:--:|:--:|:---
 attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
 content-class|any|''|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
-hide-overlay|boolean|/|隐藏遮罩
-return-value|any|/|
-value|boolean|/|控制可见性
 disabled|boolean|/|禁用打开对话框
-persistent|boolean|/|点击对话框外部不能使其关闭
-fullscreen|boolean|/|改变布局全屏显示
 full-width|boolean|/|指定模态框强制100%宽度
-no-click-animation|boolean|/|Disables the bounce effect when clicking outside of a `mip-v-dialog`'s content when using the **persistent** prop
+fullscreen|boolean|/|改变布局全屏显示
+hide-overlay|boolean|/|隐藏遮罩
 max-width|string / number|'none'|内容的最大宽度
+no-click-animation|boolean|/|Disables the bounce effect when clicking outside of a `mip-v-dialog`'s content when using the **persistent** prop
 origin|string|'center center'|设置过渡原点
-width|string / number|'auto'|设置对话框的宽度
+persistent|boolean|/|点击对话框外部不能使其关闭
+return-value|any|/|
 scrollable|boolean|/|当包含card, card-title, card-text 以及 card-actions这几个的对话框可滚动设为 true 的时候； card-text 应该指定高度并且设置 overflow-y
 transition|string / boolean|'dialog-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
+value|boolean|/|控制可见性
+width|string / number|'auto'|设置对话框的宽度
 
 ## 示例
 

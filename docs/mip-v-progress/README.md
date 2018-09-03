@@ -20,13 +20,13 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
+button|boolean|/|
 color|string|/|将指定的色彩应用与控件
-button|boolean|/|Deprecated - Pending removal
-indeterminate|boolean|/|Constantly animates, use when loading progress is unknown.
-rotate|number|/|Rotates the circle start point in deg
-size|number / string|32|Sets the diameter of the circle in pixels
+indeterminate|boolean|/|
 line-width|number|4|
-value|number|/|The percentage value for current progress
+rotate|number|/|
+size|number / string|32|设置元素的高度和宽度
+value|number|/|控制可见性
 
 ### mip-v-progress-linear
 
@@ -34,15 +34,15 @@ value|number|/|The percentage value for current progress
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
+active|boolean|true|
+background-color|string|/|
+background-opacity|number / string|/|
+buffer-value|number / string|100|
 color|string|'primary'|将指定的色彩应用与控件
-active|boolean|true|Reduce the height to 0, hiding component
-background-color|string|/|Background color, set to component's color if null
-background-opacity|number / string|/|Background opacity, if null it defaults to 0.3 if background color is not specified or 1 otherwise
-buffer-value|number / string|100|The percentage value for the buffer
+indeterminate|boolean|/|
 line-height|number / string|7|
-indeterminate|boolean|/|Constantly animates, use when loading progress is unknown.
 query|boolean|/|
-value|number / string|/|The percentage value for current progress
+value|number / string|/|控制可见性
 
 ## 示例
 

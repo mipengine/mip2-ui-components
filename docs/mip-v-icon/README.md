@@ -5,7 +5,6 @@
 ## 用例
 
 ```html
-<p>&#x9ED8;&#x8BA4;&#x5F15;&#x5165; material-icons&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; fontawesome&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x5F15;&#x5165;</p>
 <div class="group pa-2">
   <mip-v-icon>home</mip-v-icon>
   <mip-v-icon>event</mip-v-icon>
@@ -23,10 +22,10 @@
 :--:|:--:|:--:|:---
 color|string|/|将指定的色彩应用与控件
 dark|boolean|/|应用暗黑主题变体
-light|boolean|/|应用明亮主题变体
 disabled|boolean|/|输入框是禁用的
 large|boolean|/|设置图标为大型**（36px）**
 left|boolean|/|在按钮内部使用时，把图标放置在左侧
+light|boolean|/|应用明亮主题变体
 medium|boolean|/|设置图标为中型**(28px)**
 right|boolean|/|在按钮内部使用时，把图标放置在右侧
 size|number / string|/|设置元素的高度和宽度

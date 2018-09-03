@@ -16,8 +16,8 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-height|string / number|500|设置组件高度
 alt|string|/|Attaches an alt property to the parallax image
+height|string / number|500|设置组件高度
 src|string|/|The image to parallax
 
 ## 示例

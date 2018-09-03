@@ -17,13 +17,13 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|/|将指定的色彩应用与控件
 circle|boolean|/|Shape pagination elements as circles
+color|string|/|将指定的色彩应用与控件
 disabled|boolean|/|Disables component
 length|number|/|The length of the paginator
-total-visible|number / string|/|Specify the max total visible pagination numbers
 next-icon|string|'$vuetify.icons.next'|Specify the icon to use for the next icon
 prev-icon|string|'$vuetify.icons.prev'|Specify the icon to use for the prev icon
+total-visible|number / string|/|Specify the max total visible pagination numbers
 value|number|/|Current selected page
 
 ## 示例

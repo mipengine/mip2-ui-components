@@ -31,14 +31,14 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|'primary'|将指定的色彩应用与控件
-value|boolean|true|控制可见性
-left|boolean|/|将组件向左边对齐
 bottom|boolean|/|将组件向底部对齐
+color|string|'primary'|将指定的色彩应用与控件
+left|boolean|/|将组件向左边对齐
 mode|string|/|设置过渡模式（不适用于“过渡组（transition-group）”）
 origin|string|/|设置过渡原点
-transition|string|'fab-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 overlap|boolean|/|组件将折叠插槽里的内容
+transition|string|'fab-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
+value|boolean|true|控制可见性
 
 ## 示例
 

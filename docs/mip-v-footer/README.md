@@ -22,9 +22,9 @@
 app|boolean|/|指定组件作为应用程序布局的一部分，用于动态调整内容的大小
 color|string|/|将指定的色彩应用与控件
 dark|boolean|/|应用暗黑主题变体
-light|boolean|/|应用明亮主题变体
 height|number / string|32|设置组件高度
 inset|boolean|/|定位工具栏偏离应用程序的`mip-v-navigation-drawer`的位置
+light|boolean|/|应用明亮主题变体
 
 ## 示例
 
