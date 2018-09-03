@@ -26,7 +26,7 @@ label|string|/|设置输入框标签
 multiple|boolean|/|
 off-icon|string|'$vuetify.icons.checkboxOff'|
 on-icon|string|'$vuetify.icons.checkboxOn'|
-toggle-keys|any|[13,32]|
+toggle-keys|array|[13,32]|
 true-value|any|/|设置真值
 
 ## 示例

@@ -22,7 +22,7 @@ id|string|/|设置组件上的DOM id
 input-value|any|/|**v-model** 的绑定值
 label|string|/|设置输入框标签
 multiple|boolean|/|
-toggle-keys|any|[13,32]|
+toggle-keys|array|[13,32]|
 true-value|any|/|设置真值
 
 ## 示例
