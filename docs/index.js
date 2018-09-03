@@ -25,7 +25,7 @@ const getOfficialDoc = type => async (name) => {
   })[name] || name
 
   const getDocByLang = async (lang) => {
-    const docsDir = path.resolve(__dirname, '../../vuetifyjs.com/src/lang', lang, type)
+    const docsDir = path.resolve(__dirname, '../lang', lang, type)
     const filenames = await fs.readdir(docsDir)
     const docFilename = filenames.find(filename => filename.startsWith(getDocName(name)))
 
