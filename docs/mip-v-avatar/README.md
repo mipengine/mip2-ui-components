@@ -5,6 +5,16 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 56,
+      "min": 16,
+      "max": 256,
+      "tile": false
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-md">
   <div class="layout row wrap">
     <div class="flex xs12 sm6 md4">
@@ -69,6 +79,14 @@ tile|boolean|/|删除边看弧度
 ### 数据绑定
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "tile": false,
+      "avatarSize": 60
+    }
+  </script>
+</mip-data>
 <mip-v-btn on="tap:MIP.setData({tile: !m.tile})" color="primary">Toggle Tile</mip-v-btn>
 <input m-bind:value="avatarSize" class="avatar-size-input">
 <div class="section">

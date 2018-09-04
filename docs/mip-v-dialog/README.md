@@ -5,6 +5,13 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "dialog1": false
+    }
+  </script>
+</mip-data>
 <mip-v-dialog m-bind:value.sync="dialog1" width="500">
   <mip-v-btn slot="activator" color="red lighten-2" dark="">
     Click Me
@@ -54,6 +61,13 @@ width|string / number|'auto'|设置对话框的宽度
 ### 模态框
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "dialog2": false
+    }
+  </script>
+</mip-data>
 <mip-v-dialog m-bind:value.sync="dialog2" persistent="" max-width="290">
   <mip-v-btn slot="activator" color="primary" dark="">
     Open Dialog
@@ -75,6 +89,13 @@ width|string / number|'auto'|设置对话框的宽度
 ### 可滚动
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "show2": false
+    }
+  </script>
+</mip-data>
 <mip-v-btn outline="" large="" fab="" color="indigo" on="tap:MIP.setData({show2:true})">
   <mip-v-icon>edit</mip-v-icon>
 </mip-v-btn>
@@ -103,6 +124,13 @@ width|string / number|'auto'|设置对话框的宽度
 ### Loading 效果
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "show3": false
+    }
+  </script>
+</mip-data>
 <p>&#x4F7F;&#x7528; hide-overlay &#x9690;&#x85CF;&#x8499;&#x5C42;</p>
 <p>&#x4F7F;&#x7528; persistent &#x70B9;&#x51FB;&#x5BF9;&#x8BDD;&#x6846;&#x5916;&#x90E8;&#x4E0D;&#x80FD;&#x4F7F;&#x5176;&#x5173;&#x95ED;</p>
 <mip-v-btn outline="" large="" fab="" color="indigo" on="tap:MIP.setData({show3:true})">

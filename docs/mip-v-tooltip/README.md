@@ -98,6 +98,13 @@ z-index|number / string|/|用于组件的z-index
 ### 控制是否可见
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "show": false
+    }
+  </script>
+</mip-data>
 <div class="container fluid text-xs-center">
   <div class="layout flex justify-space-between row wrap">
     <div class="flex xs12">

@@ -5,6 +5,11 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="group pa-2">
   <mip-v-icon>home</mip-v-icon>
   <mip-v-icon>event</mip-v-icon>
@@ -37,6 +42,11 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 ### 主题 light|dark 默认 light
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="group pa-2 teal">
   <mip-v-icon dark="true">folder_open</mip-v-icon>
   <mip-v-icon dark="true">widgets</mip-v-icon>
@@ -47,6 +57,11 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 ### 尺寸 medium size
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="group pa-2">
   <mip-v-icon medium="true">home</mip-v-icon>
   <mip-v-icon medium="true">event</mip-v-icon>
@@ -57,6 +72,11 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 ### 尺寸 large size
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="group pa-2 teal">
   <mip-v-icon dark="true" large="true">folder_open</mip-v-icon>
   <mip-v-icon dark="true" large="true">widgets</mip-v-icon>
@@ -67,6 +87,11 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 ### 尺寸 x-large size
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="group pa-2">
   <mip-v-icon x-large="true">home</mip-v-icon>
   <mip-v-icon x-large="true">event</mip-v-icon>
@@ -77,6 +102,11 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 ### 彩色
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="group pa-2">
   <mip-v-icon large="" color="green darken-2">business</mip-v-icon>
 
@@ -96,6 +126,11 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 ### 按钮
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="group pa-a">
   <mip-v-btn color="primary" dark="">Accept
     <mip-v-icon dark="" right="">check_circle</mip-v-icon>

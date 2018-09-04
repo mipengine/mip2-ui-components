@@ -1,10 +1,29 @@
 # mip-v-select
 
-选择控制组件允许用户使用选择项，这些组件必须和 `mip-v-model` 属性一起使用，因为他们无法保持自己的状态。
+选择控制组件允许用户使用选择项，这些组件必须和 `.sync` 属性一起使用，因为他们无法保持自己的状态。
 
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "items": [
+        null,
+        "bar",
+        "fizz",
+        null
+      ],
+      "value": [
+        null,
+        "bar",
+        "fizz",
+        null
+      ],
+      "select": {}
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" attach="" chips="" label="Chips" multiple></mip-v-select>
@@ -27,7 +46,7 @@ activator|any|/|
 allow-overflow|boolean|/|
 append-icon|string|'$vuetify.icons.dropdown'|Append an icon to the component, uses same syntax as `mip-v-icon`
 append-icon-cb|function|/|Callback for appended icon when clicked
-append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `v-icon`
+append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `mip-v-icon`
 append-outer-icon-cb|function|/|Callback for appended outer icon when clicked
 attach|any|/|
 auto|boolean|/|在所选择的元素上居中列表
@@ -124,6 +143,90 @@ z-index|number / string|/|
 ### 图标
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "items": [
+        null,
+        "bar",
+        "fizz",
+        "buzz"
+      ],
+      "value": [
+        null,
+        "bar",
+        "fizz",
+        "buzz"
+      ],
+      "e1": "Florida",
+      "e2": "Texas",
+      "states": [
+        null,
+        "Alaska",
+        "American Samoa",
+        "Arizona",
+        null,
+        null,
+        "Colorado",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Georgia",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "select": {
+        "state": "Florida"
+      }
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <div class="flex xs12 md6">
@@ -141,6 +244,90 @@ z-index|number / string|/|
 ### 多选
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "items": [
+        "foo",
+        "bar",
+        "fizz",
+        "buzz"
+      ],
+      "value": [
+        "foo",
+        "bar",
+        "fizz",
+        "buzz"
+      ],
+      "states": [
+        "Alabama",
+        "Alaska",
+        "American Samoa",
+        "Arizona",
+        "Arkansas",
+        null,
+        "Colorado",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Georgia",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Ohio",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "e3": [],
+      "e4": [],
+      "select": {
+        "state": "Florida"
+      }
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <div class="flex xs12 md6">
@@ -158,6 +345,38 @@ z-index|number / string|/|
 ### 自定义选项的文本和值
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "items": [
+        null,
+        null,
+        "fizz",
+        null
+      ],
+      "value": [
+        null,
+        null,
+        "fizz",
+        null
+      ],
+      "select": {
+        "state": "Florida",
+        "abbr": "FL"
+      },
+      "items2": [
+        null,
+        null,
+        {
+          "state": "Nebraska",
+          "abbr": "NE"
+        },
+        null,
+        null
+      ]
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <mip-v-select m-bind:hint="`${select.state}, ${select.abbr}`" m-bind:items="items2" m-bind:value.sync="select" item-text="state" item-value="abbr" label="Select" persistent-hint="" return-object="" single-line=""></mip-v-select>
 </div>

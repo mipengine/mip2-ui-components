@@ -5,6 +5,13 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "page": 2
+    }
+  </script>
+</mip-data>
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="6">
 </mip-v-pagination>
 ```
@@ -31,6 +38,13 @@ value|number|/|Current selected page
 ### 长的
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "page": 2
+    }
+  </script>
+</mip-data>
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="15">
 </mip-v-pagination>
 ```
@@ -38,6 +52,13 @@ value|number|/|Current selected page
 ### 限制
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "page": 2
+    }
+  </script>
+</mip-data>
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="15" m-bind:total-visible="5">
 </mip-v-pagination>
 ```
@@ -45,6 +66,13 @@ value|number|/|Current selected page
 ### 圆形
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "page": 2
+    }
+  </script>
+</mip-data>
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="4" circle="">
 </mip-v-pagination>
 ```
@@ -52,6 +80,13 @@ value|number|/|Current selected page
 ### Icons
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "page": 2
+    }
+  </script>
+</mip-data>
 <mip-v-pagination m-bind:value.sync="page" m-bind:length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right">
 </mip-v-pagination>
 ```

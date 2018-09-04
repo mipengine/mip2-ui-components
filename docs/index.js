@@ -14,7 +14,7 @@ const camelToDash = camel => (camel[0].toUpperCase() + camel.slice(1))
 
 const getMIPTagName = tagName => `mip-${tagName}`
 
-const replaceMIPTagName = text => text.replace('`v-', '`mip-v-')
+const replaceMIPTagName = text => text.replace(/`v-model`/g, '`.sync`').replace(/`v-/g, '`mip-v-')
 
 const getOfficialDoc = type => async (name) => {
   const getDocName = name => ({
@@ -72,8 +72,22 @@ const parseExamples = async (tagName) => {
         return [lines[0], ...lines.slice(1).map(line => line.slice(align))].join('\n')
       }).join('\n')
     }))
+    .map(({ html, ...example }) => {
+      const dataHtml = JSON.stringify(data, (key, val) => html.includes(key) ? val : undefined, 2)
+        .split('\n')
+        .join('\n    ')
+      return {
+        ...example,
+        html: dataHtml === '{}'
+          ? html
+          : '<mip-data>\n  <script type="application/json">\n    ' +
+            dataHtml +
+            '\n  </script>\n</mip-data>\n' +
+            html
+      }
+    })
 
-  return { data, examples }
+  return examples
 }
 
 const ensureDir = async (dir) => {
@@ -88,7 +102,6 @@ const ensureDocDir = async (mipTagName) => {
   const docDir = path.resolve(__dirname, `../docs/${mipTagName}`)
 
   await ensureDir(docDir)
-  await ensureDir(path.resolve(docDir, 'setting'))
 }
 
 const createDocPrinter = async mipTagName => {
@@ -108,15 +121,7 @@ const getHtmlBlock = html => '```html\n' + html + '\n```'
 
 const getPropType = (definition) => {
   if (typeof definition === 'function') {
-    switch (definition) {
-      case Boolean: return 'boolean'
-      case Number: return 'number'
-      case String: return 'string'
-      case Array: return 'array'
-      case Object: return 'object'
-      case Function: return 'function'
-      default: return 'any'
-    }
+    return definition.name.toLowerCase() || 'any'
   }
 
   if (Array.isArray(definition)) {
@@ -199,14 +204,9 @@ const generateDoc = async (tagName) => {
     .filter(({name: componentName = ''}) => componentName.startsWith(name))
 
   const doc = await getComponentDoc(name.slice(1))
-  const { data, examples } = await parseExamples(tagName)
+  const examples = await parseExamples(tagName)
 
   await ensureDocDir(mipTagName)
-
-  await fs.writeFile(
-    path.resolve(__dirname, mipTagName, 'setting/example.preset'),
-    `<mip-data><script type="application/json">${JSON.stringify(data)}</script></mip-data>\n`
-  )
 
   const { print, println } = await createDocPrinter(mipTagName)
 

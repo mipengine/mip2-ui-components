@@ -142,6 +142,22 @@ multiple|boolean|/|
 ### 按钮切换
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "toggle_exclusive": 2,
+      "toggle_multiple": [
+        null,
+        null,
+        null
+      ],
+      "toggle_none": null,
+      "toggle_one": 0,
+      "text": "center",
+      "icon": "justify"
+    }
+  </script>
+</mip-data>
 <h4>Exclusive</h4>
 <mip-v-btn-toggle m-bind:input-value.sync="toggle_exclusive">
   <mip-v-btn flat="">
@@ -237,6 +253,13 @@ multiple|boolean|/|
 ### 图标
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "icon": "justify"
+    }
+  </script>
+</mip-data>
 <h4>Normal</h4>
 <div class="container">
   <mip-v-btn flat="" icon="" color="pink">
@@ -272,6 +295,13 @@ multiple|boolean|/|
 ### 浮动
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "icon": "justify"
+    }
+  </script>
+</mip-data>
 <div class="container">
   <mip-v-btn fab="" dark="" small="" color="primary">
     <mip-v-icon dark="">remove</mip-v-icon>
@@ -297,6 +327,13 @@ multiple|boolean|/|
 ### 大小
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "icon": "justify"
+    }
+  </script>
+</mip-data>
 <div class="container">
   <mip-v-btn small="" color="primary" dark="">Small Button</mip-v-btn>
   <mip-v-btn color="warning" dark="">Normal Button</mip-v-btn>
@@ -318,6 +355,13 @@ multiple|boolean|/|
 ### 轮廓
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "icon": "justify"
+    }
+  </script>
+</mip-data>
 <div class="container">
   <mip-v-btn outline="" color="indigo">Outline Button</mip-v-btn>
   <mip-v-btn outline="" fab="" color="teal">
@@ -344,6 +388,32 @@ multiple|boolean|/|
 ### In toolbar
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "toggle_exclusive": 2,
+      "toggle_multiple": [
+        null,
+        null,
+        2
+      ],
+      "icon": "justify",
+      "dropdown_font": [
+        null,
+        null,
+        {},
+        null
+      ],
+      "dropdown_edit": [
+        null,
+        null,
+        {},
+        null,
+        null
+      ]
+    }
+  </script>
+</mip-data>
 <mip-v-toolbar dense="">
   <mip-v-overflow-btn m-bind:items="dropdown_font" label="Select font" hide-details=""></mip-v-overflow-btn>
   <mip-v-divider vertical=""></mip-v-divider>

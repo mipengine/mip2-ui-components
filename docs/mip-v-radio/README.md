@@ -1,10 +1,17 @@
 # mip-v-radio
 
-选择控制组件允许用户使用选择项，这些组件必须和 `mip-v-model` 属性一起使用，因为他们无法保持自己的状态。
+选择控制组件允许用户使用选择项，这些组件必须和 `.sync` 属性一起使用，因为他们无法保持自己的状态。
 
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "radioGroup": 1
+    }
+  </script>
+</mip-data>
 <mip-v-radio-group m-bind:value.sync="radioGroup">
   <mip-v-radio label="Radio 1">
     <script type="application/json">{"value": 1}</script>
@@ -79,6 +86,14 @@ value|any|/|设置选择控件组件的值
 ### 方向
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "column": null,
+      "row": null
+    }
+  </script>
+</mip-data>
 <mip-v-radio-group m-bind:value.sync="column" column="">
   <mip-v-radio label="Option 1" value="radio-1"></mip-v-radio>
   <mip-v-radio label="Option 2" value="radio-2"></mip-v-radio>
@@ -92,6 +107,15 @@ value|any|/|设置选择控件组件的值
 ### 颜色
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "column": null,
+      "ex7": "red",
+      "ex8": "primary"
+    }
+  </script>
+</mip-data>
 <mip-v-radio-group m-bind:value.sync="ex7" column="">
   <mip-v-radio label="red" color="red" value="red"></mip-v-radio>
   <mip-v-radio label="red darken-3" color="red darken-3" value="red darken-3"></mip-v-radio>
