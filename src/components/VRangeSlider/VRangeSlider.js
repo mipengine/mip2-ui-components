@@ -13,10 +13,17 @@ export default {
       default: () => []
     }
   },
-  data: vm => ({
-    activeThumb: null,
-    lazyValue: !vm.value.length ? [0, 0] : vm.value
-  }),
+  data () {
+    let vm = this
+    return {
+      activeThumb: null,
+      lazyValue: !vm.value.length ? [0, 0] : vm.value
+    }
+  },
+  // data: vm => ({
+  //   activeThumb: null,
+  //   lazyValue: !vm.value.length ? [0, 0] : vm.value
+  // }),
   computed: {
     classes () {
       return Object.assign({}, {
@@ -39,7 +46,7 @@ export default {
           value = [value[1], value[0]]
         }
         this.lazyValue = value
-        if (!deepEqual(value, this.value)) this.$emit('input', value)
+        if (!deepEqual(value, this.value)) this.$emit('input', value) && this.$emit('update:value', value)
         this.validate()
       }
     },
