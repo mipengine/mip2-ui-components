@@ -79,19 +79,39 @@ value|number / string|/|Input value
     {
       "slider": 45,
       "value": 0,
-      "thumb-label": "always"
+      "thumb-label": "always",
+      "red": 64
     }
   </script>
 </mip-data>
-<mip-v-slider m-bind:value.sync="slider" thumb-label=""></mip-v-slider>
-<mip-v-slider m-bind:value.sync="slider" thumb-label="always">
-</mip-v-slider>
-<mip-v-slider m-bind:value.sync="slider" thumb-color="red" thumb-label="always">
-</mip-v-slider>
-<mip-v-slider m-bind:value.sync="slider" thumb-size="24" thumb-label="always">
-</mip-v-slider>
-<mip-v-slider m-bind:value.sync="slider" always-dirty="" hint="Try set it to &apos;0&apos;" persistent-hint="" thumb-label="always">
-</mip-v-slider>
+<div class="container fluid grid-list-lg">
+  <div class="layout row wrap">
+    <div class="flex xs12">
+      <mip-v-subheader class="pl-0">Show thumb when using slider</mip-v-subheader>
+      <mip-v-slider m-bind:value.sync="slider" thumb-label=""></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-subheader class="pl-0">Always show thumb label</mip-v-subheader>
+      <mip-v-slider m-bind:value.sync="slider" thumb-label="always"></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-subheader class="pl-0">Custom thumb color</mip-v-subheader>
+      <mip-v-slider m-bind:value.sync="slider" thumb-color="red" thumb-label="always"></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-subheader class="pl-0">Custom thumb size</mip-v-subheader>
+      <mip-v-slider m-bind:value.sync="slider" thumb-size="24" thumb-label="always"></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-subheader class="pl-0">Always dirty</mip-v-subheader>
+      <mip-v-slider m-bind:value.sync="slider" always-dirty="" hint="Try set it to &apos;0&apos;" persistent-hint="" thumb-label="always"></mip-v-slider>
+    </div>
+  </div>
+</div>
 ```
 
 ### Ticks
@@ -145,10 +165,132 @@ value|number / string|/|Input value
   <script type="application/json">
     {
       "slider": 45,
+      "volume": 10,
       "value": 0,
       "zoom": 0
     }
   </script>
 </mip-data>
+<mip-v-slider m-bind:value.sync="zoom" append-icon="alarm"></mip-v-slider>
+<mip-v-slider m-bind:value.sync="zoom" prepend-icon="volume_up"></mip-v-slider>
 <mip-v-slider m-bind:value.sync="zoom" append-icon="zoom_in" prepend-icon="zoom_out" on="click-append:MIP.setData({zoom: m.zoom + 10}) click-prepend:MIP.setData({zoom: m.zoom - 10})"></mip-v-slider>
+```
+
+### 带有可编辑的数值
+
+```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "value": 0,
+      "red": 64,
+      "green": 128,
+      "blue": 0
+    }
+  </script>
+</mip-data>
+<mip-v-card>
+  <div m-bind:style="{ height:&apos;300px&apos;,background:`rgb(${red}, ${green}, ${blue})`}"></div>
+
+  <mip-v-card-text>
+    <div class="container fluid grid-list-lg">
+      <div class="layout row wrap">
+        <div class="flex xs9">
+          <mip-v-slider m-bind:value.sync="red" max="255" label="R"></mip-v-slider>
+        </div>
+
+        <div class="flex xs3">
+          <mip-v-text-field m-bind:value.sync="red" class="mt-0" type="number"></mip-v-text-field>
+        </div>
+
+        <div class="flex xs9">
+          <mip-v-slider m-bind:value.sync="green" max="255" label="G"></mip-v-slider>
+        </div>
+
+        <div class="flex xs3">
+          <mip-v-text-field m-bind:value.sync="green" class="mt-0" type="number"></mip-v-text-field>
+        </div>
+
+        <div class="flex xs9">
+          <mip-v-slider max="255" m-bind:value.sync="blue" label="B"></mip-v-slider>
+        </div>
+
+        <div class="flex xs3">
+          <mip-v-text-field m-bind:value.sync="blue" class="mt-0" type="number"></mip-v-text-field>
+        </div>
+      </div>
+    </div>
+  </mip-v-card-text>
+</mip-v-card>
+```
+
+### 自定义色彩
+
+```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "value": 0,
+      "thumb-label": "always",
+      "ex1": {
+        "label": "color",
+        "val": 25,
+        "color": "orange darken-3"
+      },
+      "ex2": {
+        "label": "track-color",
+        "val": 75,
+        "color": "green lighten-1"
+      },
+      "ex3": {
+        "label": "thumb-color",
+        "val": 50,
+        "color": "red"
+      }
+    }
+  </script>
+</mip-data>
+<div>
+  <mip-v-slider m-bind:value.sync="ex1.val" m-bind:color="ex1.color" m-bind:label="ex1.label"></mip-v-slider>
+
+  <mip-v-slider m-bind:value.sync="ex2.val" m-bind:label="ex2.label" m-bind:track-color="ex2.color"></mip-v-slider>
+
+  <mip-v-slider m-bind:value.sync="ex3.val" m-bind:label="ex3.label" m-bind:thumb-color="ex3.color" thumb-label="always"></mip-v-slider>
+</div>
+```
+
+### 范围
+
+```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "value": 0,
+      "value1": [
+        null,
+        60
+      ],
+      "value2": [
+        null,
+        40
+      ]
+    }
+  </script>
+</mip-data>
+<mip-v-card flat="" color="transparent">
+  <mip-v-subheader>Default range slider</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-range-slider m-bind:value.sync="value1"></mip-v-range-slider>
+  </mip-v-card-text>
+
+  <mip-v-subheader>Disabled range slider</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-range-slider m-bind:value.sync="value2" disabled></mip-v-range-slider>
+  </mip-v-card-text>
+</mip-v-card>
 ```

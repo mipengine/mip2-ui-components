@@ -8,7 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
-    
+
   </head>
   <body>
     <mip-shell>
@@ -34,33 +34,40 @@
     </mip-shell>
     <mip-data>
       <script type="application/json">
-      {
-        "slider": 45,
-        "volume": 10,
-        "price": [110, 440],
-        "value": 0,
-        "fruits": 0,
-        "tickLabels": [
-          "Figs",
-          "Lemon",
-          "Pear",
-          "Apple"
-        ],
-        "zoom": 0,
-        "thumb-label": "always",
-        "ticks": "always",
-        "red": 64,
-        "green": 128,
-        "blue": 0,
-        "ex1": { "label": 'color', "val": 25, "color": 'orange darken-3' },
-        "ex2": { "label": 'track-color', "val": 75, "color": 'green lighten-1' },
-        "ex3": { "label": 'thumb-color', "val": 50, "color": 'red' },
-        "ex1Val":25,
-        "ex2Val":75,
-        "ex3Val":50,
-        "value1": [30, 60],
-        "value2": [0, 40]
-      }
+        {
+          "slider": 45,
+          "volume": 10,
+          "price": [110, 440],
+          "value": 0,
+          "fruits": 0,
+          "tickLabels": ["Figs", "Lemon", "Pear", "Apple"],
+          "zoom": 0,
+          "thumb-label": "always",
+          "ticks": "always",
+          "red": 64,
+          "green": 128,
+          "blue": 0,
+          "ex1": {
+            "label": "color",
+            "val": 25,
+            "color": "orange darken-3"
+          },
+          "ex2": {
+            "label": "track-color",
+            "val": 75,
+            "color": "green lighten-1"
+          },
+          "ex3": {
+            "label": "thumb-color",
+            "val": 50,
+            "color": "red"
+          },
+          "ex1Val": 25,
+          "ex2Val": 75,
+          "ex3Val": 50,
+          "value1": [30, 60],
+          "value2": [0, 40]
+        }
       </script>
     </mip-data>
 
@@ -194,7 +201,7 @@
 
     <h2>带有可编辑的数值</h2>
     <mip-v-card >
-      <div  
+      <div
         m-bind:style="{ height:'300px',background:`rgb(${red}, ${green}, ${blue})`}"
       ></div>
 
