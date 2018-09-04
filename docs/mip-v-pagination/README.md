@@ -12,7 +12,7 @@
     }
   </script>
 </mip-data>
-<mip-v-pagination m-bind:value.sync="page" m-bind:length="6">
+<mip-v-pagination m-bind:value.sync="page" length="6">
 </mip-v-pagination>
 ```
 
@@ -45,7 +45,7 @@ value|number|/|Current selected page
     }
   </script>
 </mip-data>
-<mip-v-pagination m-bind:value.sync="page" m-bind:length="15">
+<mip-v-pagination m-bind:value.sync="page" length="15">
 </mip-v-pagination>
 ```
 
@@ -59,7 +59,7 @@ value|number|/|Current selected page
     }
   </script>
 </mip-data>
-<mip-v-pagination m-bind:value.sync="page" m-bind:length="15" m-bind:total-visible="5">
+<mip-v-pagination m-bind:value.sync="page" length="15" total-visible="5">
 </mip-v-pagination>
 ```
 
@@ -73,7 +73,7 @@ value|number|/|Current selected page
     }
   </script>
 </mip-data>
-<mip-v-pagination m-bind:value.sync="page" m-bind:length="4" circle="">
+<mip-v-pagination m-bind:value.sync="page" length="4" circle="">
 </mip-v-pagination>
 ```
 
@@ -87,13 +87,13 @@ value|number|/|Current selected page
     }
   </script>
 </mip-data>
-<mip-v-pagination m-bind:value.sync="page" m-bind:length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right">
+<mip-v-pagination m-bind:value.sync="page" length="4" prev-icon="mdi-menu-left" next-icon="mdi-menu-right">
 </mip-v-pagination>
 ```
 
 ### 禁用
 
 ```html
-<mip-v-pagination m-bind:length="4" disabled>
+<mip-v-pagination length="4" disabled>
 </mip-v-pagination>
 ```
