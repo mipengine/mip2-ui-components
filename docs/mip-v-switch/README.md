@@ -1,10 +1,17 @@
 # mip-v-switch
 
-选择控制组件允许用户使用选择项，这些组件必须和 `mip-v-model` 属性一起使用，因为他们无法保持自己的状态。
+选择控制组件允许用户使用选择项，这些组件必须和 `.sync` 属性一起使用，因为他们无法保持自己的状态。
 
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "switch": true
+    }
+  </script>
+</mip-data>
 <mip-v-switch label="Switch" m-bind:input-value.sync="switch"></mip-v-switch>
 ```
 
@@ -30,6 +37,14 @@ true-value|any|/|设置真值
 ### 数组
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "switch": true,
+      "people": []
+    }
+  </script>
+</mip-data>
 <mip-v-switch m-bind:input-value.sync="people" label="John" value="John"></mip-v-switch>
 <mip-v-switch m-bind:input-value.sync="people" label="Jacob" value="Jacob"></mip-v-switch>
 ```
@@ -37,6 +52,13 @@ true-value|any|/|设置真值
 ### 开关
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "switch": true
+    }
+  </script>
+</mip-data>
 <mip-v-switch label="on" value="" input-value="true"></mip-v-switch>
 <mip-v-switch label="off"></mip-v-switch>
 <mip-v-switch label="on disabled" value="" input-value="true" disabled></mip-v-switch>
@@ -46,6 +68,27 @@ true-value|any|/|设置真值
 ### 色彩
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "switch": true,
+      "ex11": [
+        null,
+        "indigo",
+        null,
+        "primary",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "orange darken-3"
+      ]
+    }
+  </script>
+</mip-data>
 <mip-v-switch m-bind:input-value.sync="ex11" label="red" color="red" value="red" hide-details=""></mip-v-switch>
 <mip-v-switch m-bind:input-value.sync="ex11" label="red darken-3" color="red darken-3" value="red darken-3" hide-details=""></mip-v-switch>
 <mip-v-switch m-bind:input-value.sync="ex11" label="indigo" color="indigo" value="indigo" hide-details=""></mip-v-switch>

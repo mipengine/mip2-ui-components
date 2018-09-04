@@ -5,6 +5,11 @@ Textarea components are used for collecting large amounts of textual data.
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <mip-v-textarea name="input-7-1" label="Default style" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through." hint="Hint text"></mip-v-textarea>
 <mip-v-textarea solo="" name="input-7-2" label="Solo textarea" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
 <mip-v-textarea box="" name="input-7-3" label="Box textarea" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
@@ -21,7 +26,7 @@ Textarea components are used for collecting large amounts of textual data.
 :--:|:--:|:--:|:---
 append-icon|string|/|Append an icon to the component, uses same syntax as `mip-v-icon`
 append-icon-cb|function|/|Callback for appended icon when clicked
-append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `v-icon`
+append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `mip-v-icon`
 append-outer-icon-cb|function|/|Callback for appended outer icon when clicked
 auto-grow|boolean|/|自动增长输入，需要使用 **v-model**
 autofocus|boolean|/|启用自动聚焦
@@ -80,5 +85,10 @@ value|any|/|Input value
 ### Auto grow
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <mip-v-textarea name="input-7-5" box="" label="Label" auto-grow="" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
 ```

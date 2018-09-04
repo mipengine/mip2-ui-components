@@ -20,7 +20,7 @@ activator|any|/|
 allow-overflow|boolean|true|
 append-icon|string|'$vuetify.icons.dropdown'|Append an icon to the component, uses same syntax as `mip-v-icon`
 append-icon-cb|function|/|Callback for appended icon when clicked
-append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `v-icon`
+append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `mip-v-icon`
 append-outer-icon-cb|function|/|Callback for appended outer icon when clicked
 attach|any|/|
 auto|boolean|/|在所选择的元素上居中列表
@@ -120,6 +120,18 @@ z-index|number / string|/|
 ### Search for Public APIs
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "descriptionLimit": 60,
+      "model": "",
+      "search": "",
+      "entries": [],
+      "items": [],
+      "isLoading": false
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <mip-v-autocomplete m-bind:value.sync="model" m-bind:items="items" m-bind:loading="isLoading" m-bind:search-input.sync="search" hide-no-data="" hide-selected="" item-text="Description" item-value="API" label="Public APIs" placeholder="Start typing to Search" prepend-icon="mdi-database-search" return-object=""></mip-v-autocomplete>
 </div>
@@ -179,6 +191,14 @@ z-index|number / string|/|
 ### Custom filter on autocomplete
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "search": "",
+      "items": []
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
 <!-- :filter="customFilter" -->
   <mip-v-autocomplete m-bind:disabled="!isEditing" m-bind:items="states" item-text="name" label="State"></mip-v-autocomplete>
@@ -273,6 +293,14 @@ z-index|number / string|/|
 ### Asynchronous items
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "search": "",
+      "items": []
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <mip-v-autocomplete m-bind:loading="loading" m-bind:items="asyncItems" m-bind:search-input.sync="searchVal" m-bind:value.sync="select" cache-items="" class="mx-3" flat="" hide-no-data="" hide-details="" label="What state are you from?" solo-inverted=""></mip-v-autocomplete>
 </div>

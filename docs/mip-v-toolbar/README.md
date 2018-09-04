@@ -5,6 +5,18 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "items": [
+        null,
+        null,
+        "Friends",
+        null
+      ]
+    }
+  </script>
+</mip-data>
 <div class="group pa-2">
   <mip-v-toolbar>
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
@@ -49,7 +61,7 @@ scroll-off-screen|boolean|/|当向下滚动时工具栏会过渡到屏幕外。
 scroll-target|string|/|为滚动屏幕指定滚动目标
 scroll-threshold|number|300|工具栏使用滚动屏幕之前滚动的距离
 scroll-toolbar-off-screen|boolean|/|Will transition the toolbar off screen when scrolling down
-tabs|boolean|/|Will set an explicit **42px** height for extension. Useful when default `mip-v-tab`s are used in the extended slot. If you have a custom height `v-tab`, you should specify a height with **extensionHeight**.
+tabs|boolean|/|Will set an explicit **42px** height for extension. Useful when default `mip-v-tab`s are used in the extended slot. If you have a custom height `mip-v-tab`, you should specify a height with **extensionHeight**.
 
 ### mip-v-toolbar-side-icon
 
@@ -287,6 +299,18 @@ tabs|boolean|/|Will set an explicit **42px** height for extension. Useful when d
 ### 应用程序栏与菜单
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "items": [
+        "All",
+        "Family",
+        "Friends",
+        "Coworkers"
+      ]
+    }
+  </script>
+</mip-data>
 <mip-v-card color="grey lighten-4" flat="" height="200px">
   <mip-v-toolbar color="grey darken-1" dark="">
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>

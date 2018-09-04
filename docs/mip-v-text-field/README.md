@@ -25,7 +25,7 @@
 :--:|:--:|:--:|:---
 append-icon|string|/|Append an icon to the component, uses same syntax as `mip-v-icon`
 append-icon-cb|function|/|Callback for appended icon when clicked
-append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `v-icon`
+append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `mip-v-icon`
 append-outer-icon-cb|function|/|Callback for appended outer icon when clicked
 autofocus|boolean|/|启用自动聚焦
 background-color|string|''|
@@ -118,6 +118,17 @@ value|any|/|Input value
 ### Clearable
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "message1": "Hey!",
+      "message2": "Hey!",
+      "message3": "Hey!",
+      "message4": "Hey!",
+      "message": "Hey!"
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message1" label="Regular" clearable=""></mip-v-text-field>
@@ -132,6 +143,27 @@ value|any|/|Input value
 ### Icon events
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "message": "Hey!",
+      "marker": true,
+      "iconIndex": 0,
+      "icons": [
+        null,
+        "mdi-emoticon-cool",
+        "mdi-emoticon-dead",
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "sendMessage": false,
+      "changeIcon": false
+    }
+  </script>
+</mip-data>
 <mip-v-flex xs12="">
   <mip-v-text-field m-bind:value.sync="message" m-bind:append-icon="marker ? &apos;mdi-map-marker&apos; : &apos;mdi-map-marker-off&apos;" m-bind:append-outer-icon="message ? &apos;mdi-send&apos; : &apos;mdi-microphone&apos;" m-bind:prepend-icon="icons[iconIndex]" box="" clear-icon="mdi-close-circle" clearable="" label="Message" type="text" on="click-append:MIP.setData({marker: !m.marker})
         click-append-outer:MIP.setData({sendMessage: true})
@@ -143,6 +175,14 @@ value|any|/|Input value
 ### 字符计数器
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "title": "Preliminary report",
+      "description": "California is a state in the western United States"
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="title" counter="25" hint="This field uses counter prop" label="Regular"></mip-v-text-field>
@@ -156,6 +196,18 @@ value|any|/|Input value
 ### 密码输入
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "password": "Password",
+      "show": false,
+      "show1": false,
+      "show2": true,
+      "show3": false,
+      "show4": false
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 sm6" m-bind:value.sync="password" m-bind:append-icon="show1 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show1 ? &apos;text&apos; : &apos;password&apos;" name="input-10-1" label="Normal with hint text" hint="At least 8 characters" counter="" on="click-append:MIP.setData({show1: !m.show1})"></mip-v-text-field>
@@ -207,6 +259,14 @@ value|any|/|Input value
 ### 盒子样式
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "first": "John",
+      "last": "Doe"
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" box=""></mip-v-text-field>
@@ -218,6 +278,14 @@ value|any|/|Input value
 ### Solo style
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "first": "John",
+      "last": "Doe"
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" solo=""></mip-v-text-field>
@@ -229,6 +297,14 @@ value|any|/|Input value
 ### Outline style
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "first": "John",
+      "last": "Doe"
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" outline=""></mip-v-text-field>
@@ -240,6 +316,19 @@ value|any|/|Input value
 ### 自定义颜色
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "first": "John",
+      "last": "Doe",
+      "form": {
+        "first": "",
+        "last": ""
+      },
+      "color": "error"
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
   <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="form.first" color="purple darken-2" label="First name" required></mip-v-text-field>
@@ -251,6 +340,14 @@ value|any|/|Input value
 ### 掩码
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "mask": "credit-card",
+      "maskValue": "4444444444444444"
+    }
+  </script>
+</mip-data>
 <mip-v-card>
   <mip-v-card-text>
     <mip-v-text-field m-bind:value.sync="mask" label="Mask"></mip-v-text-field>
@@ -264,6 +361,30 @@ value|any|/|Input value
 ### 进度条
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "message": "Hey!",
+      "iconIndex": 0,
+      "icons": [
+        "mdi-emoticon",
+        "mdi-emoticon-cool",
+        null,
+        null,
+        "mdi-emoticon-happy",
+        null,
+        null,
+        "mdi-emoticon-tongue"
+      ],
+      "sendMessage": false,
+      "changeIcon": false,
+      "progressValue": "",
+      "custom": true,
+      "progress": "",
+      "color": "error"
+    }
+  </script>
+</mip-data>
 <div class="container grid-list-xl">
   <mip-v-checkbox m-bind:input-value.sync="custom" label="Custom progress bar"></mip-v-checkbox>
   <mip-v-text-field m-bind:value.sync="progressValue" color="cyan darken" label="Text field" placeholder="Start typing..." loading="">

@@ -1,10 +1,17 @@
 # mip-v-checkbox
 
-选择控制组件允许用户使用选择项，这些组件必须和 `mip-v-model` 属性一起使用，因为他们无法保持自己的状态。
+选择控制组件允许用户使用选择项，这些组件必须和 `.sync` 属性一起使用，因为他们无法保持自己的状态。
 
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "checkbox": true
+    }
+  </script>
+</mip-data>
 <mip-v-checkbox label="Checkbox" m-bind:input-value.sync="checkbox"></mip-v-checkbox>
 ```
 
@@ -34,6 +41,14 @@ true-value|any|/|设置真值
 ### 数组
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "checkbox": true,
+      "selected": []
+    }
+  </script>
+</mip-data>
 <mip-v-checkbox m-bind:input-value.sync="selected" label="John" value="John"></mip-v-checkbox>
 <mip-v-checkbox m-bind:input-value.sync="selected" label="Jacob" value="Jacob"></mip-v-checkbox>
 ```
@@ -41,6 +56,13 @@ true-value|any|/|设置真值
 ### 状态
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "checkbox": true
+    }
+  </script>
+</mip-data>
 <mip-v-checkbox label="on" input-value="true" value=""></mip-v-checkbox>
 <mip-v-checkbox label="off" value=""></mip-v-checkbox>
 <mip-v-checkbox label="indeterminate" value="" indeterminate=""></mip-v-checkbox>
@@ -51,6 +73,27 @@ true-value|any|/|设置真值
 ### 色彩
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "checkbox": true,
+      "ex4": [
+        null,
+        null,
+        null,
+        "primary",
+        "secondary",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  </script>
+</mip-data>
 <mip-v-checkbox m-bind:input-value.sync="ex4" label="red" color="red" value="red" hide-details=""></mip-v-checkbox>
 <mip-v-checkbox m-bind:input-value.sync="ex4" label="red darken-3" color="red darken-3" value="red darken-3" hide-details=""></mip-v-checkbox>
 <mip-v-checkbox m-bind:input-value.sync="ex4" label="indigo" color="indigo" value="indigo" hide-details=""></mip-v-checkbox>
@@ -68,6 +111,15 @@ true-value|any|/|设置真值
 ### 和文本框内联
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "checkbox": true,
+      "includeFiles": true,
+      "enabled": false
+    }
+  </script>
+</mip-data>
 <div class="layout align-center">
   <mip-v-checkbox m-bind:input-value.sync="includeFiles" hide-details="" class="shrink mr-2"></mip-v-checkbox>
   <mip-v-text-field label="Include files"></mip-v-text-field>

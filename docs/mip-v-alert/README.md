@@ -5,6 +5,13 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "alert": true
+    }
+  </script>
+</mip-data>
 <mip-v-alert value="true" type="success">
   This is a success alert.
 </mip-v-alert>
@@ -42,6 +49,13 @@ value|boolean|/|控制可见性
 ### 可关闭
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "alert": true
+    }
+  </script>
+</mip-data>
 <mip-v-alert m-bind:value.sync="alert" dismissible="" type="success">
   This is a success alert that is closable.
 </mip-v-alert>
@@ -50,6 +64,13 @@ value|boolean|/|控制可见性
 ### 自定义图标/无图标
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "alert": true
+    }
+  </script>
+</mip-data>
 <mip-v-alert value="true" color="success" icon="new_releases">
   This is a success alert with a custom icon.
 </mip-v-alert>
@@ -61,6 +82,13 @@ value|boolean|/|控制可见性
 ### 过渡显示
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "alert": true
+    }
+  </script>
+</mip-data>
 <mip-v-btn color="primary" on="tap:MIP.setData({alert: !m.alert})">
   Toggle
 </mip-v-btn>
@@ -72,6 +100,13 @@ value|boolean|/|控制可见性
 ### 轮廓
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "alert": true
+    }
+  </script>
+</mip-data>
 <mip-v-alert value="true" color="success" icon="check_circle" outline="">
   This is a success alert.
 </mip-v-alert>

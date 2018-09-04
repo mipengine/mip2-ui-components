@@ -118,6 +118,13 @@ z-index|number / string|/|用于组件的z-index
 ### 和其他组件混用
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  </script>
+</mip-data>
 <div class="layout row">
   <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card height="200px">

@@ -5,6 +5,13 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "snackbar": false
+    }
+  </script>
+</mip-data>
 <div class="group pa-2">
   <mip-v-snackbar m-bind:value.sync="snackbar" timeout="3000" bottom="" multi-line="" vertical="">
     &#x51FA;&#x73B0;&#x4E86; snackbar &#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86; timeout &#x65F6;&#x95F4;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x9690;&#x85CF;

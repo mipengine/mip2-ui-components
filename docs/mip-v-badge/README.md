@@ -116,6 +116,13 @@ value|boolean|true|控制可见性
 ### 可见性
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "show": true
+    }
+  </script>
+</mip-data>
 <div class="container">
   <div class="text-xs-center">
     <mip-v-btn color="indigo" class="white--text" on="tap:MIP.setData({ show: !m.show })">

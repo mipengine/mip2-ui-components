@@ -5,6 +5,15 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "volume": 10,
+      "value": 0
+    }
+  </script>
+</mip-data>
 <mip-v-slider m-bind:value.sync="slider"></mip-v-slider>
 <mip-v-slider disabled label="Disabled" inverse-label="" value="30"></mip-v-slider>
 <mip-v-slider label="Readonly" readonly value="30"></mip-v-slider>
@@ -65,6 +74,15 @@ value|number / string|/|Input value
 ### Thumb
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "value": 0,
+      "thumb-label": "always"
+    }
+  </script>
+</mip-data>
 <mip-v-slider m-bind:value.sync="slider" thumb-label=""></mip-v-slider>
 <mip-v-slider m-bind:value.sync="slider" thumb-label="always">
 </mip-v-slider>
@@ -79,6 +97,22 @@ value|number / string|/|Input value
 ### Ticks
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "value": 0,
+      "fruits": 0,
+      "tickLabels": [
+        "Figs",
+        "Lemon",
+        "Pear",
+        "Apple"
+      ],
+      "ticks": "always"
+    }
+  </script>
+</mip-data>
 <mip-v-slider m-bind:value.sync="value" step="10" ticks=""></mip-v-slider>
 <mip-v-slider m-bind:value.sync="value" step="10">
 </mip-v-slider>
@@ -91,11 +125,30 @@ value|number / string|/|Input value
 ### 离散的
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "value": 0,
+      "thumb-label": "always",
+      "ticks": "always"
+    }
+  </script>
+</mip-data>
 <mip-v-slider m-bind:value.sync="value" step="10" thumb-label="" ticks=""></mip-v-slider>
 ```
 
 ### 图标
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "value": 0,
+      "zoom": 0
+    }
+  </script>
+</mip-data>
 <mip-v-slider m-bind:value.sync="zoom" append-icon="zoom_in" prepend-icon="zoom_out" on="click-append:MIP.setData({zoom: m.zoom + 10}) click-prepend:MIP.setData({zoom: m.zoom - 10})"></mip-v-slider>
 ```

@@ -1,10 +1,17 @@
 # mip-v-progress
 
-`mip-v-progress-circular`和`v-progress-linear`组件用于将数据直观地传达给用户。他们也可以代表一个不确定的数量，如加载或处理。这些组件包含一个位于组件容器中心的插槽。
+`mip-v-progress-circular`和`mip-v-progress-linear`组件用于将数据直观地传达给用户。他们也可以代表一个不确定的数量，如加载或处理。这些组件包含一个位于组件容器中心的插槽。
 
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "value": 0
+    }
+  </script>
+</mip-data>
 <mip-v-progress-circular value="20"></mip-v-progress-circular>
 <mip-v-progress-circular value="40"></mip-v-progress-circular>
 <mip-v-progress-circular value="60"></mip-v-progress-circular>
@@ -49,6 +56,13 @@ value|number / string|/|控制可见性
 ### 圆环色彩
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "value": 0
+    }
+  </script>
+</mip-data>
 <mip-v-progress-circular value="100" color="blue-grey"></mip-v-progress-circular>
 <mip-v-progress-circular value="80" color="deep-orange lighten-2"></mip-v-progress-circular>
 <mip-v-progress-circular value="60" color="brown"></mip-v-progress-circular>
@@ -79,6 +93,13 @@ value|number / string|/|控制可见性
 ### 圆环环绕
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "value": 0
+    }
+  </script>
+</mip-data>
 <mip-v-btn on="click:MIP.setData({value: (m.value + 10) % 100})">Progress</mip-v-btn>
 <mip-v-progress-circular rotate="360" size="100" line-width="15" m-bind:value="value" color="teal"></mip-v-progress-circular>
 ```
@@ -86,6 +107,14 @@ value|number / string|/|控制可见性
 ### 定制线条
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "value": 0,
+      "valueDeterminate": 50
+    }
+  </script>
+</mip-data>
 <mip-v-progress-linear m-bind:value.sync="valueDeterminate"></mip-v-progress-linear>
 ```
 
@@ -98,6 +127,13 @@ value|number / string|/|控制可见性
 ### 自定义高度和上下文色彩
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "value": 0
+    }
+  </script>
+</mip-data>
 <mip-v-progress-linear color="secondary" line-height="2" value="15"></mip-v-progress-linear>
 <mip-v-progress-linear color="success" line-height="5" value="30"></mip-v-progress-linear>
 <mip-v-progress-linear color="info" line-height="10" value="45"></mip-v-progress-linear>
@@ -108,6 +144,13 @@ value|number / string|/|控制可见性
 ### 自定义色彩
 
 ```html
+<mip-data>
+  <script type="application/json">
+    {
+      "value": 0
+    }
+  </script>
+</mip-data>
 <mip-v-progress-linear background-color="pink lighten-3" color="pink lighten-1" value="15"></mip-v-progress-linear>
 <mip-v-progress-linear background-color="blue-grey" color="lime" value="30"></mip-v-progress-linear>
 <mip-v-progress-linear background-color="success" color="error" value="45"></mip-v-progress-linear>

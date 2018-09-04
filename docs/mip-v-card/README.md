@@ -5,6 +5,11 @@
 ## 用例
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div>
 <div class="layout">
     <div class="flex xs12 sm6 offset-sm3">
@@ -82,6 +87,11 @@ primary-title|boolean|/|
 ### 媒体与文字
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="layout">
   <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>
@@ -113,6 +123,11 @@ primary-title|boolean|/|
 ### 水平的卡片
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div id="e3" style="max-width: 400px; margin: auto;" class="grey lighten-3">
   <mip-v-toolbar color="pink" dark="">
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
@@ -204,6 +219,11 @@ primary-title|boolean|/|
 ### 栅格
 
 ```html
+<mip-data>
+  <script type="application/json">
+    null
+  </script>
+</mip-data>
 <div class="layout justify-center">
   <div class="flex xs12 sm6">
     <mip-v-toolbar color="indigo" dark="">
