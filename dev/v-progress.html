@@ -48,7 +48,9 @@
         "valueDeterminate": 50,
         "value1": 20,
         "value2": 100,
-        "line_indeterminate": true
+        "line_indeterminate": true,
+        "buffer":10,
+        "bufferValue": 20,
       }
       </script>
     </mip-data>
@@ -112,11 +114,18 @@
       color="teal"
     ></mip-v-progress-circular>
 
-    <h2>定制线条</h2>
+    <h2>定值线条</h2>
     <mip-v-progress-linear m-bind:value.sync="valueDeterminate"></mip-v-progress-linear>
 
     <h2>不定线条</h2>
     <mip-v-progress-linear indeterminate="true"></mip-v-progress-linear>
+
+    <h2>缓冲</h2>
+    <mip-v-progress-linear
+      m-bind:value.sync="buffer"
+      m-bind:buffer-value="bufferValue"
+      buffer
+    ></mip-v-progress-linear>
 
     <h2>自定义高度和上下文色彩</h2>
     <mip-v-progress-linear
