@@ -10,26 +10,31 @@
     {
       "items": [
         null,
-        "bar",
-        "fizz",
-        null
-      ],
-      "value": [
         null,
-        "bar",
-        "fizz",
+        null,
         null
       ],
       "select": {}
     }
   </script>
 </mip-data>
-<div class="container grid-list-xl">
-  <div class="layout row wrap">
-    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" attach="" chips="" label="Chips" multiple></mip-v-select>
-    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" box="" chips="" label="Chips" multiple></mip-v-select>
-    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" chips="" label="Chips" multiple outline=""></mip-v-select>
-    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" chips="" label="Chips" multiple solo=""></mip-v-select>
+<div class="container fluid grid-list-xl">
+  <div class="layout wrap align-center">
+    <div class="flex wrap align-center">
+      <mip-v-select m-bind:items="items" label="Standard"></mip-v-select>
+    </div>
+
+    <div class="flex wrap align-center">
+      <mip-v-select m-bind:items="items" box="" label="Box style"></mip-v-select>
+    </div>
+
+    <div class="flex wrap align-center">
+      <mip-v-select m-bind:items="items" label="Outline style" outline=""></mip-v-select>
+    </div>
+
+    <div class="flex wrap align-center">
+      <mip-v-select m-bind:items="items" label="Solo field" solo=""></mip-v-select>
+    </div>
   </div>
 </div>
 ```
@@ -139,6 +144,38 @@ value-comparator|function|true|Apply a custom value comparator function
 z-index|number / string|/|
 
 ## 示例
+
+### 亮色主题
+
+```html
+<mip-data>
+  <script type="application/json">
+    {
+      "items": [
+        null,
+        "bar",
+        "fizz",
+        null
+      ],
+      "value": [
+        null,
+        "bar",
+        "fizz",
+        null
+      ],
+      "select": {}
+    }
+  </script>
+</mip-data>
+<div class="container grid-list-xl">
+  <div class="layout row wrap">
+    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" attach="" chips="" label="Chips" multiple></mip-v-select>
+    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" box="" chips="" label="Chips" multiple></mip-v-select>
+    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" chips="" label="Chips" multiple outline=""></mip-v-select>
+    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" chips="" label="Chips" multiple solo=""></mip-v-select>
+  </div>
+</div>
+```
 
 ### 图标
 

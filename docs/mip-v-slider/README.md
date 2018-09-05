@@ -129,7 +129,8 @@ value|number / string|/|Input value
         "Pear",
         "Apple"
       ],
-      "ticks": "always"
+      "ticks": "always",
+      "max": 90
     }
   </script>
 </mip-data>
@@ -186,7 +187,8 @@ value|number / string|/|Input value
       "value": 0,
       "red": 64,
       "green": 128,
-      "blue": 0
+      "blue": 0,
+      "max": 90
     }
   </script>
 </mip-data>
@@ -270,12 +272,22 @@ value|number / string|/|Input value
       "slider": 45,
       "value": 0,
       "value1": [
-        null,
+        30,
         60
       ],
       "value2": [
-        null,
+        0,
         40
+      ],
+      "value3": [
+        110,
+        440
+      ],
+      "min": -50,
+      "max": 90,
+      "range": [
+        -20,
+        70
       ]
     }
   </script>
@@ -291,6 +303,75 @@ value|number / string|/|Input value
 
   <mip-v-card-text>
     <mip-v-range-slider m-bind:value.sync="value2" disabled></mip-v-range-slider>
+  </mip-v-card-text>
+
+  <mip-v-subheader>Min and max range slider</mip-v-subheader>
+
+  <mip-v-card-text>
+    <div class="layout row">
+      <div class="flex shrink" style="width: 60px">
+        <mip-v-text-field m-bind:value.sync="value3[0]" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+      </div>
+
+      <div class="flex px-3">
+        <mip-v-range-slider m-bind:value.sync="value3" max="600" min="20" step="10"></mip-v-range-slider>
+      </div>
+
+      <div class="flex shrink" style="width: 60px">
+        <mip-v-text-field m-bind:value.sync="value3[1]" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+      </div>
+    </div>
+  </mip-v-card-text>
+</mip-v-card>
+```
+
+### 最大值和最小值
+
+```html
+<mip-data>
+  <script type="application/json">
+    {
+      "slider": 45,
+      "value": 0,
+      "min": -50,
+      "max": 90,
+      "slider0": 40,
+      "range": [
+        -20,
+        70
+      ]
+    }
+  </script>
+</mip-data>
+<mip-v-card flat="" color="transparent">
+  <mip-v-subheader>Min and max default slider</mip-v-subheader>
+
+  <mip-v-card-text>
+    <div class="layout row">
+      <div class="flex pr-3">
+        <mip-v-slider m-bind:value.sync="slider0" m-bind:max="max" m-bind:min="min"></mip-v-slider>
+      </div>
+
+      <div class="flex shrink" style="width: 60px">
+        <mip-v-text-field m-bind:value.sync="slider0" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+      </div>
+    </div>
+  </mip-v-card-text>
+
+  <mip-v-subheader>Min and max range slider</mip-v-subheader>
+
+  <mip-v-card-text>
+    <div class="layout row">
+      <div class="flex shrink" style="width: 60px">
+        <mip-v-text-field m-bind:value.sync="range[0]" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+      </div>
+      <div class="flex px-3">
+        <mip-v-range-slider m-bind:value.sync="range" m-bind:max="max" m-bind:min="min"></mip-v-range-slider>
+      </div>
+      <div class="flex shrink" style="width: 60px">
+        <mip-v-text-field m-bind:value.sync="range[1]" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+      </div>
+    </div>
   </mip-v-card-text>
 </mip-v-card>
 ```

@@ -104,7 +104,7 @@ value|number / string|/|控制可见性
 <mip-v-progress-circular rotate="360" size="100" line-width="15" m-bind:value="value" color="teal"></mip-v-progress-circular>
 ```
 
-### 定制线条
+### 定值线条
 
 ```html
 <mip-data>
@@ -122,6 +122,21 @@ value|number / string|/|控制可见性
 
 ```html
 <mip-v-progress-linear indeterminate="true"></mip-v-progress-linear>
+```
+
+### 缓冲
+
+```html
+<mip-data>
+  <script type="application/json">
+    {
+      "value": 0,
+      "buffer": 10,
+      "bufferValue": 20
+    }
+  </script>
+</mip-data>
+<mip-v-progress-linear m-bind:value.sync="buffer" m-bind:buffer-value="bufferValue" buffer=""></mip-v-progress-linear>
 ```
 
 ### 自定义高度和上下文色彩

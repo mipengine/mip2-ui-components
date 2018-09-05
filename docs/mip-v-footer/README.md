@@ -75,8 +75,8 @@ light|boolean|/|应用明亮主题变体
 
 ```html
 <mip-v-footer dark="" height="auto">
-  <mip-v-card class="flex" flat="" tile="">
-    <mip-v-card-title class="teal">
+  <mip-v-card class="flex" flat="" tile="" style="width: 100%;">
+    <div class="v-card__title teal">
       <strong class="subheading">Get connected with us on social networks!</strong>
 
       <mip-v-spacer></mip-v-spacer>
@@ -96,11 +96,11 @@ light|boolean|/|应用明亮主题变体
       <mip-v-btn class="mx-3 white--text" icon="">
         <mip-v-icon size="24px">fab fa-instagram</mip-v-icon>
       </mip-v-btn>
-    </mip-v-card-title>
+    </div>
 
-    <mip-v-card-actions class="grey darken-3 justify-center">
+    <div class="v-card__actions grey darken-3 justify-center">
       &#xA9;2018 &#x2014; <strong>Vuetify</strong>
-    </mip-v-card-actions>
+    </div>
   </mip-v-card>
 </mip-v-footer>
 ```
