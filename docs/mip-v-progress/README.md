@@ -121,7 +121,7 @@ value|number / string|/|控制可见性
 ### 不定线条
 
 ```html
-<mip-v-progress-linear indeterminate="true"></mip-v-progress-linear>
+<mip-v-progress-linear indeterminate=""></mip-v-progress-linear>
 ```
 
 ### 缓冲

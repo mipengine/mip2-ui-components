@@ -147,9 +147,9 @@ multiple|boolean|/|
     {
       "toggle_exclusive": 2,
       "toggle_multiple": [
-        null,
-        null,
-        null
+        0,
+        1,
+        2
       ],
       "toggle_none": null,
       "toggle_one": 0,
@@ -393,23 +393,23 @@ multiple|boolean|/|
     {
       "toggle_exclusive": 2,
       "toggle_multiple": [
-        null,
-        null,
+        0,
+        1,
         2
       ],
       "icon": "justify",
       "dropdown_font": [
-        null,
-        null,
         {},
-        null
+        {},
+        {},
+        {}
       ],
       "dropdown_edit": [
-        null,
-        null,
         {},
-        null,
-        null
+        {},
+        {},
+        {},
+        {}
       ]
     }
   </script>

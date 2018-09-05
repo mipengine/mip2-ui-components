@@ -73,7 +73,7 @@ const parseExamples = async (tagName) => {
       }).join('\n')
     }))
     .map(({ html, ...example }) => {
-      const dataHtml = JSON.stringify(data, (key, val) => html.includes(key) ? val : undefined, 2)
+      const dataHtml = JSON.stringify(data, (key, val) => Number.isInteger(+key) || html.includes(key) ? val : undefined, 2)
         .split('\n')
         .join('\n    ')
       return {

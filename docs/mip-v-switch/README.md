@@ -73,17 +73,17 @@ true-value|any|/|设置真值
     {
       "switch": true,
       "ex11": [
-        null,
+        "red",
         "indigo",
-        null,
+        "orange",
         "primary",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        "secondary",
+        "success",
+        "info",
+        "warning",
+        "error",
+        "red darken-3",
+        "indigo darken-3",
         "orange darken-3"
       ]
     }

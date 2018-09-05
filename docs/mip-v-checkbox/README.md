@@ -78,18 +78,18 @@ true-value|any|/|设置真值
     {
       "checkbox": true,
       "ex4": [
-        null,
-        null,
-        null,
+        "red",
+        "indigo",
+        "orange",
         "primary",
         "secondary",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "success",
+        "info",
+        "warning",
+        "error",
+        "red darken-3",
+        "indigo darken-3",
+        "orange darken-3"
       ]
     }
   </script>

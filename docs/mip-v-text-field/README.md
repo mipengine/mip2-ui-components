@@ -150,14 +150,14 @@ value|any|/|Input value
       "marker": true,
       "iconIndex": 0,
       "icons": [
-        null,
+        "mdi-emoticon",
         "mdi-emoticon-cool",
         "mdi-emoticon-dead",
-        null,
-        null,
-        null,
-        null,
-        null
+        "mdi-emoticon-excited",
+        "mdi-emoticon-happy",
+        "mdi-emoticon-neutral",
+        "mdi-emoticon-sad",
+        "mdi-emoticon-tongue"
       ],
       "sendMessage": false,
       "changeIcon": false
@@ -369,11 +369,11 @@ value|any|/|Input value
       "icons": [
         "mdi-emoticon",
         "mdi-emoticon-cool",
-        null,
-        null,
+        "mdi-emoticon-dead",
+        "mdi-emoticon-excited",
         "mdi-emoticon-happy",
-        null,
-        null,
+        "mdi-emoticon-neutral",
+        "mdi-emoticon-sad",
         "mdi-emoticon-tongue"
       ],
       "sendMessage": false,

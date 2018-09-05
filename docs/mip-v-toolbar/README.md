@@ -9,10 +9,10 @@
   <script type="application/json">
     {
       "items": [
-        null,
-        null,
+        "All",
+        "Family",
         "Friends",
-        null
+        "Coworkers"
       ]
     }
   </script>
