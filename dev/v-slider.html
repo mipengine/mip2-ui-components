@@ -62,11 +62,13 @@
             "val": 50,
             "color": "red"
           },
-          "ex1Val": 25,
-          "ex2Val": 75,
-          "ex3Val": 50,
           "value1": [30, 60],
-          "value2": [0, 40]
+          "value2": [0, 40],
+          "value3": [110, 440],
+          "min": -50,
+          "max": 90,
+          "slider0": 40,
+          "range": [-20, 70]
         }
       </script>
     </mip-data>
@@ -281,6 +283,7 @@
         thumb-label="always"
       ></mip-v-slider>
     </div>
+
     <h2>范围</h2>
     <mip-v-card flat color="transparent">
       <mip-v-subheader>Default range slider</mip-v-subheader>
@@ -299,9 +302,109 @@
           disabled
         ></mip-v-range-slider>
       </mip-v-card-text>
+
+      <mip-v-subheader>Min and max range slider</mip-v-subheader>
+
+      <mip-v-card-text>
+        <div class="layout row">
+          <div class="flex shrink" style="width: 60px">
+            <mip-v-text-field
+              m-bind:value.sync="value3[0]"
+              class="mt-0"
+              hide-details
+              single-line
+              type="number"
+            ></mip-v-text-field>
+          </div>
+
+          <div class="flex px-3">
+            <mip-v-range-slider
+              m-bind:value.sync="value3"
+              max="600"
+              min="20"
+              step="10"
+            ></mip-v-range-slider>
+          </div>
+
+          <div class="flex shrink" style="width: 60px">
+            <mip-v-text-field
+              m-bind:value.sync="value3[1]"
+              class="mt-0"
+              hide-details
+              single-line
+              type="number"
+            ></mip-v-text-field>
+          </div>
+        </div>
+      </mip-v-card-text>
+    </mip-v-card>
+    
+    <h2>最大值和最小值</h2>
+    <mip-v-card flat color="transparent">
+      <mip-v-subheader>Min and max default slider</mip-v-subheader>
+
+      <mip-v-card-text>
+        <div class="layout row">
+          <div class="flex pr-3">
+            <mip-v-slider
+              m-bind:value.sync="slider0"
+              m-bind:max="max"
+              m-bind:min="min"
+            ></mip-v-slider>
+          </div>
+
+          <div class="flex shrink" style="width: 60px">
+            <mip-v-text-field
+              m-bind:value.sync="slider0"
+              class="mt-0"
+              hide-details
+              single-line
+              type="number"
+            ></mip-v-text-field>
+          </div>
+        </div>
+      </mip-v-card-text>
+
+      <mip-v-subheader>Min and max range slider</mip-v-subheader>
+
+      <mip-v-card-text>
+        <div class="layout row">
+          <div
+            class="flex shrink"
+            style="width: 60px"
+          >
+            <mip-v-text-field
+              m-bind:value.sync="range[0]"
+              class="mt-0"
+              hide-details
+              single-line
+              type="number"
+            ></mip-v-text-field>
+          </div>
+          <div class="flex px-3">
+            <mip-v-range-slider
+              m-bind:value.sync="range"
+              m-bind:max="max"
+              m-bind:min="min"
+            ></mip-v-range-slider>
+          </div>
+          <div
+            class="flex shrink"
+            style="width: 60px"
+          >
+            <mip-v-text-field
+              m-bind:value.sync="range[1]"
+              class="mt-0"
+              hide-details
+              single-line
+              type="number"
+            ></mip-v-text-field>
+          </div>
+        </div>
+      </mip-v-card-text>
     </mip-v-card>
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
-    <!-- <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script> -->
+    <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
   </body>
 </html>
