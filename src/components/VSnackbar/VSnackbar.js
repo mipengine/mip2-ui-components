@@ -15,7 +15,15 @@ export default mixins(Colorable, Toggleable, PositionableFactory(['absolute', 't
       type: Number,
       default: 6000
     },
-    vertical: Boolean
+    vertical: Boolean,
+    toppx: {
+      type: Number,
+      default: 0
+    },
+    bottompx: {
+      type: Number,
+      default: 0
+    }
   },
   data () {
     return {
@@ -34,6 +42,17 @@ export default mixins(Colorable, Toggleable, PositionableFactory(['absolute', 't
         'v-snack--right': this.right,
         'v-snack--top': this.top,
         'v-snack--vertical': this.vertical
+      }
+    },
+    styles () {
+      if (this.top) {
+        return {
+          top: this.toppx + 'px'
+        }
+      } else {
+        return {
+          bottom: this.bottompx + 'px'
+        }
       }
     }
   },
@@ -61,6 +80,7 @@ export default mixins(Colorable, Toggleable, PositionableFactory(['absolute', 't
       children.push(h('div', {
         staticClass: 'v-snack',
         class: this.classes,
+        style: this.styles,
         on: this.$listeners
       }, [h('div', {
         staticClass: 'v-snack__wrapper',
