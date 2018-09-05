@@ -26,7 +26,7 @@
 color|string|'accent'|
 false-value|any|/|设置虚假状态的值
 id|string|/|设置组件上的DOM id
-input-value|any|/|**v-model** 的绑定值
+input-value|any|/|**.sync** 的绑定值
 label|string|/|设置输入框标签
 multiple|boolean|/|
 toggle-keys|array|[13,32]|

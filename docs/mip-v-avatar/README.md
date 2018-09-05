@@ -9,8 +9,6 @@
   <script type="application/json">
     {
       "slider": 56,
-      "min": 16,
-      "max": 256,
       "tile": false
     }
   </script>
@@ -18,7 +16,7 @@
 <div class="container grid-list-md">
   <div class="layout row wrap">
     <div class="flex xs12 sm6 md4">
-      <mip-v-slider m-bind:value.sync="slider" m-bind:min="min" m-bind:max="max"></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider" min="16" max="256"></mip-v-slider>
 
       <mip-v-switch m-bind:input-value.sync="tile" label="Tile"></mip-v-switch>
     </div>

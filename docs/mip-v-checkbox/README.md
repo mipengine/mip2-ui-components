@@ -28,7 +28,7 @@ false-value|any|/|设置虚假状态的值
 id|string|/|设置组件上的DOM id
 indeterminate|boolean|/|为复选框设置不确定状态
 indeterminate-icon|string|'$vuetify.icons.checkboxIndeterminate'|
-input-value|any|/|**v-model** 的绑定值
+input-value|any|/|**.sync** 的绑定值
 label|string|/|设置输入框标签
 multiple|boolean|/|
 off-icon|string|'$vuetify.icons.checkboxOff'|

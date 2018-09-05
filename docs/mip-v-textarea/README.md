@@ -28,7 +28,7 @@ append-icon|string|/|Append an icon to the component, uses same syntax as `mip-v
 append-icon-cb|function|/|Callback for appended icon when clicked
 append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `mip-v-icon`
 append-outer-icon-cb|function|/|Callback for appended outer icon when clicked
-auto-grow|boolean|/|自动增长输入，需要使用 **v-model**
+auto-grow|boolean|/|自动增长输入，需要使用 **.sync**
 autofocus|boolean|/|启用自动聚焦
 background-color|string|''|
 box|boolean|/|应用备用输入框样式

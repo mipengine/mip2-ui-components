@@ -14,7 +14,7 @@ const camelToDash = camel => (camel[0].toUpperCase() + camel.slice(1))
 
 const getMIPTagName = tagName => `mip-${tagName}`
 
-const replaceMIPTagName = text => text.replace(/`v-model`/g, '`.sync`').replace(/`v-/g, '`mip-v-')
+const replaceMIPTagName = text => text.replace(/v-model/g, '.sync').replace(/`v-/g, '`mip-v-')
 
 const getOfficialDoc = type => async (name) => {
   const getDocName = name => ({
