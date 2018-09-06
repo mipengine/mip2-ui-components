@@ -63,7 +63,7 @@ value|any|/|控制可见性
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 dark|boolean|/|应用暗黑主题变体
-input-value|any|/|
+input-value|any|/|控制按钮的激活状态
 light|boolean|/|应用明亮主题变体
 mandatory|boolean|/|
 multiple|boolean|/|

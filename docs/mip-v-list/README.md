@@ -107,15 +107,15 @@ two-line|boolean|/|增加列表块的高度到2行
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-active-class|string|'primary--text'|
-append-icon|string|'$vuetify.icons.expand'|
-disabled|boolean|/|
-group|string|/|
+active-class|string|'primary--text'|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
+append-icon|string|'$vuetify.icons.expand'|Append an icon to the component, uses same syntax as `mip-v-icon`
+disabled|boolean|/|Input is disabled
+group|string|/|分配一个路由命名空间。接受字符串或正则表达式来确定活动状态
 lazy|boolean|/|有条件地渲染内容，只有激活时才会渲染内容
-no-action|boolean|/|
-prepend-icon|string|/|
-sub-group|boolean|/|
-value|boolean|/|控制可见性
+no-action|boolean|/|从组项中删除为操作图标分配的左侧内边距
+prepend-icon|string|/|Prepend an icon to the component, uses same syntax as `mip-v-icon`
+sub-group|boolean|/|将组件指定为嵌套列表组
+value|boolean|/|展开/折叠列表组
 
 ### mip-v-list-tile
 
@@ -125,20 +125,20 @@ value|boolean|/|控制可见性
 :--:|:--:|:--:|:---
 active-class|string|'primary--text'|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
 append|boolean|/|Vue Router的router-link属性
-avatar|boolean|/|
+avatar|boolean|/|用来设置单行列表项的最小高度（即使用该属性后将有一个头像大小的最小高度）
 color|string|/|将指定的色彩应用与控件
-disabled|boolean|/|Route列表项是被禁用的
+disabled|boolean|/|Input is disabled
 exact|boolean|/|完全匹配链接，没有这个的话，“/”将匹配每一个路由
 exact-active-class|string|/|Vue Router的 router-link属性
 href|string / object|/|将组件标签指定为`<a>`
-inactive|boolean|/|
+inactive|boolean|/|如果设置了该属性，即使有to/href或者@click，列表块也不会响应链接。
 nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
 replace|boolean|/|Vue Router router-link 属性
 ripple|boolean / object|/|使用`mip-v-ripple`指令
 tag|string|/|指定要在组件上使用的自定义标签
 target|string|/|指定目标属性，仅适用于猫标签。
 to|string / object|/|将组件标签指定为`<router-link>`
-value|boolean|/|控制可见性
+value|boolean|/|展开/折叠列表组
 
 ### mip-v-list-tile-action
 
@@ -154,7 +154,7 @@ value|boolean|/|控制可见性
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-color|string|/|
+color|string|/|将指定的色彩应用与控件
 size|number / string|40|设置元素的高度和宽度
 tile|boolean|/|删除边看弧度
 

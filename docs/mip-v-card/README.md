@@ -65,9 +65,9 @@ width|string / number|/|内容的宽度
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-contain|boolean|/|
-height|number / string|'auto'|设置组件高度
-src|string|/|
+contain|boolean|/|修改背景大小使其成为容器
+height|number / string|'auto'|手动定义卡片的高度
+src|string|/|被作为背景显示的图片
 
 ### mip-v-card-title
 
@@ -75,7 +75,7 @@ src|string|/|
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-primary-title|boolean|/|
+primary-title|boolean|/|应用主标题特定的内边距
 
 ## 示例
 

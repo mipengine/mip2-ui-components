@@ -37,7 +37,7 @@ append-icon|string|/|使用与`mip-v-icon`相同的语法在组件上添加一�
 append-icon-cb|function|/|单击回调添加后置图标
 background-color|string|''|
 color|string|/|将指定的色彩应用与控件
-column|boolean|true|
+column|boolean|true|单选框按列显示
 dark|boolean|/|应用暗黑主题变体
 disabled|boolean|/|输入框是禁用的
 error|boolean|/|将输入框设置为手动错误状态。
@@ -49,19 +49,19 @@ hint|string|/|提示文本
 label|string|/|设置输入框标签
 light|boolean|/|应用明亮主题变体
 loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜色应用于进度条的字符串（任何material色彩——主要（primary）, 次要（secondary）, 成功（success）, 信息（info），警告（warning），错误（error）），或者使用组件的布尔值**颜色**（由色彩属性设置——如果它被组件支持的话）还可以是原色。
-mandatory|boolean|true|
+mandatory|boolean|true|强制选择复选框组的一个子复选框 `mip-v-radio` 
 messages|string / array|[]|Displays a list of messages or message if using a string
-name|string|/|
+name|string|/|设置组件的 name 属性
 persistent-hint|boolean|/|强制提示始终可见
 prepend-icon|string|/|使用与`mip-v-icon`系统的语法在组件上添加一个图标
 prepend-icon-cb|function|/|单击时回调添加前置图标
 readonly|boolean|/|将输入之余只读状态
-row|boolean|/|
+row|boolean|/|单选框按行显示
 rules|array|[]|返回True或带有错误信息的字符串的函数数组。
 success|boolean|/|Puts the input in a manual success state
 success-messages|string / array|[]|Puts the input in a success state and passes through custom success messsages.
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
-value|any|/|输入值
+value|any|/|设置选择控件组件的值
 value-comparator|function|true|Apply a custom value comparator function
 
 ### mip-v-radio

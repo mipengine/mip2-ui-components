@@ -9,7 +9,9 @@ require('../dist/vuetify')
 
 const fs = legacyFs.promises
 
-const camelToDash = camel => (camel[0].toUpperCase() + camel.slice(1))
+const capitalize = name => `${name[0].toUpperCase()}${name.slice(1)}`
+
+const camelToDash = camel => capitalize(camel)
   .match(/[A-Z][^A-Z]*/g)
   .map(word => word.toLowerCase()).join('-')
 
@@ -182,7 +184,7 @@ const getDescription = async (descriptor, prop) => {
 
 const getMergedComponentInfo = async (component) => {
   const { name, props, mixins = [] } = component
-  const doc = await getComponentDoc(name.slice(1))
+  const doc = await getComponentDoc(capitalize(camelToDash(name).split('-')[1]))
   const genericProps = await getGenericProps()
   const mixinDocs = await Promise.all(mixins.map(({ name }) => getMixinDoc(name)))
   let extendProps = {}
@@ -199,7 +201,7 @@ const getMergedComponentInfo = async (component) => {
 
 const generateDoc = async (tagName) => {
   const mipTagName = getMIPTagName(tagName)
-  const name = tagName.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join('')
+  const name = tagName.split('-').map(capitalize).join('')
   const components = Object.values(global.components)
     .filter(({name: componentName = ''}) => componentName.startsWith(name))
 

@@ -27,13 +27,13 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-button|boolean|/|
+button|boolean|/|不推荐使用 - 待删除
 color|string|/|将指定的色彩应用与控件
-indeterminate|boolean|/|
+indeterminate|boolean|/|持续动画，加载进度时使用未知
 line-width|number|4|
-rotate|number|/|
-size|number / string|32|设置元素的高度和宽度
-value|number|/|控制可见性
+rotate|number|/|以度为单位旋转圆起点
+size|number / string|32|设置圆的直径（以像素为单位）
+value|number|/|当前进度的百分比值
 
 ### mip-v-progress-linear
 
@@ -41,15 +41,15 @@ value|number|/|控制可见性
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-active|boolean|true|
-background-color|string|/|
-background-opacity|number / string|/|
-buffer-value|number / string|100|
+active|boolean|true|将高度减为0，隐藏组件
+background-color|string|/|背景颜色，若为 `null` 则跟随组件颜色
+background-opacity|number / string|/|背景透明度, 如果为空则默认是 0.3，如果背景颜色也没设置则为1
+buffer-value|number / string|100|缓冲的百分比值
 color|string|'primary'|将指定的色彩应用与控件
-indeterminate|boolean|/|
+indeterminate|boolean|/|持续动画，加载进度时使用未知
 line-height|number / string|7|
 query|boolean|/|
-value|number / string|/|控制可见性
+value|number / string|/|当前进度的百分比值
 
 ## 示例
 
