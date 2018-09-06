@@ -1,6 +1,7 @@
 const legacyFs = require('fs')
 const path = require('path')
 
+const readdir = require('recursive-readdir')
 const merge = require('lodash/merge')
 const cheerio = require('cheerio')
 
@@ -12,7 +13,7 @@ const camelToDash = camel => (camel[0].toUpperCase() + camel.slice(1))
   .match(/[A-Z][^A-Z]*/g)
   .map(word => word.toLowerCase()).join('-')
 
-const getMIPTagName = tagName => `mip-${tagName}`
+const getMIPTagName = tagName => tagName.startsWith('v-') ? `mip-${tagName}` : tagName
 
 const replaceMIPTagName = text => text.replace(/v-model/g, '.sync').replace(/`v-/g, '`mip-v-')
 
@@ -25,14 +26,13 @@ const getOfficialDoc = type => async (name) => {
   })[name] || name
 
   const getDocByLang = async (lang) => {
-    const docsDir = path.resolve(__dirname, '../lang', lang, type)
-    const filenames = await fs.readdir(docsDir)
-    const docFilename = filenames.find(filename => filename.startsWith(getDocName(name)))
+    const docPaths = await readdir(path.resolve(__dirname, '../lang', lang))
+    const docPath = docPaths.find(filename => filename.includes(getDocName(name)))
 
-    if (typeof docFilename === 'undefined') {
+    if (typeof docPath === 'undefined') {
       return null
     }
-    return require(path.resolve(docsDir, docFilename))
+    return require(docPath)
   }
 
   return merge({}, await getDocByLang('en'), await getDocByLang('zhHans'))
@@ -203,7 +203,7 @@ const generateDoc = async (tagName) => {
   const components = Object.values(global.components)
     .filter(({name: componentName = ''}) => componentName.startsWith(name))
 
-  const doc = await getComponentDoc(name.slice(1))
+  const doc = await getComponentDoc(tagName.startsWith('v-') ? name.slice(1) : name)
   const examples = await parseExamples(tagName)
 
   await ensureDocDir(mipTagName)
@@ -217,6 +217,10 @@ const generateDoc = async (tagName) => {
   println('## 用例')
 
   println(getHtmlBlock(examples[0].html))
+
+  if (!components.length) {
+    return
+  }
 
   println('## API')
 
@@ -259,7 +263,7 @@ const generateDocs = tagNames => Promise.all(tagNames.map(generateDoc))
 
 const main = async () => {
   const tagNames = (await fs.readdir(path.resolve(__dirname, '../dev')))
-    .filter(filename => filename.startsWith('v-'))
+    .filter(filename => filename.includes('.html') && filename !== 'index.html')
     .map(filename => filename.replace('.html', ''))
 
   await generateDocs(tagNames)

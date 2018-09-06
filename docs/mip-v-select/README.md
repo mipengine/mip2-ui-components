@@ -49,8 +49,8 @@
 :--:|:--:|:--:|:---
 activator|any|/|
 allow-overflow|boolean|/|
-append-icon|string|'$vuetify.icons.dropdown'|Append an icon to the component, uses same syntax as `mip-v-icon`
-append-icon-cb|function|/|Callback for appended icon when clicked
+append-icon|string|'$vuetify.icons.dropdown'|使用与`mip-v-icon`相同的语法在组件上添加一个后置图标
+append-icon-cb|function|/|单击回调添加后置图标
 append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `mip-v-icon`
 append-outer-icon-cb|function|/|Callback for appended outer icon when clicked
 attach|any|/|
@@ -80,9 +80,9 @@ error-messages|string / array|[]|将输入框置于错误状态，并传入自�
 flat|boolean|/|当使用**solo**或者**solo-inverted**属性时，移除添加到元素的标高（阴影）
 full-width|boolean|/|指定输入框为全屏宽度。
 height|number / string|/|设置组件高度
-hide-details|boolean|/|Hides hint, validation errors
+hide-details|boolean|/|隐藏提示，验证错误
 hide-selected|boolean|/|
-hint|string|/|Hint text
+hint|string|/|提示文本
 input-activator|boolean|/|
 item-avatar|string / array / function|'avatar'|
 item-disabled|string / array / function|'disabled'|
@@ -113,16 +113,16 @@ open-on-click|boolean|true|
 open-on-hover|boolean|/|
 origin|string|'top left'|
 outline|boolean|/|Applies the outline style to the input
-persistent-hint|boolean|/|Forces hint to always be visible
+persistent-hint|boolean|/|强制提示始终可见
 placeholder|string|/|Sets the input’s placeholder text
 position-x|number|/|
 position-y|number|/|
 prefix|string|/|显示前缀
-prepend-icon|string|/|Prepend an icon to the component, uses same syntax as `mip-v-icon`
-prepend-icon-cb|function|/|Callback for prepended icon when clicked
+prepend-icon|string|/|使用与`mip-v-icon`系统的语法在组件上添加一个图标
+prepend-icon-cb|function|/|单击时回调添加前置图标
 prepend-inner-icon|string|/|
 prepend-inner-icon-cb|function|/|
-readonly|boolean|/|Puts input in readonly state
+readonly|boolean|/|将输入之余只读状态
 return-masked-value|boolean|/|返回未修改的掩码字符串
 return-object|boolean|/|
 reverse|boolean|/|Reverses the input orientation
