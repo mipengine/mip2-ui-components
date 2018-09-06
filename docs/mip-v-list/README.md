@@ -94,12 +94,12 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 dark|boolean|/|应用暗黑主题变体
-dense|boolean|/|
-expand|boolean|/|
+dense|boolean|/|减小列表块的最大宽度
+expand|boolean|/|将只有在明确关闭之后才会折叠起来
 light|boolean|/|应用明亮主题变体
-subheader|boolean|/|
-three-line|boolean|/|
-two-line|boolean|/|
+subheader|boolean|/|会移除上边距（top padding），当前面只有一个列表组标题的时候使用
+three-line|boolean|/|增加列表块的高度到3行
+two-line|boolean|/|增加列表块的高度到2行
 
 ### mip-v-list-group
 

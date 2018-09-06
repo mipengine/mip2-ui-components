@@ -78,7 +78,7 @@ const parseExamples = async (tagName) => {
         .join('\n    ')
       return {
         ...example,
-        html: dataHtml === '{}'
+        html: dataHtml === '{}' || dataHtml === 'null'
           ? html
           : '<mip-data>\n  <script type="application/json">\n    ' +
             dataHtml +

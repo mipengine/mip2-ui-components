@@ -5,11 +5,6 @@
 ## 用例
 
 ```html
-<mip-data>
-  <script type="application/json">
-    null
-  </script>
-</mip-data>
 <p>&#x76F8;&#x5BF9;&#x6DF1;&#x5EA6;&#x6216;&#x8DDD;&#x79BB;&#x3002;&#x5171;&#x6709; 25 &#x4E2A;&#x5C42;&#x7EA7;&#xFF0C;&#x4F8B;&#x5982; elevation-0 elevation-1 elevation-24</p>
 <div class="container grid-list-md text-xs-center">
   <div class="layout row wrap">

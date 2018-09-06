@@ -5,11 +5,6 @@
 ## 用例
 
 ```html
-<mip-data>
-  <script type="application/json">
-    null
-  </script>
-</mip-data>
 <mip-v-menu transition="slide-x-transition">
   <mip-v-btn slot="activator" dark="" color="primary">Slide X Transition</mip-v-btn>
   <mip-v-list>
