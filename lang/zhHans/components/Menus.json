@@ -1,6 +1,6 @@
 {
   "header": "菜单",
-  "headerText": "`v-menu`组件展示一个菜单在用于激活它的元素的位置上。",
+  "headerText": "`v-menu`组件在它元素的位置上展示一个菜单，可以用于激活它。",
   "components": ["v-menu"],
   "examples": {
     "activator": {
@@ -40,7 +40,7 @@
     }
   },
   "props": {
-    "closeOnClick": "指定菜应该在外部激活器被点击时关闭。",
+    "closeOnClick": "指定菜单应该在外部激活器被点击时关闭。",
     "closeOnContentClick": "指定点击内容时菜单是否应该关闭。",
     "disabled": "禁用菜单",
     "offsetX": "在x轴上偏移菜单，与左/右方向一起工作",

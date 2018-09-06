@@ -24,14 +24,14 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-circle|boolean|/|Shape pagination elements as circles
+circle|boolean|/|分页元素变为圆形
 color|string|/|将指定的色彩应用与控件
-disabled|boolean|/|Disables component
-length|number|/|The length of the paginator
-next-icon|string|'$vuetify.icons.next'|Specify the icon to use for the next icon
-prev-icon|string|'$vuetify.icons.prev'|Specify the icon to use for the prev icon
-total-visible|number / string|/|Specify the max total visible pagination numbers
-value|number|/|Current selected page
+disabled|boolean|/|禁用
+length|number|/|分页器长度
+next-icon|string|'$vuetify.icons.next'|指定一个图标用于下一个图标
+prev-icon|string|'$vuetify.icons.prev'|S指定一个图标用于前一个图标
+total-visible|number / string|/|指定最大总可见分页数
+value|number|/|当前选中页
 
 ## 示例
 

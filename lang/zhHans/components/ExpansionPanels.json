@@ -29,14 +29,24 @@
   },
   "props": {
     "v-expansion-panel": {
+      "disabled": "禁用整个扩展面板",
       "expand": "选择另一个时，将扩展面板打开",
       "focusable": "使扩展面板标题可以调焦",
       "inset": "使扩展面板以嵌入的样式打开",
-      "popout": "使扩展面板以弹出的样式打开"
+      "popout": "使扩展面板以弹出的样式打开",
+      "readonly": "只读属性",
+      "value": "控制扩展面板内容的打开和关闭状态。对应于当前打开内容的零位置开始索引。如果使用了 `expand` 属性，则它是一个布尔数组，其中的索引对应内容的索引。"
     },
     "v-expansion-panel-content": {
+      "disabled": "禁用扩展面板的内容",
+      "expandIcon": "设置自定义的展开图标",
       "hideActions": "隐藏内容标题中的展开图标",
-      "expandIcon": "Set the expand action icon"
+      "readonly": "只读属性",
+      "value": "控制内容的打开和关闭状态"
     }
+  },
+  "slot": {
+    "actions": "扩展头部操作",
+    "header": "扩展头部的内容"
   }
 }

@@ -47,11 +47,11 @@ full-width|boolean|/|指定模态框强制100%宽度
 fullscreen|boolean|/|改变布局全屏显示
 hide-overlay|boolean|/|隐藏遮罩
 max-width|string / number|'none'|内容的最大宽度
-no-click-animation|boolean|/|Disables the bounce effect when clicking outside of a `mip-v-dialog`'s content when using the **persistent** prop
+no-click-animation|boolean|/|当使用 **persistent** 属性时，点击 `mip-v-dialog` 内容之外会禁止弹跳效果
 origin|string|'center center'|设置过渡原点
 persistent|boolean|/|点击对话框外部不能使其关闭
 return-value|any|/|
-scrollable|boolean|/|当包含card, card-title, card-text 以及 card-actions这几个的对话框可滚动设为 true 的时候； card-text 应该指定高度并且设置 overflow-y
+scrollable|boolean|/|设为 true 的时候，内部应该包含card, card-title, card-text 以及 card-actions；另外 card-text 应该指定高度并且设置 overflow-y
 transition|string / boolean|'dialog-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 value|boolean|/|控制可见性
 width|string / number|'auto'|设置对话框的宽度

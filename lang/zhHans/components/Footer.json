@@ -23,6 +23,6 @@
   "props": {
     "absolute": "Mixins.Positionable.props.absolute",
     "fixed": "Mixins.Positionable.props.fixed",
-    "inset": "定位工具栏偏离应用程序的`v-navigation-drawer`的位置"
+    "inset": "定位工具栏偏离应用程序`v-navigation-drawer`的位置"
   }
 }

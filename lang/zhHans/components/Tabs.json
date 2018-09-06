@@ -52,8 +52,17 @@
   },
   "props": {
     "alignWithTitle": "让`v-tabs`与工具栏标题对齐",
+    "cycle": "当滑动至选项卡的边界时会重置到第一个或最后一个子项",
+    "grow": "强制让 `v-tab-item`占满所有可用空间",
+    "hideSlider": "隐藏产生的 `v-tabs-slider`",
+    "iconsAndText": "将垂直堆叠图标和文本",
     "prevIcon": "右分页图标",
     "nextIcon": "左分页图标",
-    "right": "将选项向右侧对齐"
+    "reverseTransition": "Components.Carousels.props.reverseTransition",
+    "right": "将选项向右侧对齐",
+    "showArrows": "总是显示分页箭头",
+    "sliderColor": "为自动产生的 `v-tabs-slider` 改变背景颜色",
+    "touchless": "Components.NavigationDrawers.props.touchless",
+    "transition": "Mixins.Transitionable.props.transition"
   }
 }

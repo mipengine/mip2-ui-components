@@ -16,9 +16,9 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-alt|string|/|Attaches an alt property to the parallax image
+alt|string|/|给视差图增加一个 `alt` 属性
 height|string / number|500|设置组件高度
-src|string|/|The image to parallax
+src|string|/|图片源地址
 
 ## 示例
 

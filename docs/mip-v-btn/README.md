@@ -36,7 +36,7 @@ fab|boolean|/|使按钮变圆
 fixed|boolean|/|给元素设置固定定位
 flat|boolean|/|移除按钮的背景色
 href|string / object|/|将组件标签指定为`<a>`
-icon|boolean|/|将按钮指定为图标——原型和平面
+icon|boolean|/|将按钮指定为图标——圆型和平面
 input-value|boolean|/|控制按钮的激活状态
 large|boolean|/|大型按钮
 left|boolean|/|将组件向左边对齐
@@ -47,7 +47,7 @@ outline|boolean|/|按钮将拥有一个轮廓
 replace|boolean|/|Vue Router router-link 属性
 right|boolean|/|将组件向右边对齐
 ripple|boolean / object|true|使用`mip-v-ripple`指令
-round|boolean|/|按钮两边会边圆
+round|boolean|/|按钮两边会变圆
 small|boolean|/|小型按钮
 tag|string|'button'|指定要在组件上使用的自定义标签
 target|string|/|指定目标属性，仅适用于猫标签。

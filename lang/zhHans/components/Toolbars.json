@@ -69,16 +69,20 @@
     "clippedRight": "指定`v-navigation-drawer`应用程序在工具栏的右侧被剪切",
     "dense": "减小工具栏内容和扩展的高度",
     "extended": "强制工具栏生成扩展名而不使用插槽",
+    "extensionHeight": "为扩展插槽指定一个明确的高度",
     "flat": "移除工具栏的盒子阴影",
     "floating": "使工具栏内联浮动",
     "height": "为工具栏指定一个特定的高度",
+    "invertedScroll": "向上滚动时会滑出视图，向上滚动时会回到视图中",
     "lightsOut": "降低系统栏不透明度",
     "manualScroll": "手动应用**滚动屏幕**功能",
     "prominent": "增加工具栏内容和扩展的高度",
-    "scrollOffScreen": "当向下滚动时工具栏会过渡到屏幕外。",
+    "scrollOffScreen": "当向下滚动时工具栏会过渡到屏幕外",
+    "scrollToolbarOffScreen": "向下滚动时会将工具栏从屏幕上移开",
     "scrollTarget": "为滚动屏幕指定滚动目标",
     "scrollThreshold": "工具栏使用滚动屏幕之前滚动的距离",
     "status": "降低系统栏高度",
+    "tabs": "将会为扩展设置一个明确的高度 **42px**，当在扩展插槽中使用默认的 `v-tab` 会很有用，如果你有一个自定义高度的 `v-tab`， 那也应该给 **extensionHeight** 指定一个高度",
     "window": "增加系统栏高度"
   }
 }

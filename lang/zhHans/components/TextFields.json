@@ -58,8 +58,8 @@
       "desc": "文本框可以使用替代的样式设计，但是这种模式下不支持附加或者前置图标属性。"
     },
     "solo": {
-      "header": "Solo style",
-      "desc": "Text-fields can be used with an alternative solo design."
+      "header": "Solo 风格",
+      "desc": "文本框可以设置两种 `solo` 风格。"
     },
     "customColors": {
       "header": "自定义颜色",
@@ -75,17 +75,34 @@
     }
   },
   "props": {
+    "appendOuterIcon": "为 `v-text-field` 输入框外部增加一个标签，使用方法同 `v-icon`",
+    "appendOuterIconCb": "当点击添加的外部标签时触发的回调",
     "autoGrow": "自动增长输入，需要使用 **v-model**",
     "autofocus": "启用自动聚焦",
     "box": "应用备用输入框样式",
+    "browserAutocomplete": "配置`<input>` 默认的自动补全属性",
+    "clearIcon": "当使用 **clearable** 属性和输入框有内容时起作用",
+    "clearIconCb": "当清除标签被点击时的回调",
     "counter": "为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。",
+    "flat": "Mixins.Soloable.props.flat",
     "fullWidth": "指定输入框为全屏宽度。",
     "multiLine": "转为多行文本框",
+    "noResize": "移除 `resize` 的处理操作，只会对 **multi-line** 和 **textarea** 属性起作用",
+    "outline": "设置输入框的外边缘样式",
+    "placeholder": "设置输入的占位符文本",
     "prefix": "显示前缀",
+    "reverse": "反转输入方向",
     "rows": "Textarea 的行数",
+    "rowHeight": "当使用 **multi-line** 或 **textarea** 属性时，可以指定一个自定义的 _row-height_ 来设置输入框的高度",
+    "solo": "Mixins.Soloable.props.solo",
+    "soloInverted": "Mixins.Soloable.props.soloInverted",
     "suffix": "显示后缀",
     "textarea": "Textarea 使用备用样式",
     "toggleKeys": "切换输入键值的数组（如果支持切换的话）",
     "type": "设置输入类型"
+  },
+  "events": {
+    "change": "Components.Inputs.events.change",
+    "update:error": "Mixins.Validatable.events['update:error']"
   }
 }

@@ -11,6 +11,14 @@
   "props": {
     "contentClass": "将自定义类应用于列表项周围的包装元素",
     "contentProps": "将自定义属性应用于列表项周围的包装元素",
-    "contentTag": "指定那些标签需要用于列表项周围的包装元素"
+    "contentTag": "指定哪些标签需要用于列表项周围的包装元素",
+    "nextIcon": "Mixins.DataIterable.props.nextIcon",
+    "prevIcon": "Mixins.DataIterable.props.prevIcon"
+  },
+  "slot": {
+    "header": "在包装元素上面定义一个标题"
+  },
+  "event": {
+    "update:pagination": "更新事件 `pagination.sync`"
   }
 }

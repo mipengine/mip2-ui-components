@@ -47,5 +47,18 @@
       "header": "自定义色彩",
       "desc": "您还可以使用属性`color`和`background-color`设置颜色。"
     }
+  },
+  "props": {
+    "active": "将高度减为0，隐藏组件",
+    "backgroundColor": "背景颜色，若为 `null` 则跟随组件颜色",
+    "backgroundOpacity": "背景透明度, 如果为空则默认是 0.3，如果背景颜色也没设置则为1",
+    "bufferValue": "缓冲的百分比值",
+    "button": "不推荐使用 - 待删除",
+    "fill": "设置圆的填充色",
+    "indeterminate": "持续动画，加载进度时使用未知",
+    "rotate": "以度为单位旋转圆起点",
+    "size": "设置圆的直径（以像素为单位）",
+    "value": "当前进度的百分比值",
+    "width": "设置圆的笔划（以像素为单位）"
   }
 }

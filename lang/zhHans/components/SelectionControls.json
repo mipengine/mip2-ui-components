@@ -57,14 +57,18 @@
     }
   },
   "props": {
-    "column": "单选框列显示",
+    "column": "单选框按列显示",
     "disabled": "Mixins.Input.props.disabled",
     "label": "Mixins.Input.props.label",
     "mandatory": "强制选择复选框组的一个子复选框 `v-radio` ",
     "name": "设置组件的 name 属性",
-    "row": "单选框行显示",
+    "row": "单选框按行显示",
     "indeterminate": "为复选框设置不确定状态",
     "inputValue": "**v-model** 的绑定值",
     "value": "设置选择控件组件的值"
+  },
+  "events": {
+    "change": "Components.Inputs.events.change",
+    "update:error": "Mixins.Validatable.events['update:error']"
   }
 }

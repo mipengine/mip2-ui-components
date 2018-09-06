@@ -27,5 +27,14 @@
       "header": "禁用",
       "desc": "分页按钮可以手动禁用。"
     }
+  },
+  "props": {
+    "circle": "分页元素变为圆形",
+    "disabled": "禁用",
+    "length": "分页器长度",
+    "nextIcon": "指定一个图标用于下一个图标",
+    "prevIcon": "S指定一个图标用于前一个图标",
+    "totalVisible": "指定最大总可见分页数",
+    "value": "当前选中页"
   }
 }

@@ -4,8 +4,8 @@
   "components": ["v-slider"],
   "examples": {
     "usage": {
-      "header": "Usage",
-      "desc": "Sliders reflect a range of values along a bar, from which users may select a single value. They are ideal for adjusting settings such as volume, brightness, or applying image filters."
+      "header": "用法",
+      "desc": "滑块沿条形图反映一系列值，用户可从中选择单个值。 它们非常适合调整音量，亮度或应用图像滤镜等设置。"
     },
     "thumb": {
       "header": "Thumb",
@@ -46,10 +46,15 @@
     }
   },
   "props": {
+    "alwaysDirty": "当这个属性和 **thumb-label** 一起使用时，拇指标签会一直显示",
+    "inverseLabel": "倒序设置标签，和 **rtl** 一起使用",
     "step": "如果大于0，则为滑块上的点设置步骤间隔",
     "thumbColor": "设置拇指和拇指标签颜色",
     "thumbLabel": "显示拇指标签",
+    "thumbSize": "控制 **thumb-label** 的大小",
     "ticks": "",
-    "trackColor": "设置曲目填充色彩"
+    "tickLabels": "如果值为 Array<string>，则会按照序号尝试给每一步分配标签",
+    "tickSize": "控制 **ticks** 的颜色",
+    "trackColor": "设置轨迹填充颜色"
   }
 }

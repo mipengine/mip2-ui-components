@@ -1,6 +1,6 @@
 # mip-v-chip
 
-`mip-v-chip`组件用于传递小块信息。使用`close`属性，厚切薯条变得互动，允许用户交互。
+`mip-v-chip`组件用于传递小块信息。使用`close`属性，厚切条变得互动，允许用户交互。
 
 ## 用例
 
@@ -30,12 +30,12 @@
 close|boolean|/|添加删除按钮
 color|string|/|将指定的色彩应用与控件
 dark|boolean|/|应用暗黑主题变体
-disabled|boolean|/|禁用厚切薯条，使其不可选择
+disabled|boolean|/|禁用厚切条，使其不可选择
 label|boolean|/|移除圆形边缘
 light|boolean|/|应用明亮主题变体
 outline|boolean|/|删除背景并应用边框和文本颜色
-selected|boolean|/|将选择框颜色应用于厚切薯条，主要用于在`mip-v-select`中显示高亮上下文
-small|boolean|/|减少后期薯条的尺寸
+selected|boolean|/|将选择框颜色应用于厚切条，主要用于在`mip-v-select`中显示高亮上下文
+small|boolean|/|减小厚切条的尺寸
 text-color|string|/|将指定的颜色应用于控件文本
 value|boolean|true|控制可见性
 

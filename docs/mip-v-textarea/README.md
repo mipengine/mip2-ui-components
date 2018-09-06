@@ -26,15 +26,15 @@ Textarea components are used for collecting large amounts of textual data.
 :--:|:--:|:--:|:---
 append-icon|string|/|使用与`mip-v-icon`相同的语法在组件上添加一个后置图标
 append-icon-cb|function|/|单击回调添加后置图标
-append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `mip-v-icon`
-append-outer-icon-cb|function|/|Callback for appended outer icon when clicked
+append-outer-icon|string|/|为 `mip-v-text-field` 输入框外部增加一个标签，使用方法同 `mip-v-icon`
+append-outer-icon-cb|function|/|当点击添加的外部标签时触发的回调
 auto-grow|boolean|/|自动增长输入，需要使用 **.sync**
 autofocus|boolean|/|启用自动聚焦
 background-color|string|''|
 box|boolean|/|应用备用输入框样式
-browser-autocomplete|string|/|Configures the default `<input>` autocomplete attribute
-clear-icon|string|'$vuetify.icons.clear'|Applied when using **clearable** and the input is dirty
-clear-icon-cb|function|/|Callback for clear icon when clicked
+browser-autocomplete|string|/|配置`<input>` 默认的自动补全属性
+clear-icon|string|'$vuetify.icons.clear'|当使用 **clearable** 属性和输入框有内容时起作用
+clear-icon-cb|function|/|当清除标签被点击时的回调
 clearable|boolean|/|添加输入框清除功能，默认图标是 Material Icons **clear**
 color|string|'primary'|将指定的色彩应用与控件
 counter|boolean / number / string|/|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
@@ -54,10 +54,10 @@ light|boolean|/|应用明亮主题变体
 loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜色应用于进度条的字符串（任何material色彩——主要（primary）, 次要（secondary）, 成功（success）, 信息（info），警告（warning），错误（error）），或者使用组件的布尔值**颜色**（由色彩属性设置——如果它被组件支持的话）还可以是原色。
 mask|object / string|/|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
 messages|string / array|[]|Displays a list of messages or message if using a string
-no-resize|boolean|/|Remove resize handle, only applies to **multi-line** and **textarea** props
-outline|boolean|/|Applies the outline style to the input
+no-resize|boolean|/|移除 `resize` 的处理操作，只会对 **multi-line** 和 **textarea** 属性起作用
+outline|boolean|/|设置输入框的外边缘样式
 persistent-hint|boolean|/|强制提示始终可见
-placeholder|string|/|Sets the input’s placeholder text
+placeholder|string|/|设置输入的占位符文本
 prefix|string|/|显示前缀
 prepend-icon|string|/|使用与`mip-v-icon`系统的语法在组件上添加一个图标
 prepend-icon-cb|function|/|单击时回调添加前置图标
@@ -65,8 +65,8 @@ prepend-inner-icon|string|/|
 prepend-inner-icon-cb|function|/|
 readonly|boolean|/|将输入之余只读状态
 return-masked-value|boolean|/|返回未修改的掩码字符串
-reverse|boolean|/|Reverses the input orientation
-row-height|number / string|24|Designate a custom _row-height_. Used for determining input height when using **multi-line** or **textarea** props
+reverse|boolean|/|反转输入方向
+row-height|number / string|24|当使用 **multi-line** 或 **textarea** 属性时，可以指定一个自定义的 _row-height_ 来设置输入框的高度
 rows|number / string|5|Textarea 的行数
 rules|array|[]|返回True或带有错误信息的字符串的函数数组。
 single-line|boolean|/|Label does not move on focus/dirty

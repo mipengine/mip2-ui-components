@@ -30,7 +30,7 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-always-dirty|boolean|/|When used with the **thumb-label** prop will always show the thumb label.
+always-dirty|boolean|/|当这个属性和 **thumb-label** 一起使用时，拇指标签会一直显示
 append-icon|string|/|使用与`mip-v-icon`相同的语法在组件上添加一个后置图标
 append-icon-cb|function|/|单击回调添加后置图标
 background-color|string|''|
@@ -43,7 +43,7 @@ error-messages|string / array|[]|将输入框置于错误状态，并传入自�
 height|number / string|/|设置组件高度
 hide-details|boolean|/|隐藏提示，验证错误
 hint|string|/|提示文本
-inverse-label|boolean|/|Reverse the label position. Works with **rtl**.
+inverse-label|boolean|/|倒序设置标签，和 **rtl** 一起使用
 label|string|/|设置输入框标签
 light|boolean|/|应用明亮主题变体
 loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜色应用于进度条的字符串（任何material色彩——主要（primary）, 次要（secondary）, 成功（success）, 信息（info），警告（warning），错误（error）），或者使用组件的布尔值**颜色**（由色彩属性设置——如果它被组件支持的话）还可以是原色。
@@ -61,11 +61,11 @@ success|boolean|/|Puts the input in a manual success state
 success-messages|string / array|[]|Puts the input in a success state and passes through custom success messsages.
 thumb-color|string|/|设置拇指和拇指标签颜色
 thumb-label|boolean / string|/|显示拇指标签
-thumb-size|number / string|32|Controls the size of the **thumb-label**
-tick-labels|array|[]|When provided with Array<string>, will attempt to map the labels to each step in index order
-tick-size|number / string|1|Controls the size of **ticks**
+thumb-size|number / string|32|控制 **thumb-label** 的大小
+tick-labels|array|[]|如果值为 Array<string>，则会按照序号尝试给每一步分配标签
+tick-size|number / string|1|控制 **ticks** 的颜色
 ticks|boolean / string|/|
-track-color|string|/|设置曲目填充色彩
+track-color|string|/|设置轨迹填充颜色
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
 value|number / string|/|输入值
 

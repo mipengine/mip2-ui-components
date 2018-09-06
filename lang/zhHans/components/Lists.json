@@ -57,10 +57,23 @@
   "props": {
     "avatar": "用来设置单行列表项的最小高度（即使用该属性后将有一个头像大小的最小高度）",
     "dense": "减小列表块的最大宽度",
-    "expand": "将只有在明确关闭后才会折叠起来",
+    "expand": "将只有在明确关闭之后才会折叠起来",
+    "group": "分配一个路由命名空间。接受字符串或正则表达式来确定活动状态",
+    "noAction": "从组项中删除为操作图标分配的左侧内边距",
     "subheader": "会移除上边距（top padding），当前面只有一个列表组标题的时候使用",
+    "subGroup": "将组件指定为嵌套列表组",
     "threeLine": "增加列表块的高度到3行",
     "twoLine": "增加列表块的高度到2行",
-    "inactive": "如果设置了该属性，即使有to/href或者@click，列表块也不会响应链接。"
+    "inactive": "如果设置了该属性，即使有to/href或者@click，列表块也不会响应链接。",
+    "value": "展开/折叠列表组",
+    "v-list-tile-avatar": {
+      "color": "Mixins.Colorable.props.color"
+    },
+    "v-list-group": {
+      "activeClass": "Mixins.Routable.props.activeClass",
+      "appendIcon": "Components.Inputs.props.appendIcon",
+      "disabled": "Components.Inputs.props.disabled",
+      "prependIcon": "Components.Inputs.props.prependIcon"
+    }
   }
 }

@@ -1,6 +1,6 @@
 # mip-v-card
 
-`mip-v-card`组件是一个多功能组件，可用于从面板到静态图像的任何事物。**card**组件有许多班助组件，使标记尽可能简单。没有列出选项的组件使用**Vue的**功能组件选项来加快渲染速度，并作为标记糖来使构建更容易。
+`mip-v-card`组件是一个多功能组件，可用于从面板到静态图像的任何事物。**card**组件有许多帮助组件，使标记尽可能简单。没有列出选项的组件使用**Vue的**功能组件选项来加快渲染速度，并作为标记糖来使构建更容易。
 
 ## 用例
 
@@ -50,7 +50,7 @@ exact|boolean|/|完全匹配链接，没有这个的话，“/”将匹配每一
 exact-active-class|string|/|Vue Router的 router-link属性
 flat|boolean|/|移除卡片的盒子阴影
 height|number / string|/|手动定义卡片的高度
-hover|boolean|/|在悬停上应用跟高的海拔
+hover|boolean|/|在悬停上应用更高的海拔
 href|string / object|/|将组件标签指定为`<a>`
 img|string|/|指定一个图像背景
 light|boolean|/|应用明亮主题变体
@@ -60,7 +60,7 @@ replace|boolean|/|Vue Router router-link 属性
 ripple|boolean / object|/|使用`mip-v-ripple`指令
 tag|string|'div'|指定要在组件上使用的自定义标签
 target|string|/|指定目标属性，仅适用于猫标签。
-tile|boolean|/|通过去除边界弧度将卡片卡如贴片。
+tile|boolean|/|通过去除边界弧度将卡片转为贴片
 to|string / object|/|将组件标签指定为`<router-link>`
 width|string / number|/|内容的宽度
 

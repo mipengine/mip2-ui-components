@@ -49,19 +49,19 @@ color|string|/|将指定的色彩应用与控件
 dark|boolean|/|应用暗黑主题变体
 dense|boolean|/|减小工具栏内容和扩展的高度
 extended|boolean|/|强制工具栏生成扩展名而不使用插槽
-extension-height|number / string|/|Specify an explicit height for the extended slot
+extension-height|number / string|/|为扩展插槽指定一个明确的高度
 flat|boolean|/|移除工具栏的盒子阴影
 floating|boolean|/|使工具栏内联浮动
 height|number / string|/|为工具栏指定一个特定的高度
-inverted-scroll|boolean|/|Will slide out of view when scrolling down and back into view when scrolling up
+inverted-scroll|boolean|/|向上滚动时会滑出视图，向上滚动时会回到视图中
 light|boolean|/|应用明亮主题变体
 manual-scroll|boolean|/|手动应用**滚动屏幕**功能
 prominent|boolean|/|增加工具栏内容和扩展的高度
-scroll-off-screen|boolean|/|当向下滚动时工具栏会过渡到屏幕外。
+scroll-off-screen|boolean|/|当向下滚动时工具栏会过渡到屏幕外
 scroll-target|string|/|为滚动屏幕指定滚动目标
 scroll-threshold|number|300|工具栏使用滚动屏幕之前滚动的距离
-scroll-toolbar-off-screen|boolean|/|Will transition the toolbar off screen when scrolling down
-tabs|boolean|/|Will set an explicit **42px** height for extension. Useful when default `mip-v-tab`s are used in the extended slot. If you have a custom height `mip-v-tab`, you should specify a height with **extensionHeight**.
+scroll-toolbar-off-screen|boolean|/|向下滚动时会将工具栏从屏幕上移开
+tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩展插槽中使用默认的 `mip-v-tab` 会很有用，如果你有一个自定义高度的 `mip-v-tab`， 那也应该给 **extensionHeight** 指定一个高度
 
 ### mip-v-toolbar-side-icon
 

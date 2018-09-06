@@ -51,18 +51,18 @@ activator|any|/|
 allow-overflow|boolean|/|
 append-icon|string|'$vuetify.icons.dropdown'|使用与`mip-v-icon`相同的语法在组件上添加一个后置图标
 append-icon-cb|function|/|单击回调添加后置图标
-append-outer-icon|string|/|Append an icon to the outside of `mip-v-text-field`'s input, uses same syntax as `mip-v-icon`
-append-outer-icon-cb|function|/|Callback for appended outer icon when clicked
+append-outer-icon|string|/|为 `mip-v-text-field` 输入框外部增加一个标签，使用方法同 `mip-v-icon`
+append-outer-icon-cb|function|/|当点击添加的外部标签时触发的回调
 attach|any|/|
 auto|boolean|/|在所选择的元素上居中列表
 autofocus|boolean|/|启用自动聚焦
 background-color|string|''|
 box|boolean|/|应用备用输入框样式
-browser-autocomplete|string|'on'|Configures the default `<input>` autocomplete attribute
+browser-autocomplete|string|'on'|配置`<input>` 默认的自动补全属性
 cache-items|boolean|/|
 chips|boolean|/|
-clear-icon|string|'$vuetify.icons.clear'|Applied when using **clearable** and the input is dirty
-clear-icon-cb|function|/|Callback for clear icon when clicked
+clear-icon|string|'$vuetify.icons.clear'|当使用 **clearable** 属性和输入框有内容时起作用
+clear-icon-cb|function|/|当清除标签被点击时的回调
 clearable|boolean|/|添加输入框清除功能，默认图标是 Material Icons **clear**
 close-on-click|boolean|true|
 close-on-content-click|boolean|true|
@@ -112,9 +112,9 @@ open-on-clear|boolean|/|
 open-on-click|boolean|true|
 open-on-hover|boolean|/|
 origin|string|'top left'|
-outline|boolean|/|Applies the outline style to the input
+outline|boolean|/|设置输入框的外边缘样式
 persistent-hint|boolean|/|强制提示始终可见
-placeholder|string|/|Sets the input’s placeholder text
+placeholder|string|/|设置输入的占位符文本
 position-x|number|/|
 position-y|number|/|
 prefix|string|/|显示前缀
@@ -125,7 +125,7 @@ prepend-inner-icon-cb|function|/|
 readonly|boolean|/|将输入之余只读状态
 return-masked-value|boolean|/|返回未修改的掩码字符串
 return-object|boolean|/|
-reverse|boolean|/|Reverses the input orientation
+reverse|boolean|/|反转输入方向
 rules|array|[]|返回True或带有错误信息的字符串的函数数组。
 search-input|any|/|
 single-line|boolean|/|Label does not move on focus/dirty

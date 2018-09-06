@@ -94,12 +94,12 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 dark|boolean|/|应用暗黑主题变体
-dense|boolean|/|Lowers max height of list tiles
-expand|boolean|/|Will only collapse when explicitly closed
+dense|boolean|/|
+expand|boolean|/|
 light|boolean|/|应用明亮主题变体
-subheader|boolean|/|Removes top padding. Used when previous sibling is a header
-three-line|boolean|/|Increases list-tile height for three lines
-two-line|boolean|/|Increases list-tile height for two lines
+subheader|boolean|/|
+three-line|boolean|/|
+two-line|boolean|/|
 
 ### mip-v-list-group
 

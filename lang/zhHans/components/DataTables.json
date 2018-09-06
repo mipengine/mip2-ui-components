@@ -83,7 +83,11 @@
     "v-data-table": {
       "headerText": "使用一个对象时表头的文本值",
       "headers": "表头数组",
-      "hideHeaders": "隐藏表头"
+      "headersLength": "可以和 `hide-headers` 一起使用来指定表格中一定数量的列，从而使得扩展行和加载栏正常运行",
+      "hideHeaders": "隐藏表头",
+      "sortIcon": "使用自定义的搜索图标，使用方法同 `v-icon`",
+      "nextIcon": "Mixins.DataIterable.props.nextIcon",
+      "prevIcon": "Mixins.DataIterable.props.prevIcon"
     }
   },
   "scopedSlots": {

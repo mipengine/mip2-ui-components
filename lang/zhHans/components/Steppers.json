@@ -1,6 +1,6 @@
 {
-  "header": "步骤线",
-  "headerText": "`v-stepper` 组件用于显示步骤进度。",
+  "header": "步骤条",
+  "headerText": "`v-stepper` 组件用于显示步骤条进度。",
   "components": [
     "v-stepper",
     "v-stepper-step",
@@ -62,19 +62,21 @@
     }
   },
   "props": {
-    "altLabels": "将标签置于步骤的下方",
-    "complete": "标志一步完成",
-    "completeIcon": "标志一步完成时的图标显示",
-    "editable": "表示步骤可编辑",
-    "editIcon": "步骤可编辑时的图标显示",
-    "errorIcon": "步骤错误时的图标显示",
+    "altLabels": "将标签置于步骤条的下方",
+    "color": "Mixins.Colorable.props.color",
+    "complete": "表示步骤条完成",
+    "completeIcon": "当步骤条完成时显示的图标",
+    "editable": "表示步骤条可编辑",
+    "editIcon": "步骤条可编辑时显示的图标",
+    "errorIcon": "步骤条错误时显示的图标",
     "nonLinear": "允许用户跳过任意一步",
+    "rules": "Mixins.Validatable.props.rules",
     "vertical": "垂直显示步骤线",
     "v-stepper-step": {
       "step": "要在步骤圈内显示的内容"
     },
     "v-stepper-content": {
-      "step": "设置步骤关联的内容"
+      "step": "设置步骤条关联的内容"
     }
   }
 }

@@ -1,6 +1,6 @@
 # mip-v-menu
 
-`mip-v-menu`组件展示一个菜单在用于激活它的元素的位置上。
+`mip-v-menu`组件在它元素的位置上展示一个菜单，可以用于激活它。
 
 ## 用例
 
@@ -38,7 +38,7 @@ allow-overflow|boolean|/|移除内容的移除重新定位
 attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
 auto|boolean|/|在所选择的元素上居中列表
 close-delay|number / string|200|关闭组件前等待的毫秒数
-close-on-click|boolean|true|指定菜应该在外部激活器被点击时关闭。
+close-on-click|boolean|true|指定菜单应该在外部激活器被点击时关闭。
 close-on-content-click|boolean|true|指定点击内容时菜单是否应该关闭。
 content-class|any|''|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
 disabled|boolean|/|禁用菜单
