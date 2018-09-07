@@ -100,7 +100,7 @@ export default {
     })
   },
   beforeDestroy () {
-    const buttonGroup = this.buttonGroup || this.customButtonGroup;
+    const buttonGroup = this.buttonGroup || this.customButtonGroup
     if (buttonGroup) {
       buttonGroup.unregister(this)
     }

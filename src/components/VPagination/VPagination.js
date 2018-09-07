@@ -79,7 +79,7 @@ export default {
       const width = this.$el && this.$el.parentNode ? this.$el.parentNode.clientWidth : window.innerWidth
       this.maxButtons = Math.floor((width - 96) / 42)
     },
-    updateValue(value) {
+    updateValue (value) {
       this.$emit('input', value)
       this.$emit('update:value', value)
     },

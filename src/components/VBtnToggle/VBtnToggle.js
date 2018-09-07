@@ -61,7 +61,7 @@ export default mixins(ButtonGroup, Themeable).extend({
       const item = this.getValue(i)
       if (!this.multiple) {
         if (this.mandatory && this.inputValue === item) return
-        const nextValue = this.inputValue === item ? null : item;
+        const nextValue = this.inputValue === item ? null : item
         this.onChange(nextValue)
         return
       }

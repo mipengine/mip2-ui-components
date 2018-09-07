@@ -1,8 +1,12 @@
 {
   "props": {
     "error": "将输入框设置为手动错误状态。",
+    "errorCount": "同时展示的错误数",
     "errorMessages": "将输入框置于错误状态，并传入自定义的错误信息。将与来自**规则（rules）**属性的任何验证相结合。这个字段不会触发验证。",
+    "message": "展示一条消息，或一个消息列表",
     "rules": "返回True或带有错误信息的字符串的函数数组。",
+    "success": "设置输入框为成功（success）状态",
+    "success-messages": "设置输入框为成功（success）状态，并且传入自定义成功信息",
     "validateOnBlur": "延迟验证直到失去焦点的事件被触发"
   }
 }

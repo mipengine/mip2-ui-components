@@ -37,7 +37,7 @@ dark|boolean|/|应用暗黑主题变体
 disabled|boolean|/|输入框是禁用的
 dont-fill-mask-blanks|boolean|/|键入时禁用自动字符显示
 error|boolean|/|将输入框设置为手动错误状态。
-error-count|number / string|1|The total number of errors that should display at once
+error-count|number / string|1|同时展示的错误数
 error-messages|string / array|[]|将输入框置于错误状态，并传入自定义的错误信息。将与来自**规则（rules）**属性的任何验证相结合。这个字段不会触发验证。
 flat|boolean|/|当使用**solo**或者**solo-inverted**属性时，移除添加到元素的标高（阴影）
 full-width|boolean|/|指定输入框为全屏宽度。
@@ -67,7 +67,7 @@ rules|array|[]|返回True或带有错误信息的字符串的函数数组。
 single-line|boolean|/|Label does not move on focus/dirty
 solo|boolean|/|改变输入框的样式
 solo-inverted|boolean|/|减少元素的不透明度，知道获得焦点
-success|boolean|/|Puts the input in a manual success state
+success|boolean|/|设置输入框为成功（success）状态
 success-messages|string / array|[]|Puts the input in a success state and passes through custom success messsages.
 suffix|string|/|显示后缀
 textarea|boolean|/|Textarea 使用备用样式

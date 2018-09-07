@@ -322,7 +322,7 @@ export default {
     getLabel (value) {
       return this.$scopedSlots['thumb-label'] ? this.$scopedSlots['thumb-label']({ value }) : this.$createElement('span', value)
     },
-    onInput(value) {
+    onInput (value) {
       this.$emit('input', value)
       this.$emit('update:value', value)
     },
