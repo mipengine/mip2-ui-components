@@ -5,7 +5,79 @@ The `mip-v-autocomplete` component offers simple and flexible type-ahead functio
 ## 用例
 
 ```html
-<div></div>
+<mip-data>
+  <script type="application/json">
+    {
+      "model": "",
+      "stateNames": [
+        "Alabama",
+        "Alaska",
+        "American Samoa",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "District of Columbia",
+        "Federated States of Micronesia",
+        "Florida",
+        "Georgia",
+        "Guam",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Marshall Islands",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Northern Mariana Islands",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Palau",
+        "Pennsylvania",
+        "Puerto Rico",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virgin Island",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming"
+      ],
+      "items": []
+    }
+  </script>
+</mip-data>
+<div class="container grid-list-xl">
+  <mip-v-autocomplete m-bind:value.sync="model" m-bind:items="stateNames">
+  </mip-v-autocomplete>
+</div>
 ```
 
 ## API
@@ -123,12 +195,14 @@ z-index|number / string|/|
 <mip-data>
   <script type="application/json">
     {
-      "descriptionLimit": 60,
       "model": "",
+      "descriptionLimit": 60,
       "search": "",
       "entries": [],
       "items": [],
-      "isLoading": false
+      "isLoading": false,
+      "loading": false,
+      "select": ""
     }
   </script>
 </mip-data>
@@ -171,21 +245,6 @@ z-index|number / string|/|
       .finally(() =&gt; MIP.setData({isLoading: false}))
   })
 </mip-script>
-<mip-data>
-  <script type="application/json">
-  {
-    isEditing: false,
-    states: [
-      { name: 'Florida', abbr: 'FL', id: 1 },
-      { name: 'Georgia', abbr: 'GA', id: 2 },
-      { name: 'Nebraska', abbr: 'NE', id: 3 },
-      { name: 'California', abbr: 'CA', id: 4 },
-      { name: 'New York', abbr: 'NY', id: 5 }
-    ],
-    toSave: false
-  }
-  </script>
-</mip-data>
 ```
 
 ### Custom filter on autocomplete
@@ -194,13 +253,35 @@ z-index|number / string|/|
 <mip-data>
   <script type="application/json">
     {
-      "search": "",
-      "items": []
+      "isEditing": false,
+      "items": [],
+      "states": [
+        {
+          "name": "Florida",
+          "id": 1
+        },
+        {
+          "name": "Georgia",
+          "id": 2
+        },
+        {
+          "name": "Nebraska",
+          "id": 3
+        },
+        {
+          "name": "California",
+          "id": 4
+        },
+        {
+          "name": "New York",
+          "id": 5
+        }
+      ],
+      "toSave": false
     }
   </script>
 </mip-data>
 <div class="container grid-list-xl">
-<!-- :filter="customFilter" -->
   <mip-v-autocomplete m-bind:disabled="!isEditing" m-bind:items="states" item-text="name" label="State"></mip-v-autocomplete>
   <mip-v-btn color="purple darken-3 white--text" fab="" small="" on="tap:MIP.setData({isEditing: !m.isEditing})">
     <mip-v-icon m-bind:class="{hide:!isEditing}">mdi-close</mip-v-icon>
@@ -217,77 +298,6 @@ z-index|number / string|/|
     MIP.setData({toSave: false})
   })
 </mip-script>
-<mip-data>
-  <script type="application/json">
-  {
-    loading: false,
-    asyncItems: [],
-    searchVal: '',
-    select: '',
-    states: [
-      'Alabama',
-      'Alaska',
-      'American Samoa',
-      'Arizona',
-      'Arkansas',
-      'California',
-      'Colorado',
-      'Connecticut',
-      'Delaware',
-      'District of Columbia',
-      'Federated States of Micronesia',
-      'Florida',
-      'Georgia',
-      'Guam',
-      'Hawaii',
-      'Idaho',
-      'Illinois',
-      'Indiana',
-      'Iowa',
-      'Kansas',
-      'Kentucky',
-      'Louisiana',
-      'Maine',
-      'Marshall Islands',
-      'Maryland',
-      'Massachusetts',
-      'Michigan',
-      'Minnesota',
-      'Mississippi',
-      'Missouri',
-      'Montana',
-      'Nebraska',
-      'Nevada',
-      'New Hampshire',
-      'New Jersey',
-      'New Mexico',
-      'New York',
-      'North Carolina',
-      'North Dakota',
-      'Northern Mariana Islands',
-      'Ohio',
-      'Oklahoma',
-      'Oregon',
-      'Palau',
-      'Pennsylvania',
-      'Puerto Rico',
-      'Rhode Island',
-      'South Carolina',
-      'South Dakota',
-      'Tennessee',
-      'Texas',
-      'Utah',
-      'Vermont',
-      'Virgin Island',
-      'Virginia',
-      'Washington',
-      'West Virginia',
-      'Wisconsin',
-      'Wyoming'
-    ]
-  }
-  </script>
-</mip-data>
 ```
 
 ### Asynchronous items
@@ -297,7 +307,28 @@ z-index|number / string|/|
   <script type="application/json">
     {
       "search": "",
-      "items": []
+      "items": [],
+      "states": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        },
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        },
+        {
+          "id": 5
+        }
+      ],
+      "loading": false,
+      "asyncItems": [],
+      "searchVal": "",
+      "select": ""
     }
   </script>
 </mip-data>
@@ -324,7 +355,4 @@ z-index|number / string|/|
     val &amp;&amp; val !== MIP.getData(&apos;select&apos;) &amp;&amp; querySelections(val)
   })
 </mip-script>
-<script src="http://localhost:8080/dist/mip.js"></script>
-<script src="/dev/main.js"></script>
-<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```

@@ -35,18 +35,113 @@
     </mip-shell>
     <mip-data>
       <script type="application/json">
-      {
-        "descriptionLimit": 60,
-        "model": "",
-        "search": "",
-        "entries": [],
-        "items": [],
-        "isLoading": false
-      }
+        {
+          "model": "",
+          "isEditing": false,
+          "stateNames": [
+            "Alabama",
+            "Alaska",
+            "American Samoa",
+            "Arizona",
+            "Arkansas",
+            "California",
+            "Colorado",
+            "Connecticut",
+            "Delaware",
+            "District of Columbia",
+            "Federated States of Micronesia",
+            "Florida",
+            "Georgia",
+            "Guam",
+            "Hawaii",
+            "Idaho",
+            "Illinois",
+            "Indiana",
+            "Iowa",
+            "Kansas",
+            "Kentucky",
+            "Louisiana",
+            "Maine",
+            "Marshall Islands",
+            "Maryland",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "Mississippi",
+            "Missouri",
+            "Montana",
+            "Nebraska",
+            "Nevada",
+            "New Hampshire",
+            "New Jersey",
+            "New Mexico",
+            "New York",
+            "North Carolina",
+            "North Dakota",
+            "Northern Mariana Islands",
+            "Ohio",
+            "Oklahoma",
+            "Oregon",
+            "Palau",
+            "Pennsylvania",
+            "Puerto Rico",
+            "Rhode Island",
+            "South Carolina",
+            "South Dakota",
+            "Tennessee",
+            "Texas",
+            "Utah",
+            "Vermont",
+            "Virgin Island",
+            "Virginia",
+            "Washington",
+            "West Virginia",
+            "Wisconsin",
+            "Wyoming"
+          ],
+          "descriptionLimit": 60,
+          "search": "",
+          "entries": [],
+          "items": [],
+          "isLoading": false,
+          "states": [{
+            "name": "Florida",
+            "abbr": "FL",
+            "id": 1
+          }, {
+            "name": "Georgia",
+            "abbr": "GA",
+            "id": 2
+          }, {
+            "name": "Nebraska",
+            "abbr": "NE",
+            "id": 3
+          }, {
+            "name": "California",
+            "abbr": "CA",
+            "id": 4
+          }, {
+            "name": "New York",
+            "abbr": "NY",
+            "id": 5
+          }],
+          "toSave": false,
+          "loading": false,
+          "asyncItems": [],
+          "searchVal": "",
+          "select": ""
+        }
       </script>
     </mip-data>
     <h2>基础样式</h2>
-    <div></div>
+
+    <div class="container grid-list-xl">
+      <mip-v-autocomplete
+        m-bind:value.sync="model"
+        m-bind:items="stateNames"
+      >
+      </mip-v-autocomplete>
+    </div>
 
     <h2>Search for Public APIs</h2>
     <div class="container grid-list-xl">
@@ -102,103 +197,8 @@
       })
     </mip-script>
 
-    <!-- <mip-data>
-      <script type="application/json">
-      {
-        autoUpdate: true,
-        friends: ['Sandra Adams', 'Britta Holt'],
-        isUpdating: false,
-        name: 'Midnight Crew',
-        people: [
-          { header: 'Group 1' },
-          { name: 'Sandra Adams', group: 'Group 1', avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg' },
-          { name: 'Ali Connors', group: 'Group 1', avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg' },
-          { name: 'Trevor Hansen', group: 'Group 1', avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg' },
-          { name: 'Tucker Smith', group: 'Group 1', avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg' },
-          { divider: true },
-          { header: 'Group 2' },
-          { name: 'Britta Holt', group: 'Group 2', avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg' },
-          { name: 'Jane Smith ', group: 'Group 2', avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg' },
-          { name: 'John Smith', group: 'Group 2', avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg' },
-          { name: 'Sandra Williams', group: 'Group 2', avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg' }
-        ],
-        title: 'The summer breeze'
-      }
-      </script>
-    </mip-data>
-    <h2>Scoped slots</h2>
-    <v-autocomplete
-      m-bind:value.sync="friends"
-      m-bind:disabled="isUpdating"
-      m-bind:items="people"
-      box
-      chips
-      color="blue-grey lighten-2"
-      label="Select"
-      item-text="name"
-      item-value="name"
-      multiple
-    >
-      <template
-        slot="selection"
-        slot-scope="data"
-      >
-        <mip-v-chip
-          :selected="data.selected"
-          close
-          class="chip--select-multi"
-          @input="data.parent.selectItem(data.item)"
-        >
-          <mip-v-avatar>
-            <img :src="data.item.avatar">
-          </mip-v-avatar>
-          {{ data.item.name }}
-        </mip-v-chip>
-      </template>
-      <template
-        slot="item"
-        slot-scope="data"
-      >
-        <template v-if="typeof data.item !== 'object'">
-          <mip-v-list-tile-content v-text="data.item"></mip-v-list-tile-content>
-        </template>
-        <template v-else>
-          <mip-v-list-tile-avatar>
-            <img :src="data.item.avatar">
-          </mip-v-list-tile-avatar>
-          <mip-v-list-tile-content>
-            <mip-v-list-tile-title v-html="data.item.name"></mip-v-list-tile-title>
-            <mip-v-list-tile-sub-title v-html="data.item.group"></mip-v-list-tile-sub-title>
-          </mip-v-list-tile-content>
-        </template>
-      </template>
-    </mip-v-autocomplete>
-    <mip-script>
-      MIP.watch('isUpdating', function (val) {
-        if (val) {
-          setTimeout(() => MIP.setData({isUpdating: false}), 3000)
-        }
-      })
-    </mip-script> -->
-
-    <mip-data>
-      <script type="application/json">
-      {
-        isEditing: false,
-        states: [
-          { name: 'Florida', abbr: 'FL', id: 1 },
-          { name: 'Georgia', abbr: 'GA', id: 2 },
-          { name: 'Nebraska', abbr: 'NE', id: 3 },
-          { name: 'California', abbr: 'CA', id: 4 },
-          { name: 'New York', abbr: 'NY', id: 5 }
-        ],
-        toSave: false
-      }
-      </script>
-    </mip-data>
     <h2>Custom filter on autocomplete</h2>
     <div class="container grid-list-xl">
-    <!-- :filter="customFilter" -->
       <mip-v-autocomplete
         m-bind:disabled="!isEditing"
         m-bind:items="states"
@@ -230,77 +230,6 @@
       })
     </mip-script>
 
-    <mip-data>
-      <script type="application/json">
-      {
-        loading: false,
-        asyncItems: [],
-        searchVal: '',
-        select: '',
-        states: [
-          'Alabama',
-          'Alaska',
-          'American Samoa',
-          'Arizona',
-          'Arkansas',
-          'California',
-          'Colorado',
-          'Connecticut',
-          'Delaware',
-          'District of Columbia',
-          'Federated States of Micronesia',
-          'Florida',
-          'Georgia',
-          'Guam',
-          'Hawaii',
-          'Idaho',
-          'Illinois',
-          'Indiana',
-          'Iowa',
-          'Kansas',
-          'Kentucky',
-          'Louisiana',
-          'Maine',
-          'Marshall Islands',
-          'Maryland',
-          'Massachusetts',
-          'Michigan',
-          'Minnesota',
-          'Mississippi',
-          'Missouri',
-          'Montana',
-          'Nebraska',
-          'Nevada',
-          'New Hampshire',
-          'New Jersey',
-          'New Mexico',
-          'New York',
-          'North Carolina',
-          'North Dakota',
-          'Northern Mariana Islands',
-          'Ohio',
-          'Oklahoma',
-          'Oregon',
-          'Palau',
-          'Pennsylvania',
-          'Puerto Rico',
-          'Rhode Island',
-          'South Carolina',
-          'South Dakota',
-          'Tennessee',
-          'Texas',
-          'Utah',
-          'Vermont',
-          'Virgin Island',
-          'Virginia',
-          'Washington',
-          'West Virginia',
-          'Wisconsin',
-          'Wyoming'
-        ]
-      }
-      </script>
-    </mip-data>
     <h2>Asynchronous items</h2>
     <div class="container grid-list-xl">
       <mip-v-autocomplete
@@ -337,8 +266,6 @@
         val && val !== MIP.getData('select') && querySelections(val)
       })
     </mip-script>
-
-    <!-- <h2>Advanced slots</h2> -->
 
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
