@@ -55,29 +55,41 @@ const parseExamples = async (tagName) => {
       const current = examples[examples.length - 1]
 
       if (node.tagName === 'h2') {
-        return examples.concat({ title: $(node).text() })
+        return examples.concat({
+          title: $(node).text(),
+          descriptions: [],
+          fragments: []
+        })
+      }
+
+      if (node.tagName === 'p') {
+        return examples.slice(0, -1).concat({
+          ...current,
+          descriptions: [...current.descriptions, $(node).html()]
+        })
       }
 
       const fragment = $('<div></div>').append(node).html()
 
       return examples.slice(0, -1).concat({
         ...current,
-        fragments: current.fragments ? [...current.fragments, fragment] : [fragment]
+        fragments: [...current.fragments, fragment]
       })
-    }, [{}])
-    .map(({ fragments, ...example }) => ({
-      ...example,
-      html: fragments.map(fragment => {
+    }, [{
+      descriptions: [],
+      fragments: []
+    }])
+    .map(({ fragments, ...example }) => {
+      const html = fragments.map(fragment => {
         const lines = fragment.split('\n')
         const align = lines[lines.length - 1].match(/\s*/)[0].length
 
         return [lines[0], ...lines.slice(1).map(line => line.slice(align))].join('\n')
       }).join('\n')
-    }))
-    .map(({ html, ...example }) => {
       const dataHtml = JSON.stringify(data, (key, val) => Number.isInteger(+key) || html.includes(key) ? val : undefined, 2)
         .split('\n')
         .join('\n    ')
+
       return {
         ...example,
         html: dataHtml === '{}' || dataHtml === 'null'
@@ -217,6 +229,8 @@ const generateDoc = async (tagName) => {
   println(replaceMIPTagName(doc.headerText))
 
   println('## 用例')
+
+  examples[0].descriptions.length && println(examples[0].descriptions.join('\n'))
 
   println(getHtmlBlock(examples[0].html))
 

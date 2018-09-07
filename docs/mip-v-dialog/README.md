@@ -131,8 +131,6 @@ width|string / number|'auto'|设置对话框的宽度
     }
   </script>
 </mip-data>
-<p>&#x4F7F;&#x7528; hide-overlay &#x9690;&#x85CF;&#x8499;&#x5C42;</p>
-<p>&#x4F7F;&#x7528; persistent &#x70B9;&#x51FB;&#x5BF9;&#x8BDD;&#x6846;&#x5916;&#x90E8;&#x4E0D;&#x80FD;&#x4F7F;&#x5176;&#x5173;&#x95ED;</p>
 <mip-v-btn outline="" large="" fab="" color="indigo" on="tap:MIP.setData({show3:true})">
   <mip-v-icon>edit</mip-v-icon>
 </mip-v-btn>
