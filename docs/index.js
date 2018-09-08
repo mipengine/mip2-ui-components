@@ -3,7 +3,6 @@ const path = require('path')
 
 const readdir = require('recursive-readdir')
 const merge = require('lodash/merge')
-const cheerio = require('cheerio')
 
 require('../dist/vuetify')
 
@@ -47,6 +46,8 @@ const getMixinDoc = getOfficialDoc('mixins')
 const getGenericProps = () => getOfficialDoc('generic')('Props')
 
 const parseExamples = async (tagName) => {
+  const cheerio = require('cheerio')
+
   const html = await fs.readFile(path.resolve(__dirname, '../dev', `${tagName}.html`), 'utf8')
   const $ = cheerio.load(html)
   const data = JSON.parse($('mip-data > script[type="application/json"]').html())
