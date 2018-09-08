@@ -73,7 +73,7 @@ value|number|/|当前选中页
     }
   </script>
 </mip-data>
-<mip-v-pagination m-bind:value.sync="page" length="4" circle="">
+<mip-v-pagination m-bind:value.sync="page" length="4" circle>
 </mip-v-pagination>
 ```
 

@@ -11,7 +11,7 @@
     <mip-v-card>
       <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" height="200px"></mip-v-card-media>
 
-      <mip-v-card-title primary-title="">
+      <mip-v-card-title primary-title>
         <div>
           <h3 class="headline mb-0">Kangaroo Valley Safari</h3>
           <div>Located two hours south of Sydney in the <br>Southern Highlands of New South Wales, ...</div>
@@ -19,8 +19,8 @@
       </mip-v-card-title>
 
       <mip-v-card-actions>
-        <mip-v-btn flat="" color="orange">Share</mip-v-btn>
-        <mip-v-btn flat="" color="orange">Explore</mip-v-btn>
+        <mip-v-btn flat color="orange">Share</mip-v-btn>
+        <mip-v-btn flat color="orange">Explore</mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
     </div>
@@ -102,8 +102,8 @@ primary-title|boolean|/|应用主标题特定的内边距
         </div>
       </mip-v-card-title>
       <mip-v-card-actions>
-        <mip-v-btn flat="" color="orange">Share</mip-v-btn>
-        <mip-v-btn flat="" color="orange">Explore</mip-v-btn>
+        <mip-v-btn flat color="orange">Share</mip-v-btn>
+        <mip-v-btn flat color="orange">Explore</mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </div>
@@ -114,11 +114,11 @@ primary-title|boolean|/|应用主标题特定的内边距
 
 ```html
 <div id="e3" style="max-width: 400px; margin: auto;" class="grey lighten-3">
-  <mip-v-toolbar color="pink" dark="">
+  <mip-v-toolbar color="pink" dark>
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
     <mip-v-toolbar-title>My Music</mip-v-toolbar-title>
     <mip-v-spacer></mip-v-spacer>
-    <mip-v-btn icon="">
+    <mip-v-btn icon>
       <mip-v-icon>search</mip-v-icon>
     </mip-v-btn>
   </mip-v-toolbar>
@@ -128,12 +128,12 @@ primary-title|boolean|/|应用主标题特定的内边距
         <div class="layout row wrap">
           <div class="flex xs12">
             <mip-v-card color="blue-grey darken-2" class="white--text">
-              <mip-v-card-title primary-title="">
+              <mip-v-card-title primary-title>
                 <div class="headline">Unlimited music now</div>
                 <div>Listen to your favorite artists and albums whenever and wherever, online and offline.</div>
               </mip-v-card-title>
               <mip-v-card-actions>
-                <mip-v-btn flat="" dark="">Listen now</mip-v-btn>
+                <mip-v-btn flat dark>Listen now</mip-v-btn>
               </mip-v-card-actions>
             </mip-v-card>
           </div>
@@ -142,10 +142,10 @@ primary-title|boolean|/|应用主标题特定的内边距
             <mip-v-card color="cyan darken-2" class="white--text">
               <div class="layout">
                 <div class="flex xs5">
-                  <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" height="125px" contain=""></mip-v-card-media>
+                  <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" height="125px" contain></mip-v-card-media>
                 </div>
                 <div class="flex xs7">
-                  <mip-v-card-title primary-title="">
+                  <mip-v-card-title primary-title>
                     <div>
                       <div class="headline">Supermodel</div>
                       <div>Foster the People</div>
@@ -154,7 +154,7 @@ primary-title|boolean|/|应用主标题特定的内边距
                   </mip-v-card-title>
                 </div>
               </div>
-              <mip-v-divider light=""></mip-v-divider>
+              <mip-v-divider light></mip-v-divider>
               <mip-v-card-actions class="pa-3">
                 Rate this album
                 <mip-v-spacer></mip-v-spacer>
@@ -171,7 +171,7 @@ primary-title|boolean|/|应用主标题特定的内边距
             <mip-v-card color="purple" class="white--text">
               <div class="layout row">
                 <div class="flex xs7">
-                  <mip-v-card-title primary-title="">
+                  <mip-v-card-title primary-title>
                     <div>
                       <div class="headline">Halycon Days</div>
                       <div>Ellie Goulding</div>
@@ -180,10 +180,10 @@ primary-title|boolean|/|应用主标题特定的内边距
                   </mip-v-card-title>
                 </div>
                 <div class="flex xs5">
-                  <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/halcyon.png" height="125px" contain=""></mip-v-card-media>
+                  <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/halcyon.png" height="125px" contain></mip-v-card-media>
                 </div>
               </div>
-              <mip-v-divider light=""></mip-v-divider>
+              <mip-v-divider light></mip-v-divider>
               <mip-v-card-actions class="pa-3">
                 Rate this album
                 <mip-v-spacer></mip-v-spacer>
@@ -206,11 +206,11 @@ primary-title|boolean|/|应用主标题特定的内边距
 ```html
 <div class="layout justify-center">
   <div class="flex xs12 sm6">
-    <mip-v-toolbar color="indigo" dark="">
+    <mip-v-toolbar color="indigo" dark>
       <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
       <mip-v-toolbar-title>Discover</mip-v-toolbar-title>
       <mip-v-spacer></mip-v-spacer>
-      <mip-v-btn icon="">
+      <mip-v-btn icon>
         <mip-v-icon>search</mip-v-icon>
       </mip-v-btn>
     </mip-v-toolbar>
@@ -235,13 +235,13 @@ primary-title|boolean|/|应用主标题特定的内边距
 
               <mip-v-card-actions>
                 <mip-v-spacer></mip-v-spacer>
-                <mip-v-btn icon="">
+                <mip-v-btn icon>
                   <mip-v-icon>favorite</mip-v-icon>
                 </mip-v-btn>
-                <mip-v-btn icon="">
+                <mip-v-btn icon>
                   <mip-v-icon>bookmark</mip-v-icon>
                 </mip-v-btn>
-                <mip-v-btn icon="">
+                <mip-v-btn icon>
                   <mip-v-icon>share</mip-v-icon>
                 </mip-v-btn>
               </mip-v-card-actions>
@@ -264,13 +264,13 @@ primary-title|boolean|/|应用主标题特定的内边距
 
                 <mip-v-card-actions>
                   <mip-v-spacer></mip-v-spacer>
-                  <mip-v-btn icon="">
+                  <mip-v-btn icon>
                     <mip-v-icon>favorite</mip-v-icon>
                   </mip-v-btn>
-                  <mip-v-btn icon="">
+                  <mip-v-btn icon>
                     <mip-v-icon>bookmark</mip-v-icon>
                   </mip-v-btn>
-                  <mip-v-btn icon="">
+                  <mip-v-btn icon>
                     <mip-v-icon>share</mip-v-icon>
                   </mip-v-btn>
                 </mip-v-card-actions>
@@ -293,13 +293,13 @@ primary-title|boolean|/|应用主标题特定的内边距
 
               <mip-v-card-actions>
                 <mip-v-spacer></mip-v-spacer>
-                <mip-v-btn icon="">
+                <mip-v-btn icon>
                   <mip-v-icon>favorite</mip-v-icon>
                 </mip-v-btn>
-                <mip-v-btn icon="">
+                <mip-v-btn icon>
                   <mip-v-icon>bookmark</mip-v-icon>
                 </mip-v-btn>
-                <mip-v-btn icon="">
+                <mip-v-btn icon>
                   <mip-v-icon>share</mip-v-icon>
                 </mip-v-btn>
               </mip-v-card-actions>

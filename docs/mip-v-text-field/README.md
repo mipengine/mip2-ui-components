@@ -7,10 +7,10 @@
 ```html
 <div class="container grid-list-xl">
   <div class="layout row wrap">
-    <mip-v-text-field class="flex xs12 md6" label="Regular" single-line=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Solo" single-line="" solo=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Box" single-line="" box=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Outline" single-line="" outline=""></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Regular" single-line></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Solo" single-line solo></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Box" single-line box></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Outline" single-line outline></mip-v-text-field>
   </div>
 </div>
 ```
@@ -84,12 +84,12 @@ value|any|/|输入值
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Regular" disabled></mip-v-text-field>
     <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Regular" readonly></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Solo" solo="" disabled></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Solo" solo="" readonly></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Box" box="" disabled></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Box" box="" readonly></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Outline" outline="" disabled></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Outline" outline="" readonly></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Solo" solo disabled></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Solo" solo readonly></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Box" box disabled></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Box" box readonly></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Outline" outline disabled></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" value="John Doe" label="Outline" outline readonly></mip-v-text-field>
   </div>
 </div>
 ```
@@ -102,15 +102,15 @@ value|any|/|输入值
     <mip-v-text-field class="flex xs12 md6" label="Prepend" prepend-icon="place"></mip-v-text-field>
     <mip-v-text-field class="flex xs12 md6" label="Append" append-icon="place"></mip-v-text-field>
     <mip-v-text-field class="flex xs12 md6" label="Append outer" append-outer-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" solo="" label="Prepend" prepend-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" solo="" label="Append" append-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" solo="" label="Append outer" append-outer-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" box="" label="Prepend" prepend-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" box="" label="Append" append-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" box="" label="Append outer" append-outer-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" outline="" label="Prepend" prepend-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" outline="" label="Append" append-icon="place"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" outline="" label="Append outer" append-outer-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" solo label="Prepend" prepend-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" solo label="Append" append-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" solo label="Append outer" append-outer-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" box label="Prepend" prepend-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" box label="Append" append-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" box label="Append outer" append-outer-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" outline label="Prepend" prepend-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" outline label="Append" append-icon="place"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" outline label="Append outer" append-outer-icon="place"></mip-v-text-field>
   </div>
 </div>
 ```
@@ -131,10 +131,10 @@ value|any|/|输入值
 </mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message1" label="Regular" clearable=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message2" solo="" label="Solo" clearable=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message3" box="" label="Box" clearable=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message4" label="Outline" outline="" clearable=""></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message1" label="Regular" clearable></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message2" solo label="Solo" clearable></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message3" box label="Box" clearable></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="message4" label="Outline" outline clearable></mip-v-text-field>
   
   </div>
 </div>
@@ -164,8 +164,8 @@ value|any|/|输入值
     }
   </script>
 </mip-data>
-<mip-v-flex xs12="">
-  <mip-v-text-field m-bind:value.sync="message" m-bind:append-icon="marker ? &apos;mdi-map-marker&apos; : &apos;mdi-map-marker-off&apos;" m-bind:append-outer-icon="message ? &apos;mdi-send&apos; : &apos;mdi-microphone&apos;" m-bind:prepend-icon="icons[iconIndex]" box="" clear-icon="mdi-close-circle" clearable="" label="Message" type="text" on="click-append:MIP.setData({marker: !m.marker})
+<mip-v-flex xs12>
+  <mip-v-text-field m-bind:value.sync="message" m-bind:append-icon="marker ? &apos;mdi-map-marker&apos; : &apos;mdi-map-marker-off&apos;" m-bind:append-outer-icon="message ? &apos;mdi-send&apos; : &apos;mdi-microphone&apos;" m-bind:prepend-icon="icons[iconIndex]" box clear-icon="mdi-close-circle" clearable label="Message" type="text" on="click-append:MIP.setData({marker: !m.marker})
         click-append-outer:MIP.setData({sendMessage: true})
         click-prepend:MIP.setData({changeIcon: true})
         click-clear:MIP.setData({message: &apos;&apos;})">
@@ -186,9 +186,9 @@ value|any|/|输入值
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="title" counter="25" hint="This field uses counter prop" label="Regular"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="description" counter="" maxlength="25" hint="This field uses maxlength attribute" label="Limit exceeded"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="title" counter="25" box="" label="Box"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="title" counter="25" label="Outline" outline=""></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="description" counter maxlength="25" hint="This field uses maxlength attribute" label="Limit exceeded"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="title" counter="25" box label="Box"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="title" counter="25" label="Outline" outline></mip-v-text-field>
   </div>
 </div>
 ```
@@ -210,10 +210,10 @@ value|any|/|输入值
 </mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
-    <mip-v-text-field class="flex xs12 sm6" m-bind:value.sync="password" m-bind:append-icon="show1 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show1 ? &apos;text&apos; : &apos;password&apos;" name="input-10-1" label="Normal with hint text" hint="At least 8 characters" counter="" on="click-append:MIP.setData({show1: !m.show1})"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 sm6" m-bind:value.sync="password" m-bind:append-icon="show1 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show1 ? &apos;text&apos; : &apos;password&apos;" name="input-10-1" label="Normal with hint text" hint="At least 8 characters" counter on="click-append:MIP.setData({show1: !m.show1})"></mip-v-text-field>
     <mip-v-text-field class="flex xs12 sm6 input-group--focused" m-bind:append-icon="show2 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show2 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Visible" hint="At least 8 characters" value="wqfasds" on="click-append:MIP.setData({show2: !m.show2})"></mip-v-text-field>
     <mip-v-text-field class="flex xs12 sm6 input-group--focused" m-bind:append-icon="show3 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show3 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Not visible" hint="At least 8 characters" value="wqfasds" on="click-append:MIP.setData({show3: !m.show3})"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 sm6" m-bind:append-icon="show4 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show4 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Error" hint="At least 8 characters" value="Pa" error="" on="click-append:MIP.setData({show4: !m.show4})"></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 sm6" m-bind:append-icon="show4 ? &apos;visibility_off&apos; : &apos;visibility&apos;" m-bind:type="show4 ? &apos;text&apos; : &apos;password&apos;" name="input-10-2" label="Error" hint="At least 8 characters" value="Pa" error on="click-append:MIP.setData({show4: !m.show4})"></mip-v-text-field>
   </div>
 </div>
 ```
@@ -223,7 +223,7 @@ value|any|/|输入值
 ```html
 <div class="container grid-list-xl">
   <div class="layout row wrap">
-    <mip-v-text-field class="flex xs12 md6" label="Subject" value="Plans for the weekend" single-line="" full-width="" hide-details=""></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Subject" value="Plans for the weekend" single-line full-width hide-details></mip-v-text-field>
   </div>
 </div>
 ```
@@ -234,11 +234,11 @@ value|any|/|输入值
 <div class="container grid-list-xl">
   <div class="layout row wrap">
     <mip-v-text-field class="flex xs12 md6" label="Your product or service" value="Grocery delivery" hint="For example, flowers or used cars"></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Your landing page" hint="www.example.com/page" persistent-hint=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Your product or service" value="Grocery delivery" hint="For example, flowers or used cars" box=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Your landing page" hint="www.example.com/page" persistent-hint="" box=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Your product or service" value="Grocery delivery" hint="For example, flowers or used cars" outline=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Your landing page" hint="www.example.com/page" persistent-hint="" outline=""></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Your landing page" hint="www.example.com/page" persistent-hint></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Your product or service" value="Grocery delivery" hint="For example, flowers or used cars" box></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Your landing page" hint="www.example.com/page" persistent-hint box></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Your product or service" value="Grocery delivery" hint="For example, flowers or used cars" outline></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Your landing page" hint="www.example.com/page" persistent-hint outline></mip-v-text-field>
   </div>
 </div>
 ```
@@ -269,8 +269,8 @@ value|any|/|输入值
 </mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" box=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="last" label="Last Name" box=""></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" box></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="last" label="Last Name" box></mip-v-text-field>
   </div>
 </div>
 ```
@@ -288,8 +288,8 @@ value|any|/|输入值
 </mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" solo=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="last" label="Last Name" solo-inverted=""></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" solo></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="last" label="Last Name" solo-inverted></mip-v-text-field>
   </div>
 </div>
 ```
@@ -307,8 +307,8 @@ value|any|/|输入值
 </mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" outline=""></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="last" label="Last Name" outline=""></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="first" label="First Name" outline></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" m-bind:value.sync="last" label="Last Name" outline></mip-v-text-field>
   </div>
 </div>
 ```
@@ -387,7 +387,7 @@ value|any|/|输入值
 </mip-data>
 <div class="container grid-list-xl">
   <mip-v-checkbox m-bind:input-value.sync="custom" label="Custom progress bar"></mip-v-checkbox>
-  <mip-v-text-field m-bind:value.sync="progressValue" color="cyan darken" label="Text field" placeholder="Start typing..." loading="">
+  <mip-v-text-field m-bind:value.sync="progressValue" color="cyan darken" label="Text field" placeholder="Start typing..." loading>
     <mip-v-progress-linear m-bind:class="{hide: !custom}" slot="progress" m-bind:value="progress" m-bind:color="color" height="7"></mip-v-progress-linear>
   </mip-v-text-field>
 </div>

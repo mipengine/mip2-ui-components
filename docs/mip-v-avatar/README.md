@@ -49,18 +49,18 @@ tile|boolean|/|删除边看弧度
 ```html
 <div class="layout align-center justify-space-around wrap">
   <mip-v-avatar color="indigo">
-    <mip-v-icon dark="">account_circle</mip-v-icon>
+    <mip-v-icon dark>account_circle</mip-v-icon>
   </mip-v-avatar>
 
   <mip-v-avatar>
     <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
   </mip-v-avatar>
 
-  <mip-v-badge overlap="">
+  <mip-v-badge overlap>
     <span slot="badge">3</span>
 
     <mip-v-avatar color="purple red--after">
-      <mip-v-icon dark="">notifications</mip-v-icon>
+      <mip-v-icon dark>notifications</mip-v-icon>
     </mip-v-avatar>
   </mip-v-badge>
 
@@ -100,7 +100,7 @@ tile|boolean|/|删除边看弧度
 </div>
 <div class="section">
   <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="purple red--after">
-    <mip-v-icon dark="">favorite</mip-v-icon>
+    <mip-v-icon dark>favorite</mip-v-icon>
   </mip-v-avatar>
 </div>
 ```

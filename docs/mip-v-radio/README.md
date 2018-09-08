@@ -94,11 +94,11 @@ value|any|/|设置选择控件组件的值
     }
   </script>
 </mip-data>
-<mip-v-radio-group m-bind:value.sync="column" column="">
+<mip-v-radio-group m-bind:value.sync="column" column>
   <mip-v-radio label="Option 1" value="radio-1"></mip-v-radio>
   <mip-v-radio label="Option 2" value="radio-2"></mip-v-radio>
 </mip-v-radio-group>
-<mip-v-radio-group m-bind:value.sync="row" row="">
+<mip-v-radio-group m-bind:value.sync="row" row>
   <mip-v-radio label="Option 1" value="radio-1"></mip-v-radio>
   <mip-v-radio label="Option 2" value="radio-2"></mip-v-radio>
 </mip-v-radio-group>
@@ -116,7 +116,7 @@ value|any|/|设置选择控件组件的值
     }
   </script>
 </mip-data>
-<mip-v-radio-group m-bind:value.sync="ex7" column="">
+<mip-v-radio-group m-bind:value.sync="ex7" column>
   <mip-v-radio label="red" color="red" value="red"></mip-v-radio>
   <mip-v-radio label="red darken-3" color="red darken-3" value="red darken-3"></mip-v-radio>
   <mip-v-radio label="indigo" color="indigo" value="indigo"></mip-v-radio>
@@ -124,7 +124,7 @@ value|any|/|设置选择控件组件的值
   <mip-v-radio label="orange" color="orange" value="orange"></mip-v-radio>
   <mip-v-radio label="orange darken-3" color="orange darken-3" value="orange darken-3"></mip-v-radio>
 </mip-v-radio-group>
-<mip-v-radio-group m-bind:value.sync="ex8" column="">
+<mip-v-radio-group m-bind:value.sync="ex8" column>
   <mip-v-radio label="primary" color="primary" value="primary"></mip-v-radio>
   <mip-v-radio label="secondary" color="secondary" value="secondary"></mip-v-radio>
   <mip-v-radio label="success" color="success" value="success"></mip-v-radio>

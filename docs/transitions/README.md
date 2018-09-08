@@ -6,7 +6,7 @@
 
 ```html
 <mip-v-menu transition="slide-x-transition">
-  <mip-v-btn slot="activator" dark="" color="primary">Slide X Transition</mip-v-btn>
+  <mip-v-btn slot="activator" dark color="primary">Slide X Transition</mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -26,7 +26,7 @@
   </mip-v-list>
 </mip-v-menu>
 <mip-v-menu transition="slide-x-reverse-transition">
-  <mip-v-btn slot="activator" dark="" color="secondary">Slide X Reverse Transition</mip-v-btn>
+  <mip-v-btn slot="activator" dark color="secondary">Slide X Reverse Transition</mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -46,7 +46,7 @@
   </mip-v-list>
 </mip-v-menu>
 <mip-v-menu transition="slide-y-transition">
-  <mip-v-btn slot="activator" dark="" color="primary">Slide Y Transition</mip-v-btn>
+  <mip-v-btn slot="activator" dark color="primary">Slide Y Transition</mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -66,7 +66,7 @@
   </mip-v-list>
 </mip-v-menu>
 <mip-v-menu transition="slide-y-reverse-transition">
-  <mip-v-btn slot="activator" dark="" color="secondary">Slide Y Reverse Transition</mip-v-btn>
+  <mip-v-btn slot="activator" dark color="secondary">Slide Y Reverse Transition</mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>

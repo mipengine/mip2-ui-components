@@ -63,11 +63,11 @@ true-value|any|/|设置真值
     }
   </script>
 </mip-data>
-<mip-v-checkbox label="on" input-value="true" value=""></mip-v-checkbox>
-<mip-v-checkbox label="off" value=""></mip-v-checkbox>
-<mip-v-checkbox label="indeterminate" value="" indeterminate=""></mip-v-checkbox>
-<mip-v-checkbox label="on disabled" input-value="true" value="" disabled></mip-v-checkbox>
-<mip-v-checkbox label="off disabled" value="" disabled></mip-v-checkbox>
+<mip-v-checkbox label="on" input-value="true" value></mip-v-checkbox>
+<mip-v-checkbox label="off" value></mip-v-checkbox>
+<mip-v-checkbox label="indeterminate" value indeterminate></mip-v-checkbox>
+<mip-v-checkbox label="on disabled" input-value="true" value disabled></mip-v-checkbox>
+<mip-v-checkbox label="off disabled" value disabled></mip-v-checkbox>
 ```
 
 ### 色彩
@@ -94,18 +94,18 @@ true-value|any|/|设置真值
     }
   </script>
 </mip-data>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="red" color="red" value="red" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="red darken-3" color="red darken-3" value="red darken-3" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="indigo" color="indigo" value="indigo" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="indigo darken-3" color="indigo darken-3" value="indigo darken-3" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="orange" color="orange" value="orange" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="orange darken-3" color="orange darken-3" value="orange darken-3" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="primary" color="primary" value="primary" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="secondary" color="secondary" value="secondary" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="success" color="success" value="success" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="info" color="info" value="info" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="warning" color="warning" value="warning" hide-details=""></mip-v-checkbox>
-<mip-v-checkbox m-bind:input-value.sync="ex4" label="error" color="error" value="error" hide-details=""></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="red" color="red" value="red" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="red darken-3" color="red darken-3" value="red darken-3" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="indigo" color="indigo" value="indigo" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="indigo darken-3" color="indigo darken-3" value="indigo darken-3" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="orange" color="orange" value="orange" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="orange darken-3" color="orange darken-3" value="orange darken-3" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="primary" color="primary" value="primary" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="secondary" color="secondary" value="secondary" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="success" color="success" value="success" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="info" color="info" value="info" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="warning" color="warning" value="warning" hide-details></mip-v-checkbox>
+<mip-v-checkbox m-bind:input-value.sync="ex4" label="error" color="error" value="error" hide-details></mip-v-checkbox>
 ```
 
 ### 和文本框内联
@@ -121,11 +121,11 @@ true-value|any|/|设置真值
   </script>
 </mip-data>
 <div class="layout align-center">
-  <mip-v-checkbox m-bind:input-value.sync="includeFiles" hide-details="" class="shrink mr-2"></mip-v-checkbox>
+  <mip-v-checkbox m-bind:input-value.sync="includeFiles" hide-details class="shrink mr-2"></mip-v-checkbox>
   <mip-v-text-field label="Include files"></mip-v-text-field>
 </div>
 <div class="layout align-center">
-  <mip-v-checkbox m-bind:input-value.sync="enabled" hide-details="" class="shrink mr-2"></mip-v-checkbox>
+  <mip-v-checkbox m-bind:input-value.sync="enabled" hide-details class="shrink mr-2"></mip-v-checkbox>
   <mip-v-text-field m-bind:disabled="!enabled" label="I only work if you check the box"></mip-v-text-field>
 </div>
 ```

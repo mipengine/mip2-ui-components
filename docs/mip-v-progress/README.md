@@ -73,21 +73,21 @@ value|number / string|/|当前进度的百分比值
 ### 不定圆环
 
 ```html
-<mip-v-progress-circular indeterminate="" color="primary"></mip-v-progress-circular>
-<mip-v-progress-circular indeterminate="" color="red"></mip-v-progress-circular>
-<mip-v-progress-circular indeterminate="" color="purple"></mip-v-progress-circular>
-<mip-v-progress-circular indeterminate="" color="green"></mip-v-progress-circular>
-<mip-v-progress-circular indeterminate="" color="amber"></mip-v-progress-circular>
+<mip-v-progress-circular indeterminate color="primary"></mip-v-progress-circular>
+<mip-v-progress-circular indeterminate color="red"></mip-v-progress-circular>
+<mip-v-progress-circular indeterminate color="purple"></mip-v-progress-circular>
+<mip-v-progress-circular indeterminate color="green"></mip-v-progress-circular>
+<mip-v-progress-circular indeterminate color="amber"></mip-v-progress-circular>
 ```
 
 ### 圆环大小和宽度
 
 ```html
-<mip-v-progress-circular size="50" color="primary" indeterminate=""></mip-v-progress-circular>
-<mip-v-progress-circular line-width="3" color="red" indeterminate=""></mip-v-progress-circular>
-<mip-v-progress-circular size="70" line-width="7" color="purple" indeterminate=""></mip-v-progress-circular>
-<mip-v-progress-circular line-width="3" color="green" indeterminate=""></mip-v-progress-circular>
-<mip-v-progress-circular size="50" color="amber" indeterminate=""></mip-v-progress-circular>
+<mip-v-progress-circular size="50" color="primary" indeterminate></mip-v-progress-circular>
+<mip-v-progress-circular line-width="3" color="red" indeterminate></mip-v-progress-circular>
+<mip-v-progress-circular size="70" line-width="7" color="purple" indeterminate></mip-v-progress-circular>
+<mip-v-progress-circular line-width="3" color="green" indeterminate></mip-v-progress-circular>
+<mip-v-progress-circular size="50" color="amber" indeterminate></mip-v-progress-circular>
 ```
 
 ### 圆环环绕
@@ -121,7 +121,7 @@ value|number / string|/|当前进度的百分比值
 ### 不定线条
 
 ```html
-<mip-v-progress-linear indeterminate=""></mip-v-progress-linear>
+<mip-v-progress-linear indeterminate></mip-v-progress-linear>
 ```
 
 ### 缓冲
@@ -136,7 +136,7 @@ value|number / string|/|当前进度的百分比值
     }
   </script>
 </mip-data>
-<mip-v-progress-linear m-bind:value.sync="buffer" m-bind:buffer-value="bufferValue" buffer=""></mip-v-progress-linear>
+<mip-v-progress-linear m-bind:value.sync="buffer" m-bind:buffer-value="bufferValue" buffer></mip-v-progress-linear>
 ```
 
 ### 自定义高度和上下文色彩

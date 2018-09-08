@@ -207,7 +207,7 @@ z-index|number / string|/|
   </script>
 </mip-data>
 <div class="container grid-list-xl">
-  <mip-v-autocomplete m-bind:value.sync="model" m-bind:items="items" m-bind:loading="isLoading" m-bind:search-input.sync="search" hide-no-data="" hide-selected="" item-text="Description" item-value="API" label="Public APIs" placeholder="Start typing to Search" prepend-icon="mdi-database-search" return-object=""></mip-v-autocomplete>
+  <mip-v-autocomplete m-bind:value.sync="model" m-bind:items="items" m-bind:loading="isLoading" m-bind:search-input.sync="search" hide-no-data hide-selected item-text="Description" item-value="API" label="Public APIs" placeholder="Start typing to Search" prepend-icon="mdi-database-search" return-object></mip-v-autocomplete>
 </div>
 <mip-script>
   MIP.watch(&apos;entries&apos;, val =&gt; {
@@ -283,7 +283,7 @@ z-index|number / string|/|
 </mip-data>
 <div class="container grid-list-xl">
   <mip-v-autocomplete m-bind:disabled="!isEditing" m-bind:items="states" item-text="name" label="State"></mip-v-autocomplete>
-  <mip-v-btn color="purple darken-3 white--text" fab="" small="" on="tap:MIP.setData({isEditing: !m.isEditing})">
+  <mip-v-btn color="purple darken-3 white--text" fab small on="tap:MIP.setData({isEditing: !m.isEditing})">
     <mip-v-icon m-bind:class="{hide:!isEditing}">mdi-close</mip-v-icon>
     <mip-v-icon m-bind:class="{hide:isEditing}">mdi-pencil</mip-v-icon>
   </mip-v-btn>
@@ -333,7 +333,7 @@ z-index|number / string|/|
   </script>
 </mip-data>
 <div class="container grid-list-xl">
-  <mip-v-autocomplete m-bind:loading="loading" m-bind:items="asyncItems" m-bind:search-input.sync="searchVal" m-bind:value.sync="select" cache-items="" class="mx-3" flat="" hide-no-data="" hide-details="" label="What state are you from?" solo-inverted=""></mip-v-autocomplete>
+  <mip-v-autocomplete m-bind:loading="loading" m-bind:items="asyncItems" m-bind:search-input.sync="searchVal" m-bind:value.sync="select" cache-items class="mx-3" flat hide-no-data hide-details label="What state are you from?" solo-inverted></mip-v-autocomplete>
 </div>
 <mip-script>
   function querySelections (v) {

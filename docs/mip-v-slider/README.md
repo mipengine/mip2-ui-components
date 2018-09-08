@@ -15,10 +15,10 @@
   </script>
 </mip-data>
 <mip-v-slider m-bind:value.sync="slider"></mip-v-slider>
-<mip-v-slider disabled label="Disabled" inverse-label="" value="30"></mip-v-slider>
+<mip-v-slider disabled label="Disabled" inverse-label value="30"></mip-v-slider>
 <mip-v-slider label="Readonly" readonly value="30"></mip-v-slider>
 <mip-v-slider m-bind:value.sync="slider" label="Label"></mip-v-slider>
-<mip-v-slider m-bind:value.sync="slider" inverse-label="" label="Inverse label"></mip-v-slider>
+<mip-v-slider m-bind:value.sync="slider" inverse-label label="Inverse label"></mip-v-slider>
 <mip-v-slider m-bind:value.sync="volume" append-icon="volume_up" prepend-icon="volume_down"></mip-v-slider>
 ```
 
@@ -88,7 +88,7 @@ value|number / string|/|输入值
   <div class="layout row wrap">
     <div class="flex xs12">
       <mip-v-subheader class="pl-0">Show thumb when using slider</mip-v-subheader>
-      <mip-v-slider m-bind:value.sync="slider" thumb-label=""></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider" thumb-label></mip-v-slider>
     </div>
 
     <div class="flex xs12">
@@ -108,7 +108,7 @@ value|number / string|/|输入值
 
     <div class="flex xs12">
       <mip-v-subheader class="pl-0">Always dirty</mip-v-subheader>
-      <mip-v-slider m-bind:value.sync="slider" always-dirty="" hint="Try set it to &apos;0&apos;" persistent-hint="" thumb-label="always"></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider" always-dirty hint="Try set it to &apos;0&apos;" persistent-hint thumb-label="always"></mip-v-slider>
     </div>
   </div>
 </div>
@@ -134,7 +134,7 @@ value|number / string|/|输入值
     }
   </script>
 </mip-data>
-<mip-v-slider m-bind:value.sync="value" step="10" ticks=""></mip-v-slider>
+<mip-v-slider m-bind:value.sync="value" step="10" ticks></mip-v-slider>
 <mip-v-slider m-bind:value.sync="value" step="10">
 </mip-v-slider>
 <mip-v-slider m-bind:value.sync="value" step="10" tick-size="2">
@@ -156,7 +156,7 @@ value|number / string|/|输入值
     }
   </script>
 </mip-data>
-<mip-v-slider m-bind:value.sync="value" step="10" thumb-label="" ticks=""></mip-v-slider>
+<mip-v-slider m-bind:value.sync="value" step="10" thumb-label ticks></mip-v-slider>
 ```
 
 ### 图标
@@ -292,7 +292,7 @@ value|number / string|/|输入值
     }
   </script>
 </mip-data>
-<mip-v-card flat="" color="transparent">
+<mip-v-card flat color="transparent">
   <mip-v-subheader>Default range slider</mip-v-subheader>
 
   <mip-v-card-text>
@@ -310,7 +310,7 @@ value|number / string|/|输入值
   <mip-v-card-text>
     <div class="layout row">
       <div class="flex shrink" style="width: 60px">
-        <mip-v-text-field m-bind:value.sync="value3[0]" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+        <mip-v-text-field m-bind:value.sync="value3[0]" class="mt-0" hide-details single-line type="number"></mip-v-text-field>
       </div>
 
       <div class="flex px-3">
@@ -318,7 +318,7 @@ value|number / string|/|输入值
       </div>
 
       <div class="flex shrink" style="width: 60px">
-        <mip-v-text-field m-bind:value.sync="value3[1]" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+        <mip-v-text-field m-bind:value.sync="value3[1]" class="mt-0" hide-details single-line type="number"></mip-v-text-field>
       </div>
     </div>
   </mip-v-card-text>
@@ -343,7 +343,7 @@ value|number / string|/|输入值
     }
   </script>
 </mip-data>
-<mip-v-card flat="" color="transparent">
+<mip-v-card flat color="transparent">
   <mip-v-subheader>Min and max default slider</mip-v-subheader>
 
   <mip-v-card-text>
@@ -353,7 +353,7 @@ value|number / string|/|输入值
       </div>
 
       <div class="flex shrink" style="width: 60px">
-        <mip-v-text-field m-bind:value.sync="slider0" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+        <mip-v-text-field m-bind:value.sync="slider0" class="mt-0" hide-details single-line type="number"></mip-v-text-field>
       </div>
     </div>
   </mip-v-card-text>
@@ -363,13 +363,13 @@ value|number / string|/|输入值
   <mip-v-card-text>
     <div class="layout row">
       <div class="flex shrink" style="width: 60px">
-        <mip-v-text-field m-bind:value.sync="range[0]" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+        <mip-v-text-field m-bind:value.sync="range[0]" class="mt-0" hide-details single-line type="number"></mip-v-text-field>
       </div>
       <div class="flex px-3">
         <mip-v-range-slider m-bind:value.sync="range" m-bind:max="max" m-bind:min="min"></mip-v-range-slider>
       </div>
       <div class="flex shrink" style="width: 60px">
-        <mip-v-text-field m-bind:value.sync="range[1]" class="mt-0" hide-details="" single-line="" type="number"></mip-v-text-field>
+        <mip-v-text-field m-bind:value.sync="range[1]" class="mt-0" hide-details single-line type="number"></mip-v-text-field>
       </div>
     </div>
   </mip-v-card-text>

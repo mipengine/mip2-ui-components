@@ -5,9 +5,9 @@
 ## 用例
 
 ```html
-<mip-v-chip close="">Example Chip</mip-v-chip>
+<mip-v-chip close>Example Chip</mip-v-chip>
 <mip-v-chip>Example Chip</mip-v-chip>
-<mip-v-chip close="">
+<mip-v-chip close>
   <mip-v-avatar>
     <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="trevor">
   </mip-v-avatar>
@@ -61,17 +61,17 @@ value|boolean|true|控制可见性
 </mip-v-chip>
 <mip-v-chip color="orange" text-color="white">
   Premium
-  <mip-v-icon right="">star</mip-v-icon>
+  <mip-v-icon right>star</mip-v-icon>
 </mip-v-chip>
 <mip-v-chip color="primary" text-color="white">
   1 Year
-  <mip-v-icon right="">cake</mip-v-icon>
+  <mip-v-icon right>cake</mip-v-icon>
 </mip-v-chip>
 <mip-v-chip color="green" text-color="white">
   <mip-v-avatar class="green darken-4">1</mip-v-avatar>
   Years
 </mip-v-chip>
-<mip-v-chip close="" color="teal" text-color="white">
+<mip-v-chip close color="teal" text-color="white">
   <mip-v-avatar>
     <mip-v-icon>check_circle</mip-v-icon>
   </mip-v-avatar>
@@ -82,21 +82,21 @@ value|boolean|true|控制可见性
 ### 轮廓
 
 ```html
-<mip-v-chip outline="" color="secondary">Outline</mip-v-chip>
-<mip-v-chip outline="" color="primary">Colored</mip-v-chip>
-<mip-v-chip outline="" color="red">
-  <mip-v-icon left="">build</mip-v-icon>Icon
+<mip-v-chip outline color="secondary">Outline</mip-v-chip>
+<mip-v-chip outline color="primary">Colored</mip-v-chip>
+<mip-v-chip outline color="red">
+  <mip-v-icon left>build</mip-v-icon>Icon
 </mip-v-chip>
 ```
 
 ### 标签
 
 ```html
-<mip-v-chip label="">Label</mip-v-chip>
-<mip-v-chip label="" color="pink" text-color="white">
-  <mip-v-icon left="">label</mip-v-icon>Tags
+<mip-v-chip label>Label</mip-v-chip>
+<mip-v-chip label color="pink" text-color="white">
+  <mip-v-icon left>label</mip-v-icon>Tags
 </mip-v-chip>
-<mip-v-chip label="" outline="" color="red">Outline</mip-v-chip>
+<mip-v-chip label outline color="red">Outline</mip-v-chip>
 ```
 
 ### 可关闭
@@ -112,19 +112,19 @@ value|boolean|true|控制可见性
     }
   </script>
 </mip-data>
-<mip-v-btn color="primary" dark="" on="click:MIP.setData({chip1: true, chip2: true, chip3: true, chip4: true})">
+<mip-v-btn color="primary" dark on="click:MIP.setData({chip1: true, chip2: true, chip3: true, chip4: true})">
   Reset Chips
 </mip-v-btn>
-<mip-v-chip m-bind:value.sync="chip1" close="">
+<mip-v-chip m-bind:value.sync="chip1" close>
   Closable
 </mip-v-chip>
-<mip-v-chip m-bind:value.sync="chip2" close="" color="red" text-color="white">
+<mip-v-chip m-bind:value.sync="chip2" close color="red" text-color="white">
   Remove
 </mip-v-chip>
-<mip-v-chip m-bind:value.sync="chip3" close="" color="green" outline="">
+<mip-v-chip m-bind:value.sync="chip3" close color="green" outline>
   Success
 </mip-v-chip>
-<mip-v-chip m-bind:value.sync="chip4" close="" color="orange" label="" outline="">
+<mip-v-chip m-bind:value.sync="chip4" close color="orange" label outline>
   Complete
 </mip-v-chip>
 ```

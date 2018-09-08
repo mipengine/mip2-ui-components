@@ -59,14 +59,14 @@
       </div>
 
     </div>
-    <mip-v-btn block="" color="primary" dark="" on="click:MIP.setData({snackbar:true})">
+    <mip-v-btn block color="primary" dark on="click:MIP.setData({snackbar:true})">
       Show Snackbar
     </mip-v-btn>
   </mip-v-card-text>
 
   <mip-v-snackbar m-bind:value.sync="snackbar" m-bind:timeout="+timeout" m-bind:left="x === &apos;left&apos;" m-bind:right="x === &apos;right&apos;" m-bind:top="y === &apos;top&apos;" m-bind:bottom="y === &apos;bottom&apos;" m-bind:multi-line="mode === &apos;multi-line&apos;" m-bind:vertical="mode === &apos;vertical&apos;" toppx="44">
     <span m-text="text"></span>
-    <mip-v-btn color="pink" flat="" on="click:MIP.setData({snackbar:false})">
+    <mip-v-btn color="pink" flat on="click:MIP.setData({snackbar:false})">
       Close
     </mip-v-btn>
   </mip-v-snackbar>
@@ -76,7 +76,7 @@
     <div class="container fluid">
       <div class="layout row wrap">
         <div class="flex xs12">
-          <mip-v-radio-group m-bind:value.sync="color" row="">
+          <mip-v-radio-group m-bind:value.sync="color" row>
             <mip-v-radio color="success" label="success" value="success"></mip-v-radio>
             <mip-v-radio color="info" label="info" value="info"></mip-v-radio>
             <mip-v-radio color="error" label="error" value="error"></mip-v-radio>
@@ -102,13 +102,13 @@
       </div>
     </div>
 
-    <mip-v-btn block="" color="primary" dark="" on="click:MIP.setData({snackbar0:true})">
+    <mip-v-btn block color="primary" dark on="click:MIP.setData({snackbar0:true})">
       Show Snackbar0
     </mip-v-btn>
   </mip-v-card-text>
   <mip-v-snackbar m-bind:value.sync="snackbar0" m-bind:color="color" m-bind:multi-line="mode === &apos;multi-line&apos;" m-bind:timeout="+timeout0" m-bind:vertical="mode === &apos;vertical&apos;" toppx="44">
     <span m-text="text0"></span>
-    <mip-v-btn dark="" flat="" on="click:MIP.setData({snackbar0:false})">
+    <mip-v-btn dark flat on="click:MIP.setData({snackbar0:false})">
       Close
     </mip-v-btn>
   </mip-v-snackbar>

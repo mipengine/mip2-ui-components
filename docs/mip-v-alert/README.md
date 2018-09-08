@@ -56,7 +56,7 @@ value|boolean|/|控制可见性
     }
   </script>
 </mip-data>
-<mip-v-alert m-bind:value.sync="alert" dismissible="" type="success">
+<mip-v-alert m-bind:value.sync="alert" dismissible type="success">
   This is a success alert that is closable.
 </mip-v-alert>
 ```
@@ -107,16 +107,16 @@ value|boolean|/|控制可见性
     }
   </script>
 </mip-data>
-<mip-v-alert value="true" color="success" icon="check_circle" outline="">
+<mip-v-alert value="true" color="success" icon="check_circle" outline>
   This is a success alert.
 </mip-v-alert>
-<mip-v-alert value="true" color="info" icon="info" outline="">
+<mip-v-alert value="true" color="info" icon="info" outline>
   This is an info alert.
 </mip-v-alert>
-<mip-v-alert value="true" color="warning" icon="priority_high" outline="">
+<mip-v-alert value="true" color="warning" icon="priority_high" outline>
   This is a warning alert.
 </mip-v-alert>
-<mip-v-alert value="true" color="error" icon="warning" outline="">
+<mip-v-alert value="true" color="error" icon="warning" outline>
   This is a error alert.
 </mip-v-alert>
 ```

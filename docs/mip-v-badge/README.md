@@ -7,15 +7,15 @@
 ```html
 <div class="container">
   <div class="text-xs-center">
-    <mip-v-badge left="">
+    <mip-v-badge left>
       <span slot="badge">6</span>
-      <mip-v-icon large="" color="grey lighten-1">
+      <mip-v-icon large color="grey lighten-1">
         shopping_cart
       </mip-v-icon>
     </mip-v-badge>
     <mip-v-badge color="red">
       <span slot="badge">!</span>
-      <mip-v-icon large="" color="grey">
+      <mip-v-icon large color="grey">
         mail
       </mip-v-icon>
     </mip-v-badge>
@@ -47,20 +47,20 @@ value|boolean|true|控制可见性
 ```html
 <div class="container">
 <div class="text-xs-center">
-  <mip-v-badge color="purple" left="" overlap="">
-    <mip-v-icon slot="badge" dark="" small="">
+  <mip-v-badge color="purple" left overlap>
+    <mip-v-icon slot="badge" dark small>
       done
     </mip-v-icon>
-    <mip-v-icon color="grey lighten-1" large="">
+    <mip-v-icon color="grey lighten-1" large>
       account_circle
     </mip-v-icon>
   </mip-v-badge>
 
-  <mip-v-badge overlap="" color="orange">
-    <mip-v-icon slot="badge" dark="" small="">
+  <mip-v-badge overlap color="orange">
+    <mip-v-icon slot="badge" dark small>
       notifications
     </mip-v-icon>
-    <mip-v-icon large="" color="grey darken-1">
+    <mip-v-icon large color="grey darken-1">
       account_box
     </mip-v-icon>
   </mip-v-badge>
@@ -74,7 +74,7 @@ value|boolean|true|控制可见性
 <div class="container">
   <div class="text-xs-center">
 
-  <mip-v-badge left="">
+  <mip-v-badge left>
     <span slot="badge">2</span>
     <span>Examples</span>
   </mip-v-badge>
@@ -82,7 +82,7 @@ value|boolean|true|控制可见性
   &#xA0;&#xA0;
 
   <mip-v-badge color="green">
-    <mip-v-icon slot="badge" dark="" small="">list</mip-v-icon>
+    <mip-v-icon slot="badge" dark small>list</mip-v-icon>
     <span>Lists</span>
   </mip-v-badge>
   </div>
@@ -94,8 +94,8 @@ value|boolean|true|控制可见性
 ```html
 <div class="container">
   <div class="text-xs-center">
-    <mip-v-badge left="" color="purple">
-      <mip-v-icon slot="badge" dark="" small="">mdi-adjust</mip-v-icon>
+    <mip-v-badge left color="purple">
+      <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
       <span>
         MDI icon
       </span>
@@ -104,7 +104,7 @@ value|boolean|true|控制可见性
     &#xA0;&#xA0;
 
     <mip-v-badge color="orange">
-      <mip-v-icon slot="badge" dark="" small="">fas fa-fighter-jet</mip-v-icon>
+      <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>
       <span>
         Font Awesome icon
       </span>
@@ -132,16 +132,16 @@ value|boolean|true|控制可见性
 </div>
 <div class="container">
   <div class="text-xs-center">
-  <mip-v-badge m-bind:value="show" color="cyan" left="">
+  <mip-v-badge m-bind:value="show" color="cyan" left>
     <span slot="badge">6</span>
-    <mip-v-icon large="" color="grey lighten-1">
+    <mip-v-icon large color="grey lighten-1">
       shopping_cart
     </mip-v-icon>
   </mip-v-badge>
 
   <mip-v-badge m-bind:value="show" color="purple">
     <span slot="badge">6</span>
-    <mip-v-icon large="" color="grey">
+    <mip-v-icon large color="grey">
       mail
     </mip-v-icon>
   </mip-v-badge>

@@ -6,9 +6,9 @@ Textarea components are used for collecting large amounts of textual data.
 
 ```html
 <mip-v-textarea name="input-7-1" label="Default style" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through." hint="Hint text"></mip-v-textarea>
-<mip-v-textarea solo="" name="input-7-2" label="Solo textarea" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
-<mip-v-textarea box="" name="input-7-3" label="Box textarea" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
-<mip-v-textarea outline="" name="input-7-4" label="Outline textarea" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
+<mip-v-textarea solo name="input-7-2" label="Solo textarea" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
+<mip-v-textarea box name="input-7-3" label="Box textarea" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
+<mip-v-textarea outline name="input-7-4" label="Outline textarea" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
 ```
 
 ## API
@@ -80,5 +80,5 @@ value|any|/|输入值
 ### Auto grow
 
 ```html
-<mip-v-textarea name="input-7-5" box="" label="Label" auto-grow="" value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
+<mip-v-textarea name="input-7-5" box label="Label" auto-grow value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></mip-v-textarea>
 ```

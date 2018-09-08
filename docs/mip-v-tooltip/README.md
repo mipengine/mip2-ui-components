@@ -6,19 +6,19 @@
 
 ```html
 <div class="text-xs-center d-flex align-center">
-  <mip-v-tooltip bottom="">
-    <mip-v-btn slot="activator" color="primary" dark="">
+  <mip-v-tooltip bottom>
+    <mip-v-btn slot="activator" color="primary" dark>
       Button
     </mip-v-btn>
     <span>Tooltip</span>
   </mip-v-tooltip>
 
-  <mip-v-tooltip bottom="">
-    <mip-v-icon slot="activator" color="primary" dark="">home</mip-v-icon>
+  <mip-v-tooltip bottom>
+    <mip-v-icon slot="activator" color="primary" dark>home</mip-v-icon>
     <span>Tooltip</span>
   </mip-v-tooltip>
 
-  <mip-v-tooltip bottom="">
+  <mip-v-tooltip bottom>
     <span slot="activator">This text has a tooltip</span>
     <span>Tooltip</span>
   </mip-v-tooltip>
@@ -65,29 +65,29 @@ z-index|number / string|/|用于组件的z-index
 
 ```html
 <div class="text-xs-center">
-  <mip-v-tooltip left="">
-    <mip-v-btn slot="activator" color="primary" dark="">
+  <mip-v-tooltip left>
+    <mip-v-btn slot="activator" color="primary" dark>
       Left
     </mip-v-btn>
     <span>Left tooltip</span>
   </mip-v-tooltip>
 
-  <mip-v-tooltip top="">
-    <mip-v-btn slot="activator" color="primary" dark="">
+  <mip-v-tooltip top>
+    <mip-v-btn slot="activator" color="primary" dark>
       Top
     </mip-v-btn>
     <span>Top tooltip</span>
   </mip-v-tooltip>
 
-  <mip-v-tooltip bottom="">
-    <mip-v-btn slot="activator" color="primary" dark="">
+  <mip-v-tooltip bottom>
+    <mip-v-btn slot="activator" color="primary" dark>
       Bottom
     </mip-v-btn>
     <span>Bottom tooltip</span>
   </mip-v-tooltip>
 
-  <mip-v-tooltip right="">
-    <mip-v-btn slot="activator" color="primary" dark="">
+  <mip-v-tooltip right>
+    <mip-v-btn slot="activator" color="primary" dark>
       Right
     </mip-v-btn>
     <span>Right tooltip</span>
@@ -112,8 +112,8 @@ z-index|number / string|/|用于组件的z-index
     </div>
 
     <div class="flex xs12 mt-5">
-      <mip-v-tooltip m-bind:value.sync="show" top="">
-        <mip-v-btn slot="activator" icon="">
+      <mip-v-tooltip m-bind:value.sync="show" top>
+        <mip-v-btn slot="activator" icon>
           <mip-v-icon color="grey lighten-1">shopping_cart</mip-v-icon>
         </mip-v-btn>
         <span>Programmatic tooltip</span>

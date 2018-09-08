@@ -59,9 +59,9 @@ true-value|any|/|设置真值
     }
   </script>
 </mip-data>
-<mip-v-switch label="on" value="" input-value="true"></mip-v-switch>
+<mip-v-switch label="on" value input-value="true"></mip-v-switch>
 <mip-v-switch label="off"></mip-v-switch>
-<mip-v-switch label="on disabled" value="" input-value="true" disabled></mip-v-switch>
+<mip-v-switch label="on disabled" value input-value="true" disabled></mip-v-switch>
 <mip-v-switch label="off disabled" disabled></mip-v-switch>
 ```
 
@@ -89,16 +89,16 @@ true-value|any|/|设置真值
     }
   </script>
 </mip-data>
-<mip-v-switch m-bind:input-value.sync="ex11" label="red" color="red" value="red" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="red darken-3" color="red darken-3" value="red darken-3" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="indigo" color="indigo" value="indigo" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="indigo darken-3" color="indigo darken-3" value="indigo darken-3" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="orange" color="orange" value="orange" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="orange darken-3" color="orange darken-3" value="orange darken-3" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="primary" color="primary" value="primary" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="secondary" color="secondary" value="secondary" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="success" color="success" value="success" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="info" color="info" value="info" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="warning" color="warning" value="warning" hide-details=""></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="error" color="error" value="error" hide-details=""></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="red" color="red" value="red" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="red darken-3" color="red darken-3" value="red darken-3" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="indigo" color="indigo" value="indigo" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="indigo darken-3" color="indigo darken-3" value="indigo darken-3" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="orange" color="orange" value="orange" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="orange darken-3" color="orange darken-3" value="orange darken-3" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="primary" color="primary" value="primary" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="secondary" color="secondary" value="secondary" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="success" color="success" value="success" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="info" color="info" value="info" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="warning" color="warning" value="warning" hide-details></mip-v-switch>
+<mip-v-switch m-bind:input-value.sync="ex11" label="error" color="error" value="error" hide-details></mip-v-switch>
 ```

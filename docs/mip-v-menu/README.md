@@ -6,18 +6,18 @@
 
 ```html
 <div class="group pa-2">
-  <mip-v-menu offset-y="">
-    <mip-v-btn slot="activator" color="primary" dark="">
+  <mip-v-menu offset-y>
+    <mip-v-btn slot="activator" color="primary" dark>
       Dropdown
     </mip-v-btn>
     <mip-v-list>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
       </mip-v-list-tile>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
       </mip-v-list-tile>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
       </mip-v-list-tile>
     </mip-v-list>
@@ -72,19 +72,19 @@ z-index|number / string|/|用于组件的z-index
 
 ```html
 <div class="group pa-2">
-  <mip-v-menu open-on-hover="" offset-x="">
-    <mip-v-btn slot="activator" color="primary" dark="">
+  <mip-v-menu open-on-hover offset-x>
+    <mip-v-btn slot="activator" color="primary" dark>
       Hover
     </mip-v-btn>
 
     <mip-v-list>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
       </mip-v-list-tile>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
       </mip-v-list-tile>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
       </mip-v-list-tile>
     </mip-v-list>
@@ -96,18 +96,18 @@ z-index|number / string|/|用于组件的z-index
 
 ```html
 <div class="group pa-2">
-  <mip-v-menu bottom="" origin="center center" transition="scale-transition">
-    <mip-v-btn slot="activator" color="primary" dark="">
+  <mip-v-menu bottom origin="center center" transition="scale-transition">
+    <mip-v-btn slot="activator" color="primary" dark>
       Dropdown
     </mip-v-btn>
     <mip-v-list>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
       </mip-v-list-tile>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
       </mip-v-list-tile>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
       </mip-v-list-tile>
     </mip-v-list>
@@ -133,19 +133,19 @@ z-index|number / string|/|用于组件的z-index
 
         <mip-v-spacer></mip-v-spacer>
 
-        <mip-v-menu bottom="" left="">
-          <mip-v-btn slot="activator" dark="" icon="">
+        <mip-v-menu bottom left>
+          <mip-v-btn slot="activator" dark icon>
             <mip-v-icon>more_vert</mip-v-icon>
           </mip-v-btn>
 
           <mip-v-list>
-            <mip-v-list-tile href="#" ripple="">
+            <mip-v-list-tile href="#" ripple>
               <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
             </mip-v-list-tile>
-            <mip-v-list-tile href="#" ripple="">
+            <mip-v-list-tile href="#" ripple>
               <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
             </mip-v-list-tile>
-            <mip-v-list-tile href="#" ripple="">
+            <mip-v-list-tile href="#" ripple>
               <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
             </mip-v-list-tile>
           </mip-v-list>
@@ -162,17 +162,17 @@ z-index|number / string|/|用于组件的z-index
 
 ```html
 <div class="layout d-flex justify-center">
-  <mip-v-menu absolute="" offset-y="" style="max-width: 600px">
+  <mip-v-menu absolute offset-y style="max-width: 600px">
     <mip-v-card slot="activator" class="portrait" img="https://cdn.vuetifyjs.com/images/cards/girl.jpg" height="300" width="600"></mip-v-card>
 
     <mip-v-list>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu1</mip-v-list-tile-title>
       </mip-v-list-tile>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu2</mip-v-list-tile-title>
       </mip-v-list-tile>
-      <mip-v-list-tile href="#" ripple="">
+      <mip-v-list-tile href="#" ripple>
         <mip-v-list-tile-title>Menu3</mip-v-list-tile-title>
       </mip-v-list-tile>
     </mip-v-list>

@@ -13,18 +13,18 @@
   </script>
 </mip-data>
 <mip-v-dialog m-bind:value.sync="dialog1" width="500">
-  <mip-v-btn slot="activator" color="red lighten-2" dark="">
+  <mip-v-btn slot="activator" color="red lighten-2" dark>
     Click Me
   </mip-v-btn>
   <mip-v-card>
-    <mip-v-card-title class="headline grey lighten-2" primary-title="">Privacy Policy</mip-v-card-title>
+    <mip-v-card-title class="headline grey lighten-2" primary-title>Privacy Policy</mip-v-card-title>
     <mip-v-card-text>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </mip-v-card-text>
     <mip-v-divider></mip-v-divider>
     <mip-v-card-actions>
       <div class="spacer"></div>
-      <mip-v-btn color="primary" flat="" on="tap:MIP.setData({dialog1:false})">
+      <mip-v-btn color="primary" flat on="tap:MIP.setData({dialog1:false})">
         I accept
       </mip-v-btn>
     
@@ -68,8 +68,8 @@ width|string / number|'auto'|设置对话框的宽度
     }
   </script>
 </mip-data>
-<mip-v-dialog m-bind:value.sync="dialog2" persistent="" max-width="290">
-  <mip-v-btn slot="activator" color="primary" dark="">
+<mip-v-dialog m-bind:value.sync="dialog2" persistent max-width="290">
+  <mip-v-btn slot="activator" color="primary" dark>
     Open Dialog
   </mip-v-btn>
   <mip-v-card>
@@ -79,8 +79,8 @@ width|string / number|'auto'|设置对话框的宽度
     </mip-v-card-text>
     <mip-v-card-actions>
       <div class="spacer"></div>
-      <mip-v-btn color="green darken-1" flat="" on="tap:MIP.setData({dialog2:false})">Disagree</mip-v-btn>
-      <mip-v-btn color="green darken-1" flat="" on="tap:MIP.setData({dialog2:false})">Agree</mip-v-btn>
+      <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({dialog2:false})">Disagree</mip-v-btn>
+      <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({dialog2:false})">Agree</mip-v-btn>
     </mip-v-card-actions>
   </mip-v-card>
 </mip-v-dialog>
@@ -96,10 +96,10 @@ width|string / number|'auto'|设置对话框的宽度
     }
   </script>
 </mip-data>
-<mip-v-btn outline="" large="" fab="" color="indigo" on="tap:MIP.setData({show2:true})">
+<mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({show2:true})">
   <mip-v-icon>edit</mip-v-icon>
 </mip-v-btn>
-<mip-v-dialog m-bind:value.sync="show2" scrollable="" max-width="290">
+<mip-v-dialog m-bind:value.sync="show2" scrollable max-width="290">
   <div class="v-card">
     <div class="v-card__title headline">Use Google&apos;s location service?</div>
     <div class="v-card__text" style="height: 300px;">
@@ -113,7 +113,7 @@ width|string / number|'auto'|设置对话框的宽度
     </div>
     <div class="v-card__actions">
       <div class="spacer"></div>
-      <mip-v-btn outline="" large="" fab="" color="indigo" on="tap:MIP.setData({show2:false})">
+      <mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({show2:false})">
         <mip-v-icon>close</mip-v-icon>
       </mip-v-btn>
     </div>
@@ -131,10 +131,10 @@ width|string / number|'auto'|设置对话框的宽度
     }
   </script>
 </mip-data>
-<mip-v-btn outline="" large="" fab="" color="indigo" on="tap:MIP.setData({show3:true})">
+<mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({show3:true})">
   <mip-v-icon>edit</mip-v-icon>
 </mip-v-btn>
-<mip-v-dialog m-bind:value="show3" hide-overlay="" persistent="" max-width="290">
+<mip-v-dialog m-bind:value="show3" hide-overlay persistent max-width="290">
   <div class="v-card">
     <div class="v-card__text">
       Loading...
