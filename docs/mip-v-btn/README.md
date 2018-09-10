@@ -316,7 +316,6 @@ multiple|boolean|/|允许选中多个按钮
 <mip-data>
   <script type="application/json">
     {
-      "text": "center",
       "loading": false
     }
   </script>

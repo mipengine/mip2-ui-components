@@ -181,12 +181,6 @@ z-index|number / string|/|
 <mip-data>
   <script type="application/json">
     {
-      "value": [
-        "foo",
-        "bar",
-        "fizz",
-        "buzz"
-      ],
       "e1": "Florida",
       "e2": "Texas",
       "states": [
@@ -273,12 +267,6 @@ z-index|number / string|/|
 <mip-data>
   <script type="application/json">
     {
-      "value": [
-        "foo",
-        "bar",
-        "fizz",
-        "buzz"
-      ],
       "states": [
         "Alabama",
         "Alaska",
@@ -366,12 +354,6 @@ z-index|number / string|/|
   <script type="application/json">
     {
       "items": [
-        "foo",
-        "bar",
-        "fizz",
-        "buzz"
-      ],
-      "value": [
         "foo",
         "bar",
         "fizz",

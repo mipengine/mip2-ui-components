@@ -116,7 +116,6 @@ value|number / string|/|当前进度的百分比值
 <mip-data>
   <script type="application/json">
     {
-      "value": 0,
       "buffer": 10,
       "bufferValue": 20
     }

@@ -322,8 +322,7 @@ value|any|/|输入值
       "form": {
         "first": "",
         "last": ""
-      },
-      "color": "error"
+      }
     }
   </script>
 </mip-data>

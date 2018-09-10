@@ -89,7 +89,7 @@ const parseExamples = async (tagName) => {
       }).join('\n')
       const dataHtml = JSON.stringify(
         data,
-        (key, val) => Number.isInteger(+key) || html.search(new RegExp(`m-bind:[^=]+=".*${key}.*"`)) !== -1
+        (key, val) => Number.isInteger(+key) || html.search(new RegExp(`m-bind:[^=]+="[^"]*${key}[^"]*"`)) !== -1
           ? val
           : undefined,
         2

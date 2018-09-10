@@ -33,8 +33,8 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-activator|any|/|Designate a custom activator when the activator slot is not used. String can be any valid querySelector and Object can be any valid Node
-allow-overflow|boolean|/|Removes overflow re-positioning for the content
+activator|any|/|在未使用激活器插槽激活器4.字符串可以是任何有效的查询选择器（querySelector），对象（Object）可以是任何有效的Node对象。
+allow-overflow|boolean|/|移除内容的移除重新定位
 attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
 auto|boolean|/|在所选择的元素上居中列表
 close-delay|number / string|200|关闭组件前等待的毫秒数
@@ -45,26 +45,26 @@ disabled|boolean|/|禁用菜单
 full-width|boolean|/|Forces 100% width
 input-activator|boolean|/|Sets a new activator target for the detached element. Use when placing detachable items in `mip-v-input` slots
 max-height|any|'auto'|设置内容的最大高度
-max-width|number / string|'auto'|Sets the maximum width for the content
-min-width|number / string|/|Sets the minimum width for the content
-nudge-bottom|number / string|/|Nudge the content to the bottom
-nudge-left|number / string|/|Nudge the content to the left
-nudge-right|number / string|/|Nudge the content to the right
-nudge-top|number / string|/|Nudge the content to the top
-nudge-width|number / string|/|Nudge the content width
-offset-overflow|boolean|/|Causes the component to flip to the opposite side when repositioned due to overflow
+max-width|number / string|'auto'|设置内容的最大宽度
+min-width|number / string|/|设置内容的最小宽度
+nudge-bottom|number / string|/|向底部微调内容
+nudge-left|number / string|/|向左侧微调内容
+nudge-right|number / string|/|向右侧微调内容
+nudge-top|number / string|/|向顶部微调内容
+nudge-width|number / string|/|微调内容宽度
+offset-overflow|boolean|/|当由于溢出而重新定位时，导致组件翻转到另一侧
 offset-x|boolean|/|在x轴上偏移菜单，与左/右方向一起工作
 offset-y|boolean|/|在y轴上偏移菜单，与上/下方向一起工作
 open-delay|number / string|/|打开组件前等待的毫秒数
 open-on-click|boolean|true|指定是否在激活器点击时打开菜单
 open-on-hover|boolean|/|指定是否在激活器悬停时打开菜单
 origin|string|'top left'|设置过渡原点
-position-x|number|/|Used to position the content when not using an activator slot
-position-y|number|/|Used to position the content when not using an activator slot
+position-x|number|/|用于在不使用激活器插槽时定位内容
+position-y|number|/|用于在不使用激活器插槽时定位内容
 return-value|any|/|
 transition|string / boolean|'v-menu-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 value|boolean|/|控制可见性
-z-index|number / string|/|The z-index used for the component
+z-index|number / string|/|用于组件的z-index
 
 ## 示例
 

@@ -76,9 +76,7 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "slider": 45,
-      "thumb-label": "always",
-      "red": 64
+      "slider": 45
     }
   </script>
 </mip-data>
@@ -125,8 +123,7 @@ value|number / string|/|输入值
         "Lemon",
         "Pear",
         "Apple"
-      ],
-      "max": 90
+      ]
     }
   </script>
 </mip-data>
@@ -158,7 +155,6 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "volume": 10,
       "zoom": 0
     }
   </script>
@@ -176,8 +172,7 @@ value|number / string|/|输入值
     {
       "red": 64,
       "green": 128,
-      "blue": 0,
-      "max": 90
+      "blue": 0
     }
   </script>
 </mip-data>
@@ -222,7 +217,6 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "thumb-label": "always",
       "ex1": {
         "label": "color",
         "val": 25,
@@ -268,9 +262,7 @@ value|number / string|/|输入值
       "value3": [
         110,
         440
-      ],
-      "min": -50,
-      "max": 90
+      ]
     }
   </script>
 </mip-data>

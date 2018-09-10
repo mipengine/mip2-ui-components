@@ -69,8 +69,7 @@ The `mip-v-autocomplete` component offers simple and flexible type-ahead functio
         "West Virginia",
         "Wisconsin",
         "Wyoming"
-      ],
-      "items": []
+      ]
     }
   </script>
 </mip-data>
@@ -198,9 +197,7 @@ z-index|number / string|/|
       "model": "",
       "search": "",
       "items": [],
-      "isLoading": false,
-      "loading": false,
-      "select": ""
+      "isLoading": false
     }
   </script>
 </mip-data>
@@ -252,30 +249,23 @@ z-index|number / string|/|
   <script type="application/json">
     {
       "isEditing": false,
-      "items": [],
       "states": [
         {
-          "name": "Florida",
           "id": 1
         },
         {
-          "name": "Georgia",
           "id": 2
         },
         {
-          "name": "Nebraska",
           "id": 3
         },
         {
-          "name": "California",
           "id": 4
         },
         {
-          "name": "New York",
           "id": 5
         }
-      ],
-      "toSave": false
+      ]
     }
   </script>
 </mip-data>
@@ -305,7 +295,6 @@ z-index|number / string|/|
   <script type="application/json">
     {
       "search": "",
-      "items": [],
       "loading": false,
       "asyncItems": [],
       "searchVal": "",
