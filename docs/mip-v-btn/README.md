@@ -340,6 +340,7 @@ multiple|boolean|/|允许选中多个按钮
     }
   })
 </mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```
 
 ### 大小

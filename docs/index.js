@@ -51,7 +51,7 @@ const parseExamples = async (tagName) => {
   const html = await fs.readFile(path.resolve(__dirname, '../dev', `${tagName}.html`), 'utf8')
   const $ = cheerio.load(html)
   const data = JSON.parse($('mip-data > script[type="application/json"]').html())
-  const examples = $('h2').nextUntil('script').toArray()
+  const examples = $('h2').nextUntil('script[src="http://localhost:8080/dist/mip.js"]').toArray()
     .reduce((examples, node) => {
       const current = examples[examples.length - 1]
 

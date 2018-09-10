@@ -240,6 +240,7 @@ z-index|number / string|/|
       .finally(() => MIP.setData({isLoading: false}))
   })
 </mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```
 
 ### Custom filter on autocomplete
@@ -286,6 +287,7 @@ z-index|number / string|/|
     MIP.setData({toSave: false})
   })
 </mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```
 
 ### Asynchronous items
@@ -325,4 +327,5 @@ z-index|number / string|/|
     val && val !== MIP.getData('select') && querySelections(val)
   })
 </mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```

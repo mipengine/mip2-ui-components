@@ -403,4 +403,5 @@ value|any|/|输入值
     })
   })
 </mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```

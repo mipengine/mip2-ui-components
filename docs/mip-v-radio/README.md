@@ -131,6 +131,4 @@ value|any|/|设置选择控件组件的值
   <mip-v-radio label="warning" color="warning" value="warning"></mip-v-radio>
   <mip-v-radio label="error" color="error" value="error"></mip-v-radio>
 </mip-v-radio-group>
-<script src="http://localhost:8080/dist/mip.js"></script>
-<script src="/dev/main.js"></script>
 ```
