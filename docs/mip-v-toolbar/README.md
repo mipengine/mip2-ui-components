@@ -291,7 +291,7 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
     </mip-v-btn>
   </mip-v-toolbar>
   <div id="scrolling-techniques" class="scroll-y" style="max-height: 600px;">
-    <div class="container" style="height: 1000px;"></div>
+    <div style="height: 1000px;"></div>
   </div>
 </div>
 ```

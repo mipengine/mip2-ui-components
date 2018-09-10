@@ -5,7 +5,7 @@
 ## 用例
 
 ```html
-<div class="container">
+<div class="flex">
   <mip-v-btn color="success">Success</mip-v-btn>
   <mip-v-btn color="error">Error</mip-v-btn>
   <mip-v-btn color="warning">Warning</mip-v-btn>
@@ -73,19 +73,19 @@ multiple|boolean|/|
 ### 扁平
 
 ```html
-<div class="container">
+<div class="flex">
   <mip-v-btn flat small>Normal</mip-v-btn>
   <mip-v-btn flat small color="primary">Primary</mip-v-btn>
   <mip-v-btn flat small color="error">Error</mip-v-btn>
   <mip-v-btn flat small disabled>Disabled</mip-v-btn>
 </div>
-<div class="container">
+<div class="flex">
   <mip-v-btn flat>Normal</mip-v-btn>
   <mip-v-btn flat color="primary">Primary</mip-v-btn>
   <mip-v-btn flat color="error">Error</mip-v-btn>
   <mip-v-btn flat disabled>Disabled</mip-v-btn>
 </div>
-<div class="container">
+<div class="flex">
   <mip-v-btn flat large>Normal</mip-v-btn>
   <mip-v-btn flat large color="primary">Primary</mip-v-btn>
   <mip-v-btn flat large color="error">Error</mip-v-btn>
@@ -96,19 +96,19 @@ multiple|boolean|/|
 ### 凸起
 
 ```html
-<div class="container">
+<div class="flex">
   <mip-v-btn small>Normal</mip-v-btn>
   <mip-v-btn small color="primary">Primary</mip-v-btn>
   <mip-v-btn small color="error">Error</mip-v-btn>
   <mip-v-btn small disabled>Disabled</mip-v-btn>
 </div>
-<div class="container">
+<div class="flex">
   <mip-v-btn>Normal</mip-v-btn>
   <mip-v-btn color="primary">Primary</mip-v-btn>
   <mip-v-btn color="error">Error</mip-v-btn>
   <mip-v-btn disabled>Disabled</mip-v-btn>
 </div>
-<div class="container">
+<div class="flex">
   <mip-v-btn large>Normal</mip-v-btn>
   <mip-v-btn large color="primary">Primary</mip-v-btn>
   <mip-v-btn large color="error">Error</mip-v-btn>
@@ -119,19 +119,19 @@ multiple|boolean|/|
 ### 凹陷
 
 ```html
-<div class="container">
+<div class="flex">
   <mip-v-btn depressed small>Normal</mip-v-btn>
   <mip-v-btn depressed small color="primary">Primary</mip-v-btn>
   <mip-v-btn depressed small color="error">Error</mip-v-btn>
   <mip-v-btn depressed small disabled>Disabled</mip-v-btn>
 </div>
-<div class="container">
+<div class="flex">
   <mip-v-btn depressed>Normal</mip-v-btn>
   <mip-v-btn depressed color="primary">Primary</mip-v-btn>
   <mip-v-btn depressed color="error">Error</mip-v-btn>
   <mip-v-btn depressed disabled>Disabled</mip-v-btn>
 </div>
-<div class="container">
+<div class="flex">
   <mip-v-btn depressed large>Normal</mip-v-btn>
   <mip-v-btn depressed large color="primary">Primary</mip-v-btn>
   <mip-v-btn depressed large color="error">Error</mip-v-btn>
@@ -261,7 +261,7 @@ multiple|boolean|/|
   </script>
 </mip-data>
 <h4>Normal</h4>
-<div class="container">
+<div class="flex">
   <mip-v-btn flat icon color="pink">
     <mip-v-icon>favorite</mip-v-icon>
   </mip-v-btn>
@@ -276,7 +276,7 @@ multiple|boolean|/|
   </mip-v-btn>
 </div>
 <h4>Disabled</h4>
-<div class="container">
+<div class="flex">
   <mip-v-btn icon disabled>
     <mip-v-icon>favorite</mip-v-icon>
   </mip-v-btn>
@@ -302,7 +302,7 @@ multiple|boolean|/|
     }
   </script>
 </mip-data>
-<div class="container">
+<div class="flex">
   <mip-v-btn fab dark small color="primary">
     <mip-v-icon dark>remove</mip-v-icon>
   </mip-v-btn>
@@ -334,12 +334,12 @@ multiple|boolean|/|
     }
   </script>
 </mip-data>
-<div class="container">
+<div class="flex">
   <mip-v-btn small color="primary" dark>Small Button</mip-v-btn>
   <mip-v-btn color="warning" dark>Normal Button</mip-v-btn>
   <mip-v-btn color="error" dark large>Large Button</mip-v-btn>
 </div>
-<div class="container">
+<div class="flex">
   <mip-v-btn color="primary" fab small dark>
     <mip-v-icon>edit</mip-v-icon>
   </mip-v-btn>
@@ -362,7 +362,7 @@ multiple|boolean|/|
     }
   </script>
 </mip-data>
-<div class="container">
+<div class="flex">
   <mip-v-btn outline color="indigo">Outline Button</mip-v-btn>
   <mip-v-btn outline fab color="teal">
     <mip-v-icon>list</mip-v-icon>

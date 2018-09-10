@@ -5,7 +5,7 @@
 ## 用例
 
 ```html
-<div class="container">
+<div class="flex justify-center" style="margin-top: 24px">
   <div class="text-xs-center">
     <mip-v-badge left>
       <span slot="badge">6</span>
@@ -45,7 +45,7 @@ value|boolean|true|控制可见性
 ### 重叠
 
 ```html
-<div class="container">
+<div class="flex justify-center" style="margin-top: 24px">
 <div class="text-xs-center">
   <mip-v-badge color="purple" left overlap>
     <mip-v-icon slot="badge" dark small>
@@ -71,7 +71,7 @@ value|boolean|true|控制可见性
 ### 内联
 
 ```html
-<div class="container">
+<div class="flex justify-center" style="margin-top: 24px">
   <div class="text-xs-center">
 
   <mip-v-badge left>
@@ -92,7 +92,7 @@ value|boolean|true|控制可见性
 ### 图标
 
 ```html
-<div class="container">
+<div class="flex justify-center" style="margin-top: 24px">
   <div class="text-xs-center">
     <mip-v-badge left color="purple">
       <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
@@ -123,14 +123,14 @@ value|boolean|true|控制可见性
     }
   </script>
 </mip-data>
-<div class="container">
+<div class="flex justify-center" style="margin-top: 24px">
   <div class="text-xs-center">
     <mip-v-btn color="indigo" class="white--text" on="tap:MIP.setData({ show: !m.show })">
       Toggle
     </mip-v-btn>
   </div>
 </div>
-<div class="container">
+<div class="flex justify-center" style="margin-top: 24px">
   <div class="text-xs-center">
   <mip-v-badge m-bind:value="show" color="cyan" left>
     <span slot="badge">6</span>
