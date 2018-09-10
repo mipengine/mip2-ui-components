@@ -253,13 +253,6 @@ multiple|boolean|/|允许选中多个按钮
 ### 图标
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "icon": "justify"
-    }
-  </script>
-</mip-data>
 <h4>Normal</h4>
 <div class="flex">
   <mip-v-btn flat icon color="pink">
@@ -295,13 +288,6 @@ multiple|boolean|/|允许选中多个按钮
 ### 浮动
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "icon": "justify"
-    }
-  </script>
-</mip-data>
 <div class="flex">
   <mip-v-btn fab dark small color="primary">
     <mip-v-icon dark>remove</mip-v-icon>
@@ -331,7 +317,6 @@ multiple|boolean|/|允许选中多个按钮
   <script type="application/json">
     {
       "text": "center",
-      "icon": "justify",
       "loading": false
     }
   </script>
@@ -361,13 +346,6 @@ multiple|boolean|/|允许选中多个按钮
 ### 大小
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "icon": "justify"
-    }
-  </script>
-</mip-data>
 <div class="flex">
   <mip-v-btn small color="primary" dark>Small Button</mip-v-btn>
   <mip-v-btn color="warning" dark>Normal Button</mip-v-btn>
@@ -389,13 +367,6 @@ multiple|boolean|/|允许选中多个按钮
 ### 轮廓
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "icon": "justify"
-    }
-  </script>
-</mip-data>
 <div class="flex">
   <mip-v-btn outline color="indigo">Outline Button</mip-v-btn>
   <mip-v-btn outline fab color="teal">

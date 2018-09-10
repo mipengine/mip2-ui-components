@@ -13,8 +13,7 @@
         "bar",
         "fizz",
         "buzz"
-      ],
-      "select": {}
+      ]
     }
   </script>
 </mip-data>
@@ -162,8 +161,7 @@ z-index|number / string|/|
         "bar",
         "fizz",
         "buzz"
-      ],
-      "select": {}
+      ]
     }
   </script>
 </mip-data>
@@ -183,12 +181,6 @@ z-index|number / string|/|
 <mip-data>
   <script type="application/json">
     {
-      "items": [
-        "foo",
-        "bar",
-        "fizz",
-        "buzz"
-      ],
       "value": [
         "foo",
         "bar",
@@ -257,10 +249,7 @@ z-index|number / string|/|
         "West Virginia",
         "Wisconsin",
         "Wyoming"
-      ],
-      "select": {
-        "state": "Florida"
-      }
+      ]
     }
   </script>
 </mip-data>
@@ -284,12 +273,6 @@ z-index|number / string|/|
 <mip-data>
   <script type="application/json">
     {
-      "items": [
-        "foo",
-        "bar",
-        "fizz",
-        "buzz"
-      ],
       "value": [
         "foo",
         "bar",
@@ -358,10 +341,7 @@ z-index|number / string|/|
         "Wyoming"
       ],
       "e3": [],
-      "e4": [],
-      "select": {
-        "state": "Florida"
-      }
+      "e4": []
     }
   </script>
 </mip-data>

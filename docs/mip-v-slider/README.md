@@ -9,8 +9,7 @@
   <script type="application/json">
     {
       "slider": 45,
-      "volume": 10,
-      "value": 0
+      "volume": 10
     }
   </script>
 </mip-data>
@@ -78,7 +77,6 @@ value|number / string|/|输入值
   <script type="application/json">
     {
       "slider": 45,
-      "value": 0,
       "thumb-label": "always",
       "red": 64
     }
@@ -120,7 +118,6 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "slider": 45,
       "value": 0,
       "fruits": 0,
       "tickLabels": [
@@ -129,7 +126,6 @@ value|number / string|/|输入值
         "Pear",
         "Apple"
       ],
-      "ticks": "always",
       "max": 90
     }
   </script>
@@ -149,10 +145,7 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "slider": 45,
-      "value": 0,
-      "thumb-label": "always",
-      "ticks": "always"
+      "value": 0
     }
   </script>
 </mip-data>
@@ -165,9 +158,7 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "slider": 45,
       "volume": 10,
-      "value": 0,
       "zoom": 0
     }
   </script>
@@ -183,8 +174,6 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "slider": 45,
-      "value": 0,
       "red": 64,
       "green": 128,
       "blue": 0,
@@ -233,8 +222,6 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "slider": 45,
-      "value": 0,
       "thumb-label": "always",
       "ex1": {
         "label": "color",
@@ -269,7 +256,6 @@ value|number / string|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "slider": 45,
       "value": 0,
       "value1": [
         30,
@@ -284,11 +270,7 @@ value|number / string|/|输入值
         440
       ],
       "min": -50,
-      "max": 90,
-      "range": [
-        -20,
-        70
-      ]
+      "max": 90
     }
   </script>
 </mip-data>
@@ -332,7 +314,6 @@ value|number / string|/|输入值
   <script type="application/json">
     {
       "slider": 45,
-      "value": 0,
       "min": -50,
       "max": 90,
       "slider0": 40,

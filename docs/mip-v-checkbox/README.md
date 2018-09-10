@@ -44,7 +44,6 @@ true-value|any|/|设置真值
 <mip-data>
   <script type="application/json">
     {
-      "checkbox": true,
       "selected": []
     }
   </script>
@@ -56,13 +55,6 @@ true-value|any|/|设置真值
 ### 状态
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "checkbox": true
-    }
-  </script>
-</mip-data>
 <mip-v-checkbox label="on" input-value="true" value></mip-v-checkbox>
 <mip-v-checkbox label="off" value></mip-v-checkbox>
 <mip-v-checkbox label="indeterminate" value indeterminate></mip-v-checkbox>
@@ -76,7 +68,6 @@ true-value|any|/|设置真值
 <mip-data>
   <script type="application/json">
     {
-      "checkbox": true,
       "ex4": [
         "red",
         "indigo",
@@ -114,7 +105,6 @@ true-value|any|/|设置真值
 <mip-data>
   <script type="application/json">
     {
-      "checkbox": true,
       "includeFiles": true,
       "enabled": false
     }

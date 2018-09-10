@@ -110,7 +110,6 @@ value|any|/|设置选择控件组件的值
 <mip-data>
   <script type="application/json">
     {
-      "column": null,
       "ex7": "red",
       "ex8": "primary"
     }

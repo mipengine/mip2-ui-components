@@ -5,18 +5,6 @@
 ## 用例
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "items": [
-        "All",
-        "Family",
-        "Friends",
-        "Coworkers"
-      ]
-    }
-  </script>
-</mip-data>
 <div class="group pa-2">
   <mip-v-toolbar>
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
@@ -299,18 +287,6 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 ### 应用程序栏与菜单
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "items": [
-        "All",
-        "Family",
-        "Friends",
-        "Coworkers"
-      ]
-    }
-  </script>
-</mip-data>
 <mip-v-card color="grey lighten-4" flat height="200px">
   <mip-v-toolbar color="grey darken-1" dark>
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>

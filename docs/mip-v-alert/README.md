@@ -5,13 +5,6 @@
 ## 用例
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "alert": true
-    }
-  </script>
-</mip-data>
 <mip-v-alert value="true" type="success">
   This is a success alert.
 </mip-v-alert>
@@ -64,13 +57,6 @@ value|boolean|/|控制可见性
 ### 自定义图标/无图标
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "alert": true
-    }
-  </script>
-</mip-data>
 <mip-v-alert value="true" color="success" icon="new_releases">
   This is a success alert with a custom icon.
 </mip-v-alert>
@@ -100,13 +86,6 @@ value|boolean|/|控制可见性
 ### 轮廓
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "alert": true
-    }
-  </script>
-</mip-data>
 <mip-v-alert value="true" color="success" icon="check_circle" outline>
   This is a success alert.
 </mip-v-alert>

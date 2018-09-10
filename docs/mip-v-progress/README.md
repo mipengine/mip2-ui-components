@@ -5,13 +5,6 @@
 ## 用例
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "value": 0
-    }
-  </script>
-</mip-data>
 <mip-v-progress-circular value="20"></mip-v-progress-circular>
 <mip-v-progress-circular value="40"></mip-v-progress-circular>
 <mip-v-progress-circular value="60"></mip-v-progress-circular>
@@ -56,13 +49,6 @@ value|number / string|/|当前进度的百分比值
 ### 圆环色彩
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "value": 0
-    }
-  </script>
-</mip-data>
 <mip-v-progress-circular value="100" color="blue-grey"></mip-v-progress-circular>
 <mip-v-progress-circular value="80" color="deep-orange lighten-2"></mip-v-progress-circular>
 <mip-v-progress-circular value="60" color="brown"></mip-v-progress-circular>
@@ -142,13 +128,6 @@ value|number / string|/|当前进度的百分比值
 ### 自定义高度和上下文色彩
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "value": 0
-    }
-  </script>
-</mip-data>
 <mip-v-progress-linear color="secondary" line-height="2" value="15"></mip-v-progress-linear>
 <mip-v-progress-linear color="success" line-height="5" value="30"></mip-v-progress-linear>
 <mip-v-progress-linear color="info" line-height="10" value="45"></mip-v-progress-linear>
@@ -159,13 +138,6 @@ value|number / string|/|当前进度的百分比值
 ### 自定义色彩
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "value": 0
-    }
-  </script>
-</mip-data>
 <mip-v-progress-linear background-color="pink lighten-3" color="pink lighten-1" value="15"></mip-v-progress-linear>
 <mip-v-progress-linear background-color="blue-grey" color="lime" value="30"></mip-v-progress-linear>
 <mip-v-progress-linear background-color="success" color="error" value="45"></mip-v-progress-linear>

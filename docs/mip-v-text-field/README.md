@@ -158,9 +158,7 @@ value|any|/|输入值
         "mdi-emoticon-neutral",
         "mdi-emoticon-sad",
         "mdi-emoticon-tongue"
-      ],
-      "sendMessage": false,
-      "changeIcon": false
+      ]
     }
   </script>
 </mip-data>
@@ -364,20 +362,6 @@ value|any|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "message": "Hey!",
-      "iconIndex": 0,
-      "icons": [
-        "mdi-emoticon",
-        "mdi-emoticon-cool",
-        "mdi-emoticon-dead",
-        "mdi-emoticon-excited",
-        "mdi-emoticon-happy",
-        "mdi-emoticon-neutral",
-        "mdi-emoticon-sad",
-        "mdi-emoticon-tongue"
-      ],
-      "sendMessage": false,
-      "changeIcon": false,
       "progressValue": "",
       "custom": true,
       "progress": "",

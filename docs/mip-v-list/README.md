@@ -8,23 +8,15 @@
 <mip-data>
   <script type="application/json">
     {
-      "header": "Today",
       "items": [
         {
-          "icon": true,
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg",
-          "title": "Brunch this weekend?",
-          "subtitle": "Ali Connors &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg"
         },
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg",
-          "title": "Summer BBQ",
-          "subtitle": "to Alex, Scott, Jennifer &mdash; Wish I could come, but I'm out of town this weekend."
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg"
         },
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-          "title": "Oui oui",
-          "subtitle": "Sandra Adams &mdash; Do you have Paris recommendations? Have you ever been?"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg"
         }
       ]
     }
@@ -168,17 +160,13 @@ tile|boolean|/|删除边看弧度
     {
       "items": [
         {
-          "icon": true,
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg",
-          "title": "Brunch this weekend?"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg"
         },
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg",
-          "title": "Summer BBQ"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg"
         },
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-          "title": "Oui oui"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg"
         }
       ]
     }
@@ -249,55 +237,6 @@ tile|boolean|/|删除边看弧度
 ### 图标加两行内容以及操作的组合
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "header": "Today",
-      "items": [
-        {
-          "icon": true,
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg",
-          "title": "Brunch this weekend?",
-          "subtitle": "Ali Connors &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
-        },
-        {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg",
-          "title": "Summer BBQ",
-          "subtitle": "to Alex, Scott, Jennifer &mdash; Wish I could come, but I'm out of town this weekend."
-        },
-        {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg",
-          "title": "Oui oui",
-          "subtitle": "Sandra Adams &mdash; Do you have Paris recommendations? Have you ever been?"
-        }
-      ],
-      "folderItems": [
-        {
-          "icon": "folder",
-          "title": "Photos",
-          "subtitle": "Jan 9, 2014"
-        },
-        {
-          "icon": "folder",
-          "title": "Recipes",
-          "subtitle": "Jan 17, 2014"
-        }
-      ],
-      "fileItems": [
-        {
-          "icon": "assignment",
-          "title": "Vacation itinerary",
-          "subtitle": "Jan 20, 2014"
-        },
-        {
-          "icon": "call_to_action",
-          "title": "Kitchen remodel",
-          "subtitle": "Jan 10, 2014"
-        }
-      ]
-    }
-  </script>
-</mip-data>
 <div class="layout row">
   <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>

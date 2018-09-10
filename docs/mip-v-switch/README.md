@@ -40,7 +40,6 @@ true-value|any|/|设置真值
 <mip-data>
   <script type="application/json">
     {
-      "switch": true,
       "people": []
     }
   </script>
@@ -52,13 +51,6 @@ true-value|any|/|设置真值
 ### 开关
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "switch": true
-    }
-  </script>
-</mip-data>
 <mip-v-switch label="on" value input-value="true"></mip-v-switch>
 <mip-v-switch label="off"></mip-v-switch>
 <mip-v-switch label="on disabled" value input-value="true" disabled></mip-v-switch>
@@ -71,7 +63,6 @@ true-value|any|/|设置真值
 <mip-data>
   <script type="application/json">
     {
-      "switch": true,
       "ex11": [
         "red",
         "indigo",

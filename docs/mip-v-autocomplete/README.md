@@ -196,9 +196,7 @@ z-index|number / string|/|
   <script type="application/json">
     {
       "model": "",
-      "descriptionLimit": 60,
       "search": "",
-      "entries": [],
       "items": [],
       "isLoading": false,
       "loading": false,
@@ -308,23 +306,6 @@ z-index|number / string|/|
     {
       "search": "",
       "items": [],
-      "states": [
-        {
-          "id": 1
-        },
-        {
-          "id": 2
-        },
-        {
-          "id": 3
-        },
-        {
-          "id": 4
-        },
-        {
-          "id": 5
-        }
-      ],
       "loading": false,
       "asyncItems": [],
       "searchVal": "",

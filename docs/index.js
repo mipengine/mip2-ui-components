@@ -87,7 +87,13 @@ const parseExamples = async (tagName) => {
 
         return [lines[0], ...lines.slice(1).map(line => line.slice(align))].join('\n')
       }).join('\n')
-      const dataHtml = JSON.stringify(data, (key, val) => Number.isInteger(+key) || html.includes(key) ? val : undefined, 2)
+      const dataHtml = JSON.stringify(
+        data,
+        (key, val) => Number.isInteger(+key) || html.search(new RegExp(`m-bind:[^=]+=".*${key}.*"`)) !== -1
+          ? val
+          : undefined,
+        2
+      )
         .split('\n')
         .join('\n    ')
 

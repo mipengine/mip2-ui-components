@@ -5,13 +5,6 @@
 ## 用例
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "year": 2018
-    }
-  </script>
-</mip-data>
 <mip-v-footer class="pa-3">
   <mip-v-spacer></mip-v-spacer>
   <div>&#xA9; <span m-text="year"></span></div>
