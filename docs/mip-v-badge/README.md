@@ -79,8 +79,6 @@ value|boolean|true|控制可见性
     <span>Examples</span>
   </mip-v-badge>
 
-  &#xA0;&#xA0;
-
   <mip-v-badge color="green">
     <mip-v-icon slot="badge" dark small>list</mip-v-icon>
     <span>Lists</span>
@@ -100,8 +98,6 @@ value|boolean|true|控制可见性
         MDI icon
       </span>
     </mip-v-badge>
-
-    &#xA0;&#xA0;
 
     <mip-v-badge color="orange">
       <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>

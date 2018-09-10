@@ -392,18 +392,18 @@ value|any|/|输入值
   </mip-v-text-field>
 </div>
 <mip-script>
-  MIP.watch(&apos;sendMessage&apos;, val =&gt; {
+  MIP.watch('sendMessage', val => {
     MIP.setData({
       iconIndex: 0,
-      message: &apos;&apos;,
+      message: '',
       sendMessage: false
     })
   })
 
-  MIP.watch(&apos;changeIcon&apos;, val =&gt; {
+  MIP.watch('changeIcon', val => {
     if (val) {
-      let iconIndex = MIP.getData(&apos;iconIndex&apos;)
-      let icons = MIP.getData(&apos;icons&apos;)
+      let iconIndex = MIP.getData('iconIndex')
+      let icons = MIP.getData('icons')
       MIP.setData({
         iconIndex: (iconIndex === icons.length - 1) ? 0 : ++iconIndex
       })
@@ -412,11 +412,11 @@ value|any|/|输入值
       changeIcon: false
     })
   })
-  MIP.watch(&apos;progressValue&apos;, val =&gt; {
+  MIP.watch('progressValue', val => {
     let progress = Math.min(100, val.length * 10)
     MIP.setData({
       progress,
-      color: [&apos;error&apos;, &apos;warning&apos;, &apos;success&apos;][Math.floor(progress / 40)]
+      color: ['error', 'warning', 'success'][Math.floor(progress / 40)]
     })
   })
 </mip-script>

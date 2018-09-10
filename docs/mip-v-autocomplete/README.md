@@ -210,11 +210,11 @@ z-index|number / string|/|
   <mip-v-autocomplete m-bind:value.sync="model" m-bind:items="items" m-bind:loading="isLoading" m-bind:search-input.sync="search" hide-no-data hide-selected item-text="Description" item-value="API" label="Public APIs" placeholder="Start typing to Search" prepend-icon="mdi-database-search" return-object></mip-v-autocomplete>
 </div>
 <mip-script>
-  MIP.watch(&apos;entries&apos;, val =&gt; {
-    let descriptionLimit = MIP.getData(&apos;descriptionLimit&apos;)
-    let items = val.map(entry =&gt; {
-      const Description = entry.Description.length &gt; descriptionLimit
-        ? entry.Description.slice(0, descriptionLimit) + &apos;...&apos;
+  MIP.watch('entries', val => {
+    let descriptionLimit = MIP.getData('descriptionLimit')
+    let items = val.map(entry => {
+      const Description = entry.Description.length > descriptionLimit
+        ? entry.Description.slice(0, descriptionLimit) + '...'
         : entry.Description
 
       return Object.assign({}, entry, { Description })
@@ -223,26 +223,26 @@ z-index|number / string|/|
     MIP.setData({items})
   })
 
-  MIP.watch(&apos;search&apos;, val =&gt; {
+  MIP.watch('search', val => {
     // Items have already been loaded
-    if (MIP.getData(&apos;items&apos;).length &gt; 0) return
+    if (MIP.getData('items').length > 0) return
 
     MIP.setData({isLoading: true})
 
     // Lazily load input items
-    fetch(&apos;https://api.publicapis.org/entries&apos;)
-      .then(res =&gt; {
+    fetch('https://api.publicapis.org/entries')
+      .then(res => {
         if (res.ok) {
-          res.json().then(data =&gt; {
+          res.json().then(data => {
             const { count, entries } = data
             MIP.setData({entries})
           })
         }
       })
-      .catch(err =&gt; {
+      .catch(err => {
         console.log(err)
       })
-      .finally(() =&gt; MIP.setData({isLoading: false}))
+      .finally(() => MIP.setData({isLoading: false}))
   })
 </mip-script>
 ```
@@ -292,9 +292,9 @@ z-index|number / string|/|
   </mip-v-btn>
 </div>
 <mip-script>
-  MIP.watch(&apos;toSave&apos;, val =&gt; {
+  MIP.watch('toSave', val => {
     // do sth like set-data/ajax-put
-    val &amp;&amp; MIP.setData({isEditing: !MIP.getData(&apos;isEditing&apos;)})
+    val && MIP.setData({isEditing: !MIP.getData('isEditing')})
     MIP.setData({toSave: false})
   })
 </mip-script>
@@ -340,19 +340,19 @@ z-index|number / string|/|
     MIP.setData({loading: true})
 
     // Simulated ajax query
-    setTimeout(() =&gt; {
-      let states = MIP.getData(&apos;states&apos;)
+    setTimeout(() => {
+      let states = MIP.getData('states')
       MIP.setData({
         loading: false,
-        asyncItems: states.filter(e =&gt; {
-          return (e || &apos;&apos;).toLowerCase().indexOf((v || &apos;&apos;).toLowerCase()) &gt; -1
+        asyncItems: states.filter(e => {
+          return (e || '').toLowerCase().indexOf((v || '').toLowerCase()) > -1
         })
       })
     }, 500)
   }
 
-  MIP.watch(&apos;searchVal&apos;, val =&gt; {
-    val &amp;&amp; val !== MIP.getData(&apos;select&apos;) &amp;&amp; querySelections(val)
+  MIP.watch('searchVal', val => {
+    val && val !== MIP.getData('select') && querySelections(val)
   })
 </mip-script>
 ```

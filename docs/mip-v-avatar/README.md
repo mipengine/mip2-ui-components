@@ -58,7 +58,6 @@ tile|boolean|/|删除边看弧度
 
   <mip-v-badge overlap>
     <span slot="badge">3</span>
-
     <mip-v-avatar color="purple red--after">
       <mip-v-icon dark>notifications</mip-v-icon>
     </mip-v-avatar>
@@ -86,19 +85,18 @@ tile|boolean|/|删除边看弧度
   </script>
 </mip-data>
 <mip-v-btn on="tap:MIP.setData({tile: !m.tile})" color="primary">Toggle Tile</mip-v-btn>
-<input m-bind:value="avatarSize" class="avatar-size-input">
-<div class="section">
+<input m-bind:value="avatarSize">
+<div>
   <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="grey lighten-4">
     <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
   </mip-v-avatar>
-
 </div>
-<div class="section">
+<div>
   <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="green">
     <span class="white--text headline">J</span>
   </mip-v-avatar>
 </div>
-<div class="section">
+<div>
   <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="purple red--after">
     <mip-v-icon dark>favorite</mip-v-icon>
   </mip-v-avatar>

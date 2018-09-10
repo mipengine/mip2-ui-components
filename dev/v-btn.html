@@ -37,6 +37,7 @@
         "toggle_one": 0,
         "text": "center",
         "icon": "justify",
+        "loading": false,
         "dropdown_font": [
           { "text": "Arial" },
           { "text": "Calibri" },
@@ -121,8 +122,6 @@
       <mip-v-btn depressed large color="error">Error</mip-v-btn>
       <mip-v-btn depressed large disabled>Disabled</mip-v-btn>
     </div>
-
-    <!-- <h2>按钮下拉菜单</h2> -->
 
     <h2>按钮切换</h2>
 
@@ -278,7 +277,43 @@
       </mip-v-btn>
     </div>
 
-    <!-- <h2>加载器</h2> -->
+    <h2>加载器</h2>
+    <div class="flex">
+      <mip-v-btn
+        m-bind:loading="loading"
+        m-bind:disabled="loading"
+        color="secondary"
+        on="click:MIP.setData({ loading: true })"
+      >
+        Accept Terms
+      </mip-v-btn>
+      <mip-v-btn
+        m-bind:loading="loading"
+        m-bind:disabled="loading"
+        color="blue-grey"
+        class="white--text"
+        on="click:MIP.setData({ loading: true })"
+      >
+        Upload
+        <mip-v-icon right dark>cloud_upload</mip-v-icon>
+      </mip-v-btn>
+      <mip-v-btn
+        m-bind:loading="loading"
+        m-bind:disabled="loading"
+        color="success"
+        on="click:MIP.setData({ loading: true })"
+      >
+        Custom Loader
+        <span slot="loader">Loading...</span>
+      </mip-v-btn>
+    </div>
+    <mip-script>
+      MIP.watch('loading', (val) => {
+        if (val) {
+          setTimeout(() => MIP.setData({ loading: false }), 2000)
+        }
+      })
+    </mip-script>
 
     <h2>大小</h2>
     <div class="flex">
@@ -317,5 +352,6 @@
 
     <script src="http://localhost:8080/dist/mip.js"></script>
     <script src="/dev/main.js"></script>
+    <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
   </body>
 </html>

@@ -324,6 +324,40 @@ multiple|boolean|/|允许选中多个按钮
 </div>
 ```
 
+### 加载器
+
+```html
+<mip-data>
+  <script type="application/json">
+    {
+      "text": "center",
+      "icon": "justify",
+      "loading": false
+    }
+  </script>
+</mip-data>
+<div class="flex">
+  <mip-v-btn m-bind:loading="loading" m-bind:disabled="loading" color="secondary" on="click:MIP.setData({ loading: true })">
+    Accept Terms
+  </mip-v-btn>
+  <mip-v-btn m-bind:loading="loading" m-bind:disabled="loading" color="blue-grey" class="white--text" on="click:MIP.setData({ loading: true })">
+    Upload
+    <mip-v-icon right dark>cloud_upload</mip-v-icon>
+  </mip-v-btn>
+  <mip-v-btn m-bind:loading="loading" m-bind:disabled="loading" color="success" on="click:MIP.setData({ loading: true })">
+    Custom Loader
+    <span slot="loader">Loading...</span>
+  </mip-v-btn>
+</div>
+<mip-script>
+  MIP.watch('loading', (val) => {
+    if (val) {
+      setTimeout(() => MIP.setData({ loading: false }), 2000)
+    }
+  })
+</mip-script>
+```
+
 ### 大小
 
 ```html

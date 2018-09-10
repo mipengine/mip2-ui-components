@@ -288,6 +288,8 @@ const fixDOMSerializer = () => fs.writeFile(
 
   var unencodedElements = {
     __proto__: null,
+    'mip-style': true,
+    'mip-script': true,
     style: true,
     script: true,
     xmp: true,
