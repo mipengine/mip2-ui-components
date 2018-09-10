@@ -65,8 +65,8 @@ value|any|/|控制可见性
 dark|boolean|/|应用暗黑主题变体
 input-value|any|/|控制按钮的激活状态
 light|boolean|/|应用明亮主题变体
-mandatory|boolean|/|
-multiple|boolean|/|
+mandatory|boolean|/|强制选中其中一个按钮
+multiple|boolean|/|允许选中多个按钮
 
 ## 示例
 
@@ -382,71 +382,5 @@ multiple|boolean|/|
 ### 块状
 
 ```html
-<mip-v-btn block color="secondary" dark>Block Button</mip-v-btn>
-```
-
-### In toolbar
-
-```html
-<mip-data>
-  <script type="application/json">
-    {
-      "toggle_exclusive": 2,
-      "toggle_multiple": [
-        0,
-        1,
-        2
-      ],
-      "icon": "justify",
-      "dropdown_font": [
-        {},
-        {},
-        {},
-        {}
-      ],
-      "dropdown_edit": [
-        {},
-        {},
-        {},
-        {},
-        {}
-      ]
-    }
-  </script>
-</mip-data>
-<mip-v-toolbar dense>
-  <mip-v-overflow-btn m-bind:items="dropdown_font" label="Select font" hide-details></mip-v-overflow-btn>
-  <mip-v-divider vertical></mip-v-divider>
-  <mip-v-overflow-btn m-bind:items="dropdown_edit" editable label="Select size" hide-details overflow></mip-v-overflow-btn>
-  <mip-v-divider class="mr-2" vertical></mip-v-divider>
-  <mip-v-btn-toggle m-bind:input-value.sync="toggle_multiple" class="transparent" multiple>
-    <mip-v-btn flat>
-      <mip-v-icon>format_bold</mip-v-icon>
-    </mip-v-btn>
-    <mip-v-btn flat>
-      <mip-v-icon>format_italic</mip-v-icon>
-    </mip-v-btn>
-    <mip-v-btn flat>
-      <mip-v-icon>format_underlined</mip-v-icon>
-    </mip-v-btn>
-    <mip-v-btn flat>
-      <mip-v-icon>format_color_fill</mip-v-icon>
-    </mip-v-btn>
-  </mip-v-btn-toggle>
-  <mip-v-divider class="mx-2" vertical></mip-v-divider>
-  <mip-v-btn-toggle m-bind:input-value.sync="toggle_exclusive" class="transparent">
-    <mip-v-btn flat value="left">
-      <mip-v-icon>format_align_left</mip-v-icon>
-    </mip-v-btn>
-    <mip-v-btn flat value="center">
-      <mip-v-icon>format_align_center</mip-v-icon>
-    </mip-v-btn>
-    <mip-v-btn flat value="right">
-      <mip-v-icon>format_align_right</mip-v-icon>
-    </mip-v-btn>
-    <mip-v-btn flat value="justify">
-      <mip-v-icon>format_align_justify</mip-v-icon>
-    </mip-v-btn>
-  </mip-v-btn-toggle>
-</mip-v-toolbar>
+<mip-v-btn block color="secondary" dark style="width: 100%">Block Button</mip-v-btn>
 ```
