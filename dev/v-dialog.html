@@ -9,11 +9,11 @@
     <style>
       h2 {
         padding: 16px;
-      }
+     }
       body > p {
         padding: 4px 16px;
         margin-bottom: 0;
-      }
+     }
     </style>
   </head>
   <body>
@@ -27,14 +27,14 @@
             "meta": {
               "header": {
                 "show": true
-              },
+             },
               "view": {
                 "isIndex": false
-              }
-            }
-          }
+             }
+           }
+         }
         ]
-      }
+     }
       </script>
     </mip-shell>
 
@@ -45,7 +45,7 @@
         "dialog2": false,
         "show2": false,
         "show3": false
-      }
+     }
       </script>
     </mip-data>
 
@@ -62,7 +62,7 @@
         <mip-v-divider></mip-v-divider>
         <mip-v-card-actions>
           <div class="spacer"></div>
-          <mip-v-btn color="primary" flat on="tap:MIP.setData({dialog1:false})">
+          <mip-v-btn color="primary" flat on="tap:MIP.setData({ dialog1: false })">
             I accept
           </mip-v-btn>
         </mip-v-card-acti>
@@ -81,15 +81,15 @@
         </mip-v-card-text>
         <mip-v-card-actions>
           <div class="spacer"></div>
-          <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({dialog2:false})">Disagree</mip-v-btn>
-          <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({dialog2:false})">Agree</mip-v-btn>
+          <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({ dialog2: false })">Disagree</mip-v-btn>
+          <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({ dialog2: false })">Agree</mip-v-btn>
         </mip-v-card-actions>
       </mip-v-card>
     </mip-v-dialog>
 
     <h2>可滚动</h2>
     <mip-v-btn outline large fab color="indigo"
-      on="tap:MIP.setData({show2:true})">
+      on="tap:MIP.setData({ show2: true })">
       <mip-v-icon>edit</mip-v-icon>
     </mip-v-btn>
 
@@ -111,7 +111,7 @@
         <div class="v-card__actions">
           <div class="spacer"></div>
           <mip-v-btn outline large fab color="indigo"
-            on="tap:MIP.setData({show2:false})">
+            on="tap:MIP.setData({ show2: false })">
             <mip-v-icon>close</mip-v-icon>
           </mip-v-btn>
         </div>
@@ -122,7 +122,7 @@
     <p>使用 hide-overlay 隐藏蒙层</p>
     <p>使用 persistent 点击对话框外部不能使其关闭</p>
     <mip-v-btn outline large fab color="indigo"
-      on="tap:MIP.setData({show3:true})">
+      on="tap:MIP.setData({ show3: true })">
       <mip-v-icon>edit</mip-v-icon>
     </mip-v-btn>
 

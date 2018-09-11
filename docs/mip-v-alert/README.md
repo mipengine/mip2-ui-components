@@ -75,7 +75,7 @@ value|boolean|/|控制可见性
     }
   </script>
 </mip-data>
-<mip-v-btn color="primary" on="tap:MIP.setData({alert: !m.alert})">
+<mip-v-btn color="primary" on="tap:MIP.setData({ alert: !alert })">
   Toggle
 </mip-v-btn>
 <mip-v-alert m-bind:value="alert" type="success" transition="scale-transition">

@@ -24,7 +24,7 @@
     <mip-v-divider></mip-v-divider>
     <mip-v-card-actions>
       <div class="spacer"></div>
-      <mip-v-btn color="primary" flat on="tap:MIP.setData({dialog1:false})">
+      <mip-v-btn color="primary" flat on="tap:MIP.setData({ dialog1: false })">
         I accept
       </mip-v-btn>
     
@@ -79,8 +79,8 @@ width|string / number|'auto'|设置对话框的宽度
     </mip-v-card-text>
     <mip-v-card-actions>
       <div class="spacer"></div>
-      <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({dialog2:false})">Disagree</mip-v-btn>
-      <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({dialog2:false})">Agree</mip-v-btn>
+      <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({ dialog2: false })">Disagree</mip-v-btn>
+      <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({ dialog2: false })">Agree</mip-v-btn>
     </mip-v-card-actions>
   </mip-v-card>
 </mip-v-dialog>
@@ -96,7 +96,7 @@ width|string / number|'auto'|设置对话框的宽度
     }
   </script>
 </mip-data>
-<mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({show2:true})">
+<mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({ show2: true })">
   <mip-v-icon>edit</mip-v-icon>
 </mip-v-btn>
 <mip-v-dialog m-bind:value.sync="show2" scrollable max-width="290">
@@ -113,7 +113,7 @@ width|string / number|'auto'|设置对话框的宽度
     </div>
     <div class="v-card__actions">
       <div class="spacer"></div>
-      <mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({show2:false})">
+      <mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({ show2: false })">
         <mip-v-icon>close</mip-v-icon>
       </mip-v-btn>
     </div>
@@ -131,7 +131,7 @@ width|string / number|'auto'|设置对话框的宽度
     }
   </script>
 </mip-data>
-<mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({show3:true})">
+<mip-v-btn outline large fab color="indigo" on="tap:MIP.setData({ show3: true })">
   <mip-v-icon>edit</mip-v-icon>
 </mip-v-btn>
 <mip-v-dialog m-bind:value="show3" hide-overlay persistent max-width="290">

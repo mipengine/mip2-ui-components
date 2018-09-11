@@ -93,44 +93,44 @@ append-icon|string|'$vuetify.icons.dropdown'|使用与`mip-v-icon`相同的语�
 append-icon-cb|function|/|单击回调添加后置图标
 append-outer-icon|string|/|为 `mip-v-text-field` 输入框外部增加一个标签，使用方法同 `mip-v-icon`
 append-outer-icon-cb|function|/|当点击添加的外部标签时触发的回调
-attach|any|/|
+attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
 auto|boolean|/|在所选择的元素上居中列表
 autofocus|boolean|/|启用自动聚焦
 background-color|string|''|
 box|boolean|/|应用备用输入框样式
-browser-autocomplete|string|'off'|配置`<input>` 默认的自动补全属性
-cache-items|boolean|/|
-chips|boolean|/|
+browser-autocomplete|string|'off'|设置搜索框的浏览器自动补全
+cache-items|boolean|/|保留已经通过 **items** 属性的项在本地的唯一副本
+chips|boolean|/|将一个已选择项改为小纸片（chips）的显示方式
 clear-icon|string|'$vuetify.icons.clear'|当使用 **clearable** 属性和输入框有内容时起作用
 clear-icon-cb|function|/|当清除标签被点击时的回调
 clearable|boolean|/|添加输入框清除功能，默认图标是 Material Icons **clear**
 close-on-click|boolean|true|
 close-on-content-click|boolean|true|
 color|string|'primary'|将指定的色彩应用与控件
-content-class|string|/|
+content-class|string|/|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
 counter|boolean / number / string|/|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
 dark|boolean|/|应用暗黑主题变体
-deletable-chips|boolean|/|
-dense|boolean|/|
-disabled|boolean|/|输入框是禁用的
+deletable-chips|boolean|/|给选定的小纸片（chips）添加一个去除图标
+dense|boolean|/|减小列表的最大高度
+disabled|boolean|/|禁用输入
 dont-fill-mask-blanks|boolean|/|键入时禁用自动字符显示
 error|boolean|/|将输入框设置为手动错误状态。
 error-count|number / string|1|同时展示的错误数
 error-messages|string / array|[]|将输入框置于错误状态，并传入自定义的错误信息。将与来自**规则（rules）**属性的任何验证相结合。这个字段不会触发验证。
-filter|function|true|
+filter|function|true|用于过滤选项的函数
 flat|boolean|/|当使用**solo**或者**solo-inverted**属性时，移除添加到元素的标高（阴影）
 full-width|boolean|/|指定输入框为全屏宽度。
 height|number / string|/|设置组件高度
 hide-details|boolean|/|隐藏提示，验证错误
 hide-no-data|boolean|/|
-hide-selected|boolean|/|
+hide-selected|boolean|/|不要在选择菜单中显示已选择的项
 hint|string|/|提示文本
 input-activator|boolean|/|
-item-avatar|string / array / function|'avatar'|
-item-disabled|string / array / function|'disabled'|
-item-text|string / array / function|'text'|
-item-value|string / array / function|'value'|
-items|array|[]|
+item-avatar|string / array / function|'avatar'|设置 **items** 属性的头像
+item-disabled|string / array / function|'disabled'| 禁用 **items** 的属性值
+item-text|string / array / function|'text'|设置**items**'属性的文本值
+item-value|string / array / function|'value'|设置**items**属性的值
+items|array|[]|可以是一个对象数组或字符串数组，当使用对象时，会查找文本和值字段，这可以使用 **item-text** 和 **item-value** 属性来改变。
 label|string|/|设置输入框标签
 light|boolean|/|应用明亮主题变体
 loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜色应用于进度条的字符串（任何material色彩——主要（primary）, 次要（secondary）, 成功（success）, 信息（info），警告（warning），错误（error）），或者使用组件的布尔值**颜色**（由色彩属性设置——如果它被组件支持的话）还可以是原色。
@@ -138,9 +138,9 @@ mask|object / string|/|将自定义字符掩码应用于输入框。有关更多
 max-height|number / string|300|设置内容的最大高度
 max-width|number / string|'auto'|
 messages|string / array|[]|Displays a list of messages or message if using a string
-min-width|number / string|/|
-multi-line|boolean|/|转为多行文本框
-multiple|boolean|/|
+min-width|number / string|/|设置内容的最小宽度
+multi-line|boolean|/|当选择器组件被聚焦或使用时，使标签浮动
+multiple|boolean|/|多选，接受数组作为值
 no-data-text|string|'$vuetify.noDataText'|当没有数据时显示的文本
 no-filter|boolean|/|Do not apply filtering when searching. Useful when data is being filtered server side
 nudge-bottom|number / string|/|
@@ -151,7 +151,7 @@ nudge-width|number / string|/|
 offset-overflow|boolean|true|
 offset-x|boolean|/|
 offset-y|boolean|true|
-open-on-clear|boolean|/|
+open-on-clear|boolean|/|当使用 **clearable** 属性, 一旦清除，选择菜单将打开或保持打开，这个取决于当前状态
 open-on-click|boolean|true|
 open-on-hover|boolean|/|
 origin|string|'top left'|
@@ -167,12 +167,12 @@ prepend-inner-icon|string|/|
 prepend-inner-icon-cb|function|/|
 readonly|boolean|/|将输入之余只读状态
 return-masked-value|boolean|/|返回未修改的掩码字符串
-return-object|boolean|/|
+return-object|boolean|/|将选择器的行为更改为直接返回对象，而不是 item-value 指定的值
 reverse|boolean|/|反转输入方向
 rules|array|[]|返回True或带有错误信息的字符串的函数数组。
-search-input|any|/|
+search-input|any|/|使用自动补全（autocomplete）属性，使用 .sync 修饰符从自动补全搜索框中捕获用户的输入
 single-line|boolean|/|Label does not move on focus/dirty
-small-chips|boolean|/|
+small-chips|boolean|/|使用 **small** 属性可以改变选择器的外观
 solo|boolean|/|改变输入框的样式
 solo-inverted|boolean|/|减少元素的不透明度，知道获得焦点
 success|boolean|/|设置输入框为成功（success）状态
@@ -182,8 +182,8 @@ textarea|boolean|/|Textarea 使用备用样式
 transition|boolean / string|/|
 type|string|'text'|设置输入类型
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
-value|any|/|设置选择控件组件的值
-value-comparator|function|true|Apply a custom value comparator function
+value|any|/|Sets the value of the selection control component
+value-comparator|function|true|用于值的比较算法. [更多内容](https://github.com/vuetifyjs/vuetify/blob/master/src/util/helpers.ts)
 z-index|number / string|/|
 
 ## 示例
@@ -215,14 +215,14 @@ z-index|number / string|/|
       return Object.assign({}, entry, { Description })
     })
 
-    MIP.setData({items})
+    MIP.setData({ items })
   })
 
   MIP.watch('search', val => {
     // Items have already been loaded
     if (MIP.getData('items').length > 0) return
 
-    MIP.setData({isLoading: true})
+    MIP.setData({ isLoading: true })
 
     // Lazily load input items
     fetch('https://api.publicapis.org/entries')
@@ -230,14 +230,14 @@ z-index|number / string|/|
         if (res.ok) {
           res.json().then(data => {
             const { count, entries } = data
-            MIP.setData({entries})
+            MIP.setData({ entries })
           })
         }
       })
       .catch(err => {
         console.log(err)
       })
-      .finally(() => MIP.setData({isLoading: false}))
+      .finally(() => MIP.setData({ isLoading: false }))
   })
 </mip-script>
 <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
@@ -272,19 +272,19 @@ z-index|number / string|/|
 </mip-data>
 <div class="container grid-list-xl">
   <mip-v-autocomplete m-bind:disabled="!isEditing" m-bind:items="states" item-text="name" label="State"></mip-v-autocomplete>
-  <mip-v-btn color="purple darken-3 white--text" fab small on="tap:MIP.setData({isEditing: !m.isEditing})">
+  <mip-v-btn color="purple darken-3 white--text" fab small on="tap:MIP.setData({ isEditing: !isEditing })">
     <mip-v-icon m-bind:class="{hide:!isEditing}">mdi-close</mip-v-icon>
     <mip-v-icon m-bind:class="{hide:isEditing}">mdi-pencil</mip-v-icon>
   </mip-v-btn>
-  <mip-v-btn m-bind:disabled="!isEditing" color="success" on="tap:MIP.setData({toSave: true})">
+  <mip-v-btn m-bind:disabled="!isEditing" color="success" on="tap:MIP.setData({ toSave: true })">
     Save
   </mip-v-btn>
 </div>
 <mip-script>
   MIP.watch('toSave', val => {
     // do sth like set-data/ajax-put
-    val && MIP.setData({isEditing: !MIP.getData('isEditing')})
-    MIP.setData({toSave: false})
+    val && MIP.setData({ isEditing: !MIP.getData('isEditing') })
+    MIP.setData({ toSave: false })
   })
 </mip-script>
 <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
@@ -309,7 +309,7 @@ z-index|number / string|/|
 </div>
 <mip-script>
   function querySelections (v) {
-    MIP.setData({loading: true})
+    MIP.setData({ loading: true })
 
     // Simulated ajax query
     setTimeout(() => {

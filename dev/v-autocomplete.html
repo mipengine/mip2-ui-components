@@ -171,14 +171,14 @@
           return Object.assign({}, entry, { Description })
         })
 
-        MIP.setData({items})
+        MIP.setData({ items })
       })
 
       MIP.watch('search', val => {
         // Items have already been loaded
         if (MIP.getData('items').length > 0) return
 
-        MIP.setData({isLoading: true})
+        MIP.setData({ isLoading: true })
 
         // Lazily load input items
         fetch('https://api.publicapis.org/entries')
@@ -186,14 +186,14 @@
             if (res.ok) {
               res.json().then(data => {
                 const { count, entries } = data
-                MIP.setData({entries})
+                MIP.setData({ entries })
               })
             }
           })
           .catch(err => {
             console.log(err)
           })
-          .finally(() => MIP.setData({isLoading: false}))
+          .finally(() => MIP.setData({ isLoading: false }))
       })
     </mip-script>
     <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
@@ -210,7 +210,7 @@
         color="purple darken-3 white--text"
         fab
         small
-        on="tap:MIP.setData({isEditing: !m.isEditing})"
+        on="tap:MIP.setData({ isEditing: !isEditing })"
       >
         <mip-v-icon m-bind:class="{hide:!isEditing}">mdi-close</mip-v-icon>
         <mip-v-icon m-bind:class="{hide:isEditing}">mdi-pencil</mip-v-icon>
@@ -218,7 +218,7 @@
       <mip-v-btn
         m-bind:disabled="!isEditing"
         color="success"
-        on="tap:MIP.setData({toSave: true})"
+        on="tap:MIP.setData({ toSave: true })"
       >
         Save
       </mip-v-btn>
@@ -226,8 +226,8 @@
     <mip-script>
       MIP.watch('toSave', val => {
         // do sth like set-data/ajax-put
-        val && MIP.setData({isEditing: !MIP.getData('isEditing')})
-        MIP.setData({toSave: false})
+        val && MIP.setData({ isEditing: !MIP.getData('isEditing') })
+        MIP.setData({ toSave: false })
       })
     </mip-script>
     <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
@@ -250,7 +250,7 @@
     </div>
     <mip-script>
       function querySelections (v) {
-        MIP.setData({loading: true})
+        MIP.setData({ loading: true })
 
         // Simulated ajax query
         setTimeout(() => {

@@ -84,7 +84,7 @@ tile|boolean|/|删除边看弧度
     }
   </script>
 </mip-data>
-<mip-v-btn on="tap:MIP.setData({tile: !m.tile})" color="primary">Toggle Tile</mip-v-btn>
+<mip-v-btn on="tap:MIP.setData({ tile: !tile })" color="primary">Toggle Tile</mip-v-btn>
 <input m-bind:value="avatarSize">
 <div>
   <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="grey lighten-4">

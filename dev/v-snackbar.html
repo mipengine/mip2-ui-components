@@ -10,27 +10,27 @@
   <body>
     <mip-shell>
       <script type="application/json">
-      {
+     {
         "transitionContainsHeader": false,
         "routes": [
-          {
+         {
             "pattern": "*",
             "meta": {
               "header": {
                 "show": true
-              },
+             },
               "view": {
                 "isIndex": false
-              }
-            }
-          }
+             }
+           }
+         }
         ]
-      }
+     }
       </script>
     </mip-shell>
     <mip-data>
       <script type="application/json">
-        {
+       {
           "snackbar": false,
           "y": "top",
           "x": null,
@@ -42,7 +42,7 @@
           "mode0": "",
           "timeout0": 6000,
           "text0": "Hello, I'm a snackbar"
-        }
+       }
       </script>
     </mip-data>
 
@@ -121,7 +121,7 @@
           block
           color="primary"
           dark
-          on="click:MIP.setData({snackbar:true})"
+          on="click:MIP.setData({ snackbar: true })"
         >
           Show Snackbar
         </mip-v-btn>
@@ -142,7 +142,7 @@
         <mip-v-btn
           color="pink"
           flat
-          on="click:MIP.setData({snackbar:false})"
+          on="click:MIP.setData({ snackbar: false })"
         >
           Close
         </mip-v-btn>
@@ -217,7 +217,7 @@
           block
           color="primary"
           dark
-          on="click:MIP.setData({snackbar0:true})"
+          on="click:MIP.setData({ snackbar0: true })"
         >
           Show Snackbar0
         </mip-v-btn>
@@ -234,7 +234,7 @@
         <mip-v-btn
           dark
           flat
-          on="click:MIP.setData({snackbar0:false})"
+          on="click:MIP.setData({ snackbar0: false })"
         >
           Close
         </mip-v-btn>

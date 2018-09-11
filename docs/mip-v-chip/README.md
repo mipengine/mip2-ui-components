@@ -112,7 +112,7 @@ value|boolean|true|控制可见性
     }
   </script>
 </mip-data>
-<mip-v-btn color="primary" dark on="click:MIP.setData({chip1: true, chip2: true, chip3: true, chip4: true})">
+<mip-v-btn color="primary" dark on="click:MIP.setData({ chip1: true, chip2: true, chip3: true, chip4: true })">
   Reset Chips
 </mip-v-btn>
 <mip-v-chip m-bind:value.sync="chip1" close>
