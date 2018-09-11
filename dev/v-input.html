@@ -33,43 +33,48 @@
     </mip-shell>
     <mip-data>
       <script type="application/json">
-      {
-        "input_validation": "validation",
-        "input_loading": true
-      }
+        {}
       </script>
     </mip-data>
 
     <h2>基础样式</h2>
 
-    <mip-v-input label="Label"
-      m-bind:messages="input_validation"
+    <mip-v-input
+      label="Label"
+      messages="validation"
       append-icon="close"
-      prepend-icon="phone">
+      prepend-icon="phone"
+    >
       <input type="text" />
     </mip-v-input>
 
-    <mip-v-input label="Label"
-      m-bind:messages="input_validation"
+    <mip-v-input
+      label="Label"
+      messages="validation"
       append-icon="close"
       prepend-icon="phone"
-      m-bind:loading="input_loading">
+      loading="true"
+    >
       <input type="text" />
     </mip-v-input>
 
-    <mip-v-input label="Label"
-      m-bind:messages="input_validation"
+    <mip-v-input
+      label="Label"
+      messages="validation"
       append-icon="close"
       prepend-icon="phone"
-      error="true">
+      error="true"
+    >
       <input type="text" />
     </mip-v-input>
 
-    <mip-v-input label="Label"
-      m-bind:messages="input_validation"
+    <mip-v-input
+      label="Label"
+      messages="validation"
       append-icon="close"
       prepend-icon="phone"
-      disabled="true">
+      disabled="true"
+    >
       <input type="text" />
     </mip-v-input>
 

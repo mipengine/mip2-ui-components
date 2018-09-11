@@ -5,24 +5,16 @@ The `mip-v-input` component gives you a baseline to create your own custom input
 ## 用例
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "input_validation": "validation",
-      "input_loading": true
-    }
-  </script>
-</mip-data>
-<mip-v-input label="Label" m-bind:messages="input_validation" append-icon="close" prepend-icon="phone">
+<mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone">
   <input type="text">
 </mip-v-input>
-<mip-v-input label="Label" m-bind:messages="input_validation" append-icon="close" prepend-icon="phone" m-bind:loading="input_loading">
+<mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" loading="true">
   <input type="text">
 </mip-v-input>
-<mip-v-input label="Label" m-bind:messages="input_validation" append-icon="close" prepend-icon="phone" error="true">
+<mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" error="true">
   <input type="text">
 </mip-v-input>
-<mip-v-input label="Label" m-bind:messages="input_validation" append-icon="close" prepend-icon="phone" disabled="true">
+<mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" disabled="true">
   <input type="text">
 </mip-v-input>
 ```
