@@ -232,11 +232,9 @@ const generateDoc = async (tagName) => {
 
   println(getHtmlBlock(examples[0].html))
 
-  if (!components.length) {
-    return
+  if (components.length) {
+    println('## API')
   }
-
-  println('## API')
 
   for (const component of components) {
     const { name } = component

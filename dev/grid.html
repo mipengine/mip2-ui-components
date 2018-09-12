@@ -41,7 +41,58 @@
     <h2>基础样式</h2>
     <p>栅格结构：container -> layout -> flex，其中 flex 和 layout 可以互相嵌套</p>
     <p>响应式断点定义如下：</p>
-    <div class="mb-5 v-card"><div class="v-table__overflow"><table class="v-table"><caption class="mt-3"><strong>Material Design Viewport Breakpoints</strong></caption><thead><tr class="text-xs-left"><th>Device</th><th>Code</th><th>Types</th><th>Range</th></tr></thead><tbody><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">phone_iphone</i><span>Extra small</span></td><td><strong>xs</strong></td><td>small to large handset</td><td>&lt; 600px</td></tr><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">tablet</i><span>Small</span></td><td><strong>sm</strong></td><td>small to medium tablet</td><td>600px &gt; &lt; 960px</td></tr><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">laptop</i><span>Medium</span></td><td><strong>md</strong></td><td>large tablet to laptop</td><td>960px &gt; &lt; 1264*</td></tr><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">desktop_windows</i><span>Large</span></td><td><strong>lg</strong></td><td>desktop</td><td>1264 &gt; &lt; 1904px*</td></tr><tr><td><i aria-hidden="true" class="v-icon mr-3 material-icons">tv</i><span>Extra large</span></td><td><strong>xl</strong></td><td>4k and ultra-wides</td><td>&gt; 1904px*</td></tr></tbody><tfoot><tr><td colspan="4" class="text-xs-center"><small><em class="grey--text">* -16px on Desktop</em></small></td></tr></tfoot></table></div></div>
+    <div class="mb-5 v-card">
+      <div class="v-table__overflow">
+        <table class="v-table">
+          <caption class="mt-3"><strong>Material Design Viewport Breakpoints</strong></caption>
+          <thead>
+            <tr class="text-xs-left">
+              <th>Device</th>
+              <th>Code</th>
+              <th>Types</th>
+              <th>Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i aria-hidden="true" class="v-icon mr-3 material-icons">phone_iphone</i><span>Extra small</span></td>
+              <td><strong>xs</strong></td>
+              <td>small to large handset</td>
+              <td>&lt; 600px</td>
+            </tr>
+            <tr>
+              <td><i aria-hidden="true" class="v-icon mr-3 material-icons">tablet</i><span>Small</span></td>
+              <td><strong>sm</strong></td>
+              <td>small to medium tablet</td>
+              <td>600px &gt; &lt; 960px</td>
+            </tr>
+            <tr>
+              <td><i aria-hidden="true" class="v-icon mr-3 material-icons">laptop</i><span>Medium</span></td>
+              <td><strong>md</strong></td>
+              <td>large tablet to laptop</td>
+              <td>960px &gt; &lt; 1264*</td>
+            </tr>
+            <tr>
+              <td><i aria-hidden="true" class="v-icon mr-3 material-icons">desktop_windows</i><span>Large</span></td>
+              <td><strong>lg</strong></td>
+              <td>desktop</td>
+              <td>1264 &gt; &lt; 1904px*</td>
+            </tr>
+            <tr>
+              <td><i aria-hidden="true" class="v-icon mr-3 material-icons">tv</i><span>Extra large</span></td>
+              <td><strong>xl</strong></td>
+              <td>4k and ultra-wides</td>
+              <td>&gt; 1904px*</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" class="text-xs-center"><small><em class="grey--text">* -16px on Desktop</em></small></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
 
     <h2>container 可以调整基础间距</h2>
     <p>例如 .container.grid-list-md 下间距为 8px，而 .container.grid-list-xs 下为 2px</p>

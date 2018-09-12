@@ -87,3 +87,79 @@
 </mip-v-menu>
 ```
 
+## 示例
+
+### 缩放过渡
+
+```html
+<mip-v-menu transition="scale-transition">
+  <mip-v-btn slot="activator" dark color="primary">Scale Transition</mip-v-btn>
+  <mip-v-list>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 2</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 3</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 4</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 5</mip-v-list-tile-title>
+    </mip-v-list-tile>
+  </mip-v-list>
+</mip-v-menu>
+```
+
+### 淡入淡出过渡
+
+```html
+<mip-v-menu transition="fade-transition">
+  <mip-v-btn slot="activator" dark color="primary">Fade Transition</mip-v-btn>
+  <mip-v-list>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 2</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 3</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 4</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 5</mip-v-list-tile-title>
+    </mip-v-list-tile>
+  </mip-v-list>
+</mip-v-menu>
+```
+
+### 自定义原点
+
+```html
+<mip-v-menu transition="scale-transition" origin="center center">
+  <mip-v-btn slot="activator" dark color="primary">Scale Transition</mip-v-btn>
+  <mip-v-list>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 2</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 3</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 4</mip-v-list-tile-title>
+    </mip-v-list-tile>
+    <mip-v-list-tile>
+      <mip-v-list-tile-title>Item 5</mip-v-list-tile-title>
+    </mip-v-list-tile>
+  </mip-v-list>
+</mip-v-menu>
+```
