@@ -183,7 +183,7 @@ transition|boolean / string|/|设置组件过渡效果，可以是内置的过�
 type|string|'text'|设置输入类型
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
 value|any|/|输入值
-value-comparator|function|true|用于值的比较算法. [更多内容](https://github.com/vuetifyjs/vuetify/blob/master/src/util/helpers.ts)
+value-comparator|function|true|用于值的比较算法
 z-index|number / string|/|
 
 ## 示例

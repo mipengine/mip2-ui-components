@@ -59,7 +59,7 @@ toggle-keys|array|[13,32]|将切换输入框（如果它支持切换）的键码
 true-value|any|/|设置真值
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
 value|any|/|设置选择控件组件的值
-value-comparator|function|true|Apply a custom value comparator function
+value-comparator|function|true|用于值的比较算法
 
 ## 示例
 

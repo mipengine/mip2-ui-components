@@ -65,7 +65,8 @@
     "row": "单选框按行显示",
     "indeterminate": "为复选框设置不确定状态",
     "inputValue": "**v-model** 的绑定值",
-    "value": "设置选择控件组件的值"
+    "value": "设置选择控件组件的值",
+    "valueComparator": "用于值的比较算法"
   },
   "events": {
     "change": "Components.Inputs.events.change",

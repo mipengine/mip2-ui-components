@@ -72,7 +72,7 @@
     "segmented": "创建一个分段按钮 - <a href=\"https://material.io/guidelines/components/buttons.html#buttons-dropdown-buttons\" target=\"_blank\" rel=\"noopener\">spec</a>",
     "smallChips": "使用 **small** 属性可以改变选择器的外观",
     "tags": "标记功能允许用户创建一个 **items** 属性中不存在的新值",
-    "valueComparator": "用于值的比较算法. [更多内容](https://github.com/vuetifyjs/vuetify/blob/master/src/util/helpers.ts)"
+    "valueComparator": "用于值的比较算法"
   },
   "slots": {
     "item": "用于标记列表块的作用域插槽",

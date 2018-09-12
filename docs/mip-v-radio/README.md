@@ -62,7 +62,7 @@ success|boolean|/|设置输入框为**成功（success）**状态
 success-messages|string / array|[]|设置输入框为**成功（success）**状态，并且传入自定义成功信息
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
 value|any|/|设置选择控件组件的值
-value-comparator|function|true|Apply a custom value comparator function
+value-comparator|function|true|用于值的比较算法
 
 ### mip-v-radio
 
