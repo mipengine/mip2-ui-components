@@ -67,8 +67,8 @@ rules|array|[]|返回True或带有错误信息的字符串的函数数组。
 single-line|boolean|/|Label does not move on focus/dirty
 solo|boolean|/|改变输入框的样式
 solo-inverted|boolean|/|减少元素的不透明度，知道获得焦点
-success|boolean|/|设置输入框为成功（success）状态
-success-messages|string / array|[]|Puts the input in a success state and passes through custom success messsages.
+success|boolean|/|设置输入框为**成功（success）**状态
+success-messages|string / array|[]|设置输入框为**成功（success）**状态，并且传入自定义成功信息
 suffix|string|/|显示后缀
 textarea|boolean|/|Textarea 使用备用样式
 type|string|'text'|设置输入类型

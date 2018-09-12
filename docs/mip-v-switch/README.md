@@ -49,8 +49,8 @@ prepend-icon-cb|function|/|单击时回调添加前置图标
 readonly|boolean|/|将输入之余只读状态
 ripple|boolean / object|true|应用`mip-v-ripple`指令
 rules|array|[]|返回True或带有错误信息的字符串的函数数组。
-success|boolean|/|设置输入框为成功（success）状态
-success-messages|string / array|[]|Puts the input in a success state and passes through custom success messsages.
+success|boolean|/|设置输入框为**成功（success）**状态
+success-messages|string / array|[]|设置输入框为**成功（success）**状态，并且传入自定义成功信息
 toggle-keys|array|[13,32]|将切换输入框（如果它支持切换）的键码数组。
 true-value|any|/|设置真值
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发

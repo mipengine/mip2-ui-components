@@ -56,8 +56,8 @@ range|boolean|/|
 readonly|boolean|/|将输入之余只读状态
 rules|array|[]|返回True或带有错误信息的字符串的函数数组。
 step|number / string|1|如果大于0，则为滑块上的点设置步骤间隔
-success|boolean|/|设置输入框为成功（success）状态
-success-messages|string / array|[]|Puts the input in a success state and passes through custom success messsages.
+success|boolean|/|设置输入框为**成功（success）**状态
+success-messages|string / array|[]|设置输入框为**成功（success）**状态，并且传入自定义成功信息
 thumb-color|string|/|设置拇指和拇指标签颜色
 thumb-label|boolean / string|/|显示拇指标签
 thumb-size|number / string|32|控制 **thumb-label** 的大小
