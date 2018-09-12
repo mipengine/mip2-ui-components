@@ -337,4 +337,5 @@ width|string / number|'auto'|设置对话框的宽度
     val && setTimeout(() => MIP.setData({ dialog7: false }), 2000)
   })
 </mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```

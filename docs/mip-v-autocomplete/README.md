@@ -87,8 +87,8 @@ The `mip-v-autocomplete` component offers simple and flexible type-ahead functio
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
-activator|any|/|在未使用激活器插槽激活器4.字符串可以是任何有效的查询选择器（querySelector），对象（Object）可以是任何有效的Node对象。
-allow-overflow|boolean|true|移除内容的移除重新定位
+activator|any|/|
+allow-overflow|boolean|true|
 append-icon|string|'$vuetify.icons.dropdown'|使用与`mip-v-icon`相同的语法在组件上添加一个后置图标
 append-icon-cb|function|/|单击回调添加后置图标
 append-outer-icon|string|/|为 `mip-v-text-field` 输入框外部增加一个标签，使用方法同 `mip-v-icon`
@@ -104,8 +104,8 @@ chips|boolean|/|将一个已选择项改为小纸片（chips）的显示方式
 clear-icon|string|'$vuetify.icons.clear'|当使用 **clearable** 属性和输入框有内容时起作用
 clear-icon-cb|function|/|当清除标签被点击时的回调
 clearable|boolean|/|添加输入框清除功能，默认图标是 Material Icons **clear**
-close-on-click|boolean|true|Designates if menu should close on outside-activator click
-close-on-content-click|boolean|true|Designates if menu should close when its content is clicked
+close-on-click|boolean|true|指定菜单应该在外部激活器被点击时关闭。
+close-on-content-click|boolean|true|指定点击内容时菜单是否应该关闭。
 color|string|'primary'|将指定的色彩应用与控件
 content-class|string|/|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
 counter|boolean / number / string|/|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
@@ -136,30 +136,30 @@ light|boolean|/|应用明亮主题变体
 loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜色应用于进度条的字符串（任何material色彩——主要（primary）, 次要（secondary）, 成功（success）, 信息（info），警告（warning），错误（error）），或者使用组件的布尔值**颜色**（由色彩属性设置——如果它被组件支持的话）还可以是原色。
 mask|object / string|/|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
 max-height|number / string|300|设置内容的最大高度
-max-width|number / string|'auto'|设置内容的最大宽度
+max-width|number / string|'auto'|
 messages|string / array|[]|Displays a list of messages or message if using a string
 min-width|number / string|/|设置内容的最小宽度
 multi-line|boolean|/|当选择器组件被聚焦或使用时，使标签浮动
 multiple|boolean|/|多选，接受数组作为值
 no-data-text|string|'$vuetify.noDataText'|当没有数据时显示的文本
 no-filter|boolean|/|Do not apply filtering when searching. Useful when data is being filtered server side
-nudge-bottom|number / string|/|向底部微调内容
-nudge-left|number / string|/|向左侧微调内容
-nudge-right|number / string|/|向右侧微调内容
-nudge-top|number / string|/|向顶部微调内容
-nudge-width|number / string|/|微调内容宽度
-offset-overflow|boolean|true|当由于溢出而重新定位时，导致组件翻转到另一侧
-offset-x|boolean|/|Offset the menu on the x-axis. Works in conjunction with direction left/right
-offset-y|boolean|true|Offset the menu on the y-axis. Works in conjunction with direction top/bottom
+nudge-bottom|number / string|/|
+nudge-left|number / string|/|
+nudge-right|number / string|/|
+nudge-top|number / string|/|
+nudge-width|number / string|/|
+offset-overflow|boolean|true|
+offset-x|boolean|/|在x轴上偏移菜单，与左/右方向一起工作
+offset-y|boolean|true|在y轴上偏移菜单，与上/下方向一起工作
 open-on-clear|boolean|/|当使用 **clearable** 属性, 一旦清除，选择菜单将打开或保持打开，这个取决于当前状态
-open-on-click|boolean|true|Designates whether menu should open on activator click
-open-on-hover|boolean|/|Designates whether menu should open on activator hover
+open-on-click|boolean|true|指定是否在激活器点击时打开菜单
+open-on-hover|boolean|/|指定是否在激活器悬停时打开菜单
 origin|string|'top left'|设置过渡原点
 outline|boolean|/|设置输入框的外边缘样式
 persistent-hint|boolean|/|强制提示始终可见
 placeholder|string|/|设置输入的占位符文本
-position-x|number|/|用于在不使用激活器插槽时定位内容
-position-y|number|/|用于在不使用激活器插槽时定位内容
+position-x|number|/|
+position-y|number|/|
 prefix|string|/|显示前缀
 prepend-icon|string|/|使用与`mip-v-icon`系统的语法在组件上添加一个图标
 prepend-icon-cb|function|/|单击时回调添加前置图标
@@ -184,7 +184,7 @@ type|string|'text'|设置输入类型
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
 value|any|/|输入值
 value-comparator|function|true|用于值的比较算法. [更多内容](https://github.com/vuetifyjs/vuetify/blob/master/src/util/helpers.ts)
-z-index|number / string|/|用于组件的z-index
+z-index|number / string|/|
 
 ## 示例
 
