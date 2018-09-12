@@ -29,6 +29,7 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
+absolute|boolean|/|给元素设置绝对定位
 app|boolean|/|指定组件作为应用程序布局的一部分，用于动态调整内容的大小
 card|boolean|/|在`mip-v-card`中使用时继承边框半径
 clipped-left|boolean|/|指定`mip-v-navigation-drawer`应用程序在工具栏的左侧被剪切
@@ -38,6 +39,7 @@ dark|boolean|/|应用暗黑主题变体
 dense|boolean|/|减小工具栏内容和扩展的高度
 extended|boolean|/|强制工具栏生成扩展名而不使用插槽
 extension-height|number / string|/|为扩展插槽指定一个明确的高度
+fixed|boolean|/|给元素设置固定定位
 flat|boolean|/|移除工具栏的盒子阴影
 floating|boolean|/|使工具栏内联浮动
 height|number / string|/|为工具栏指定一个特定的高度

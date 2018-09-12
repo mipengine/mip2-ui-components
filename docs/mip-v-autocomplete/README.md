@@ -104,8 +104,8 @@ chips|boolean|/|
 clear-icon|string|'$vuetify.icons.clear'|当使用 **clearable** 属性和输入框有内容时起作用
 clear-icon-cb|function|/|当清除标签被点击时的回调
 clearable|boolean|/|添加输入框清除功能，默认图标是 Material Icons **clear**
-close-on-click|boolean|true|
-close-on-content-click|boolean|true|
+close-on-click|boolean|true|指定菜单应该在外部激活器被点击时关闭。
+close-on-content-click|boolean|true|指定点击内容时菜单是否应该关闭。
 color|string|'primary'|将指定的色彩应用与控件
 content-class|string|/|
 counter|boolean / number / string|/|为输入长度创建一个计数器，如果未指定数字，则默认为25，不会应用任何验证。
@@ -149,12 +149,12 @@ nudge-right|number / string|/|
 nudge-top|number / string|/|
 nudge-width|number / string|/|
 offset-overflow|boolean|true|
-offset-x|boolean|/|
-offset-y|boolean|true|
+offset-x|boolean|/|在x轴上偏移菜单，与左/右方向一起工作
+offset-y|boolean|true|在y轴上偏移菜单，与上/下方向一起工作
 open-on-clear|boolean|/|
-open-on-click|boolean|true|
-open-on-hover|boolean|/|
-origin|string|'top left'|
+open-on-click|boolean|true|指定是否在激活器点击时打开菜单
+open-on-hover|boolean|/|指定是否在激活器悬停时打开菜单
+origin|string|'top left'|设置过渡原点
 outline|boolean|/|设置输入框的外边缘样式
 persistent-hint|boolean|/|强制提示始终可见
 placeholder|string|/|设置输入的占位符文本
@@ -179,7 +179,7 @@ success|boolean|/|设置输入框为成功（success）状态
 success-messages|string / array|[]|Puts the input in a success state and passes through custom success messsages.
 suffix|string|/|显示后缀
 textarea|boolean|/|Textarea 使用备用样式
-transition|boolean / string|/|
+transition|boolean / string|/|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 type|string|'text'|设置输入类型
 validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
 value|any|/|设置选择控件组件的值

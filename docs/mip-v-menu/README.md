@@ -33,17 +33,24 @@
 
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
+absolute|boolean|/|给元素设置绝对定位
 activator|any|/|在未使用激活器插槽激活器4.字符串可以是任何有效的查询选择器（querySelector），对象（Object）可以是任何有效的Node对象。
 allow-overflow|boolean|/|移除内容的移除重新定位
 attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
 auto|boolean|/|在所选择的元素上居中列表
+bottom|boolean|/|将组件向底部对齐
 close-delay|number / string|200|关闭组件前等待的毫秒数
 close-on-click|boolean|true|指定菜单应该在外部激活器被点击时关闭。
 close-on-content-click|boolean|true|指定点击内容时菜单是否应该关闭。
 content-class|any|''|将自定义类应用于分离的元素。这是很有用的，因为内容被移动到应用程序的末尾，而不是直接通过组件传递给类。
+dark|boolean|/|应用暗黑主题变体
 disabled|boolean|/|禁用菜单
+fixed|boolean|/|给元素设置固定定位
 full-width|boolean|/|Forces 100% width
 input-activator|boolean|/|Sets a new activator target for the detached element. Use when placing detachable items in `mip-v-input` slots
+lazy|boolean|/|有条件地渲染内容，只有激活时才会渲染内容
+left|boolean|/|将组件向左边对齐
+light|boolean|/|应用明亮主题变体
 max-height|any|'auto'|设置内容的最大高度
 max-width|number / string|'auto'|设置内容的最大宽度
 min-width|number / string|/|设置内容的最小宽度
@@ -62,6 +69,8 @@ origin|string|'top left'|设置过渡原点
 position-x|number|/|用于在不使用激活器插槽时定位内容
 position-y|number|/|用于在不使用激活器插槽时定位内容
 return-value|any|/|
+right|boolean|/|将组件向右边对齐
+top|boolean|/|将组件向顶部对齐
 transition|string / boolean|'v-menu-transition'|设置组件过渡效果，可以是内置的过渡配置或者是您自己的配置的其中一个。
 value|boolean|/|控制可见性
 z-index|number / string|/|用于组件的z-index

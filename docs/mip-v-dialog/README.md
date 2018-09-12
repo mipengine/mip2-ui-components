@@ -46,6 +46,7 @@ disabled|boolean|/|禁用打开对话框
 full-width|boolean|/|指定模态框强制100%宽度
 fullscreen|boolean|/|改变布局全屏显示
 hide-overlay|boolean|/|隐藏遮罩
+lazy|boolean|/|有条件地渲染内容，只有激活时才会渲染内容
 max-width|string / number|'none'|内容的最大宽度
 no-click-animation|boolean|/|当使用 **persistent** 属性时，点击 `mip-v-dialog` 内容之外会禁止弹跳效果
 origin|string|'center center'|设置过渡原点

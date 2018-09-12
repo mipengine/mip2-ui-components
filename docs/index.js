@@ -18,7 +18,7 @@ const getMIPTagName = tagName => tagName.startsWith('v-') ? `mip-${tagName}` : t
 
 const replaceMIPTagName = text => text.replace(/v-model/g, '.sync').replace(/`v-/g, '`mip-v-')
 
-const getOfficialDoc = type => async (name) => {
+const getOfficialDoc = async (name) => {
   const getDocName = name => ({
     Btn: 'Buttons',
     Checkbox: 'Selection',
@@ -38,12 +38,6 @@ const getOfficialDoc = type => async (name) => {
 
   return merge({}, await getDocByLang('en'), await getDocByLang('zhHans'))
 }
-
-const getComponentDoc = getOfficialDoc('components')
-
-const getMixinDoc = getOfficialDoc('mixins')
-
-const getGenericProps = () => getOfficialDoc('generic')('Props')
 
 const parseExamples = async (tagName) => {
   const cheerio = require('cheerio')
@@ -185,36 +179,32 @@ const getDescription = async (descriptor, prop) => {
   }
 
   const description = descriptor[prop] || ''
+  const paths = description.split('.')
 
-  if (description.startsWith('Mixins')) {
-    const paths = description.split('.')
-
-    return (await getMixinDoc(paths[1])).props[paths[3]]
-  }
-
-  if (description.startsWith('Components')) {
-    const paths = description.split('.')
-
-    return (await getComponentDoc(paths[1])).props[paths[3]]
+  if (['Components', 'Mixins'].some(type => description.startsWith(type))) {
+    return (await getOfficialDoc(paths[1])).props[paths[3]]
   }
 
   return description
 }
 
-const getMergedComponentInfo = async (component) => {
-  const { name, props, mixins = [] } = component
-  const doc = await getComponentDoc(capitalize(camelToDash(name).split('-')[1]))
-  const genericProps = await getGenericProps()
-  const mixinDocs = await Promise.all(mixins.map(({ name }) => getMixinDoc(name)))
-  let extendProps = {}
-  let extendDoc = {}
-  if (component.extends) {
-    const extendInfo = await getMergedComponentInfo(component.extends)
-    extendProps = merge({}, extendProps, extendInfo.mergedProps)
-    extendDoc = merge({}, extendDoc, extendInfo.mergedDoc)
+const getMergedInfo = async (definition = {}) => {
+  const { name, props, mixins = [] } = definition
+
+  if (!name) {
+    return {}
   }
-  const mergedProps = merge({}, extendProps, ...mixins.map(({ props }) => props), props)
-  const mergedDoc = merge({}, {props: genericProps}, extendDoc, ...mixinDocs, doc)
+
+  const tagName = camelToDash(name)
+
+  const doc = await getOfficialDoc(tagName.startsWith('v-') ? capitalize(tagName.split('-')[1]) : name)
+
+  const { mergedProps: extendsProps, mergedDoc: extendsDoc } = await getMergedInfo(definition.extends)
+  const { mergedProps: mixinsProps, mergedDoc: mixinsDoc } = merge({}, ...(await Promise.all(mixins.map(getMergedInfo))))
+
+  const mergedProps = merge({}, extendsProps, mixinsProps, props)
+  const mergedDoc = merge({}, extendsDoc, mixinsDoc, doc)
+
   return { mergedProps, mergedDoc }
 }
 
@@ -224,7 +214,7 @@ const generateDoc = async (tagName) => {
   const components = Object.values(global.components)
     .filter(({name: componentName = ''}) => componentName.startsWith(name))
 
-  const doc = await getComponentDoc(tagName.startsWith('v-') ? name.slice(1) : name)
+  const doc = await getOfficialDoc(tagName.startsWith('v-') ? name.slice(1) : name)
   const examples = await parseExamples(tagName)
 
   await ensureDocDir(mipTagName)
@@ -249,7 +239,8 @@ const generateDoc = async (tagName) => {
 
   for (const component of components) {
     const { name } = component
-    const { mergedProps, mergedDoc } = await getMergedComponentInfo(component)
+    const { mergedProps, mergedDoc } = await getMergedInfo(component)
+    const mergedPropsDoc = merge({}, await getOfficialDoc('Props'), mergedDoc.props)
 
     println(`### ${getMIPTagName(camelToDash(name))}`)
 
@@ -266,7 +257,7 @@ const generateDoc = async (tagName) => {
             camelToDash(prop),
             getPropType(definition),
             getDefaultValue(definition),
-            replaceMIPTagName(await getDescription(mergedDoc.props, prop))
+            replaceMIPTagName(await getDescription(mergedPropsDoc, prop))
           ].join('|')
         ))
       ).join('\n')
