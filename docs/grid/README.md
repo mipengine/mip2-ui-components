@@ -239,7 +239,30 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
 ### flex 偏移
 
 ```html
-<div class="container grid-list-xl text-xs-center"><div class="layout row wrap"><div class="flex xs10 offset-xs1"><div class="v-card theme--dark purple"><div class="v-card__text">xs10 offset-xs1</div></div></div><div class="flex xs7 offset-xs5 offset-md2 offset-lg5"><div class="v-card theme--dark secondary"><div class="v-card__text">xs7 offset-(xs5 | md2 | lg5)</div></div></div><div class="flex xs12 sm5 md3"><div class="v-card theme--dark primary"><div class="v-card__text">(xs12 | sm5 | md3)</div></div></div><div class="flex xs12 sm5 md5 offset-xs0 offset-lg2"><div class="v-card theme--dark green"><div class="v-card__text">(xs12 | sm5 | md5) offset-(xs0 | lg2)</div></div></div></div></div>
+<div class="container grid-list-xl text-xs-center">
+  <div class="layout row wrap">
+    <div class="flex xs10 offset-xs1">
+      <div class="v-card theme--dark purple">
+        <div class="v-card__text">xs10 offset-xs1</div>
+      </div>
+    </div>
+    <div class="flex xs7 offset-xs5 offset-md2 offset-lg5">
+      <div class="v-card theme--dark secondary">
+        <div class="v-card__text">xs7 offset-(xs5 | md2 | lg5)</div>
+      </div>
+    </div>
+    <div class="flex xs12 sm5 md3">
+      <div class="v-card theme--dark primary">
+        <div class="v-card__text">(xs12 | sm5 | md3)</div>
+      </div>
+    </div>
+    <div class="flex xs12 sm5 md5 offset-xs0 offset-lg2">
+      <div class="v-card theme--dark green">
+        <div class="v-card__text">(xs12 | sm5 | md5) offset-(xs0 | lg2)</div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 ### 自定义组件
