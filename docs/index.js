@@ -198,7 +198,7 @@ const getMergedInfo = async (definition = {}) => {
 
   const tagName = camelToDash(name)
 
-  const doc = await getOfficialDoc(tagName.startsWith('v-') ? capitalize(tagName.split('-')[1]) : name)
+  const doc = await getOfficialDoc(capitalize(tagName.startsWith('v-') ? tagName.split('-')[1] : name))
 
   const { mergedProps: extendsProps, mergedDoc: extendsDoc } = await getMergedInfo(definition.extends)
   const { mergedProps: mixinsProps, mergedDoc: mixinsDoc } = merge({}, ...(await Promise.all(mixins.map(getMergedInfo))))

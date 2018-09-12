@@ -34,7 +34,7 @@
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 absolute|boolean|/|给元素设置绝对定位
-activator|any|/|在未使用激活器插槽激活器4.字符串可以是任何有效的查询选择器（querySelector），对象（Object）可以是任何有效的Node对象。
+activator|any|/|在未使用激活器插槽时，可以是任何有效的查询选择器（querySelector）或Node对象。
 allow-overflow|boolean|/|移除内容的移除重新定位
 attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
 bottom|boolean|/|将组件向底部对齐
