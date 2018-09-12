@@ -25,7 +25,7 @@
 :--:|:--:|:--:|:---
 append-icon|string|/|使用与`mip-v-icon`相同的语法在组件上添加一个后置图标
 append-icon-cb|function|/|单击回调添加后置图标
-background-color|string|''|
+background-color|string|''|背景颜色
 color|string|'accent'|将指定的色彩应用与控件
 dark|boolean|/|应用暗黑主题变体
 disabled|boolean|/|输入框是禁用的
@@ -43,7 +43,7 @@ input-value|any|/|**.sync** 的绑定值
 label|string|/|设置输入框标签
 light|boolean|/|应用明亮主题变体
 loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜色应用于进度条的字符串（任何material色彩——主要（primary）, 次要（secondary）, 成功（success）, 信息（info），警告（warning），错误（error）），或者使用组件的布尔值**颜色**（由色彩属性设置——如果它被组件支持的话）还可以是原色。
-messages|string / array|[]|Displays a list of messages or message if using a string
+messages|string / array|[]|展示一条消息，或一个消息列表
 multiple|boolean|/|
 off-icon|string|'$vuetify.icons.checkboxOff'|
 on-icon|string|'$vuetify.icons.checkboxOn'|

@@ -55,7 +55,7 @@ append-outer-icon-cb|function|/|当点击添加的外部标签时触发的回调
 attach|any|/|指定该组件应该分离到哪个DOM元素，使用CSS选择器字符串或元素的对象应用。
 auto|boolean|/|在所选择的元素上居中列表
 autofocus|boolean|/|启用自动聚焦
-background-color|string|''|
+background-color|string|''|背景颜色
 box|boolean|/|应用备用输入框样式
 browser-autocomplete|string|'on'|设置搜索框的浏览器自动补全
 cache-items|boolean|/|保留已经通过 **items** 属性的项在本地的唯一副本
@@ -94,7 +94,7 @@ loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜�
 mask|object / string|/|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
 max-height|number / string|300|设置内容的最大高度
 max-width|number / string|'auto'|
-messages|string / array|[]|Displays a list of messages or message if using a string
+messages|string / array|[]|展示一条消息，或一个消息列表
 min-width|number / string|/|设置内容的最小宽度
 multi-line|boolean|/|当选择器组件被聚焦或使用时，使标签浮动
 multiple|boolean|/|多选，接受数组作为值

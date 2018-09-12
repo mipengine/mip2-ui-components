@@ -2,6 +2,7 @@
   "props": {
     "appendIcon": "使用与`v-icon`相同的语法在组件上添加一个后置图标",
     "appendIconCb": "单击回调添加后置图标",
+    "backgroundColor": "背景颜色",
     "disabled": "输入框是禁用的",
     "hideDetails": "隐藏提示，验证错误",
     "hint": "提示文本",

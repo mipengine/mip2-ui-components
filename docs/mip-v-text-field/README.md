@@ -28,7 +28,7 @@ append-icon-cb|function|/|单击回调添加后置图标
 append-outer-icon|string|/|为 `mip-v-text-field` 输入框外部增加一个标签，使用方法同 `mip-v-icon`
 append-outer-icon-cb|function|/|当点击添加的外部标签时触发的回调
 autofocus|boolean|/|启用自动聚焦
-background-color|string|''|
+background-color|string|''|背景颜色
 box|boolean|/|应用备用输入框样式
 browser-autocomplete|string|/|配置`<input>` 默认的自动补全属性
 clear-icon|string|'$vuetify.icons.clear'|当使用 **clearable** 属性和输入框有内容时起作用
@@ -51,7 +51,7 @@ label|string|/|设置输入框标签
 light|boolean|/|应用明亮主题变体
 loading|boolean / string|/|显示线性进度条。可以是指定将哪种颜色应用于进度条的字符串（任何material色彩——主要（primary）, 次要（secondary）, 成功（success）, 信息（info），警告（warning），错误（error）），或者使用组件的布尔值**颜色**（由色彩属性设置——如果它被组件支持的话）还可以是原色。
 mask|object / string|/|将自定义字符掩码应用于输入框。有关更多信息，请参阅上面的掩码表格。
-messages|string / array|[]|Displays a list of messages or message if using a string
+messages|string / array|[]|展示一条消息，或一个消息列表
 outline|boolean|/|设置输入框的外边缘样式
 persistent-hint|boolean|/|强制提示始终可见
 placeholder|string|/|设置输入的占位符文本

@@ -107,12 +107,12 @@ two-line|boolean|/|增加列表块的高度到2行
 名称|类型|默认值|含义
 :--:|:--:|:--:|:---
 active-class|string|'primary--text'|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
-append-icon|string|'$vuetify.icons.expand'|Append an icon to the component, uses same syntax as `mip-v-icon`
-disabled|boolean|/|Input is disabled
+append-icon|string|'$vuetify.icons.expand'|使用与`mip-v-icon`相同的语法在组件上添加一个后置图标
+disabled|boolean|/|输入框是禁用的
 group|string|/|分配一个路由命名空间。接受字符串或正则表达式来确定活动状态
 lazy|boolean|/|有条件地渲染内容，只有激活时才会渲染内容
 no-action|boolean|/|从组项中删除为操作图标分配的左侧内边距
-prepend-icon|string|/|Prepend an icon to the component, uses same syntax as `mip-v-icon`
+prepend-icon|string|/|使用与`mip-v-icon`系统的语法在组件上添加一个图标
 sub-group|boolean|/|将组件指定为嵌套列表组
 value|boolean|/|展开/折叠列表组
 
@@ -126,7 +126,7 @@ active-class|string|'primary--text'|当组件处于激活状态时被绑定的�
 append|boolean|/|Vue Router的router-link属性
 avatar|boolean|/|用来设置单行列表项的最小高度（即使用该属性后将有一个头像大小的最小高度）
 color|string|/|将指定的色彩应用与控件
-disabled|boolean|/|Input is disabled
+disabled|boolean|/|输入框是禁用的
 exact|boolean|/|完全匹配链接，没有这个的话，“/”将匹配每一个路由
 exact-active-class|string|/|Vue Router的 router-link属性
 href|string / object|/|将组件标签指定为`<a>`
