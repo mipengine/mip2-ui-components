@@ -23,7 +23,8 @@ const getOfficialDoc = async (name) => {
     Btn: 'Buttons',
     Checkbox: 'Selection',
     Radio: 'Selection',
-    Switch: 'Selection'
+    Switch: 'Selection',
+    Select: 'Selects'
   })[name] || name
 
   const getDocByLang = async (lang) => {
@@ -44,7 +45,7 @@ const parseExamples = async (tagName) => {
 
   const html = await fs.readFile(path.resolve(__dirname, '../dev', `${tagName}.html`), 'utf8')
   const $ = cheerio.load(html)
-  const data = JSON.parse($('mip-data > script[type="application/json"]').html())
+  const data = JSON.parse($('mip-data > script[type="application/json"]').html()) || {}
   const examples = $('h2').nextUntil('script[src="http://localhost:8080/dist/mip.js"]').toArray()
     .reduce((examples, node) => {
       const current = examples[examples.length - 1]
@@ -83,7 +84,7 @@ const parseExamples = async (tagName) => {
       }).join('\n')
       const dataHtml = JSON.stringify(
         data,
-        (key, val) => Number.isInteger(+key) || html.search(new RegExp(`m-bind:[^=]+="[^"]*${key}[^"]*"`)) !== -1
+        (key, val) => val !== data[key] || Number.isInteger(+key) || html.search(new RegExp(`m-bind:[^=]+="[^"]*${key}[^"]*"`)) !== -1
           ? val
           : undefined,
         2

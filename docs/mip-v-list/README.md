@@ -10,13 +10,20 @@
     {
       "items": [
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg"
+          "icon": true,
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg",
+          "title": "Brunch this weekend?",
+          "subtitle": "Ali Connors &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
         },
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg",
+          "title": "Summer BBQ",
+          "subtitle": "to Alex, Scott, Jennifer &mdash; Wish I could come, but I'm out of town this weekend."
         },
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg",
+          "title": "Oui oui",
+          "subtitle": "Sandra Adams &mdash; Do you have Paris recommendations? Have you ever been?"
         }
       ]
     }
@@ -160,13 +167,20 @@ tile|boolean|/|删除边看弧度
     {
       "items": [
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg"
+          "icon": true,
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/1.jpg",
+          "title": "Brunch this weekend?",
+          "subtitle": "Ali Connors &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
         },
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/2.jpg",
+          "title": "Summer BBQ",
+          "subtitle": "to Alex, Scott, Jennifer &mdash; Wish I could come, but I'm out of town this weekend."
         },
         {
-          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg"
+          "avatar": "https://cdn.vuetifyjs.com/images/lists/3.jpg",
+          "title": "Oui oui",
+          "subtitle": "Sandra Adams &mdash; Do you have Paris recommendations? Have you ever been?"
         }
       ]
     }
