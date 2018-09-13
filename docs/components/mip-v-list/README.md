@@ -133,7 +133,7 @@ href|string / object|/|将组件标签指定为`<a>`
 inactive|boolean|/|如果设置了该属性，即使有to/href或者@click，列表块也不会响应链接。
 nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
 replace|boolean|/|Vue Router router-link 属性
-ripple|boolean / object|/|使用`mip-v-ripple`指令
+ripple|boolean / object|/|使用`v-ripple`指令
 tag|string|/|指定要在组件上使用的自定义标签
 target|string|/|指定目标属性，仅适用于猫标签。
 to|string / object|/|将组件标签指定为`<router-link>`

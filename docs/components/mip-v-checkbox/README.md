@@ -51,7 +51,7 @@ persistent-hint|boolean|/|强制提示始终可见
 prepend-icon|string|/|使用与`mip-v-icon`系统的语法在组件上添加一个图标
 prepend-icon-cb|function|/|单击时回调添加前置图标
 readonly|boolean|/|将输入之余只读状态
-ripple|boolean / object|true|应用`mip-v-ripple`指令
+ripple|boolean / object|true|应用`v-ripple`指令
 rules|array|[]|返回True或带有错误信息的字符串的函数数组。
 success|boolean|/|设置输入框为**成功（success）**状态
 success-messages|string / array|[]|设置输入框为**成功（success）**状态，并且传入自定义成功信息

@@ -13,11 +13,7 @@
       "x": null,
       "mode": "",
       "timeout": 6000,
-      "text": "出现了 snackbar 的内容，设置了 timeout 时间后，自动隐藏",
-      "snackbar0": false,
-      "color": "",
-      "timeout0": 6000,
-      "text0": "Hello, I'm a snackbar"
+      "text": "出现了 snackbar 的内容，设置了 timeout 时间后，自动隐藏"
     }
   </script>
 </mip-data>
@@ -71,6 +67,50 @@
     </mip-v-btn>
   </mip-v-snackbar>
 </mip-v-card>
+```
+
+## API
+
+### mip-v-snackbar
+
+#### Props
+
+名称|类型|默认值|含义
+:--:|:--:|:--:|:---
+absolute|boolean|/|给元素设置绝对定位
+auto-height|boolean|/|设置全局提示的高度为动态
+bottom|boolean|/|将组件向底部对齐
+bottompx|number|/|当 `bottom` 为 `true` 时，可以通过**bottompx**设置 `snackbar` 距离屏幕底端的距离
+color|string|/|将指定的色彩应用与控件
+left|boolean|/|将组件向左边对齐
+multi-line|boolean|/|使全局提示更高（移动设备）
+right|boolean|/|将组件向右边对齐
+timeout|number|6000|等待全局提示自动隐藏的时间
+top|boolean|/|将组件向顶部对齐
+toppx|number|/|当 `top` 为 `true` 时，可以通过**toppx**设置 `snackbar` 距离屏幕顶端的距离
+value|boolean|/|控制可见性
+vertical|boolean|/|垂直折叠全局提示的内容（移动设备）
+
+## 示例
+
+### 上下文
+
+```html
+<mip-data>
+  <script type="application/json">
+    {
+      "snackbar": false,
+      "x": null,
+      "mode": "",
+      "timeout": 6000,
+      "text": "出现了 snackbar 的内容，设置了 timeout 时间后，自动隐藏",
+      "snackbar0": false,
+      "color": "",
+      "timeout0": 6000,
+      "text0": "Hello, I'm a snackbar"
+    }
+  </script>
+</mip-data>
 <mip-v-card>
   <mip-v-card-text>
     <div class="container fluid">
@@ -114,26 +154,3 @@
   </mip-v-snackbar>
 </mip-v-card>
 ```
-
-## API
-
-### mip-v-snackbar
-
-#### Props
-
-名称|类型|默认值|含义
-:--:|:--:|:--:|:---
-absolute|boolean|/|给元素设置绝对定位
-auto-height|boolean|/|设置全局提示的高度为动态
-bottom|boolean|/|将组件向底部对齐
-bottompx|number|/|当 `bottom` 为 `true` 时，可以通过**bottompx**设置 `snackbar` 距离屏幕底端的距离
-color|string|/|将指定的色彩应用与控件
-left|boolean|/|将组件向左边对齐
-multi-line|boolean|/|使全局提示更高（移动设备）
-right|boolean|/|将组件向右边对齐
-timeout|number|6000|等待全局提示自动隐藏的时间
-top|boolean|/|将组件向顶部对齐
-toppx|number|/|当 `top` 为 `true` 时，可以通过**toppx**设置 `snackbar` 距离屏幕顶端的距离
-value|boolean|/|控制可见性
-vertical|boolean|/|垂直折叠全局提示的内容（移动设备）
-

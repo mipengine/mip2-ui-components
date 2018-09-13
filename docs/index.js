@@ -16,9 +16,22 @@ const camelToDash = camel => capitalize(camel)
 
 const getMIPTagName = tagName => tagName.startsWith('v-') ? `mip-${tagName}` : tagName
 
-const replaceMIPTagName = text => text.replace(/v-model/g, '.sync').replace(/`v-/g, '`mip-v-')
+const getName = (tagName) => tagName.startsWith('v-')
+  ? capitalize(tagName.split('-')[1])
+  : tagName.split('-').map(capitalize).join('')
 
-const getOfficialDoc = async (name) => {
+const replaceMIPTagName = async (text) => {
+  const directiveDocPaths = await readdir(path.resolve(__dirname, '..', 'lang', 'en', 'directives'))
+
+  return text.replace(/v-model/g, '.sync')
+    .replace(/`(v-[a-z-]+)`/g, (match, tagName) => {
+      const name = getName(tagName)
+
+      return directiveDocPaths.some(docPath => docPath.includes(name)) ? match : `\`${getMIPTagName(tagName)}\``
+    })
+}
+
+const getDocPath = async (name, lang = 'en') => {
   const getDocName = name => ({
     Btn: 'Buttons',
     Checkbox: 'Selection',
@@ -27,9 +40,21 @@ const getOfficialDoc = async (name) => {
     Select: 'Selects'
   })[name] || name
 
+  const docPaths = await readdir(path.resolve(__dirname, '..', 'lang', lang))
+  const docPath = docPaths.find(filename => filename.includes(getDocName(name)))
+
+  return docPath
+}
+
+const getDocType = async (name) => {
+  const docPath = await getDocPath(name)
+
+  return docPath.split(path.sep).slice(-2)[0]
+}
+
+const getOfficialDoc = async (name) => {
   const getDocByLang = async (lang) => {
-    const docPaths = await readdir(path.resolve(__dirname, '../lang', lang))
-    const docPath = docPaths.find(filename => filename.includes(getDocName(name)))
+    const docPath = await getDocPath(name, lang)
 
     if (typeof docPath === 'undefined') {
       return null
@@ -114,14 +139,11 @@ const ensureDir = async (dir) => {
   }
 }
 
-const ensureDocDir = async (mipTagName) => {
-  const docDir = path.resolve(__dirname, `../docs/${mipTagName}`)
+const ensureDocDir = (docType, mipTagName) =>
+  ensureDir(path.resolve(__dirname, '..', 'docs', docType, mipTagName))
 
-  await ensureDir(docDir)
-}
-
-const createDocPrinter = async mipTagName => {
-  const docPath = path.resolve(__dirname, mipTagName, 'README.md')
+const createDocPrinter = async (docType, mipTagName) => {
+  const docPath = path.resolve(__dirname, docType, mipTagName, 'README.md')
 
   try {
     await fs.writeFile(docPath, '')
@@ -198,7 +220,7 @@ const getMergedInfo = async (definition = {}) => {
 
   const tagName = camelToDash(name)
 
-  const doc = await getOfficialDoc(capitalize(tagName.startsWith('v-') ? tagName.split('-')[1] : name))
+  const doc = await getOfficialDoc(getName(tagName))
 
   const { mergedProps: extendsProps, mergedDoc: extendsDoc } = await getMergedInfo(definition.extends)
   const { mergedProps: mixinsProps, mergedDoc: mixinsDoc } = merge({}, ...(await Promise.all(mixins.map(getMergedInfo))))
@@ -211,20 +233,23 @@ const getMergedInfo = async (definition = {}) => {
 
 const generateDoc = async (tagName) => {
   const mipTagName = getMIPTagName(tagName)
-  const name = tagName.split('-').map(capitalize).join('')
+  const name = getName(tagName)
   const components = Object.values(global.components)
-    .filter(({name: componentName = ''}) => componentName.startsWith(name))
+    .filter(({name: componentName = ''}) => componentName.startsWith(`V${name}`))
 
-  const doc = await getOfficialDoc(tagName.startsWith('v-') ? name.slice(1) : name)
-  const examples = await parseExamples(tagName)
+  const [doc, examples, docType] = await Promise.all([
+    getOfficialDoc(name),
+    parseExamples(tagName),
+    getDocType(name)
+  ])
 
-  await ensureDocDir(mipTagName)
+  await ensureDocDir(docType, mipTagName)
 
-  const { print, println } = await createDocPrinter(mipTagName)
+  const { print, println } = await createDocPrinter(docType, mipTagName)
 
   println(`# ${mipTagName}`)
 
-  println(replaceMIPTagName(doc.headerText))
+  println(await replaceMIPTagName(doc.headerText))
 
   println('## 用例')
 
@@ -256,7 +281,7 @@ const generateDoc = async (tagName) => {
             camelToDash(prop),
             getPropType(definition),
             getDefaultValue(definition),
-            replaceMIPTagName(await getDescription(mergedPropsDoc, prop))
+            await replaceMIPTagName(await getDescription(mergedPropsDoc, prop))
           ].join('|')
         ))
       ).join('\n')
@@ -431,11 +456,15 @@ const fixDOMSerializer = () => fs.writeFile(
 const main = async () => {
   await fixDOMSerializer()
 
+  const docTypes = ['components', 'directives', 'layout', 'motion']
+
+  await Promise.all(docTypes.map(docType => ensureDir(path.resolve(__dirname, '..', 'docs', docType))))
+
   const tagNames = (await fs.readdir(path.resolve(__dirname, '../dev')))
     .filter(filename => filename.includes('.html') && filename !== 'index.html')
     .map(filename => filename.replace('.html', ''))
 
-  await generateDocs(tagNames)
+  await generateDocs(['grid'])
 }
 
 main()

@@ -50,7 +50,7 @@ light|boolean|/|应用明亮主题变体
 nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
 raised|boolean|/|指定更高的默认海拔
 replace|boolean|/|Vue Router router-link 属性
-ripple|boolean / object|/|使用`mip-v-ripple`指令
+ripple|boolean / object|/|使用`v-ripple`指令
 tag|string|'div'|指定要在组件上使用的自定义标签
 target|string|/|指定目标属性，仅适用于猫标签。
 tile|boolean|/|通过去除边界弧度将卡片转为贴片

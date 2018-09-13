@@ -46,7 +46,7 @@ nuxt|boolean|/|指定一个链接是nuxt链接（nuxt-link）
 outline|boolean|/|按钮将拥有一个轮廓
 replace|boolean|/|Vue Router router-link 属性
 right|boolean|/|将组件向右边对齐
-ripple|boolean / object|true|使用`mip-v-ripple`指令
+ripple|boolean / object|true|使用`v-ripple`指令
 round|boolean|/|按钮两边会变圆
 small|boolean|/|小型按钮
 tag|string|'button'|指定要在组件上使用的自定义标签

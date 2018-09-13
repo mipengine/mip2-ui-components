@@ -78,7 +78,7 @@ light|boolean|/|应用明亮主题变体
 off-icon|string|'$vuetify.icons.radioOff'|
 on-icon|string|'$vuetify.icons.radioOn'|
 readonly|boolean|/|
-ripple|boolean / object|true|应用`mip-v-ripple`指令
+ripple|boolean / object|true|应用`v-ripple`指令
 value|any|/|设置选择控件组件的值
 
 ## 示例
