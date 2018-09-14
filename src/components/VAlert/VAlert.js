@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_alerts.styl'
+import '../../stylus/components/_alerts.styl'
 // Components
 import VIcon from '../VIcon'
 // Mixins

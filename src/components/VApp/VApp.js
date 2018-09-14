@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_app.styl'
+import '../../stylus/components/_app.styl'
 // Component level mixins
 import AppTheme from './mixins/app-theme'
 // Directives

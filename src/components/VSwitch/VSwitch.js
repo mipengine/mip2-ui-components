@@ -1,5 +1,5 @@
-import '../../../src/stylus/components/_selection-controls.styl'
-import '../../../src/stylus/components/_switch.styl'
+import '../../stylus/components/_selection-controls.styl'
+import '../../stylus/components/_switch.styl'
 // Mixins
 import Selectable from '../../mixins/selectable'
 // Directives

@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_autocompletes.styl'
+import '../../stylus/components/_autocompletes.styl'
 // Extensions
 import VSelect from '../VSelect/VSelect'
 import VTextField from '../VTextField/VTextField'

@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_pagination.styl'
+import '../../stylus/components/_pagination.styl'
 import VIcon from '../VIcon'
 import Resize from '../../directives/resize'
 import Colorable from '../../mixins/colorable'

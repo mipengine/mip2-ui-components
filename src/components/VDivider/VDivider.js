@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_dividers.styl'
+import '../../stylus/components/_dividers.styl'
 // Types
 // import Vue from 'vue'
 // Mixins

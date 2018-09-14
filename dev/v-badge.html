@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
   </head>
   <body>
     <mip-shell>
@@ -37,31 +36,29 @@
     </mip-data>
 
     <h2>基础样式</h2>
-    <div class="flex justify-center" style="margin-top: 24px">
-      <div class="text-xs-center">
-        <mip-v-badge left>
-          <span slot="badge">6</span>
-          <mip-v-icon
-            large
-            color="grey lighten-1"
-          >
-            shopping_cart
-          </mip-v-icon>
-        </mip-v-badge>
-        <mip-v-badge color="red">
-          <span slot="badge">!</span>
-          <mip-v-icon
-            large
-            color="grey"
-          >
-            mail
-          </mip-v-icon>
-        </mip-v-badge>
-      </div>
+    <div class="text-xs-center">
+      <mip-v-badge left>
+        <span slot="badge">6</span>
+        <mip-v-icon
+          large
+          color="grey lighten-1"
+        >
+          shopping_cart
+        </mip-v-icon>
+      </mip-v-badge>
+
+      <mip-v-badge color="red">
+        <span slot="badge">!</span>
+        <mip-v-icon
+          large
+          color="grey"
+        >
+          mail
+        </mip-v-icon>
+      </mip-v-badge>
     </div>
 
     <h2>重叠</h2>
-    <div class="flex justify-center" style="margin-top: 24px">
     <div class="text-xs-center">
       <mip-v-badge
         color="purple"
@@ -102,11 +99,9 @@
         </mip-v-icon>
       </mip-v-badge>
     </div>
-    </div>
 
     <h2>内联</h2>
-    <div class="flex justify-center" style="margin-top: 24px">
-      <div class="text-xs-center">
+    <div class="text-xs-center">
 
       <mip-v-badge left>
         <span slot="badge">2</span>
@@ -117,66 +112,63 @@
         <mip-v-icon slot="badge" dark small>list</mip-v-icon>
         <span>Lists</span>
       </mip-v-badge>
-      </div>
     </div>
 
     <h2>图标</h2>
-    <div class="flex justify-center" style="margin-top: 24px">
-      <div class="text-xs-center">
-        <mip-v-badge left color="purple">
-          <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
-          <span>
-            MDI icon
-          </span>
-        </mip-v-badge>
+    <div class="text-xs-center">
+      <mip-v-badge left color="purple">
+        <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
+        <span>
+          MDI icon
+        </span>
+      </mip-v-badge>
 
-        <mip-v-badge color="orange">
-          <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>
-          <span>
-            Font Awesome icon
-          </span>
-        </mip-v-badge>
-      </div>
+      <mip-v-badge color="orange">
+        <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>
+        <span>
+          Font Awesome icon
+        </span>
+      </mip-v-badge>
     </div>
 
     <h2>可见性</h2>
-    <div class="flex justify-center" style="margin-top: 24px">
-      <div class="text-xs-center">
-        <mip-v-btn
-          color="indigo"
-          class="white--text"
-          on="tap:MIP.setData({ show: !m.show })"
-        >
-          Toggle
-        </mip-v-btn>
-      </div>
-    </div>
+    <div class="container fluid text-xs-center">
+      <div class="layout justify-space-between row wrap">
+        <div class="flex xs12">
+          <mip-v-btn
+            color="indigo"
+            class="white--text"
+            on="tap:MIP.setData({ show: !m.show })"
+          >
+            Toggle
+          </mip-v-btn>
+        </div>
 
-    <div class="flex justify-center" style="margin-top: 24px">
-      <div class="text-xs-center">
-      <mip-v-badge
-        m-bind:value="show"
-        color="cyan"
-        left
-      >
-        <span slot="badge">6</span>
-        <mip-v-icon
-          large
-          color="grey lighten-1"
-        >
-          shopping_cart
-        </mip-v-icon>
-      </mip-v-badge>
+        <div class="flex xs12 mt-5">
+          <mip-v-badge
+            m-bind:value="show"
+            color="cyan"
+            left
+          >
+            <span slot="badge">6</span>
+            <mip-v-icon
+              large
+              color="grey lighten-1"
+            >
+              shopping_cart
+            </mip-v-icon>
+          </mip-v-badge>
 
-      <mip-v-badge
-        m-bind:value="show"
-        color="purple"
-      >
-        <span slot="badge">6</span>
-        <mip-v-icon large color="grey">
-          mail
-        </mip-v-icon>
-      </mip-v-badge>
+          <mip-v-badge
+            m-bind:value="show"
+            color="purple"
+          >
+            <span slot="badge">6</span>
+            <mip-v-icon large color="grey">
+              mail
+            </mip-v-icon>
+          </mip-v-badge>
+        </div>
       </div>
     </div>
 

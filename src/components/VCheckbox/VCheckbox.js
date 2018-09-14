@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_selection-controls.styl'
+import '../../stylus/components/_selection-controls.styl'
 // Components
 import VIcon from '../VIcon'
 // import { VFadeTransition } from '../transitions'

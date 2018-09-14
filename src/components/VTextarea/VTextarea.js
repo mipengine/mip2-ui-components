@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_textarea.styl'
+import '../../stylus/components/_textarea.styl'
 // Extensions
 import VTextField from '../VTextField/VTextField'
 import { consoleInfo } from '../../util/console'

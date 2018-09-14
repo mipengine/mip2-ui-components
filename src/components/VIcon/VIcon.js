@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_icons.styl'
+import '../../stylus/components/_icons.styl'
 // Mixins
 import Themeable from '../../mixins/themeable'
 import Colorable from '../../mixins/colorable'

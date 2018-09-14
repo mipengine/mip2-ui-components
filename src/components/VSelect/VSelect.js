@@ -1,6 +1,6 @@
 // Styles
-import '../../../src/stylus/components/_text-fields.styl'
-import '../../../src/stylus/components/_select.styl'
+import '../../stylus/components/_text-fields.styl'
+import '../../stylus/components/_select.styl'
 // Components
 import VChip from '../VChip'
 import VMenu from '../VMenu'

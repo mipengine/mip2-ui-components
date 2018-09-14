@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_progress-linear.styl'
+import '../../stylus/components/_progress-linear.styl'
 // Mixins
 import Colorable from '../../mixins/colorable'
 // Helpers

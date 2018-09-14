@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_menus.styl'
+import '../../stylus/components/_menus.styl'
 // Mixins
 import Delayable from '../../mixins/delayable'
 import Dependent from '../../mixins/dependent'

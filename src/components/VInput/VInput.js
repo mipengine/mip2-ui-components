@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_inputs.styl'
+import '../../stylus/components/_inputs.styl'
 // Components
 import VIcon from '../VIcon'
 import VLabel from '../VLabel'

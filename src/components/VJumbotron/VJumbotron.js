@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_jumbotrons.styl'
+import '../../stylus/components/_jumbotrons.styl'
 // Mixins
 import Colorable from '../../mixins/colorable'
 import Routable from '../../mixins/routable'

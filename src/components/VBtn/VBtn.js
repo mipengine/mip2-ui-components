@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_buttons.styl'
+import '../../stylus/components/_buttons.styl'
 // Components
 import VProgressCircular from '../VProgressCircular'
 // Mixins

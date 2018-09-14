@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_cards.styl'
+import '../../stylus/components/_cards.styl'
 // Components
 import VCheckbox from '../VCheckbox'
 import VDivider from '../VDivider'

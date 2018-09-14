@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_speed-dial.styl'
+import '../../stylus/components/_speed-dial.styl'
 import Toggleable from '../../mixins/toggleable'
 import Positionable from '../../mixins/positionable'
 import Transitionable from '../../mixins/transitionable'

@@ -5,18 +5,23 @@
 ## 用例
 
 ```html
-<mip-v-alert value="true" type="success">
-  This is a success alert.
-</mip-v-alert>
-<mip-v-alert value="true" type="info">
-  This is a info alert.
-</mip-v-alert>
-<mip-v-alert value="true" type="warning">
-  This is a warning alert.
-</mip-v-alert>
-<mip-v-alert value="true" type="error">
-  This is a error alert.
-</mip-v-alert>
+<div>
+  <mip-v-alert value="true" type="success">
+    This is a success alert.
+  </mip-v-alert>
+
+  <mip-v-alert value="true" type="info">
+    This is a info alert.
+  </mip-v-alert>
+
+  <mip-v-alert value="true" type="warning">
+    This is a warning alert.
+  </mip-v-alert>
+
+  <mip-v-alert value="true" type="error">
+    This is a error alert.
+  </mip-v-alert>
+</div>
 ```
 
 ## API
@@ -49,20 +54,31 @@ value|boolean|/|控制可见性
     }
   </script>
 </mip-data>
-<mip-v-alert m-bind:value.sync="alert" dismissible type="success">
-  This is a success alert that is closable.
-</mip-v-alert>
+<div>
+  <mip-v-alert m-bind:value.sync="alert" dismissible type="success">
+    This is a success alert that is closable.
+  </mip-v-alert>
+
+  <div class="text-xs-center">
+    <mip-v-btn m-bind:style="{ display: alert ? &apos;none&apos; : &apos;block&apos; }" color="primary" dark on="tap:MIP.setData({ alert: true })">
+      Reset
+    </mip-v-btn>
+  </div>
+</div>
 ```
 
 ### 自定义图标/无图标
 
 ```html
-<mip-v-alert value="true" color="success" icon="new_releases">
-  This is a success alert with a custom icon.
-</mip-v-alert>
-<mip-v-alert value="true" color="error">
-  This is an error alert with no icon.
-</mip-v-alert>
+<div>
+  <mip-v-alert value="true" color="success" icon="new_releases">
+    This is a success alert with a custom icon.
+  </mip-v-alert>
+
+  <mip-v-alert value="true" color="error">
+    This is an error alert with no icon.
+  </mip-v-alert>
+</div>
 ```
 
 ### 过渡显示
@@ -75,12 +91,17 @@ value|boolean|/|控制可见性
     }
   </script>
 </mip-data>
-<mip-v-btn color="primary" on="tap:MIP.setData({ alert: !alert })">
-  Toggle
-</mip-v-btn>
-<mip-v-alert m-bind:value="alert" type="success" transition="scale-transition">
-  This is a success alert.
-</mip-v-alert>
+<div>
+  <div class="text-xs-center">
+    <mip-v-btn color="primary" on="tap:MIP.setData({ alert: !m.alert })">
+      Toggle
+    </mip-v-btn>
+  </div>
+
+  <mip-v-alert m-bind:value="alert" type="success" transition="scale-transition">
+    This is a success alert.
+  </mip-v-alert>
+</div>
 ```
 
 ### 轮廓

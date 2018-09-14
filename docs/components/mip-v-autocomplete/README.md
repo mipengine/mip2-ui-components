@@ -282,7 +282,7 @@ z-index|number / string|/|用于组件的z-index
 </mip-data>
 <div class="container grid-list-xl">
   <mip-v-autocomplete m-bind:disabled="!isEditing" m-bind:items="states" item-text="name" label="State"></mip-v-autocomplete>
-  <mip-v-btn color="purple darken-3 white--text" fab small on="tap:MIP.setData({ isEditing: !isEditing })">
+  <mip-v-btn color="purple darken-3 white--text" fab small on="tap:MIP.setData({ isEditing: !m.isEditing })">
     <mip-v-icon m-bind:class="{hide:!isEditing}">mdi-close</mip-v-icon>
     <mip-v-icon m-bind:class="{hide:isEditing}">mdi-pencil</mip-v-icon>
   </mip-v-btn>

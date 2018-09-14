@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_button-toggle.styl'
+import '../../stylus/components/_button-toggle.styl'
 // Mixins
 import mixins from '../../util/mixins'
 import ButtonGroup from '../../mixins/button-group'

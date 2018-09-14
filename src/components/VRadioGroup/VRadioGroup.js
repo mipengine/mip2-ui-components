@@ -1,6 +1,6 @@
 // Styles
-import '../../../src/stylus/components/_selection-controls.styl'
-import '../../../src/stylus/components/_radio-group.styl'
+import '../../stylus/components/_selection-controls.styl'
+import '../../stylus/components/_radio-group.styl'
 // Components
 import VInput from '../VInput'
 // Mixins

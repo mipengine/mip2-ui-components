@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_chips.styl'
+import '../../stylus/components/_chips.styl'
 import mixins from '../../util/mixins'
 // Components
 import VIcon from '../VIcon'

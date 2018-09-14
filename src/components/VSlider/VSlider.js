@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_sliders.styl'
+import '../../stylus/components/_sliders.styl'
 // Components
 import { VScaleTransition } from '../transitions'
 // Extensions

@@ -5,21 +5,20 @@
 ## 用例
 
 ```html
-<div class="flex justify-center" style="margin-top: 24px">
-  <div class="text-xs-center">
-    <mip-v-badge left>
-      <span slot="badge">6</span>
-      <mip-v-icon large color="grey lighten-1">
-        shopping_cart
-      </mip-v-icon>
-    </mip-v-badge>
-    <mip-v-badge color="red">
-      <span slot="badge">!</span>
-      <mip-v-icon large color="grey">
-        mail
-      </mip-v-icon>
-    </mip-v-badge>
-  </div>
+<div class="text-xs-center">
+  <mip-v-badge left>
+    <span slot="badge">6</span>
+    <mip-v-icon large color="grey lighten-1">
+      shopping_cart
+    </mip-v-icon>
+  </mip-v-badge>
+
+  <mip-v-badge color="red">
+    <span slot="badge">!</span>
+    <mip-v-icon large color="grey">
+      mail
+    </mip-v-icon>
+  </mip-v-badge>
 </div>
 ```
 
@@ -45,7 +44,6 @@ value|boolean|true|控制可见性
 ### 重叠
 
 ```html
-<div class="flex justify-center" style="margin-top: 24px">
 <div class="text-xs-center">
   <mip-v-badge color="purple" left overlap>
     <mip-v-icon slot="badge" dark small>
@@ -65,14 +63,12 @@ value|boolean|true|控制可见性
     </mip-v-icon>
   </mip-v-badge>
 </div>
-</div>
 ```
 
 ### 内联
 
 ```html
-<div class="flex justify-center" style="margin-top: 24px">
-  <div class="text-xs-center">
+<div class="text-xs-center">
 
   <mip-v-badge left>
     <span slot="badge">2</span>
@@ -83,29 +79,26 @@ value|boolean|true|控制可见性
     <mip-v-icon slot="badge" dark small>list</mip-v-icon>
     <span>Lists</span>
   </mip-v-badge>
-  </div>
 </div>
 ```
 
 ### 图标
 
 ```html
-<div class="flex justify-center" style="margin-top: 24px">
-  <div class="text-xs-center">
-    <mip-v-badge left color="purple">
-      <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
-      <span>
-        MDI icon
-      </span>
-    </mip-v-badge>
+<div class="text-xs-center">
+  <mip-v-badge left color="purple">
+    <mip-v-icon slot="badge" dark small>mdi-adjust</mip-v-icon>
+    <span>
+      MDI icon
+    </span>
+  </mip-v-badge>
 
-    <mip-v-badge color="orange">
-      <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>
-      <span>
-        Font Awesome icon
-      </span>
-    </mip-v-badge>
-  </div>
+  <mip-v-badge color="orange">
+    <mip-v-icon slot="badge" dark small>fas fa-fighter-jet</mip-v-icon>
+    <span>
+      Font Awesome icon
+    </span>
+  </mip-v-badge>
 </div>
 ```
 
@@ -119,28 +112,29 @@ value|boolean|true|控制可见性
     }
   </script>
 </mip-data>
-<div class="flex justify-center" style="margin-top: 24px">
-  <div class="text-xs-center">
-    <mip-v-btn color="indigo" class="white--text" on="tap:MIP.setData({ show: !m.show })">
-      Toggle
-    </mip-v-btn>
-  </div>
-</div>
-<div class="flex justify-center" style="margin-top: 24px">
-  <div class="text-xs-center">
-  <mip-v-badge m-bind:value="show" color="cyan" left>
-    <span slot="badge">6</span>
-    <mip-v-icon large color="grey lighten-1">
-      shopping_cart
-    </mip-v-icon>
-  </mip-v-badge>
+<div class="container fluid text-xs-center">
+  <div class="layout justify-space-between row wrap">
+    <div class="flex xs12">
+      <mip-v-btn color="indigo" class="white--text" on="tap:MIP.setData({ show: !m.show })">
+        Toggle
+      </mip-v-btn>
+    </div>
 
-  <mip-v-badge m-bind:value="show" color="purple">
-    <span slot="badge">6</span>
-    <mip-v-icon large color="grey">
-      mail
-    </mip-v-icon>
-  </mip-v-badge>
+    <div class="flex xs12 mt-5">
+      <mip-v-badge m-bind:value="show" color="cyan" left>
+        <span slot="badge">6</span>
+        <mip-v-icon large color="grey lighten-1">
+          shopping_cart
+        </mip-v-icon>
+      </mip-v-badge>
+
+      <mip-v-badge m-bind:value="show" color="purple">
+        <span slot="badge">6</span>
+        <mip-v-icon large color="grey">
+          mail
+        </mip-v-icon>
+      </mip-v-badge>
+    </div>
   </div>
 </div>
 ```

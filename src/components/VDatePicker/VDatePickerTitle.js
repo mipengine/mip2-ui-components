@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_date-picker-title.styl'
+import '../../stylus/components/_date-picker-title.styl'
 // Components
 import VIcon from '../VIcon'
 // Mixins

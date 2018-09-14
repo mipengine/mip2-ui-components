@@ -1,5 +1,5 @@
 // Style
-import '../../../src/stylus/components/_parallax.styl'
+import '../../stylus/components/_parallax.styl'
 // Mixins
 import Translatable from '../../mixins/translatable'
 import mixins from '../../util/mixins'

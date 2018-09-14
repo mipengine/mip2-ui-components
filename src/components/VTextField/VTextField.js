@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_text-fields.styl'
+import '../../stylus/components/_text-fields.styl'
 // Extensions
 import VInput from '../VInput'
 // Components

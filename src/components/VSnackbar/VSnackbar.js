@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_snackbars.styl'
+import '../../stylus/components/_snackbars.styl'
 import Colorable from '../../mixins/colorable'
 import Toggleable from '../../mixins/toggleable'
 import { factory as PositionableFactory } from '../../mixins/positionable'

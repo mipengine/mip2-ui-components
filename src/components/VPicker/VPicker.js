@@ -1,5 +1,5 @@
-import '../../../src/stylus/components/_pickers.styl'
-import '../../../src/stylus/components/_cards.styl'
+import '../../stylus/components/_pickers.styl'
+import '../../stylus/components/_cards.styl'
 // Mixins
 import Colorable from '../../mixins/colorable'
 import Themeable from '../../mixins/themeable'

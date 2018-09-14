@@ -433,7 +433,7 @@ value|any|/|输入值
 <div class="container grid-list-xl">
   <mip-v-checkbox m-bind:input-value.sync="custom" label="Custom progress bar"></mip-v-checkbox>
   <mip-v-text-field m-bind:value.sync="progressValue" color="cyan darken" label="Text field" placeholder="Start typing..." loading>
-    <mip-v-progress-linear m-bind:class="{hide: !custom}" slot="progress" m-bind:value="progress" m-bind:color="color" height="7"></mip-v-progress-linear>
+    <mip-v-progress-linear m-bind:class="{hide: !m.custom}" slot="progress" m-bind:value="progress" m-bind:color="color" height="7"></mip-v-progress-linear>
   </mip-v-text-field>
 </div>
 <mip-script>

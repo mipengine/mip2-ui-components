@@ -1,5 +1,5 @@
-import '../../../src/stylus/components/_tables.styl'
-import '../../../src/stylus/components/_data-table.styl'
+import '../../stylus/components/_tables.styl'
+import '../../stylus/components/_data-table.styl'
 import DataIterable from '../../mixins/data-iterable'
 import Head from './mixins/head'
 import Body from './mixins/body'

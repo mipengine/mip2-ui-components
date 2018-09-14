@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_lists.styl'
+import '../../stylus/components/_lists.styl'
 // Mixins
 import Themeable from '../../mixins/themeable'
 import { provide as RegistrableProvide } from '../../mixins/registrable'

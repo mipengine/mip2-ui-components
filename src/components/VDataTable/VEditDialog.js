@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_small-dialog.styl'
+import '../../stylus/components/_small-dialog.styl'
 // Mixins
 import Returnable from '../../mixins/returnable'
 // Utils

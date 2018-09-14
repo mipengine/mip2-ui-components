@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_tabs.styl'
+import '../../stylus/components/_tabs.styl'
 // Component level mixins
 import TabsComputed from './mixins/tabs-computed'
 import TabsGenerators from './mixins/tabs-generators'

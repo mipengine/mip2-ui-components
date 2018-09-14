@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_data-iterator.styl'
+import '../../stylus/components/_data-iterator.styl'
 import DataIterable from '../../mixins/data-iterable'
 /* @vue/component */
 export default {

@@ -1,0 +1,20 @@
+{
+  "menu": [
+    {
+      "name": "组件",
+      "key": "components"
+    },
+    {
+      "name": "指令",
+      "key": "directives"
+    },
+    {
+      "name": "布局",
+      "key": "layout"
+    },
+    {
+      "name": "动画",
+      "key": "motion"
+    }
+  ]
+}

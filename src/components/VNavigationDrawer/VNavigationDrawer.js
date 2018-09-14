@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_navigation-drawer.styl'
+import '../../stylus/components/_navigation-drawer.styl'
 // Mixins
 import Applicationable from '../../mixins/applicationable'
 import Overlayable from '../../mixins/overlayable'

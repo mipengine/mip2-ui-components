@@ -16,7 +16,7 @@
 <div class="container grid-list-md">
   <div class="layout row wrap">
     <div class="flex xs12 sm6 md4">
-      <mip-v-slider m-bind:value.sync="slider" min="16" max="256"></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider" min="16" max="256" label="Size" thumb-label></mip-v-slider>
 
       <mip-v-switch m-bind:input-value.sync="tile" label="Tile"></mip-v-switch>
     </div>
@@ -44,6 +44,12 @@ tile|boolean|/|删除边看弧度
 
 ## 示例
 
+### 高级用法
+
+```html
+<div></div>
+```
+
 ### 图标和文本
 
 ```html
@@ -69,36 +75,6 @@ tile|boolean|/|删除边看弧度
 
   <mip-v-avatar color="red">
     <span class="white--text headline">J</span>
-  </mip-v-avatar>
-</div>
-```
-
-### 数据绑定
-
-```html
-<mip-data>
-  <script type="application/json">
-    {
-      "tile": false,
-      "avatarSize": 60
-    }
-  </script>
-</mip-data>
-<mip-v-btn on="tap:MIP.setData({ tile: !tile })" color="primary">Toggle Tile</mip-v-btn>
-<input m-bind:value="avatarSize">
-<div>
-  <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="grey lighten-4">
-    <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
-  </mip-v-avatar>
-</div>
-<div>
-  <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="green">
-    <span class="white--text headline">J</span>
-  </mip-v-avatar>
-</div>
-<div>
-  <mip-v-avatar m-bind:tile="tile" m-bind:size="avatarSize" style="display: inline-block" color="purple red--after">
-    <mip-v-icon dark>favorite</mip-v-icon>
   </mip-v-avatar>
 </div>
 ```

@@ -22,8 +22,12 @@ theme(button, "v-btn")
 
 /** Base Spec */
 // override default `.mip-layout-container`
-mip-v-btn.mip-layout-container
-  display: inline-flex
+mip-v-btn
+  &.mip-layout-container
+    display: inline-flex
+  &[block]
+    width: 100%
+
 
 .v-btn
   align-items: center

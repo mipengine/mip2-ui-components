@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_time-picker-clock.styl'
+import '../../stylus/components/_time-picker-clock.styl'
 // Mixins
 import Colorable from '../../mixins/colorable'
 import Themeable from '../../mixins/themeable'

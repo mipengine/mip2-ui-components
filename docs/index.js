@@ -464,7 +464,7 @@ const main = async () => {
     .filter(filename => filename.includes('.html') && filename !== 'index.html')
     .map(filename => filename.replace('.html', ''))
 
-  await generateDocs(['grid'])
+  await generateDocs(tagNames)
 }
 
 main()

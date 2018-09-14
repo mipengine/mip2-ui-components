@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_bottom-navs.styl'
+import '../../stylus/components/_bottom-navs.styl'
 // Mixins
 import Applicationable from '../../mixins/applicationable'
 import ButtonGroup from '../../mixins/button-group'

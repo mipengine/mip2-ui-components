@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_system-bars.styl'
+import '../../stylus/components/_system-bars.styl'
 import Applicationable from '../../mixins/applicationable'
 import Colorable from '../../mixins/colorable'
 import Themeable from '../../mixins/themeable'

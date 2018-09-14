@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_forms.styl'
+import '../../stylus/components/_forms.styl'
 import { provide as RegistrableProvide } from '../../mixins/registrable'
 /* @vue/component */
 export default {

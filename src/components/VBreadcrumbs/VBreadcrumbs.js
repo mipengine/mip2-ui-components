@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_breadcrumbs.styl'
+import '../../stylus/components/_breadcrumbs.styl'
 /* @vue/component */
 export default {
   name: 'VBreadcrumbs',

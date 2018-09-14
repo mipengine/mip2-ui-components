@@ -1,11 +1,10 @@
 // Styles
-import '../../../src/stylus/components/_overflow-buttons.styl'
+import '../../stylus/components/_overflow-buttons.styl'
 // Extensions
 import VSelect from '../VSelect/VSelect'
 import VAutocomplete from '../VAutocomplete'
 import VTextField from '../VTextField/VTextField'
 import VBtn from '../VBtn'
-import { consoleWarn } from '../../util/console'
 /* @vue/component */
 export default {
   name: 'VOverflowBtn',
@@ -57,8 +56,7 @@ export default {
     genSegmentedBtn (item) {
       const itemValue = this.getValue(item)
       const itemObj = this.computedItems.find(i => this.getValue(i) === itemValue) || item
-      if (!itemObj.text || !itemObj.callback) {
-        consoleWarn('When using \'segmented\' prop without a selection slot, items must contain both a text and callback property', this)
+      if (!itemObj.text) {
         return null
       }
       return this.$createElement(VBtn, {
@@ -66,7 +64,7 @@ export default {
         on: {
           click (e) {
             e.stopPropagation()
-            itemObj.callback(e)
+            typeof itemObj.callback === 'function' && itemObj.callback(e)
           }
         }
       }, [itemObj.text])

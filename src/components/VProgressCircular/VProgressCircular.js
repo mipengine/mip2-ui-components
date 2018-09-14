@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_progress-circular.styl'
+import '../../stylus/components/_progress-circular.styl'
 // Mixins
 import Colorable from '../../mixins/colorable'
 import mixins from '../../util/mixins'

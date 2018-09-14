@@ -1,4 +1,4 @@
-import '../../../../src/stylus/components/_date-picker-table.styl'
+import '../../../stylus/components/_date-picker-table.styl'
 // Directives
 import Touch from '../../../directives/touch'
 // Utils

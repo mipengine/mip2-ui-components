@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_subheaders.styl'
+import '../../stylus/components/_subheaders.styl'
 import Themeable from '../../mixins/themeable'
 /* @vue/component */
 export default {

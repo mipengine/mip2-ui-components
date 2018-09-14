@@ -123,19 +123,15 @@ vertical|boolean|/|垂直折叠全局提示的内容（移动设备）
             <mip-v-radio color="cyan darken-2" label="cyan darken-2" value="cyan darken-2"></mip-v-radio>
           </mip-v-radio-group>
         </div>
-
         <div class="flex xs12 sm3">
           <mip-v-checkbox mip-v-model="mode" label="Multi-line (mobile)" value="multi-line"></mip-v-checkbox>
         </div>
-
         <div class="flex xs12 sm3">
           <mip-v-checkbox mip-v-model="mode" label="Vertical (mobile)" value="vertical"></mip-v-checkbox>
         </div>
-
         <div class="flex xs12 sm4 offset-sm4">
           <mip-v-text-field m-bind:value.sync="text0" label="Text" type="text"></mip-v-text-field>
         </div>
-
         <div class="flex xs12 sm4">
           <mip-v-text-field m-bind:value.sync="timeout0" label="Timeout" type="number"></mip-v-text-field>
         </div>

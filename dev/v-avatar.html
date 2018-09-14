@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <link rel="stylesheet" href="http://localhost:8080/dist/mip.css">
   </head>
   <body>
     <mip-shell>
@@ -48,6 +47,8 @@
             m-bind:value.sync="slider"
             min="16"
             max="256"
+            label="Size"
+            thumb-label
           ></mip-v-slider>
 
           <mip-v-switch
@@ -67,6 +68,9 @@
         </div>
       </div>
     </div>
+
+    <h2>高级用法</h2>
+    <div></div>
 
     <h2>图标和文本</h2>
     <div class="layout align-center justify-space-around wrap">
@@ -94,42 +98,6 @@
 
       <mip-v-avatar color="red">
         <span class="white--text headline">J</span>
-      </mip-v-avatar>
-    </div>
-
-    <h2>数据绑定</h2>
-    <mip-v-btn on="tap:MIP.setData({ tile: !tile })" color="primary">Toggle Tile</mip-v-btn>
-    <input m-bind:value="avatarSize" />
-    <div>
-      <mip-v-avatar
-        m-bind:tile="tile"
-        m-bind:size="avatarSize"
-        style="display: inline-block"
-        color="grey lighten-4"
-      >
-        <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
-      </mip-v-avatar>
-    </div>
-
-    <div>
-      <mip-v-avatar
-        m-bind:tile="tile"
-        m-bind:size="avatarSize"
-        style="display: inline-block"
-        color="green"
-      >
-        <span class="white--text headline">J</span>
-      </mip-v-avatar>
-    </div>
-
-    <div>
-      <mip-v-avatar
-        m-bind:tile="tile"
-        m-bind:size="avatarSize"
-        style="display: inline-block"
-        color="purple red--after"
-      >
-        <mip-v-icon dark>favorite</mip-v-icon>
       </mip-v-avatar>
     </div>
 

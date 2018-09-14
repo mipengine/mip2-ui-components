@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_counters.styl'
+import '../../stylus/components/_counters.styl'
 // Mixins
 import Themeable from '../../mixins/themeable'
 /* @vue/component */

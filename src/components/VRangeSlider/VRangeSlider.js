@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_range-sliders.styl'
+import '../../stylus/components/_range-sliders.styl'
 // Extensions
 import VSlider from '../VSlider'
 import { createRange, deepEqual } from '../../util/helpers'

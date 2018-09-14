@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_toolbar.styl'
+import '../../stylus/components/_toolbar.styl'
 // Mixins
 import Applicationable from '../../mixins/applicationable'
 import Colorable from '../../mixins/colorable'

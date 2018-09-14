@@ -1,5 +1,5 @@
 // Styles
-import '../../../src/stylus/components/_radios.styl'
+import '../../stylus/components/_radios.styl'
 // Components
 import VIcon from '../VIcon'
 import VLabel from '../VLabel'

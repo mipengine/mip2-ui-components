@@ -109,12 +109,12 @@ two-line|boolean|/|增加列表块的高度到2行
 active-class|string|'primary--text'|当组件处于激活状态时被绑定的类，**警告（warning）**取决于组件，这可能会导致副作用。如果您需要在默认情况下添加自定义类，只需设置<code>active-class="default-class your-class"</code>
 append-icon|string|'$vuetify.icons.expand'|使用与`mip-v-icon`相同的语法在组件上添加一个后置图标
 disabled|boolean|/|输入框是禁用的
-group|string|/|分配一个路由命名空间。接受字符串或正则表达式来确定活动状态
+group|string|/|Assign a route namespace. Accepts a string or regexp for determining active state
 lazy|boolean|/|有条件地渲染内容，只有激活时才会渲染内容
-no-action|boolean|/|从组项中删除为操作图标分配的左侧内边距
+no-action|boolean|/|Removes left padding assigned for action icons from group items
 prepend-icon|string|/|使用与`mip-v-icon`系统的语法在组件上添加一个图标
-sub-group|boolean|/|将组件指定为嵌套列表组
-value|boolean|/|展开/折叠列表组
+sub-group|boolean|/|Designate the component as nested list group
+value|boolean|/|Expands / Collapse list group
 
 ### mip-v-list-tile
 

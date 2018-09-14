@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_dialogs.styl'
+import '../../stylus/components/_dialogs.styl'
 // Mixins
 import Dependent from '../../mixins/dependent'
 import Detachable from '../../mixins/detachable'

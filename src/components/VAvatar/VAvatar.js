@@ -1,4 +1,4 @@
-import '../../../src/stylus/components/_avatars.styl'
+import '../../stylus/components/_avatars.styl'
 // Mixins
 import Colorable from '../../mixins/colorable'
 import { convertToUnit } from '../../util/helpers'
