@@ -5,18 +5,23 @@ The `mip-v-input` component gives you a baseline to create your own custom input
 ## 用例
 
 ```html
-<mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone">
-  <input type="text">
-</mip-v-input>
-<mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" loading="true">
-  <input type="text">
-</mip-v-input>
-<mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" error="true">
-  <input type="text">
-</mip-v-input>
-<mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" disabled="true">
-  <input type="text">
-</mip-v-input>
+<div class="container fluid">
+  <mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone">
+    <input type="text">
+  </mip-v-input>
+
+  <mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" loading="true">
+    <input type="text">
+  </mip-v-input>
+
+  <mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" error="true">
+    <input type="text">
+  </mip-v-input>
+
+  <mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" disabled="true">
+    <input type="text">
+  </mip-v-input>
+</div>
 ```
 
 ## API

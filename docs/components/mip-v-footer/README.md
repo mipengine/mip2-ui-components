@@ -9,6 +9,10 @@
   <mip-v-spacer></mip-v-spacer>
   <div>&#xA9; <span m-text="year"></span></div>
 </mip-v-footer>
+<mip-script>
+  MIP.setData({ year: new Date().getFullYear() })
+</mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```
 
 ## API
