@@ -37,10 +37,11 @@ const getDocPath = async (name, lang = 'en') => {
     Checkbox: 'Selection',
     Radio: 'Selection',
     Switch: 'Selection',
-    Select: 'Selects'
+    Select: 'Selects',
+    Grid: 'Grid'
   })[name] || name
 
-  const docPaths = await readdir(path.resolve(__dirname, '..', 'lang', lang))
+  const docPaths = (await readdir(path.resolve(__dirname, '..', 'lang', lang))).sort()
   const docPath = docPaths.find(filename => filename.includes(getDocName(name)))
 
   return docPath
