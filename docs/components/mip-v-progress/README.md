@@ -5,11 +5,13 @@
 ## 用例
 
 ```html
-<mip-v-progress-circular value="20"></mip-v-progress-circular>
-<mip-v-progress-circular value="40"></mip-v-progress-circular>
-<mip-v-progress-circular value="60"></mip-v-progress-circular>
-<mip-v-progress-circular value="80"></mip-v-progress-circular>
-<mip-v-progress-circular value="100"></mip-v-progress-circular>
+<div class="text-xs-center">
+  <mip-v-progress-circular value="20"></mip-v-progress-circular>
+  <mip-v-progress-circular value="40"></mip-v-progress-circular>
+  <mip-v-progress-circular value="60"></mip-v-progress-circular>
+  <mip-v-progress-circular value="80"></mip-v-progress-circular>
+  <mip-v-progress-circular value="100"></mip-v-progress-circular>
+</div>
 ```
 
 ## API
@@ -49,31 +51,37 @@ value|number / string|/|当前进度的百分比值
 ### 圆环色彩
 
 ```html
-<mip-v-progress-circular value="100" color="blue-grey"></mip-v-progress-circular>
-<mip-v-progress-circular value="80" color="deep-orange lighten-2"></mip-v-progress-circular>
-<mip-v-progress-circular value="60" color="brown"></mip-v-progress-circular>
-<mip-v-progress-circular value="40" color="lime"></mip-v-progress-circular>
-<mip-v-progress-circular value="20" color="indigo darken-2"></mip-v-progress-circular>
+<div class="text-xs-center">
+  <mip-v-progress-circular value="100" color="blue-grey"></mip-v-progress-circular>
+  <mip-v-progress-circular value="80" color="deep-orange lighten-2"></mip-v-progress-circular>
+  <mip-v-progress-circular value="60" color="brown"></mip-v-progress-circular>
+  <mip-v-progress-circular value="40" color="lime"></mip-v-progress-circular>
+  <mip-v-progress-circular value="20" color="indigo darken-2"></mip-v-progress-circular>
+</div>
 ```
 
 ### 不定圆环
 
 ```html
-<mip-v-progress-circular indeterminate color="primary"></mip-v-progress-circular>
-<mip-v-progress-circular indeterminate color="red"></mip-v-progress-circular>
-<mip-v-progress-circular indeterminate color="purple"></mip-v-progress-circular>
-<mip-v-progress-circular indeterminate color="green"></mip-v-progress-circular>
-<mip-v-progress-circular indeterminate color="amber"></mip-v-progress-circular>
+<div class="text-xs-center">
+  <mip-v-progress-circular indeterminate color="primary"></mip-v-progress-circular>
+  <mip-v-progress-circular indeterminate color="red"></mip-v-progress-circular>
+  <mip-v-progress-circular indeterminate color="purple"></mip-v-progress-circular>
+  <mip-v-progress-circular indeterminate color="green"></mip-v-progress-circular>
+  <mip-v-progress-circular indeterminate color="amber"></mip-v-progress-circular>
+</div>
 ```
 
 ### 圆环大小和宽度
 
 ```html
-<mip-v-progress-circular size="50" color="primary" indeterminate></mip-v-progress-circular>
-<mip-v-progress-circular line-width="3" color="red" indeterminate></mip-v-progress-circular>
-<mip-v-progress-circular size="70" line-width="7" color="purple" indeterminate></mip-v-progress-circular>
-<mip-v-progress-circular line-width="3" color="green" indeterminate></mip-v-progress-circular>
-<mip-v-progress-circular size="50" color="amber" indeterminate></mip-v-progress-circular>
+<div class="text-xs-center">
+  <mip-v-progress-circular size="50" color="primary" indeterminate></mip-v-progress-circular>
+  <mip-v-progress-circular line-width="3" color="red" indeterminate></mip-v-progress-circular>
+  <mip-v-progress-circular size="70" line-width="7" color="purple" indeterminate></mip-v-progress-circular>
+  <mip-v-progress-circular line-width="3" color="green" indeterminate></mip-v-progress-circular>
+  <mip-v-progress-circular size="50" color="amber" indeterminate></mip-v-progress-circular>
+</div>
 ```
 
 ### 圆环环绕
@@ -86,8 +94,24 @@ value|number / string|/|当前进度的百分比值
     }
   </script>
 </mip-data>
-<mip-v-btn on="click:MIP.setData({value: (m.value + 10) % 100})">Progress</mip-v-btn>
-<mip-v-progress-circular rotate="360" size="100" line-width="15" m-bind:value="value" color="teal"></mip-v-progress-circular>
+<div class="text-xs-center">
+  <mip-v-progress-circular rotate="360" size="100" line-width="15" m-bind:value="value" color="teal">
+    <span m-text="value"></span>
+  </mip-v-progress-circular>
+  <mip-v-progress-circular rotate="-90" size="100" line-width="15" m-bind:value="value" color="primary">
+    <span m-text="value"></span>
+  </mip-v-progress-circular>
+  <mip-v-progress-circular rotate="90" size="100" line-width="15" m-bind:value="value" color="red">
+    <span m-text="value"></span>
+  </mip-v-progress-circular>
+  <mip-v-progress-circular rotate="180" size="100" line-width="15" m-bind:value="value" color="pink">
+    <span m-text="value"></span>
+  </mip-v-progress-circular>
+</div>
+<mip-script>
+  setInterval(() => MIP.setData({ value: (MIP.getData('value') + 10) % 100 }), 1000)
+</mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```
 
 ### 定值线条
@@ -122,22 +146,33 @@ value|number / string|/|当前进度的百分比值
   </script>
 </mip-data>
 <mip-v-progress-linear m-bind:value.sync="buffer" m-bind:buffer-value="bufferValue" buffer></mip-v-progress-linear>
+<mip-script>
+  setInterval(() => MIP.setData({
+    buffer: MIP.getData('buffer') + Math.random() * 10 + 5,
+    bufferValue: MIP.getData('bufferValue') + Math.random() * 10 + 5
+  }), 2000)
+</mip-script>
+<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
 ```
 
 ### 自定义高度和上下文色彩
 
 ```html
-<mip-v-progress-linear color="secondary" line-height="2" value="15"></mip-v-progress-linear>
-<mip-v-progress-linear color="success" line-height="5" value="30"></mip-v-progress-linear>
-<mip-v-progress-linear color="info" line-height="10" value="45"></mip-v-progress-linear>
-<mip-v-progress-linear color="warning" line-height="15" value="60"></mip-v-progress-linear>
-<mip-v-progress-linear color="error" line-height="20" value="75"></mip-v-progress-linear>
+<div>
+  <mip-v-progress-linear color="secondary" line-height="2" value="15"></mip-v-progress-linear>
+  <mip-v-progress-linear color="success" line-height="5" value="30"></mip-v-progress-linear>
+  <mip-v-progress-linear color="info" line-height="10" value="45"></mip-v-progress-linear>
+  <mip-v-progress-linear color="warning" line-height="15" value="60"></mip-v-progress-linear>
+  <mip-v-progress-linear color="error" line-height="20" value="75"></mip-v-progress-linear>
+</div>
 ```
 
 ### 自定义色彩
 
 ```html
-<mip-v-progress-linear background-color="pink lighten-3" color="pink lighten-1" value="15"></mip-v-progress-linear>
-<mip-v-progress-linear background-color="blue-grey" color="lime" value="30"></mip-v-progress-linear>
-<mip-v-progress-linear background-color="success" color="error" value="45"></mip-v-progress-linear>
+<div>
+  <mip-v-progress-linear background-color="pink lighten-3" color="pink lighten-1" value="15"></mip-v-progress-linear>
+  <mip-v-progress-linear background-color="blue-grey" color="lime" value="30"></mip-v-progress-linear>
+  <mip-v-progress-linear background-color="success" color="error" value="45"></mip-v-progress-linear>
+</div>
 ```
