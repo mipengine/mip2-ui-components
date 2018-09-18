@@ -9,16 +9,53 @@
   <script type="application/json">
     {
       "slider": 45,
-      "volume": 10
+      "volume": 10,
+      "price": [
+        110,
+        440
+      ]
     }
   </script>
 </mip-data>
-<mip-v-slider m-bind:value.sync="slider"></mip-v-slider>
-<mip-v-slider disabled label="Disabled" inverse-label value="30"></mip-v-slider>
-<mip-v-slider label="Readonly" readonly value="30"></mip-v-slider>
-<mip-v-slider m-bind:value.sync="slider" label="Label"></mip-v-slider>
-<mip-v-slider m-bind:value.sync="slider" inverse-label label="Inverse label"></mip-v-slider>
-<mip-v-slider m-bind:value.sync="volume" append-icon="volume_up" prepend-icon="volume_down"></mip-v-slider>
+<div class="container fluid grid-list-lg">
+  <div class="layout row wrap">
+    <div class="flex xs12">
+      <mip-v-slider m-bind:value.sync="slider"></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-slider disabled label="Disabled" inverse-label value="30"></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-slider label="Readonly" readonly value="30"></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-slider m-bind:value.sync="slider" label="Label"></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-slider m-bind:value.sync="slider" inverse-label label="Inverse label"></mip-v-slider>
+    </div>
+
+    <div class="flex xs12">
+      <mip-v-slider m-bind:value.sync="volume" append-icon="volume_up" prepend-icon="volume_down"></mip-v-slider>
+    </div>
+
+    <div class="flex shrink" style="width: 60px">
+      <mip-v-text-field m-bind:value.sync="price[0]" class="mt-0" hide-details single-line type="number"></mip-v-text-field>
+    </div>
+
+    <div class="flex">
+      <mip-v-range-slider m-bind:value.sync="price" max="600" min="20" step="10"></mip-v-range-slider>
+    </div>
+
+    <div class="flex shrink" style="width: 60px">
+      <mip-v-text-field m-bind:value.sync="price[1]" class="mt-0" hide-details single-line type="number"></mip-v-text-field>
+    </div>
+  </div>
+</div>
 ```
 
 ## API
@@ -89,22 +126,46 @@ value|number / string|/|输入值
 
     <div class="flex xs12">
       <mip-v-subheader class="pl-0">Always show thumb label</mip-v-subheader>
-      <mip-v-slider m-bind:value.sync="slider" thumb-label="always"></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider">
+        <script type="application/json">
+          {
+            "thumbLabel": "always"
+          }
+        </script>
+      </mip-v-slider>
     </div>
 
     <div class="flex xs12">
       <mip-v-subheader class="pl-0">Custom thumb color</mip-v-subheader>
-      <mip-v-slider m-bind:value.sync="slider" thumb-color="red" thumb-label="always"></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider" thumb-color="red">
+        <script type="application/json">
+          {
+            "thumbLabel": "always"
+          }
+        </script>
+      </mip-v-slider>
     </div>
 
     <div class="flex xs12">
       <mip-v-subheader class="pl-0">Custom thumb size</mip-v-subheader>
-      <mip-v-slider m-bind:value.sync="slider" thumb-size="24" thumb-label="always"></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider" thumb-size="24">
+        <script type="application/json">
+          {
+            "thumbLabel": "always"
+          }
+        </script>
+      </mip-v-slider>
     </div>
 
     <div class="flex xs12">
       <mip-v-subheader class="pl-0">Always dirty</mip-v-subheader>
-      <mip-v-slider m-bind:value.sync="slider" always-dirty hint="Try set it to &apos;0&apos;" persistent-hint thumb-label="always"></mip-v-slider>
+      <mip-v-slider m-bind:value.sync="slider" always-dirty hint="Try set it to &apos;0&apos;" persistent-hint>
+        <script type="application/json">
+          {
+            "thumbLabel": "always"
+          }
+        </script>
+      </mip-v-slider>
     </div>
   </div>
 </div>
@@ -127,13 +188,31 @@ value|number / string|/|输入值
     }
   </script>
 </mip-data>
-<mip-v-slider m-bind:value.sync="value" step="10" ticks></mip-v-slider>
-<mip-v-slider m-bind:value.sync="value" step="10">
-</mip-v-slider>
-<mip-v-slider m-bind:value.sync="value" step="10" tick-size="2">
-</mip-v-slider>
-<mip-v-slider m-bind:value.sync="fruits" max="3" step="1" tick-size="2" m-bind:tick-labels="tickLabels">
-</mip-v-slider>
+<mip-v-card flat color="transparent">
+  <mip-v-subheader>Show ticks when using slider</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-slider m-bind:value.sync="value" step="10" ticks></mip-v-slider>
+  </mip-v-card-text>
+
+  <mip-v-subheader>Always show ticks</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-slider m-bind:value.sync="value" step="10"></mip-v-slider>
+  </mip-v-card-text>
+
+  <mip-v-subheader>Tick size</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-slider m-bind:value.sync="value" step="10" tick-size="2"></mip-v-slider>
+  </mip-v-card-text>
+
+  <mip-v-subheader>Tick labels</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-slider m-bind:value.sync="fruits" max="3" step="1" tick-size="2" m-bind:tick-labels="tickLabels"></mip-v-slider>
+  </mip-v-card-text>
+</mip-v-card>
 ```
 
 ### 离散的
@@ -146,7 +225,11 @@ value|number / string|/|输入值
     }
   </script>
 </mip-data>
-<mip-v-slider m-bind:value.sync="value" step="10" thumb-label ticks></mip-v-slider>
+<mip-v-card>
+  <mip-v-card-text>
+    <mip-v-slider m-bind:value.sync="value" step="10" thumb-label ticks></mip-v-slider>
+  </mip-v-card-text>
+</mip-v-card>
 ```
 
 ### 图标
@@ -159,9 +242,25 @@ value|number / string|/|输入值
     }
   </script>
 </mip-data>
-<mip-v-slider m-bind:value.sync="zoom" append-icon="alarm"></mip-v-slider>
-<mip-v-slider m-bind:value.sync="zoom" prepend-icon="volume_up"></mip-v-slider>
-<mip-v-slider m-bind:value.sync="zoom" append-icon="zoom_in" prepend-icon="zoom_out" on="click-append:MIP.setData({zoom: m.zoom + 10}) click-prepend:MIP.setData({zoom: m.zoom - 10})"></mip-v-slider>
+<mip-v-card>
+  <mip-v-subheader>Media volume</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-slider m-bind:value.sync="zoom" append-icon="alarm"></mip-v-slider>
+  </mip-v-card-text>
+
+  <mip-v-subheader>Alarm volume</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-slider m-bind:value.sync="zoom" prepend-icon="volume_up"></mip-v-slider>
+  </mip-v-card-text>
+
+  <mip-v-subheader>Icon click callback</mip-v-subheader>
+
+  <mip-v-card-text>
+    <mip-v-slider m-bind:value.sync="zoom" append-icon="zoom_in" prepend-icon="zoom_out" on="click-append:MIP.setData({zoom: m.zoom + 10}) click-prepend:MIP.setData({zoom: m.zoom - 10})"></mip-v-slider>
+  </mip-v-card-text>
+</mip-v-card>
 ```
 
 ### 带有可编辑的数值
@@ -235,7 +334,7 @@ value|number / string|/|输入值
     }
   </script>
 </mip-data>
-<div>
+<div class="container fluid">
   <mip-v-slider m-bind:value.sync="ex1.val" m-bind:color="ex1.color" m-bind:label="ex1.label"></mip-v-slider>
 
   <mip-v-slider m-bind:value.sync="ex2.val" m-bind:label="ex2.label" m-bind:track-color="ex2.color"></mip-v-slider>
