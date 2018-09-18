@@ -120,12 +120,19 @@ const parseExamples = async (tagName) => {
 
       return {
         ...example,
-        html: dataHtml === '{}' || dataHtml === 'null'
-          ? html
-          : '<mip-data>\n  <script type="application/json">\n    ' +
+        html: (
+          dataHtml === '{}' || dataHtml === 'null'
+            ? ''
+            : '<mip-data>\n  <script type="application/json">\n    ' +
             dataHtml +
-            '\n  </script>\n</mip-data>\n' +
-            html
+            '\n  </script>\n</mip-data>\n'
+        ) +
+        html +
+        (
+          html.includes('<mip-script>')
+            ? '\n<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>'
+            : ''
+        )
       }
     })
 
