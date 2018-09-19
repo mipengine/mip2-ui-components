@@ -12,7 +12,7 @@
     }
   </script>
 </mip-data>
-<mip-v-switch label="Switch" m-bind:input-value.sync="switch"></mip-v-switch>
+<mip-v-switch m-bind:label="`Switch: ${switch}`" m-bind:input-value.sync="switch"></mip-v-switch>
 ```
 
 ## API
@@ -69,17 +69,22 @@ value-comparator|function|true|用于值的比较算法
     }
   </script>
 </mip-data>
-<mip-v-switch m-bind:input-value.sync="people" label="John" value="John"></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="people" label="Jacob" value="Jacob"></mip-v-switch>
+<div class="container fluid">
+  <p m-text="people"></p>
+  <mip-v-switch m-bind:input-value.sync="people" label="John" value="John"></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="people" label="Jacob" value="Jacob"></mip-v-switch>
+</div>
 ```
 
-### 开关
+### 状态
 
 ```html
-<mip-v-switch label="on" value input-value="true"></mip-v-switch>
-<mip-v-switch label="off"></mip-v-switch>
-<mip-v-switch label="on disabled" value input-value="true" disabled></mip-v-switch>
-<mip-v-switch label="off disabled" disabled></mip-v-switch>
+<div class="container fluid">
+  <mip-v-switch label="on" value input-value="true"></mip-v-switch>
+  <mip-v-switch label="off"></mip-v-switch>
+  <mip-v-switch label="on disabled" value input-value="true" disabled></mip-v-switch>
+  <mip-v-switch label="off disabled" disabled></mip-v-switch>
+</div>
 ```
 
 ### 色彩
@@ -88,7 +93,7 @@ value-comparator|function|true|用于值的比较算法
 <mip-data>
   <script type="application/json">
     {
-      "ex11": [
+      "colors": [
         "red",
         "indigo",
         "orange",
@@ -105,16 +110,18 @@ value-comparator|function|true|用于值的比较算法
     }
   </script>
 </mip-data>
-<mip-v-switch m-bind:input-value.sync="ex11" label="red" color="red" value="red" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="red darken-3" color="red darken-3" value="red darken-3" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="indigo" color="indigo" value="indigo" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="indigo darken-3" color="indigo darken-3" value="indigo darken-3" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="orange" color="orange" value="orange" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="orange darken-3" color="orange darken-3" value="orange darken-3" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="primary" color="primary" value="primary" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="secondary" color="secondary" value="secondary" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="success" color="success" value="success" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="info" color="info" value="info" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="warning" color="warning" value="warning" hide-details></mip-v-switch>
-<mip-v-switch m-bind:input-value.sync="ex11" label="error" color="error" value="error" hide-details></mip-v-switch>
+<div class="container fluid">
+  <mip-v-switch m-bind:input-value.sync="colors" label="red" color="red" value="red" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="red darken-3" color="red darken-3" value="red darken-3" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="indigo" color="indigo" value="indigo" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="indigo darken-3" color="indigo darken-3" value="indigo darken-3" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="orange" color="orange" value="orange" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="orange darken-3" color="orange darken-3" value="orange darken-3" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="primary" color="primary" value="primary" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="secondary" color="secondary" value="secondary" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="success" color="success" value="success" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="info" color="info" value="info" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="warning" color="warning" value="warning" hide-details></mip-v-switch>
+  <mip-v-switch m-bind:input-value.sync="colors" label="error" color="error" value="error" hide-details></mip-v-switch>
+</div>
 ```

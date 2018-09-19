@@ -13,7 +13,7 @@
   </script>
 </mip-data>
 <div class="container fluid">
-  <mip-v-checkbox m-bind:label="&apos;Checkbox: &apos; + checkbox" m-bind:input-value.sync="checkbox"></mip-v-checkbox>
+  <mip-v-checkbox m-bind:label="`Checkbox: ${checkbox}`" m-bind:input-value.sync="checkbox"></mip-v-checkbox>
 </div>
 ```
 

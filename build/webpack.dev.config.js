@@ -44,7 +44,7 @@ module.exports = merge(baseWebpackConfig, {
   devServer: {
     contentBase: resolve('../dev'),
     publicPath: '/dev/',
-    host: process.env.HOST || 'localhost',
+    host: '0.0.0.0',
     port: process.env.PORT || '8888',
     disableHostCheck: true,
     open: true

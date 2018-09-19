@@ -5,12 +5,39 @@
 ## 用例
 
 ```html
-<div class="container grid-list-xl">
-  <div class="layout row wrap">
-    <mip-v-text-field class="flex xs12 md6" label="Regular" single-line></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Solo" single-line solo></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Box" single-line box></mip-v-text-field>
-    <mip-v-text-field class="flex xs12 md6" label="Outline" single-line outline></mip-v-text-field>
+<div class="container">
+  <div class="row wrap">
+    <div class="flex xs12 sm6 md3">
+      <mip-v-text-field label="Regular"></mip-v-text-field>
+    </div>
+
+    <div class="flex xs12 sm6 md3">
+      <mip-v-text-field label="Regular" placeholder="Placeholder"></mip-v-text-field>
+    </div>
+
+    <div class="flex xs12 sm6 md3">
+      <mip-v-text-field label="Solo" solo></mip-v-text-field>
+    </div>
+
+    <div class="flex xs12 sm6 md3">
+      <mip-v-text-field label="Solo" placeholder="Placeholder" solo></mip-v-text-field>
+    </div>
+
+    <div class="flex xs12 sm6 md3">
+      <mip-v-text-field label="Box" box></mip-v-text-field>
+    </div>
+
+    <div class="flex xs12 sm6 md3">
+      <mip-v-text-field label="Box" placeholder="Placeholder" box></mip-v-text-field>
+    </div>
+
+    <div class="flex xs12 sm6 md3">
+      <mip-v-text-field label="Outline" outline></mip-v-text-field>
+    </div>
+
+    <div class="flex xs12 sm6 md3">
+      <mip-v-text-field label="Outline" placeholder="Placeholder" outline></mip-v-text-field>
+    </div>
   </div>
 </div>
 ```
@@ -138,6 +165,19 @@ validate-on-blur|boolean|/|延迟验证直到失去焦点的事件被触发
 value|any|/|输入值
 
 ## 示例
+
+### 单行亮色主题
+
+```html
+<div class="container">
+  <div class="layout row wrap">
+    <mip-v-text-field class="flex xs12 md6" label="Regular" single-line></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Solo" single-line solo></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Box" single-line box></mip-v-text-field>
+    <mip-v-text-field class="flex xs12 md6" label="Outline" single-line outline></mip-v-text-field>
+  </div>
+</div>
+```
 
 ### Disabled and readonly
 
@@ -402,8 +442,7 @@ value|any|/|输入值
 <mip-data>
   <script type="application/json">
     {
-      "mask": "credit-card",
-      "maskValue": "4444444444444444"
+      "mask": "credit-card"
     }
   </script>
 </mip-data>

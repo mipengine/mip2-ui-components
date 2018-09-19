@@ -42,7 +42,7 @@
     <h2>基础样式</h2>
     <div class="container fluid">
       <mip-v-checkbox
-        m-bind:label="'Checkbox: ' + checkbox"
+        m-bind:label="`Checkbox: ${checkbox}`"
         m-bind:input-value.sync="checkbox"
       ></mip-v-checkbox>
     </div>
@@ -209,7 +209,7 @@
       </mip-v-card-text>
     </mip-v-card>
 
-    <script src="http://localhost:8080/dist/mip.js"></script>
+    <script src="http://bos.nj.bpc.baidu.com/assets/mip/projects/vuetify/mip.js"></script>
     <script src="/dev/main.js"></script>
   </body>
 </html>
