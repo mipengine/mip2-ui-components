@@ -68,7 +68,12 @@ function genConfig (opts) {
         new UglifyJsPlugin({
           cache: true,
           parallel: true,
-          sourceMap: true
+          sourceMap: true,
+          uglifyOptions: {
+            mangle: {
+              safari10: true
+            }
+          }
         }),
         new OptimizeCssAssetsPlugin({
           assetNameRegExp: /\.css$/g,
