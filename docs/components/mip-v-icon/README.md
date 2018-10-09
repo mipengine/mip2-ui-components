@@ -38,9 +38,9 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 
 ```html
 <div class="group pa-2 teal">
-  <mip-v-icon dark="true">folder_open</mip-v-icon>
-  <mip-v-icon dark="true">widgets</mip-v-icon>
-  <mip-v-icon dark="true">gavel</mip-v-icon>
+  <mip-v-icon dark>folder_open</mip-v-icon>
+  <mip-v-icon dark>widgets</mip-v-icon>
+  <mip-v-icon dark>gavel</mip-v-icon>
 </div>
 ```
 
@@ -48,9 +48,9 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 
 ```html
 <div class="group pa-2">
-  <mip-v-icon medium="true">home</mip-v-icon>
-  <mip-v-icon medium="true">event</mip-v-icon>
-  <mip-v-icon medium="true">info</mip-v-icon>
+  <mip-v-icon medium>home</mip-v-icon>
+  <mip-v-icon medium>event</mip-v-icon>
+  <mip-v-icon medium>info</mip-v-icon>
 </div>
 ```
 
@@ -58,9 +58,9 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 
 ```html
 <div class="group pa-2 teal">
-  <mip-v-icon dark="true" large="true">folder_open</mip-v-icon>
-  <mip-v-icon dark="true" large="true">widgets</mip-v-icon>
-  <mip-v-icon dark="true" large="true">gavel</mip-v-icon>
+  <mip-v-icon dark large>folder_open</mip-v-icon>
+  <mip-v-icon dark large>widgets</mip-v-icon>
+  <mip-v-icon dark large>gavel</mip-v-icon>
 </div>
 ```
 
@@ -68,9 +68,9 @@ x-large|boolean|/|设置图标为超大型**(40px)**
 
 ```html
 <div class="group pa-2">
-  <mip-v-icon x-large="true">home</mip-v-icon>
-  <mip-v-icon x-large="true">event</mip-v-icon>
-  <mip-v-icon x-large="true">info</mip-v-icon>
+  <mip-v-icon x-large>home</mip-v-icon>
+  <mip-v-icon x-large>event</mip-v-icon>
+  <mip-v-icon x-large>info</mip-v-icon>
 </div>
 ```
 
@@ -89,7 +89,6 @@ x-large|boolean|/|设置图标为超大型**(40px)**
   <mip-v-icon large color="blue-grey darken-2">call_split</mip-v-icon>
 
   <mip-v-icon large color="orange darken-2">present_to_all</mip-v-icon>
-  <mip-v-icon x-large="true" color="teal darken-2">info</mip-v-icon>
 </div>
 ```
 
