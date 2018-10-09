@@ -25,7 +25,9 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
           <td><i
   aria-hidden="true"
   class="v-icon mr-3 material-icons"
->phone_iphone</i><span>Extra small</span></td>
+>
+  phone_iphone
+</i><span>Extra small</span></td>
           <td><strong>xs</strong></td>
           <td>small to large handset</td>
           <td>< 600px</td>
@@ -34,7 +36,9 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
           <td><i
   aria-hidden="true"
   class="v-icon mr-3 material-icons"
->tablet</i><span>Small</span></td>
+>
+  tablet
+</i><span>Small</span></td>
           <td><strong>sm</strong></td>
           <td>small to medium tablet</td>
           <td>600px > < 960px</td>
@@ -43,7 +47,9 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
           <td><i
   aria-hidden="true"
   class="v-icon mr-3 material-icons"
->laptop</i><span>Medium</span></td>
+>
+  laptop
+</i><span>Medium</span></td>
           <td><strong>md</strong></td>
           <td>large tablet to laptop</td>
           <td>960px > < 1264*</td>
@@ -52,7 +58,9 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
           <td><i
   aria-hidden="true"
   class="v-icon mr-3 material-icons"
->desktop_windows</i><span>Large</span></td>
+>
+  desktop_windows
+</i><span>Large</span></td>
           <td><strong>lg</strong></td>
           <td>desktop</td>
           <td>1264 > < 1904px*</td>
@@ -61,7 +69,9 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
           <td><i
   aria-hidden="true"
   class="v-icon mr-3 material-icons"
->tv</i><span>Extra large</span></td>
+>
+  tv
+</i><span>Extra large</span></td>
           <td><strong>xl</strong></td>
           <td>4k and ultra-wides</td>
           <td>> 1904px*</td>

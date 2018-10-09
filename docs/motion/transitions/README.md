@@ -10,7 +10,9 @@
     slot="activator"
     dark
     color="primary"
-  >Slide X Transition</mip-v-btn>
+  >
+    Slide X Transition
+  </mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -34,7 +36,9 @@
     slot="activator"
     dark
     color="secondary"
-  >Slide X Reverse Transition</mip-v-btn>
+  >
+    Slide X Reverse Transition
+  </mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -58,7 +62,9 @@
     slot="activator"
     dark
     color="primary"
-  >Slide Y Transition</mip-v-btn>
+  >
+    Slide Y Transition
+  </mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -82,7 +88,9 @@
     slot="activator"
     dark
     color="secondary"
-  >Slide Y Reverse Transition</mip-v-btn>
+  >
+    Slide Y Reverse Transition
+  </mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -113,7 +121,9 @@
     slot="activator"
     dark
     color="primary"
-  >Scale Transition</mip-v-btn>
+  >
+    Scale Transition
+  </mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -142,7 +152,9 @@
     slot="activator"
     dark
     color="primary"
-  >Fade Transition</mip-v-btn>
+  >
+    Fade Transition
+  </mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>
@@ -174,7 +186,9 @@
     slot="activator"
     dark
     color="primary"
-  >Scale Transition</mip-v-btn>
+  >
+    Scale Transition
+  </mip-v-btn>
   <mip-v-list>
     <mip-v-list-tile>
       <mip-v-list-tile-title>Item 1</mip-v-list-tile-title>

@@ -24,11 +24,15 @@
       <mip-v-btn
         flat
         color="orange"
-      >Share</mip-v-btn>
+      >
+        Share
+      </mip-v-btn>
       <mip-v-btn
         flat
         color="orange"
-      >Explore</mip-v-btn>
+      >
+        Explore
+      </mip-v-btn>
     </mip-v-card-actions>
   </mip-v-card>
   </div>
@@ -116,11 +120,15 @@ primary-title|boolean|/|应用主标题特定的内边距
         <mip-v-btn
           flat
           color="orange"
-        >Share</mip-v-btn>
+        >
+          Share
+        </mip-v-btn>
         <mip-v-btn
           flat
           color="orange"
-        >Explore</mip-v-btn>
+        >
+          Explore
+        </mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </div>
@@ -163,7 +171,9 @@ primary-title|boolean|/|应用主标题特定的内边距
               <mip-v-btn
                 flat
                 dark
-              >Listen now</mip-v-btn>
+              >
+                Listen now
+              </mip-v-btn>
             </mip-v-card-actions>
           </mip-v-card>
         </div>
@@ -401,7 +411,9 @@ primary-title|boolean|/|应用主标题特定的内边距
         <mip-v-btn
           flat
           color="purple"
-        >Explore</mip-v-btn>
+        >
+          Explore
+        </mip-v-btn>
         <mip-v-spacer></mip-v-spacer>
         <mip-v-btn
           icon

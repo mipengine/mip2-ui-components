@@ -79,28 +79,36 @@ multiple|boolean|/|允许选中多个按钮
       <mip-v-btn
         flat
         small
-      >Normal</mip-v-btn>
+      >
+        Normal
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         flat
         small
         color="primary"
-      >Primary</mip-v-btn>
+      >
+        Primary
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         flat
         small
         color="error"
-      >Error</mip-v-btn>
+      >
+        Error
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         flat
         small
         disabled
-      >Disabled</mip-v-btn>
+      >
+        Disabled
+      </mip-v-btn>
     </div>
   </div>
   <div class="flex xs12 sm4 text-xs-center">
@@ -111,19 +119,25 @@ multiple|boolean|/|允许选中多个按钮
       <mip-v-btn
         flat
         color="primary"
-      >Primary</mip-v-btn>
+      >
+        Primary
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         flat
         color="error"
-      >Error</mip-v-btn>
+      >
+        Error
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         flat
         disabled
-      >Disabled</mip-v-btn>
+      >
+        Disabled
+      </mip-v-btn>
     </div>
   </div>
   <div class="flex xs12 sm4 text-xs-center">
@@ -131,28 +145,36 @@ multiple|boolean|/|允许选中多个按钮
       <mip-v-btn
         flat
         large
-      >Normal</mip-v-btn>
+      >
+        Normal
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         flat
         large
         color="primary"
-      >Primary</mip-v-btn>
+      >
+        Primary
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         flat
         large
         color="error"
-      >Error</mip-v-btn>
+      >
+        Error
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         flat
         large
         disabled
-      >Disabled</mip-v-btn>
+      >
+        Disabled
+      </mip-v-btn>
     </div>
   </div>
 </div>
@@ -170,19 +192,25 @@ multiple|boolean|/|允许选中多个按钮
       <mip-v-btn
         small
         color="primary"
-      >Primary</mip-v-btn>
+      >
+        Primary
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         small
         color="error"
-      >Error</mip-v-btn>
+      >
+        Error
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         small
         disabled
-      >Disabled</mip-v-btn>
+      >
+        Disabled
+      </mip-v-btn>
     </div>
   </div>
   <div class="flex xs12 sm4 text-xs-center">
@@ -207,19 +235,25 @@ multiple|boolean|/|允许选中多个按钮
       <mip-v-btn
         large
         color="primary"
-      >Primary</mip-v-btn>
+      >
+        Primary
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         large
         color="error"
-      >Error</mip-v-btn>
+      >
+        Error
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         large
         disabled
-      >Disabled</mip-v-btn>
+      >
+        Disabled
+      </mip-v-btn>
     </div>
   </div>
 </div>
@@ -234,28 +268,36 @@ multiple|boolean|/|允许选中多个按钮
       <mip-v-btn
         depressed
         small
-      >Normal</mip-v-btn>
+      >
+        Normal
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         depressed
         small
         color="primary"
-      >Primary</mip-v-btn>
+      >
+        Primary
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         depressed
         small
         color="error"
-      >Error</mip-v-btn>
+      >
+        Error
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         depressed
         small
         disabled
-      >Disabled</mip-v-btn>
+      >
+        Disabled
+      </mip-v-btn>
     </div>
   </div>
   <div class="flex xs12 sm4 text-xs-center">
@@ -266,19 +308,25 @@ multiple|boolean|/|允许选中多个按钮
       <mip-v-btn
         depressed
         color="primary"
-      >Primary</mip-v-btn>
+      >
+        Primary
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         depressed
         color="error"
-      >Error</mip-v-btn>
+      >
+        Error
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         depressed
         disabled
-      >Disabled</mip-v-btn>
+      >
+        Disabled
+      </mip-v-btn>
     </div>
   </div>
   <div class="flex xs12 sm4 text-xs-center">
@@ -286,28 +334,36 @@ multiple|boolean|/|允许选中多个按钮
       <mip-v-btn
         depressed
         large
-      >Normal</mip-v-btn>
+      >
+        Normal
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         depressed
         large
         color="primary"
-      >Primary</mip-v-btn>
+      >
+        Primary
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         depressed
         large
         color="error"
-      >Error</mip-v-btn>
+      >
+        Error
+      </mip-v-btn>
     </div>
     <div>
       <mip-v-btn
         depressed
         large
         disabled
-      >Disabled</mip-v-btn>
+      >
+        Disabled
+      </mip-v-btn>
     </div>
   </div>
 </div>
@@ -773,7 +829,9 @@ multiple|boolean|/|允许选中多个按钮
     <mip-v-icon
       right
       dark
-    >cloud_upload</mip-v-icon>
+    >
+      cloud_upload
+    </mip-v-icon>
   </mip-v-btn>
 
   <mip-v-btn
@@ -823,20 +881,26 @@ multiple|boolean|/|允许选中多个按钮
             small
             color="primary"
             dark
-          >Small Button</mip-v-btn>
+          >
+            Small Button
+          </mip-v-btn>
         </div>
         <div>
           <mip-v-btn
             color="warning"
             dark
-          >Normal Button</mip-v-btn>
+          >
+            Normal Button
+          </mip-v-btn>
         </div>
         <div>
           <mip-v-btn
             color="error"
             dark
             large
-          >Large Button</mip-v-btn>
+          >
+            Large Button
+          </mip-v-btn>
         </div>
       </div>
     </div>
@@ -884,7 +948,9 @@ multiple|boolean|/|允许选中多个按钮
   <mip-v-btn
     outline
     color="indigo"
-  >Outline Button</mip-v-btn>
+  >
+    Outline Button
+  </mip-v-btn>
   <mip-v-btn
     outline
     fab
@@ -911,7 +977,9 @@ multiple|boolean|/|允许选中多个按钮
     round
     color="primary"
     dark
-  >Rounded Button</mip-v-btn>
+  >
+    Rounded Button
+  </mip-v-btn>
 </div>
 ```
 
@@ -922,7 +990,9 @@ multiple|boolean|/|允许选中多个按钮
   block
   color="secondary"
   dark
->Block Button</mip-v-btn>
+>
+  Block Button
+</mip-v-btn>
 ```
 
 ### In toolbar

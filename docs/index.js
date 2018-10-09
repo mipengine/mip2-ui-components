@@ -1,12 +1,14 @@
 const legacyFs = require('fs')
 const path = require('path')
 
-const readdir = require('recursive-readdir')
+const readdir = require('recursive-readdir-sync')
 const merge = require('lodash/merge')
 
 require('../dist/vuetify')
 
 const fs = legacyFs.promises
+
+const docPaths = readdir(path.resolve(__dirname, '..', 'lang')).sort()
 
 const capitalize = name => `${name[0].toUpperCase()}${name.slice(1)}`
 
@@ -14,24 +16,17 @@ const camelToDash = camel => capitalize(camel)
   .match(/[A-Z][^A-Z]*/g)
   .map(word => word.toLowerCase()).join('-')
 
-const getMIPTagName = tagName => tagName.startsWith('v-') ? `mip-${tagName}` : tagName
-
 const getName = (tagName) => tagName.startsWith('v-')
   ? capitalize(tagName.split('-')[1])
   : tagName.split('-').map(capitalize).join('')
 
-const replaceMIPTagName = async (text) => {
-  const directiveDocPaths = await readdir(path.resolve(__dirname, '..', 'lang', 'en', 'directives'))
+const getMIPTagName = tagName =>
+  tagName.startsWith('v-') && getDocType(getName(tagName)) === 'components' ? `mip-${tagName}` : tagName
 
-  return text.replace(/v-model/g, '.sync')
-    .replace(/`(v-[a-z-]+)`/g, (match, tagName) => {
-      const name = getName(tagName)
+const replaceMIPTagName = async (text) => text.replace(/v-model/g, '.sync')
+  .replace(/`(v-[a-z-]+)`/g, (match, tagName) => `\`${getMIPTagName(tagName)}\``)
 
-      return directiveDocPaths.some(docPath => docPath.includes(name)) ? match : `\`${getMIPTagName(tagName)}\``
-    })
-}
-
-const getDocPath = async (name, lang = 'en') => {
+const getDocPath = (name, lang = 'en') => {
   const getDocName = name => ({
     Btn: 'Buttons',
     Checkbox: 'Selection',
@@ -41,21 +36,22 @@ const getDocPath = async (name, lang = 'en') => {
     Grid: 'Grid'
   })[name] || name
 
-  const docPaths = (await readdir(path.resolve(__dirname, '..', 'lang', lang))).sort()
-  const docPath = docPaths.find(filename => filename.includes(getDocName(name)))
+  const docPath = docPaths.find(filename =>
+    filename.includes(getDocName(name)) && filename.includes(`${path.sep}${lang}${path.sep}`)
+  )
 
   return docPath
 }
 
-const getDocType = async (name) => {
-  const docPath = await getDocPath(name)
+const getDocType = (name) => {
+  const docPath = getDocPath(name)
 
   return docPath.split(path.sep).slice(-2)[0]
 }
 
 const getOfficialDoc = async (name) => {
-  const getDocByLang = async (lang) => {
-    const docPath = await getDocPath(name, lang)
+  const getDocByLang = (lang) => {
+    const docPath = getDocPath(name, lang)
 
     if (typeof docPath === 'undefined') {
       return null
@@ -63,7 +59,35 @@ const getOfficialDoc = async (name) => {
     return require(docPath)
   }
 
-  return merge({}, await getDocByLang('en'), await getDocByLang('zhHans'))
+  return merge({}, getDocByLang('en'), getDocByLang('zhHans'))
+}
+
+const formatAttributes = (html) => html.replace(
+  /([^\S\n]*)<([a-z-]+)([^>]*)>/g,
+  (match, spacing, tagName, attributes) => {
+    const formattedAttributes = attributes.replace(
+      /\s+[a-z-:.]+(?:="[^"]+")?/g,
+      attribute => `${spacing}  ${attribute.trim()}\n`
+    )
+    return formattedAttributes.split('\n').length > 2
+      ? `${spacing}<${tagName}\n${formattedAttributes}${spacing}>`
+      : match
+  }
+)
+
+const formatTextContent = (html) => {
+  const formattedHtml = html.replace(
+    /\n([^\S\n]*)((?:<\/[a-z-]+)?>)([^\n<]+)(\n|<)/g,
+    (match, spacing, head, content, tail) => content.length
+      ? `\n${spacing}${head}\n${spacing}${head === '>' ? '  ' : ''}${content}\n${tail === '\n' ? '' : spacing + tail}`
+      : match
+  )
+
+  if (formattedHtml === html) {
+    return formattedHtml
+  }
+
+  return formatTextContent(formattedHtml)
 }
 
 const formatHtml = (html, data = {}) => {
@@ -71,18 +95,7 @@ const formatHtml = (html, data = {}) => {
   const indent = lines[lines.length - 1].match(/\s*/)[0].length
   const alignedHtml = [lines[0], ...lines.slice(1).map(line => line.slice(indent))].join('\n')
 
-  const formattedHtml = alignedHtml.replace(
-    /([^\S\n]*)<([a-z-]+)([^>]*)>/g,
-    (match, spacing, tagName, attributes) => {
-      const formattedAttributes = attributes.replace(
-        /\s+[a-z-:.]+(?:="[^"]+")?/g,
-        attribute => ' '.repeat(spacing.length + 2) + attribute.trim() + '\n'
-      )
-      return formattedAttributes.split('\n').length > 2
-        ? `${spacing}<${tagName}\n${formattedAttributes}${spacing}>`
-        : match
-    }
-  )
+  const formattedHtml = formatTextContent(formatAttributes(alignedHtml))
 
   const dataHtml = JSON.stringify(
     data,
@@ -252,7 +265,6 @@ const getMergedInfo = async (definition = {}) => {
 }
 
 const generateDoc = async (tagName) => {
-  const mipTagName = getMIPTagName(tagName)
   const name = getName(tagName)
   const components = Object.values(global.components)
     .filter(({name: componentName = ''}) => componentName.startsWith(`V${name}`))
@@ -263,13 +275,15 @@ const generateDoc = async (tagName) => {
     getDocType(name)
   ])
 
+  const mipTagName = getMIPTagName(tagName)
+
   await ensureDocDir(docType, mipTagName)
 
   const { print, println } = await createDocPrinter(docType, mipTagName)
 
   println(`# ${mipTagName}`)
 
-  println(await replaceMIPTagName(doc.headerText))
+  println(await replaceMIPTagName(doc.headerText, docType))
 
   println('## 用例')
 
@@ -301,7 +315,7 @@ const generateDoc = async (tagName) => {
             camelToDash(prop),
             getPropType(definition),
             getDefaultValue(definition),
-            await replaceMIPTagName(await getDescription(mergedPropsDoc, prop))
+            await replaceMIPTagName(await getDescription(mergedPropsDoc, prop), docType)
           ].join('|')
         ))
       ).join('\n')

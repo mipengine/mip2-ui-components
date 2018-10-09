@@ -28,7 +28,9 @@
       <mip-v-card-title
         class="headline grey lighten-2"
         primary-title
-      >Privacy Policy</mip-v-card-title>
+      >
+        Privacy Policy
+      </mip-v-card-title>
       <mip-v-card-text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </mip-v-card-text>
@@ -109,12 +111,16 @@ width|string / number|'auto'|设置对话框的宽度
           color="green darken-1"
           flat
           on="tap:MIP.setData({ dialog: false })"
-        >Disagree</mip-v-btn>
+        >
+          Disagree
+        </mip-v-btn>
         <mip-v-btn
           color="green darken-1"
           flat
           on="tap:MIP.setData({ dialog: false })"
-        >Agree</mip-v-btn>
+        >
+          Agree
+        </mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </mip-v-dialog>
@@ -145,7 +151,9 @@ width|string / number|'auto'|设置对话框的宽度
       slot="activator"
       color="primary"
       dark
-    >Open Dialog</mip-v-btn>
+    >
+      Open Dialog
+    </mip-v-btn>
     <div class="v-card">
       <mip-v-toolbar
         dark
@@ -165,7 +173,9 @@ width|string / number|'auto'|设置对话框的宽度
             dark
             flat
             on="tap:MIP.setData({ dialog: false })"
-          >Save</mip-v-btn>
+          >
+            Save
+          </mip-v-btn>
         </mip-v-toolbar-items>
       </mip-v-toolbar>
       <mip-v-list
@@ -245,7 +255,9 @@ width|string / number|'auto'|设置对话框的宽度
       slot="activator"
       color="primary"
       dark
-    >Open Dialog</mip-v-btn>
+    >
+      Open Dialog
+    </mip-v-btn>
     <mip-v-card>
       <mip-v-card-title>
         <span class="headline">User Profile</span>
@@ -321,12 +333,16 @@ width|string / number|'auto'|设置对话框的宽度
           color="blue darken-1"
           flat
           on="tap:MIP.setData({ dialog: false })"
-        >Close</mip-v-btn>
+        >
+          Close
+        </mip-v-btn>
         <mip-v-btn
           color="blue darken-1"
           flat
           on="tap:MIP.setData({ dialog: false })"
-        >Save</mip-v-btn>
+        >
+          Save
+        </mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </mip-v-dialog>
@@ -354,7 +370,9 @@ width|string / number|'auto'|设置对话框的宽度
       slot="activator"
       color="primary"
       dark
-    >Open Dialog</mip-v-btn>
+    >
+      Open Dialog
+    </mip-v-btn>
     <div class="v-card">
       <div class="v-card__title">Select Country</div>
       <mip-v-divider></mip-v-divider>
@@ -446,12 +464,16 @@ width|string / number|'auto'|设置对话框的宽度
           color="blue darken-1"
           flat
           on="tap:MIP.setData({ dialog: false })"
-        >Close</mip-v-btn>
+        >
+          Close
+        </mip-v-btn>
         <mip-v-btn
           color="blue darken-1"
           flat
           on="tap:MIP.setData({ dialog: false })"
-        >Save</mip-v-btn>
+        >
+          Save
+        </mip-v-btn>
       </div>
     </div>
   </mip-v-dialog>
@@ -477,7 +499,9 @@ width|string / number|'auto'|设置对话框的宽度
       slot="activator"
       color="primary"
       dark
-    >Open Dialog</mip-v-btn>
+    >
+      Open Dialog
+    </mip-v-btn>
     <mip-v-card>
       <mip-v-card-title>
         <span class="headline">Use Google's location service?</span>
@@ -499,12 +523,16 @@ width|string / number|'auto'|设置对话框的宽度
           color="green darken-1"
           flat="flat"
           on="tap:MIP.setData({ dialog: false })"
-        >Disagree</mip-v-btn>
+        >
+          Disagree
+        </mip-v-btn>
         <mip-v-btn
           color="green darken-1"
           flat="flat"
           on="tap:MIP.setData({ dialog: false })"
-        >Agree</mip-v-btn>
+        >
+          Agree
+        </mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </mip-v-dialog>

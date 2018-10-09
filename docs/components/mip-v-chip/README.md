@@ -67,19 +67,27 @@ value|boolean|true|控制可见性
   <mip-v-chip
     color="primary"
     text-color="white"
-  >Primary</mip-v-chip>
+  >
+    Primary
+  </mip-v-chip>
   <mip-v-chip
     color="secondary"
     text-color="white"
-  >Secondary</mip-v-chip>
+  >
+    Secondary
+  </mip-v-chip>
   <mip-v-chip
     color="red"
     text-color="white"
-  >Colored Chip</mip-v-chip>
+  >
+    Colored Chip
+  </mip-v-chip>
   <mip-v-chip
     color="green"
     text-color="white"
-  >Colored Chip</mip-v-chip>
+  >
+    Colored Chip
+  </mip-v-chip>
 </div>
 ```
 
@@ -137,11 +145,15 @@ value|boolean|true|控制可见性
   <mip-v-chip
     outline
     color="secondary"
-  >Outline</mip-v-chip>
+  >
+    Outline
+  </mip-v-chip>
   <mip-v-chip
     outline
     color="primary"
-  >Colored</mip-v-chip>
+  >
+    Colored
+  </mip-v-chip>
   <mip-v-chip
     outline
     color="red"
@@ -167,7 +179,9 @@ value|boolean|true|控制可见性
     label
     outline
     color="red"
-  >Outline</mip-v-chip>
+  >
+    Outline
+  </mip-v-chip>
 </div>
 ```
 

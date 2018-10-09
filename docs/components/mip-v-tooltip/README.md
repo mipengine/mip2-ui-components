@@ -22,7 +22,9 @@
       slot="activator"
       color="primary"
       dark
-    >home</mip-v-icon>
+    >
+      home
+    </mip-v-icon>
     <span>Tooltip</span>
   </mip-v-tooltip>
 

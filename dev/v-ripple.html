@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VRipple</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="http://bos.nj.bpc.baidu.com/assets/mip/projects/vuetify/mip.css" rel="stylesheet">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+      <script type="application/json">
+        {}
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <div class="text-xs-center">
+      <mip-v-btn dark ripple color="primary">Default Ripple</mip-v-btn>
+      <mip-v-btn dark ripple="false" color="primary">Ripple Disabled</mip-v-btn>
+    </div>
+
+    <h2>自定义色彩</h2>
+    <div class="text-xs-center">
+      <mip-v-btn dark>
+        <script type="application/json">
+          {
+            "ripple": {
+              "class": "error--text"
+            }
+          }
+        </script>
+        Colored Ripple
+      </mip-v-btn>
+    </div>
+
+    <script src="http://bos.nj.bpc.baidu.com/assets/mip/projects/vuetify/mip.js"></script>
+    <script src="/dev/main.js"></script>
+    <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
+  </body>
+</html>

@@ -61,15 +61,21 @@ x-large|boolean|/|设置图标为超大型**(40px)**
   <mip-v-icon
     dark
     large
-  >folder_open</mip-v-icon>
+  >
+    folder_open
+  </mip-v-icon>
   <mip-v-icon
     dark
     large
-  >widgets</mip-v-icon>
+  >
+    widgets
+  </mip-v-icon>
   <mip-v-icon
     dark
     large
-  >gavel</mip-v-icon>
+  >
+    gavel
+  </mip-v-icon>
 </div>
 ```
 
@@ -90,32 +96,44 @@ x-large|boolean|/|设置图标为超大型**(40px)**
   <mip-v-icon
     large
     color="green darken-2"
-  >business</mip-v-icon>
+  >
+    business
+  </mip-v-icon>
 
   <mip-v-icon
     large
     color="blue darken-2"
-  >chat</mip-v-icon>
+  >
+    chat
+  </mip-v-icon>
 
   <mip-v-icon
     large
     color="purple darken-2"
-  >dialpad</mip-v-icon>
+  >
+    dialpad
+  </mip-v-icon>
 
   <mip-v-icon
     large
     color="teal darken-2"
-  >email</mip-v-icon>
+  >
+    email
+  </mip-v-icon>
 
   <mip-v-icon
     large
     color="blue-grey darken-2"
-  >call_split</mip-v-icon>
+  >
+    call_split
+  </mip-v-icon>
 
   <mip-v-icon
     large
     color="orange darken-2"
-  >present_to_all</mip-v-icon>
+  >
+    present_to_all
+  </mip-v-icon>
 </div>
 ```
 
@@ -126,28 +144,37 @@ x-large|boolean|/|设置图标为超大型**(40px)**
   <mip-v-btn
     color="primary"
     dark
-  >Accept
+  >
+    Accept
     <mip-v-icon
       dark
       right
-    >check_circle</mip-v-icon>
+    >
+      check_circle
+    </mip-v-icon>
   </mip-v-btn>
 
   <mip-v-btn
     color="red"
     dark
-  >Decline
+  >
+    Decline
     <mip-v-icon
       dark
       right
-    >block</mip-v-icon>
+    >
+      block
+    </mip-v-icon>
   </mip-v-btn>
 
   <mip-v-btn dark>
     <mip-v-icon
       dark
       left
-    >remove_circle</mip-v-icon>Cancel
+    >
+      remove_circle
+    </mip-v-icon>
+    Cancel
   </mip-v-btn>
 </div>
 <div>
@@ -158,7 +185,10 @@ x-large|boolean|/|设置图标为超大型**(40px)**
     <mip-v-icon
       dark
       left
-    >arrow_back</mip-v-icon>Back
+    >
+      arrow_back
+    </mip-v-icon>
+    Back
   </mip-v-btn>
 
   <mip-v-btn

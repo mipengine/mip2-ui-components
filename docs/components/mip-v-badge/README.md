@@ -107,7 +107,9 @@ value|boolean|true|控制可见性
       slot="badge"
       dark
       small
-    >list</mip-v-icon>
+    >
+      list
+    </mip-v-icon>
     <span>Lists</span>
   </mip-v-badge>
 </div>
@@ -125,7 +127,9 @@ value|boolean|true|控制可见性
       slot="badge"
       dark
       small
-    >mdi-adjust</mip-v-icon>
+    >
+      mdi-adjust
+    </mip-v-icon>
     <span>
       MDI icon
     </span>
@@ -136,7 +140,9 @@ value|boolean|true|控制可见性
       slot="badge"
       dark
       small
-    >fas fa-fighter-jet</mip-v-icon>
+    >
+      fas fa-fighter-jet
+    </mip-v-icon>
     <span>
       Font Awesome icon
     </span>
