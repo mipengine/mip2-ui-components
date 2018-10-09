@@ -52,11 +52,26 @@ value|number / string|/|当前进度的百分比值
 
 ```html
 <div class="text-xs-center">
-  <mip-v-progress-circular value="100" color="blue-grey"></mip-v-progress-circular>
-  <mip-v-progress-circular value="80" color="deep-orange lighten-2"></mip-v-progress-circular>
-  <mip-v-progress-circular value="60" color="brown"></mip-v-progress-circular>
-  <mip-v-progress-circular value="40" color="lime"></mip-v-progress-circular>
-  <mip-v-progress-circular value="20" color="indigo darken-2"></mip-v-progress-circular>
+  <mip-v-progress-circular
+    value="100"
+    color="blue-grey"
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    value="80"
+    color="deep-orange lighten-2"
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    value="60"
+    color="brown"
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    value="40"
+    color="lime"
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    value="20"
+    color="indigo darken-2"
+  ></mip-v-progress-circular>
 </div>
 ```
 
@@ -64,11 +79,26 @@ value|number / string|/|当前进度的百分比值
 
 ```html
 <div class="text-xs-center">
-  <mip-v-progress-circular indeterminate color="primary"></mip-v-progress-circular>
-  <mip-v-progress-circular indeterminate color="red"></mip-v-progress-circular>
-  <mip-v-progress-circular indeterminate color="purple"></mip-v-progress-circular>
-  <mip-v-progress-circular indeterminate color="green"></mip-v-progress-circular>
-  <mip-v-progress-circular indeterminate color="amber"></mip-v-progress-circular>
+  <mip-v-progress-circular
+    indeterminate
+    color="primary"
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    indeterminate
+    color="red"
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    indeterminate
+    color="purple"
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    indeterminate
+    color="green"
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    indeterminate
+    color="amber"
+  ></mip-v-progress-circular>
 </div>
 ```
 
@@ -76,11 +106,32 @@ value|number / string|/|当前进度的百分比值
 
 ```html
 <div class="text-xs-center">
-  <mip-v-progress-circular size="50" color="primary" indeterminate></mip-v-progress-circular>
-  <mip-v-progress-circular line-width="3" color="red" indeterminate></mip-v-progress-circular>
-  <mip-v-progress-circular size="70" line-width="7" color="purple" indeterminate></mip-v-progress-circular>
-  <mip-v-progress-circular line-width="3" color="green" indeterminate></mip-v-progress-circular>
-  <mip-v-progress-circular size="50" color="amber" indeterminate></mip-v-progress-circular>
+  <mip-v-progress-circular
+    size="50"
+    color="primary"
+    indeterminate
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    line-width="3"
+    color="red"
+    indeterminate
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    size="70"
+    line-width="7"
+    color="purple"
+    indeterminate
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    line-width="3"
+    color="green"
+    indeterminate
+  ></mip-v-progress-circular>
+  <mip-v-progress-circular
+    size="50"
+    color="amber"
+    indeterminate
+  ></mip-v-progress-circular>
 </div>
 ```
 
@@ -95,16 +146,40 @@ value|number / string|/|当前进度的百分比值
   </script>
 </mip-data>
 <div class="text-xs-center">
-  <mip-v-progress-circular rotate="360" size="100" line-width="15" m-bind:value="value" color="teal">
+  <mip-v-progress-circular
+    rotate="360"
+    size="100"
+    line-width="15"
+    m-bind:value="value"
+    color="teal"
+  >
     <span m-text="value"></span>
   </mip-v-progress-circular>
-  <mip-v-progress-circular rotate="-90" size="100" line-width="15" m-bind:value="value" color="primary">
+  <mip-v-progress-circular
+    rotate="-90"
+    size="100"
+    line-width="15"
+    m-bind:value="value"
+    color="primary"
+  >
     <span m-text="value"></span>
   </mip-v-progress-circular>
-  <mip-v-progress-circular rotate="90" size="100" line-width="15" m-bind:value="value" color="red">
+  <mip-v-progress-circular
+    rotate="90"
+    size="100"
+    line-width="15"
+    m-bind:value="value"
+    color="red"
+  >
     <span m-text="value"></span>
   </mip-v-progress-circular>
-  <mip-v-progress-circular rotate="180" size="100" line-width="15" m-bind:value="value" color="pink">
+  <mip-v-progress-circular
+    rotate="180"
+    size="100"
+    line-width="15"
+    m-bind:value="value"
+    color="pink"
+  >
     <span m-text="value"></span>
   </mip-v-progress-circular>
 </div>
@@ -145,7 +220,11 @@ value|number / string|/|当前进度的百分比值
     }
   </script>
 </mip-data>
-<mip-v-progress-linear m-bind:value.sync="buffer" m-bind:buffer-value="bufferValue" buffer></mip-v-progress-linear>
+<mip-v-progress-linear
+  m-bind:value.sync="buffer"
+  m-bind:buffer-value="bufferValue"
+  buffer
+></mip-v-progress-linear>
 <mip-script>
   setInterval(() => MIP.setData({
     buffer: MIP.getData('buffer') + Math.random() * 10 + 5,
@@ -159,11 +238,31 @@ value|number / string|/|当前进度的百分比值
 
 ```html
 <div>
-  <mip-v-progress-linear color="secondary" line-height="2" value="15"></mip-v-progress-linear>
-  <mip-v-progress-linear color="success" line-height="5" value="30"></mip-v-progress-linear>
-  <mip-v-progress-linear color="info" line-height="10" value="45"></mip-v-progress-linear>
-  <mip-v-progress-linear color="warning" line-height="15" value="60"></mip-v-progress-linear>
-  <mip-v-progress-linear color="error" line-height="20" value="75"></mip-v-progress-linear>
+  <mip-v-progress-linear
+    color="secondary"
+    line-height="2"
+    value="15"
+  ></mip-v-progress-linear>
+  <mip-v-progress-linear
+    color="success"
+    line-height="5"
+    value="30"
+  ></mip-v-progress-linear>
+  <mip-v-progress-linear
+    color="info"
+    line-height="10"
+    value="45"
+  ></mip-v-progress-linear>
+  <mip-v-progress-linear
+    color="warning"
+    line-height="15"
+    value="60"
+  ></mip-v-progress-linear>
+  <mip-v-progress-linear
+    color="error"
+    line-height="20"
+    value="75"
+  ></mip-v-progress-linear>
 </div>
 ```
 
@@ -171,8 +270,20 @@ value|number / string|/|当前进度的百分比值
 
 ```html
 <div>
-  <mip-v-progress-linear background-color="pink lighten-3" color="pink lighten-1" value="15"></mip-v-progress-linear>
-  <mip-v-progress-linear background-color="blue-grey" color="lime" value="30"></mip-v-progress-linear>
-  <mip-v-progress-linear background-color="success" color="error" value="45"></mip-v-progress-linear>
+  <mip-v-progress-linear
+    background-color="pink lighten-3"
+    color="pink lighten-1"
+    value="15"
+  ></mip-v-progress-linear>
+  <mip-v-progress-linear
+    background-color="blue-grey"
+    color="lime"
+    value="30"
+  ></mip-v-progress-linear>
+  <mip-v-progress-linear
+    background-color="success"
+    color="error"
+    value="45"
+  ></mip-v-progress-linear>
 </div>
 ```

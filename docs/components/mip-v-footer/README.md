@@ -37,22 +37,44 @@ light|boolean|/|应用明亮主题变体
 ### 靛蓝色页脚
 
 ```html
-<mip-v-footer dark height="auto">
-  <mip-v-card flat tile class="indigo lighten-1 white--text text-xs-center">
+<mip-v-footer
+  dark
+  height="auto"
+>
+  <mip-v-card
+    flat
+    tile
+    class="indigo lighten-1 white--text text-xs-center"
+  >
     <mip-v-card-text>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-facebook</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-twitter</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-google-plus</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-linkedin</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-instagram</mip-v-icon>
       </mip-v-btn>
     </mip-v-card-text>
@@ -73,26 +95,49 @@ light|boolean|/|应用明亮主题变体
 ### 蓝绿色页脚
 
 ```html
-<mip-v-footer dark height="auto">
-  <mip-v-card class="flex" flat tile style="width: 100%;">
+<mip-v-footer
+  dark
+  height="auto"
+>
+  <mip-v-card
+    class="flex"
+    flat
+    tile
+    style="width: 100%;"
+  >
     <div class="v-card__title teal">
       <strong class="subheading">Get connected with us on social networks!</strong>
 
       <mip-v-spacer></mip-v-spacer>
 
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-facebook</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-twitter</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-google-plus</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-linkedin</mip-v-icon>
       </mip-v-btn>
-      <mip-v-btn class="mx-3 white--text" icon>
+      <mip-v-btn
+        class="mx-3 white--text"
+        icon
+      >
         <mip-v-icon size="24px">fab fa-instagram</mip-v-icon>
       </mip-v-btn>
     </div>

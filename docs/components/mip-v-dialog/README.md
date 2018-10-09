@@ -13,19 +13,33 @@
   </script>
 </mip-data>
 <div class="layout row justify-center">
-  <mip-v-dialog m-bind:value.sync="dialog" max-width="500">
-    <mip-v-btn slot="activator" color="red lighten-2" dark>
+  <mip-v-dialog
+    m-bind:value.sync="dialog"
+    max-width="500"
+  >
+    <mip-v-btn
+      slot="activator"
+      color="red lighten-2"
+      dark
+    >
       Click Me
     </mip-v-btn>
     <mip-v-card>
-      <mip-v-card-title class="headline grey lighten-2" primary-title>Privacy Policy</mip-v-card-title>
+      <mip-v-card-title
+        class="headline grey lighten-2"
+        primary-title
+      >Privacy Policy</mip-v-card-title>
       <mip-v-card-text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </mip-v-card-text>
       <mip-v-divider></mip-v-divider>
       <mip-v-card-actions>
         <div class="spacer"></div>
-        <mip-v-btn color="primary" flat on="tap:MIP.setData({ dialog: false })">
+        <mip-v-btn
+          color="primary"
+          flat
+          on="tap:MIP.setData({ dialog: false })"
+        >
           I accept
         </mip-v-btn>
       </mip-v-card-actions>
@@ -72,8 +86,16 @@ width|string / number|'auto'|设置对话框的宽度
   </script>
 </mip-data>
 <div class="layout row justify-center">
-  <mip-v-dialog m-bind:value.sync="dialog" persistent max-width="290">
-    <mip-v-btn slot="activator" color="primary" dark>
+  <mip-v-dialog
+    m-bind:value.sync="dialog"
+    persistent
+    max-width="290"
+  >
+    <mip-v-btn
+      slot="activator"
+      color="primary"
+      dark
+    >
       Open Dialog
     </mip-v-btn>
     <mip-v-card>
@@ -83,8 +105,16 @@ width|string / number|'auto'|设置对话框的宽度
       </mip-v-card-text>
       <mip-v-card-actions>
         <div class="spacer"></div>
-        <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({ dialog: false })">Disagree</mip-v-btn>
-        <mip-v-btn color="green darken-1" flat on="tap:MIP.setData({ dialog: false })">Agree</mip-v-btn>
+        <mip-v-btn
+          color="green darken-1"
+          flat
+          on="tap:MIP.setData({ dialog: false })"
+        >Disagree</mip-v-btn>
+        <mip-v-btn
+          color="green darken-1"
+          flat
+          on="tap:MIP.setData({ dialog: false })"
+        >Agree</mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </mip-v-dialog>
@@ -105,20 +135,43 @@ width|string / number|'auto'|设置对话框的宽度
   </script>
 </mip-data>
 <div class="layout row justify-center">
-  <mip-v-dialog m-bind:value.sync="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
-    <mip-v-btn slot="activator" color="primary" dark>Open Dialog</mip-v-btn>
+  <mip-v-dialog
+    m-bind:value.sync="dialog"
+    fullscreen
+    hide-overlay
+    transition="dialog-bottom-transition"
+  >
+    <mip-v-btn
+      slot="activator"
+      color="primary"
+      dark
+    >Open Dialog</mip-v-btn>
     <div class="v-card">
-      <mip-v-toolbar dark color="primary">
-        <mip-v-btn icon dark on="tap:MIP.setData({ dialog: false })">
+      <mip-v-toolbar
+        dark
+        color="primary"
+      >
+        <mip-v-btn
+          icon
+          dark
+          on="tap:MIP.setData({ dialog: false })"
+        >
           <mip-v-icon>close</mip-v-icon>
         </mip-v-btn>
         <mip-v-toolbar-title>Settings</mip-v-toolbar-title>
         <mip-v-spacer></mip-v-spacer>
         <mip-v-toolbar-items>
-          <mip-v-btn dark flat on="tap:MIP.setData({ dialog: false })">Save</mip-v-btn>
+          <mip-v-btn
+            dark
+            flat
+            on="tap:MIP.setData({ dialog: false })"
+          >Save</mip-v-btn>
         </mip-v-toolbar-items>
       </mip-v-toolbar>
-      <mip-v-list three-line subheader>
+      <mip-v-list
+        three-line
+        subheader
+      >
         <mip-v-subheader>User Controls</mip-v-subheader>
         <mip-v-list-tile avatar>
           <mip-v-list-tile-content>
@@ -134,7 +187,10 @@ width|string / number|'auto'|设置对话框的宽度
         </mip-v-list-tile>
       </mip-v-list>
       <mip-v-divider></mip-v-divider>
-      <mip-v-list three-line subheader>
+      <mip-v-list
+        three-line
+        subheader
+      >
         <mip-v-subheader>General</mip-v-subheader>
         <mip-v-list-tile avatar>
           <mip-v-list-tile-action>
@@ -180,8 +236,16 @@ width|string / number|'auto'|设置对话框的宽度
   </script>
 </mip-data>
 <div class="layout row justify-center">
-  <mip-v-dialog m-bind:value.sync="dialog" persistent max-width="500px">
-    <mip-v-btn slot="activator" color="primary" dark>Open Dialog</mip-v-btn>
+  <mip-v-dialog
+    m-bind:value.sync="dialog"
+    persistent
+    max-width="500px"
+  >
+    <mip-v-btn
+      slot="activator"
+      color="primary"
+      dark
+    >Open Dialog</mip-v-btn>
     <mip-v-card>
       <mip-v-card-title>
         <span class="headline">User Profile</span>
@@ -190,22 +254,43 @@ width|string / number|'auto'|设置对话框的宽度
         <div class="container grid-list-md">
           <div class="layout wrap">
             <div class="flex xs12 sm6 md4">
-              <mip-v-text-field label="Legal first name" required></mip-v-text-field>
+              <mip-v-text-field
+                label="Legal first name"
+                required
+              ></mip-v-text-field>
             </div>
             <div class="flex xs12 sm6 md4">
-              <mip-v-text-field label="Legal middle name" hint="example of helper text only on focus"></mip-v-text-field>
+              <mip-v-text-field
+                label="Legal middle name"
+                hint="example of helper text only on focus"
+              ></mip-v-text-field>
             </div>
             <div class="flex xs12 sm6 md4">
-              <mip-v-text-field label="Legal last name" hint="example of persistent helper text" persistent-hint required></mip-v-text-field>
+              <mip-v-text-field
+                label="Legal last name"
+                hint="example of persistent helper text"
+                persistent-hint
+                required
+              ></mip-v-text-field>
             </div>
             <div class="flex xs12">
-              <mip-v-text-field label="Email" required></mip-v-text-field>
+              <mip-v-text-field
+                label="Email"
+                required
+              ></mip-v-text-field>
             </div>
             <div class="flex xs12">
-              <mip-v-text-field label="Password" type="password" required></mip-v-text-field>
+              <mip-v-text-field
+                label="Password"
+                type="password"
+                required
+              ></mip-v-text-field>
             </div>
             <div class="flex xs12 sm6">
-              <mip-v-select label="Age" required>
+              <mip-v-select
+                label="Age"
+                required
+              >
                 <script type="application/json">
                   {
                     "items": ["0-17", "18-29", "30-54", "54+"]
@@ -214,7 +299,11 @@ width|string / number|'auto'|设置对话框的宽度
               </mip-v-select>
             </div>
             <div class="flex xs12 sm6">
-              <mip-v-autocomplete label="Interests" multiple chips>
+              <mip-v-autocomplete
+                label="Interests"
+                multiple
+                chips
+              >
                 <script type="application/json">
                   {
                     "items": ["Skiing", "Ice hockey", "Soccer", "Basketball", "Hockey", "Reading", "Writing", "Coding", "Basejump"]
@@ -228,8 +317,16 @@ width|string / number|'auto'|设置对话框的宽度
       </mip-v-card-text>
       <mip-v-card-actions>
         <mip-v-spacer></mip-v-spacer>
-        <mip-v-btn color="blue darken-1" flat on="tap:MIP.setData({ dialog: false })">Close</mip-v-btn>
-        <mip-v-btn color="blue darken-1" flat on="tap:MIP.setData({ dialog: false })">Save</mip-v-btn>
+        <mip-v-btn
+          color="blue darken-1"
+          flat
+          on="tap:MIP.setData({ dialog: false })"
+        >Close</mip-v-btn>
+        <mip-v-btn
+          color="blue darken-1"
+          flat
+          on="tap:MIP.setData({ dialog: false })"
+        >Save</mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </mip-v-dialog>
@@ -248,37 +345,113 @@ width|string / number|'auto'|设置对话框的宽度
   </script>
 </mip-data>
 <div class="layout row justify-center">
-  <mip-v-dialog m-bind:value.sync="dialog" scrollable max-width="300px">
-    <mip-v-btn slot="activator" color="primary" dark>Open Dialog</mip-v-btn>
+  <mip-v-dialog
+    m-bind:value.sync="dialog"
+    scrollable
+    max-width="300px"
+  >
+    <mip-v-btn
+      slot="activator"
+      color="primary"
+      dark
+    >Open Dialog</mip-v-btn>
     <div class="v-card">
       <div class="v-card__title">Select Country</div>
       <mip-v-divider></mip-v-divider>
-      <div class="v-card__text" style="height: 300px;">
-        <mip-v-radio-group m-bind:value.sync="country" column>
-          <mip-v-radio label="Bahamas" value="bahamas"></mip-v-radio>
-          <mip-v-radio label="Bahrain" value="bahrain"></mip-v-radio>
-          <mip-v-radio label="Bangladesh" value="bangladesh"></mip-v-radio>
-          <mip-v-radio label="Barbados" value="barbados"></mip-v-radio>
-          <mip-v-radio label="Belarus" value="belarus"></mip-v-radio>
-          <mip-v-radio label="Belgium" value="belgium"></mip-v-radio>
-          <mip-v-radio label="Belize" value="belize"></mip-v-radio>
-          <mip-v-radio label="Benin" value="benin"></mip-v-radio>
-          <mip-v-radio label="Bhutan" value="bhutan"></mip-v-radio>
-          <mip-v-radio label="Bolivia" value="bolivia"></mip-v-radio>
-          <mip-v-radio label="Bosnia and Herzegovina" value="bosnia"></mip-v-radio>
-          <mip-v-radio label="Botswana" value="botswana"></mip-v-radio>
-          <mip-v-radio label="Brazil" value="brazil"></mip-v-radio>
-          <mip-v-radio label="Brunei" value="brunei"></mip-v-radio>
-          <mip-v-radio label="Bulgaria" value="bulgaria"></mip-v-radio>
-          <mip-v-radio label="Burkina Faso" value="burkina"></mip-v-radio>
-          <mip-v-radio label="Burma" value="burma"></mip-v-radio>
-          <mip-v-radio label="Burundi" value="burundi"></mip-v-radio>
+      <div
+        class="v-card__text"
+        style="height: 300px;"
+      >
+        <mip-v-radio-group
+          m-bind:value.sync="country"
+          column
+        >
+          <mip-v-radio
+            label="Bahamas"
+            value="bahamas"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Bahrain"
+            value="bahrain"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Bangladesh"
+            value="bangladesh"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Barbados"
+            value="barbados"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Belarus"
+            value="belarus"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Belgium"
+            value="belgium"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Belize"
+            value="belize"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Benin"
+            value="benin"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Bhutan"
+            value="bhutan"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Bolivia"
+            value="bolivia"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Bosnia and Herzegovina"
+            value="bosnia"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Botswana"
+            value="botswana"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Brazil"
+            value="brazil"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Brunei"
+            value="brunei"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Bulgaria"
+            value="bulgaria"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Burkina Faso"
+            value="burkina"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Burma"
+            value="burma"
+          ></mip-v-radio>
+          <mip-v-radio
+            label="Burundi"
+            value="burundi"
+          ></mip-v-radio>
         </mip-v-radio-group>
       </div>
       <mip-v-divider></mip-v-divider>
       <div class="v-card__actions">
-        <mip-v-btn color="blue darken-1" flat on="tap:MIP.setData({ dialog: false })">Close</mip-v-btn>
-        <mip-v-btn color="blue darken-1" flat on="tap:MIP.setData({ dialog: false })">Save</mip-v-btn>
+        <mip-v-btn
+          color="blue darken-1"
+          flat
+          on="tap:MIP.setData({ dialog: false })"
+        >Close</mip-v-btn>
+        <mip-v-btn
+          color="blue darken-1"
+          flat
+          on="tap:MIP.setData({ dialog: false })"
+        >Save</mip-v-btn>
       </div>
     </div>
   </mip-v-dialog>
@@ -296,8 +469,15 @@ width|string / number|'auto'|设置对话框的宽度
   </script>
 </mip-data>
 <div class="layout row justify-center">
-  <mip-v-dialog m-bind:value.sync="dialog" max-width="600px">
-    <mip-v-btn slot="activator" color="primary" dark>Open Dialog</mip-v-btn>
+  <mip-v-dialog
+    m-bind:value.sync="dialog"
+    max-width="600px"
+  >
+    <mip-v-btn
+      slot="activator"
+      color="primary"
+      dark
+    >Open Dialog</mip-v-btn>
     <mip-v-card>
       <mip-v-card-title>
         <span class="headline">Use Google&apos;s location service?</span>
@@ -315,8 +495,16 @@ width|string / number|'auto'|设置对话框的宽度
       </mip-v-card-text>
       <mip-v-card-actions>
         <mip-v-spacer></mip-v-spacer>
-        <mip-v-btn color="green darken-1" flat="flat" on="tap:MIP.setData({ dialog: false })">Disagree</mip-v-btn>
-        <mip-v-btn color="green darken-1" flat="flat" on="tap:MIP.setData({ dialog: false })">Agree</mip-v-btn>
+        <mip-v-btn
+          color="green darken-1"
+          flat="flat"
+          on="tap:MIP.setData({ dialog: false })"
+        >Disagree</mip-v-btn>
+        <mip-v-btn
+          color="green darken-1"
+          flat="flat"
+          on="tap:MIP.setData({ dialog: false })"
+        >Agree</mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </mip-v-dialog>
@@ -334,14 +522,33 @@ width|string / number|'auto'|设置对话框的宽度
   </script>
 </mip-data>
 <div class="layout row justify-center">
-  <mip-v-dialog m-bind:value.sync="dialog" hide-overlay persistent max-width="300">
-    <mip-v-btn slot="activator" m-bind:disabled="dialog" m-bind:loading="dialog" class="white--text" color="purple darken-2" on="tap:MIP.setData({ dialog: true })">
+  <mip-v-dialog
+    m-bind:value.sync="dialog"
+    hide-overlay
+    persistent
+    max-width="300"
+  >
+    <mip-v-btn
+      slot="activator"
+      m-bind:disabled="dialog"
+      m-bind:loading="dialog"
+      class="white--text"
+      color="purple darken-2"
+      on="tap:MIP.setData({ dialog: true })"
+    >
       Start loading
     </mip-v-btn>
-    <mip-v-card color="primary" dark>
+    <mip-v-card
+      color="primary"
+      dark
+    >
       <mip-v-card-text>
         Please stand by
-        <mip-v-progress-linear indeterminate color="white" class="mb-0"></mip-v-progress-linear>
+        <mip-v-progress-linear
+          indeterminate
+          color="white"
+          class="mb-0"
+        ></mip-v-progress-linear>
       </mip-v-card-text>
     </mip-v-card>
   </mip-v-dialog>

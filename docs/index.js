@@ -68,8 +68,21 @@ const getOfficialDoc = async (name) => {
 
 const formatHtml = (html, data = {}) => {
   const lines = html.split('\n')
-  const align = lines[lines.length - 1].match(/\s*/)[0].length
-  const alignedHtml = [lines[0], ...lines.slice(1).map(line => line.slice(align))].join('\n')
+  const indent = lines[lines.length - 1].match(/\s*/)[0].length
+  const alignedHtml = [lines[0], ...lines.slice(1).map(line => line.slice(indent))].join('\n')
+
+  const formattedHtml = alignedHtml.replace(
+    /([^\S\n]*)<([a-z-]+)([^>]*)>/g,
+    (match, spacing, tagName, attributes) => {
+      const formattedAttributes = attributes.replace(
+        /\s+[a-z-:.]+(?:="[^"]+")?/g,
+        attribute => ' '.repeat(spacing.length + 2) + attribute.trim() + '\n'
+      )
+      return formattedAttributes.split('\n').length > 2
+        ? `${spacing}<${tagName}\n${formattedAttributes}${spacing}>`
+        : match
+    }
+  )
 
   const dataHtml = JSON.stringify(
     data,
@@ -88,7 +101,7 @@ const formatHtml = (html, data = {}) => {
         dataHtml +
         '\n  </script>\n</mip-data>\n'
   ) +
-  alignedHtml +
+  formattedHtml +
   (
     html.includes('<mip-script>')
       ? '\n<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>'

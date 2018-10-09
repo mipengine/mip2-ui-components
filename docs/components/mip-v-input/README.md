@@ -6,19 +6,42 @@ The `mip-v-input` component gives you a baseline to create your own custom input
 
 ```html
 <div class="container fluid">
-  <mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone">
+  <mip-v-input
+    label="Label"
+    messages="validation"
+    append-icon="close"
+    prepend-icon="phone"
+  >
     <input type="text">
   </mip-v-input>
 
-  <mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" loading="true">
+  <mip-v-input
+    label="Label"
+    messages="validation"
+    append-icon="close"
+    prepend-icon="phone"
+    loading="true"
+  >
     <input type="text">
   </mip-v-input>
 
-  <mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" error="true">
+  <mip-v-input
+    label="Label"
+    messages="validation"
+    append-icon="close"
+    prepend-icon="phone"
+    error="true"
+  >
     <input type="text">
   </mip-v-input>
 
-  <mip-v-input label="Label" messages="validation" append-icon="close" prepend-icon="phone" disabled="true">
+  <mip-v-input
+    label="Label"
+    messages="validation"
+    append-icon="close"
+    prepend-icon="phone"
+    disabled="true"
+  >
     <input type="text">
   </mip-v-input>
 </div>

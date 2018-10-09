@@ -83,7 +83,10 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 
 ```html
 <div class="group pa-2">
-<mip-v-toolbar dark color="primary">
+<mip-v-toolbar
+  dark
+  color="primary"
+>
   <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
 
   <mip-v-toolbar-title class="white--text">Title</mip-v-toolbar-title>
@@ -116,7 +119,10 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
   <div class="layout row child-flex wrap">
       <div>
         <mip-v-toolbar>
-          <mip-v-btn icon class="hidden-xs-only">
+          <mip-v-btn
+            icon
+            class="hidden-xs-only"
+          >
             <mip-v-icon>arrow_back</mip-v-icon>
           </mip-v-btn>
 
@@ -124,7 +130,10 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 
           <mip-v-spacer></mip-v-spacer>
 
-          <mip-v-btn icon class="hidden-xs-only">
+          <mip-v-btn
+            icon
+            class="hidden-xs-only"
+          >
             <mip-v-icon>search</mip-v-icon>
           </mip-v-btn>
         </mip-v-toolbar>
@@ -151,14 +160,22 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 
 ```html
 <mip-v-card flat>
-  <mip-v-toolbar color="primary" dark extended flat>
+  <mip-v-toolbar
+    color="primary"
+    dark
+    extended
+    flat
+  >
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
   </mip-v-toolbar>
 
   <div class="layout row pb-2">
     <div class="flex xs8 offset-xs2">
       <mip-v-card class="card--flex-toolbar">
-        <mip-v-toolbar card prominent>
+        <mip-v-toolbar
+          card
+          prominent
+        >
           <mip-v-toolbar-title class="body-2 grey--text">Title</mip-v-toolbar-title>
 
           <mip-v-spacer></mip-v-spacer>
@@ -189,9 +206,21 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 
 ```html
 <div class="group pa-2">
-  <mip-v-card class="pa-3" flat height="300px" img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg">
-    <mip-v-toolbar dense floating>
-      <mip-v-text-field hide-details prepend-icon="search" single-line></mip-v-text-field>
+  <mip-v-card
+    class="pa-3"
+    flat
+    height="300px"
+    img="https://cdn.vuetifyjs.com/images/toolbar/map.jpg"
+  >
+    <mip-v-toolbar
+      dense
+      floating
+    >
+      <mip-v-text-field
+        hide-details
+        prepend-icon="search"
+        single-line
+      ></mip-v-text-field>
 
       <mip-v-btn icon>
         <mip-v-icon>my_location</mip-v-icon>
@@ -208,8 +237,16 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 ### 突出的工具栏
 
 ```html
-<mip-v-card color="grey lighten-4" flat height="200px" tile>
-  <mip-v-toolbar prominent extended>
+<mip-v-card
+  color="grey lighten-4"
+  flat
+  height="200px"
+  tile
+>
+  <mip-v-toolbar
+    prominent
+    extended
+  >
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
 
     <mip-v-toolbar-title>Title</mip-v-toolbar-title>
@@ -234,7 +271,12 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 ### 密集的工具栏
 
 ```html
-<mip-v-card color="grey lighten-4" flat height="200px" tile>
+<mip-v-card
+  color="grey lighten-4"
+  flat
+  height="200px"
+  tile
+>
   <mip-v-toolbar dense>
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
 
@@ -260,8 +302,17 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 ### 滚动屏幕
 
 ```html
-<div class="hide-overflow" style="position: relative;">
-  <mip-v-toolbar absolute color="teal lighten-3" dark scroll-off-screen scroll-target="#scrolling-techniques">
+<div
+  class="hide-overflow"
+  style="position: relative;"
+>
+  <mip-v-toolbar
+    absolute
+    color="teal lighten-3"
+    dark
+    scroll-off-screen
+    scroll-target="#scrolling-techniques"
+  >
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
 
     <mip-v-toolbar-title>Title</mip-v-toolbar-title>
@@ -280,7 +331,11 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
       <mip-v-icon>more_vert</mip-v-icon>
     </mip-v-btn>
   </mip-v-toolbar>
-  <div id="scrolling-techniques" class="scroll-y" style="max-height: 600px;">
+  <div
+    id="scrolling-techniques"
+    class="scroll-y"
+    style="max-height: 600px;"
+  >
     <div style="height: 1000px;"></div>
   </div>
 </div>
@@ -289,8 +344,15 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 ### 应用程序栏与菜单
 
 ```html
-<mip-v-card color="grey lighten-4" flat height="200px">
-  <mip-v-toolbar color="grey darken-1" dark>
+<mip-v-card
+  color="grey lighten-4"
+  flat
+  height="200px"
+>
+  <mip-v-toolbar
+    color="grey darken-1"
+    dark
+  >
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
 
     <mip-v-menu :nudge-width="100">
@@ -337,8 +399,14 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
 ```html
 <div>
   <mip-v-subheader>Light status bar</mip-v-subheader>
-  <mip-v-card img="https://cdn.vuetifyjs.com/images/home/vuetify_layout1.svg" height="200px">
-    <mip-v-system-bar status color="primary">
+  <mip-v-card
+    img="https://cdn.vuetifyjs.com/images/home/vuetify_layout1.svg"
+    height="200px"
+  >
+    <mip-v-system-bar
+      status
+      color="primary"
+    >
       <mip-v-spacer></mip-v-spacer>
       <mip-v-icon>network_wifi</mip-v-icon>
       <mip-v-icon>signal_cellular_null</mip-v-icon>
@@ -347,8 +415,15 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
     </mip-v-system-bar>
   </mip-v-card>
   <mip-v-subheader>Lights out</mip-v-subheader>
-  <mip-v-card img="https://cdn.vuetifyjs.com/images/home/vuetify_layout2.svg" height="200px">
-    <mip-v-system-bar status color="primary" lights-out>
+  <mip-v-card
+    img="https://cdn.vuetifyjs.com/images/home/vuetify_layout2.svg"
+    height="200px"
+  >
+    <mip-v-system-bar
+      status
+      color="primary"
+      lights-out
+    >
       <mip-v-spacer></mip-v-spacer>
       <mip-v-icon>network_wifi</mip-v-icon>
       <mip-v-icon>signal_cellular_null</mip-v-icon>
@@ -357,8 +432,15 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
     </mip-v-system-bar>
   </mip-v-card>
   <mip-v-subheader>Dark status bar</mip-v-subheader>
-  <mip-v-card img="https://cdn.vuetifyjs.com/images/home/vuetify_layout1.svg" height="200px">
-    <mip-v-system-bar status color="primary" dark>
+  <mip-v-card
+    img="https://cdn.vuetifyjs.com/images/home/vuetify_layout1.svg"
+    height="200px"
+  >
+    <mip-v-system-bar
+      status
+      color="primary"
+      dark
+    >
       <mip-v-spacer></mip-v-spacer>
       <mip-v-icon>network_wifi</mip-v-icon>
       <mip-v-icon>signal_cellular_null</mip-v-icon>
@@ -367,8 +449,16 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
     </mip-v-system-bar>
   </mip-v-card>
   <mip-v-subheader>Lights out</mip-v-subheader>
-  <mip-v-card img="https://cdn.vuetifyjs.com/images/home/vuetify_layout2.svg" height="200px">
-    <mip-v-system-bar status color="primary" lights-out dark>
+  <mip-v-card
+    img="https://cdn.vuetifyjs.com/images/home/vuetify_layout2.svg"
+    height="200px"
+  >
+    <mip-v-system-bar
+      status
+      color="primary"
+      lights-out
+      dark
+    >
       <mip-v-spacer></mip-v-spacer>
       <mip-v-icon>network_wifi</mip-v-icon>
       <mip-v-icon>signal_cellular_null</mip-v-icon>
@@ -378,7 +468,10 @@ tabs|boolean|/|将会为扩展设置一个明确的高度 **42px**，当在扩�
   </mip-v-card>
   <mip-v-divider class="my-5"></mip-v-divider>
   <mip-v-subheader>Window bar</mip-v-subheader>
-  <mip-v-system-bar window dark>
+  <mip-v-system-bar
+    window
+    dark
+  >
     <mip-v-spacer></mip-v-spacer>
     <mip-v-icon>remove</mip-v-icon>
     <mip-v-icon>check_box_outline_blank</mip-v-icon>

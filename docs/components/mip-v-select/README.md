@@ -20,19 +20,34 @@
 <div class="container fluid grid-list-xl">
   <div class="layout wrap align-center">
     <div class="flex wrap align-center">
-      <mip-v-select m-bind:items="items" label="Standard"></mip-v-select>
+      <mip-v-select
+        m-bind:items="items"
+        label="Standard"
+      ></mip-v-select>
     </div>
 
     <div class="flex wrap align-center">
-      <mip-v-select m-bind:items="items" box label="Box style"></mip-v-select>
+      <mip-v-select
+        m-bind:items="items"
+        box
+        label="Box style"
+      ></mip-v-select>
     </div>
 
     <div class="flex wrap align-center">
-      <mip-v-select m-bind:items="items" label="Outline style" outline></mip-v-select>
+      <mip-v-select
+        m-bind:items="items"
+        label="Outline style"
+        outline
+      ></mip-v-select>
     </div>
 
     <div class="flex wrap align-center">
-      <mip-v-select m-bind:items="items" label="Solo field" solo></mip-v-select>
+      <mip-v-select
+        m-bind:items="items"
+        label="Solo field"
+        solo
+      ></mip-v-select>
     </div>
   </div>
 </div>
@@ -167,10 +182,42 @@ z-index|number / string|/|用于组件的z-index
 </mip-data>
 <div class="container grid-list-xl">
   <div class="layout row wrap">
-    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" attach chips label="Chips" multiple></mip-v-select>
-    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" box chips label="Chips" multiple></mip-v-select>
-    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" chips label="Chips" multiple outline></mip-v-select>
-    <mip-v-select class="flex xs12 md6" m-bind:value.sync="value" m-bind:items="items" chips label="Chips" multiple solo></mip-v-select>
+    <mip-v-select
+      class="flex xs12 md6"
+      m-bind:value.sync="value"
+      m-bind:items="items"
+      attach
+      chips
+      label="Chips"
+      multiple
+    ></mip-v-select>
+    <mip-v-select
+      class="flex xs12 md6"
+      m-bind:value.sync="value"
+      m-bind:items="items"
+      box
+      chips
+      label="Chips"
+      multiple
+    ></mip-v-select>
+    <mip-v-select
+      class="flex xs12 md6"
+      m-bind:value.sync="value"
+      m-bind:items="items"
+      chips
+      label="Chips"
+      multiple
+      outline
+    ></mip-v-select>
+    <mip-v-select
+      class="flex xs12 md6"
+      m-bind:value.sync="value"
+      m-bind:items="items"
+      chips
+      label="Chips"
+      multiple
+      solo
+    ></mip-v-select>
   </div>
 </div>
 ```
@@ -251,11 +298,27 @@ z-index|number / string|/|用于组件的z-index
   <div class="layout row wrap">
     <div class="flex xs12 md6">
       <h3>prepend-icon</h3>
-      <mip-v-select m-bind:items="states" m-bind:value.sync="e1" auto label="Select" hide-details prepend-icon="map" single-line></mip-v-select>
+      <mip-v-select
+        m-bind:items="states"
+        m-bind:value.sync="e1"
+        auto
+        label="Select"
+        hide-details
+        prepend-icon="map"
+        single-line
+      ></mip-v-select>
     </div>
     <div class="flex xs12 md6">
       <h3>append-icon</h3>
-      <mip-v-select m-bind:items="states" m-bind:value.sync="e2" append-outer-icon="map" auto hide-details label="Select" single-line></mip-v-select>
+      <mip-v-select
+        m-bind:items="states"
+        m-bind:value.sync="e2"
+        append-outer-icon="map"
+        auto
+        hide-details
+        label="Select"
+        single-line
+      ></mip-v-select>
     </div>
   </div>
 </div>
@@ -337,11 +400,27 @@ z-index|number / string|/|用于组件的z-index
   <div class="layout row wrap">
     <div class="flex xs12 md6">
       <h3>Multiple with persistent hint</h3>
-      <mip-v-select m-bind:items="states" m-bind:value.sync="e3" label="Select" multiple max-height="400" hint="Pick your favorite states" persistent-hint></mip-v-select>
+      <mip-v-select
+        m-bind:items="states"
+        m-bind:value.sync="e3"
+        label="Select"
+        multiple
+        max-height="400"
+        hint="Pick your favorite states"
+        persistent-hint
+      ></mip-v-select>
     </div>
     <div class="flex xs12 md6">
       <h3>Multiple (Chips) with persistent hint</h3>
-      <mip-v-select m-bind:items="states" m-bind:value.sync="e4" label="Select" multiple chips hint="What are the target regions" persistent-hint></mip-v-select>
+      <mip-v-select
+        m-bind:items="states"
+        m-bind:value.sync="e4"
+        label="Select"
+        multiple
+        chips
+        hint="What are the target regions"
+        persistent-hint
+      ></mip-v-select>
     </div>
   </div>
 </div>
@@ -389,6 +468,16 @@ z-index|number / string|/|用于组件的z-index
   </script>
 </mip-data>
 <div class="container grid-list-xl">
-  <mip-v-select m-bind:hint="`${select.state}, ${select.abbr}`" m-bind:items="items2" m-bind:value.sync="select" item-text="state" item-value="abbr" label="Select" persistent-hint return-object single-line></mip-v-select>
+  <mip-v-select
+    m-bind:hint="`${select.state}, ${select.abbr}`"
+    m-bind:items="items2"
+    m-bind:value.sync="select"
+    item-text="state"
+    item-value="abbr"
+    label="Select"
+    persistent-hint
+    return-object
+    single-line
+  ></mip-v-select>
 </div>
 ```

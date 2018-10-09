@@ -32,7 +32,10 @@
 <div class="layout row">
   <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>
-      <mip-v-toolbar color="cyan" dark>
+      <mip-v-toolbar
+        color="cyan"
+        dark
+      >
         <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
 
         <mip-v-toolbar-title>Inbox</mip-v-toolbar-title>
@@ -46,7 +49,11 @@
 
       <mip-v-list two-line>
         <mip-v-subheader m-text="header"></mip-v-subheader>
-        <mip-v-list-tile avatar href="#" ripple>
+        <mip-v-list-tile
+          avatar
+          href="#"
+          ripple
+        >
           <mip-v-list-tile-avatar>
             <mip-img m-bind:src="items[0].avatar">
           </mip-img></mip-v-list-tile-avatar>
@@ -59,7 +66,11 @@
 
         <mip-v-divider inset></mip-v-divider>
 
-        <mip-v-list-tile avatar href="#" ripple>
+        <mip-v-list-tile
+          avatar
+          href="#"
+          ripple
+        >
           <mip-v-list-tile-avatar>
             <mip-img m-bind:src="items[1].avatar">
           </mip-img></mip-v-list-tile-avatar>
@@ -72,7 +83,11 @@
 
         <mip-v-divider inset></mip-v-divider>
 
-        <mip-v-list-tile avatar href="#" ripple>
+        <mip-v-list-tile
+          avatar
+          href="#"
+          ripple
+        >
           <mip-v-list-tile-avatar>
             <mip-img m-bind:src="items[2].avatar">
           </mip-img></mip-v-list-tile-avatar>
@@ -193,7 +208,10 @@ tile|boolean|/|删除边看弧度
 <div class="layout row">
   <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>
-      <mip-v-toolbar color="indigo" dark>
+      <mip-v-toolbar
+        color="indigo"
+        dark
+      >
         <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
 
         <mip-v-toolbar-title>Inbox</mip-v-toolbar-title>
@@ -209,7 +227,10 @@ tile|boolean|/|删除边看弧度
         </mip-v-btn>
       </mip-v-toolbar>
       <mip-v-list>
-        <mip-v-list-tile avatar href="#">
+        <mip-v-list-tile
+          avatar
+          href="#"
+        >
           <mip-v-list-tile-action>
             <mip-v-icon color="pink">star</mip-v-icon>
           </mip-v-list-tile-action>
@@ -222,7 +243,10 @@ tile|boolean|/|删除边看弧度
             <img m-bind:src="items[0].avatar">
           </mip-v-list-tile-avatar>
         </mip-v-list-tile>
-        <mip-v-list-tile avatar href="#">
+        <mip-v-list-tile
+          avatar
+          href="#"
+        >
           <mip-v-list-tile-action>
           </mip-v-list-tile-action>
 
@@ -234,7 +258,10 @@ tile|boolean|/|删除边看弧度
             <img m-bind:src="items[1].avatar">
           </mip-v-list-tile-avatar>
         </mip-v-list-tile>
-        <mip-v-list-tile avatar href="#">
+        <mip-v-list-tile
+          avatar
+          href="#"
+        >
           <mip-v-list-tile-action>
           </mip-v-list-tile-action>
 
@@ -258,7 +285,10 @@ tile|boolean|/|删除边看弧度
 <div class="layout row">
   <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>
-      <mip-v-toolbar color="light-blue" dark>
+      <mip-v-toolbar
+        color="light-blue"
+        dark
+      >
         <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
 
         <mip-v-toolbar-title>My files</mip-v-toolbar-title>
@@ -274,10 +304,16 @@ tile|boolean|/|删除边看弧度
         </mip-v-btn>
       </mip-v-toolbar>
 
-      <mip-v-list two-line subheader>
+      <mip-v-list
+        two-line
+        subheader
+      >
         <mip-v-subheader inset>Folders</mip-v-subheader>
 
-        <mip-v-list-tile avatar href="#">
+        <mip-v-list-tile
+          avatar
+          href="#"
+        >
           <mip-v-list-tile-avatar>
             <mip-v-icon class="grey lighten-1 white--text">folder</mip-v-icon>
           </mip-v-list-tile-avatar>
@@ -288,12 +324,18 @@ tile|boolean|/|删除边看弧度
           </mip-v-list-tile-content>
 
           <mip-v-list-tile-action>
-            <mip-v-btn icon ripple>
+            <mip-v-btn
+              icon
+              ripple
+            >
               <mip-v-icon color="grey lighten-1">info</mip-v-icon>
             </mip-v-btn>
           </mip-v-list-tile-action>
         </mip-v-list-tile>
-        <mip-v-list-tile avatar href="#">
+        <mip-v-list-tile
+          avatar
+          href="#"
+        >
           <mip-v-list-tile-avatar>
             <mip-v-icon class="grey lighten-1 white--text">folder</mip-v-icon>
           </mip-v-list-tile-avatar>
@@ -304,7 +346,10 @@ tile|boolean|/|删除边看弧度
           </mip-v-list-tile-content>
 
           <mip-v-list-tile-action>
-            <mip-v-btn icon ripple>
+            <mip-v-btn
+              icon
+              ripple
+            >
               <mip-v-icon color="grey lighten-1">info</mip-v-icon>
             </mip-v-btn>
           </mip-v-list-tile-action>
@@ -314,9 +359,15 @@ tile|boolean|/|删除边看弧度
 
         <mip-v-subheader inset>Files</mip-v-subheader>
 
-        <mip-v-list-tile avatar href="#">
+        <mip-v-list-tile
+          avatar
+          href="#"
+        >
           <mip-v-list-tile-avatar>
-            <mip-v-icon class="blue white--text" m-text="fileItems[0].icon"></mip-v-icon>
+            <mip-v-icon
+              class="blue white--text"
+              m-text="fileItems[0].icon"
+            ></mip-v-icon>
           </mip-v-list-tile-avatar>
 
           <mip-v-list-tile-content>
@@ -325,14 +376,23 @@ tile|boolean|/|删除边看弧度
           </mip-v-list-tile-content>
 
           <mip-v-list-tile-action>
-            <mip-v-btn icon ripple>
+            <mip-v-btn
+              icon
+              ripple
+            >
               <mip-v-icon color="grey lighten-1">info</mip-v-icon>
             </mip-v-btn>
           </mip-v-list-tile-action>
         </mip-v-list-tile>
-        <mip-v-list-tile avatar href="#">
+        <mip-v-list-tile
+          avatar
+          href="#"
+        >
           <mip-v-list-tile-avatar>
-            <mip-v-icon class="amber white--text" m-text="fileItems[1].icon"></mip-v-icon>
+            <mip-v-icon
+              class="amber white--text"
+              m-text="fileItems[1].icon"
+            ></mip-v-icon>
           </mip-v-list-tile-avatar>
 
           <mip-v-list-tile-content>
@@ -341,7 +401,10 @@ tile|boolean|/|删除边看弧度
           </mip-v-list-tile-content>
 
           <mip-v-list-tile-action>
-            <mip-v-btn icon ripple>
+            <mip-v-btn
+              icon
+              ripple
+            >
               <mip-v-icon color="grey lighten-1">info</mip-v-icon>
             </mip-v-btn>
           </mip-v-list-tile-action>

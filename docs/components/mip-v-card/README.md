@@ -8,7 +8,10 @@
 <div class="layout">
   <div class="flex xs12 sm6 offset-sm3">
   <mip-v-card>
-    <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" height="200px"></mip-v-card-media>
+    <mip-v-card-media
+      src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+      height="200px"
+    ></mip-v-card-media>
 
     <mip-v-card-title primary-title>
       <div>
@@ -18,8 +21,14 @@
     </mip-v-card-title>
 
     <mip-v-card-actions>
-      <mip-v-btn flat color="orange">Share</mip-v-btn>
-      <mip-v-btn flat color="orange">Explore</mip-v-btn>
+      <mip-v-btn
+        flat
+        color="orange"
+      >Share</mip-v-btn>
+      <mip-v-btn
+        flat
+        color="orange"
+      >Explore</mip-v-btn>
     </mip-v-card-actions>
   </mip-v-card>
   </div>
@@ -83,7 +92,11 @@ primary-title|boolean|/|应用主标题特定的内边距
 <div class="layout">
   <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>
-      <mip-v-card-media class="white--text" height="200px" src="https://cdn.vuetifyjs.com/images/cards/docks.jpg">
+      <mip-v-card-media
+        class="white--text"
+        height="200px"
+        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+      >
         <div class="container fill-height fluid">
           <div class="layout fill-height">
             <div class="flex xs12 align-end flexbox">
@@ -100,8 +113,14 @@ primary-title|boolean|/|应用主标题特定的内边距
         </div>
       </mip-v-card-title>
       <mip-v-card-actions>
-        <mip-v-btn flat color="orange">Share</mip-v-btn>
-        <mip-v-btn flat color="orange">Explore</mip-v-btn>
+        <mip-v-btn
+          flat
+          color="orange"
+        >Share</mip-v-btn>
+        <mip-v-btn
+          flat
+          color="orange"
+        >Explore</mip-v-btn>
       </mip-v-card-actions>
     </mip-v-card>
   </div>
@@ -111,8 +130,15 @@ primary-title|boolean|/|应用主标题特定的内边距
 ### 水平的卡片
 
 ```html
-<div id="e3" style="max-width: 400px; margin: auto;" class="grey lighten-3">
-  <mip-v-toolbar color="pink" dark>
+<div
+  id="e3"
+  style="max-width: 400px; margin: auto;"
+  class="grey lighten-3"
+>
+  <mip-v-toolbar
+    color="pink"
+    dark
+  >
     <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
     <mip-v-toolbar-title>My Music</mip-v-toolbar-title>
     <mip-v-spacer></mip-v-spacer>
@@ -125,22 +151,35 @@ primary-title|boolean|/|应用主标题特定的内边距
     <div class="container fluid grid-list-lg">
       <div class="layout row wrap">
         <div class="flex xs12">
-          <mip-v-card color="blue-grey darken-2" class="white--text">
+          <mip-v-card
+            color="blue-grey darken-2"
+            class="white--text"
+          >
             <mip-v-card-title primary-title>
               <div class="headline">Unlimited music now</div>
               <div>Listen to your favorite artists and albums whenever and wherever, online and offline.</div>
             </mip-v-card-title>
             <mip-v-card-actions>
-              <mip-v-btn flat dark>Listen now</mip-v-btn>
+              <mip-v-btn
+                flat
+                dark
+              >Listen now</mip-v-btn>
             </mip-v-card-actions>
           </mip-v-card>
         </div>
 
         <div class="flex xs12">
-          <mip-v-card color="cyan darken-2" class="white--text">
+          <mip-v-card
+            color="cyan darken-2"
+            class="white--text"
+          >
             <div class="layout">
               <div class="flex xs5">
-                <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/foster.jpg" height="125px" contain></mip-v-card-media>
+                <mip-v-card-media
+                  src="https://cdn.vuetifyjs.com/images/cards/foster.jpg"
+                  height="125px"
+                  contain
+                ></mip-v-card-media>
               </div>
               <div class="flex xs7">
                 <mip-v-card-title primary-title>
@@ -166,7 +205,10 @@ primary-title|boolean|/|应用主标题特定的内边距
         </div>
 
         <div class="flex xs12">
-          <mip-v-card color="purple" class="white--text">
+          <mip-v-card
+            color="purple"
+            class="white--text"
+          >
             <div class="layout row">
               <div class="flex xs7">
                 <mip-v-card-title primary-title>
@@ -178,7 +220,11 @@ primary-title|boolean|/|应用主标题特定的内边距
                 </mip-v-card-title>
               </div>
               <div class="flex xs5">
-                <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/halcyon.png" height="125px" contain></mip-v-card-media>
+                <mip-v-card-media
+                  src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
+                  height="125px"
+                  contain
+                ></mip-v-card-media>
               </div>
             </div>
             <mip-v-divider light></mip-v-divider>
@@ -204,7 +250,10 @@ primary-title|boolean|/|应用主标题特定的内边距
 ```html
 <div class="layout justify-center">
   <div class="flex xs12 sm6">
-    <mip-v-toolbar color="indigo" dark>
+    <mip-v-toolbar
+      color="indigo"
+      dark
+    >
       <mip-v-toolbar-side-icon></mip-v-toolbar-side-icon>
       <mip-v-toolbar-title>Discover</mip-v-toolbar-title>
       <mip-v-spacer></mip-v-spacer>
@@ -217,11 +266,16 @@ primary-title|boolean|/|应用主标题特定的内边距
         <div class="layout row wrap">
           <div class="flex xs12">
             <mip-v-card>
-              <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/house.jpg" height="200px">
-                <div class="container
+              <mip-v-card-media
+                src="https://cdn.vuetifyjs.com/images/cards/house.jpg"
+                height="200px"
+              >
+                <div
+                  class="container
                   fill-height
                   fluid
-                  pa-2">
+                  pa-2"
+                >
                   <div class="layout fill-height">
                     <div class="flex xs12 align-end flexbox">
                       <span class="headline white--text">Pre-fab homes</span>
@@ -245,11 +299,16 @@ primary-title|boolean|/|应用主标题特定的内边距
           </div>
           <div class="flex xs6">
             <mip-v-card>
-              <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/road.jpg" height="200px">
-                <div class="container
+              <mip-v-card-media
+                src="https://cdn.vuetifyjs.com/images/cards/road.jpg"
+                height="200px"
+              >
+                <div
+                  class="container
                   fill-height
                   fluid
-                  pa-2">
+                  pa-2"
+                >
                   <div class="layout fill-height">
                     <div class="flex xs12 align-end flexbox">
                       <span class="headline white--text">Favorite road trips</span>
@@ -273,11 +332,16 @@ primary-title|boolean|/|应用主标题特定的内边距
           </div>
           <div class="flex xs6">
             <mip-v-card>
-              <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/plane.jpg" height="200px">
-                <div class="container
+              <mip-v-card-media
+                src="https://cdn.vuetifyjs.com/images/cards/plane.jpg"
+                height="200px"
+              >
+                <div
+                  class="container
                   fill-height
                   fluid
-                  pa-2">
+                  pa-2"
+                >
                   <div class="layout fill-height">
                     <div class="flex xs12 align-end flexbox">
                       <span class="headline white--text">Best airlines</span>
@@ -319,7 +383,10 @@ primary-title|boolean|/|应用主标题特定的内边距
 <div class="layout row">
   <div class="flex xs12 sm6 offset-sm3">
     <mip-v-card>
-      <mip-v-card-media src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px">
+      <mip-v-card-media
+        src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+        height="200px"
+      >
       </mip-v-card-media>
 
       <mip-v-card-title primary-title>
@@ -331,9 +398,15 @@ primary-title|boolean|/|应用主标题特定的内边距
 
       <mip-v-card-actions>
         <mip-v-btn flat>Share</mip-v-btn>
-        <mip-v-btn flat color="purple">Explore</mip-v-btn>
+        <mip-v-btn
+          flat
+          color="purple"
+        >Explore</mip-v-btn>
         <mip-v-spacer></mip-v-spacer>
-        <mip-v-btn icon on="tap:MIP.setData({ show: !m.show })">
+        <mip-v-btn
+          icon
+          on="tap:MIP.setData({ show: !m.show })"
+        >
           <mip-v-icon m-bind:style="{ display: show ? &apos;block&apos; : &apos;none&apos; }">keyboard_arrow_down</mip-v-icon>
           <mip-v-icon m-bind:style="{ display: show ? &apos;none&apos; : &apos;block&apos; }">keyboard_arrow_up</mip-v-icon>
         </mip-v-btn>

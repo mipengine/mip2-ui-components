@@ -16,14 +16,30 @@
 <div class="container grid-list-md">
   <div class="layout row wrap">
     <div class="flex xs12 sm6 md4">
-      <mip-v-slider m-bind:value.sync="slider" min="16" max="256" label="Size" thumb-label></mip-v-slider>
+      <mip-v-slider
+        m-bind:value.sync="slider"
+        min="16"
+        max="256"
+        label="Size"
+        thumb-label
+      ></mip-v-slider>
 
-      <mip-v-switch m-bind:input-value.sync="tile" label="Tile"></mip-v-switch>
+      <mip-v-switch
+        m-bind:input-value.sync="tile"
+        label="Tile"
+      ></mip-v-switch>
     </div>
 
     <div class="flex xs12 sm6 md8 align-center justify-center layout text-xs-center">
-      <mip-v-avatar m-bind:tile="tile" m-bind:size="slider" color="grey lighten-4">
-        <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="avatar">
+      <mip-v-avatar
+        m-bind:tile="tile"
+        m-bind:size="slider"
+        color="grey lighten-4"
+      >
+        <img
+          src="https://vuetifyjs.com/apple-touch-icon-180x180.png"
+          alt="avatar"
+        >
       </mip-v-avatar>
     </div>
   </div>
@@ -53,7 +69,10 @@ tile|boolean|/|删除边看弧度
   </mip-v-avatar>
 
   <mip-v-avatar>
-    <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
+    <img
+      src="https://cdn.vuetifyjs.com/images/john.jpg"
+      alt="John"
+    >
   </mip-v-avatar>
 
   <mip-v-badge overlap>

@@ -97,14 +97,32 @@ value|any|/|设置选择控件组件的值
   </script>
 </mip-data>
 <div class="container fluid">
-  <mip-v-radio-group m-bind:value.sync="column" column>
-    <mip-v-radio label="Option 1" value="radio-1"></mip-v-radio>
-    <mip-v-radio label="Option 2" value="radio-2"></mip-v-radio>
+  <mip-v-radio-group
+    m-bind:value.sync="column"
+    column
+  >
+    <mip-v-radio
+      label="Option 1"
+      value="radio-1"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="Option 2"
+      value="radio-2"
+    ></mip-v-radio>
   </mip-v-radio-group>
   <mip-v-divider></mip-v-divider>
-  <mip-v-radio-group m-bind:value.sync="row" row>
-    <mip-v-radio label="Option 1" value="radio-1"></mip-v-radio>
-    <mip-v-radio label="Option 2" value="radio-2"></mip-v-radio>
+  <mip-v-radio-group
+    m-bind:value.sync="row"
+    row
+  >
+    <mip-v-radio
+      label="Option 1"
+      value="radio-1"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="Option 2"
+      value="radio-2"
+    ></mip-v-radio>
   </mip-v-radio-group>
 </div>
 ```
@@ -120,19 +138,70 @@ value|any|/|设置选择控件组件的值
   </script>
 </mip-data>
 <div class="container fluid">
-  <mip-v-radio-group m-bind:value.sync="color" column>
-    <mip-v-radio label="red" color="red" value="red"></mip-v-radio>
-    <mip-v-radio label="red darken-3" color="red darken-3" value="red darken-3"></mip-v-radio>
-    <mip-v-radio label="indigo" color="indigo" value="indigo"></mip-v-radio>
-    <mip-v-radio label="indigo darken-3" color="indigo darken-3" value="indigo darken-3"></mip-v-radio>
-    <mip-v-radio label="orange" color="orange" value="orange"></mip-v-radio>
-    <mip-v-radio label="orange darken-3" color="orange darken-3" value="orange darken-3"></mip-v-radio>
-    <mip-v-radio label="primary" color="primary" value="primary"></mip-v-radio>
-    <mip-v-radio label="secondary" color="secondary" value="secondary"></mip-v-radio>
-    <mip-v-radio label="success" color="success" value="success"></mip-v-radio>
-    <mip-v-radio label="info" color="info" value="info"></mip-v-radio>
-    <mip-v-radio label="warning" color="warning" value="warning"></mip-v-radio>
-    <mip-v-radio label="error" color="error" value="error"></mip-v-radio>
+  <mip-v-radio-group
+    m-bind:value.sync="color"
+    column
+  >
+    <mip-v-radio
+      label="red"
+      color="red"
+      value="red"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="red darken-3"
+      color="red darken-3"
+      value="red darken-3"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="indigo"
+      color="indigo"
+      value="indigo"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="indigo darken-3"
+      color="indigo darken-3"
+      value="indigo darken-3"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="orange"
+      color="orange"
+      value="orange"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="orange darken-3"
+      color="orange darken-3"
+      value="orange darken-3"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="primary"
+      color="primary"
+      value="primary"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="secondary"
+      color="secondary"
+      value="secondary"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="success"
+      color="success"
+      value="success"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="info"
+      color="info"
+      value="info"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="warning"
+      color="warning"
+      value="warning"
+    ></mip-v-radio>
+    <mip-v-radio
+      label="error"
+      color="error"
+      value="error"
+    ></mip-v-radio>
   </mip-v-radio-group>
 </div>
 ```

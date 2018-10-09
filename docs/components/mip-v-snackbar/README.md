@@ -22,47 +22,98 @@
     <div class="container fluid">
       <div class="layout row wrap">
         <div class="flex xs12 sm3">
-          <mip-v-checkbox m-bind:input-value.sync="x" label="Left" value="left"></mip-v-checkbox>
+          <mip-v-checkbox
+            m-bind:input-value.sync="x"
+            label="Left"
+            value="left"
+          ></mip-v-checkbox>
         </div>
 
         <div class="flex xs6 sm3">
-          <mip-v-checkbox m-bind:input-value.sync="x" label="Right" value="right"></mip-v-checkbox>
+          <mip-v-checkbox
+            m-bind:input-value.sync="x"
+            label="Right"
+            value="right"
+          ></mip-v-checkbox>
         </div>
 
         <div class="flex xs6 sm3">
-          <mip-v-checkbox m-bind:input-value.sync="y" label="Top" value="top"></mip-v-checkbox>
+          <mip-v-checkbox
+            m-bind:input-value.sync="y"
+            label="Top"
+            value="top"
+          ></mip-v-checkbox>
         </div>
 
         <div class="flex xs6 sm3">
-          <mip-v-checkbox m-bind:input-value.sync="y" label="Bottom" value="bottom"></mip-v-checkbox>
+          <mip-v-checkbox
+            m-bind:input-value.sync="y"
+            label="Bottom"
+            value="bottom"
+          ></mip-v-checkbox>
         </div>
 
         <div class="flex xs12 sm3">
-          <mip-v-checkbox m-bind:input-value.sync="mode" label="Multi-line (mobile)" value="multi-line"></mip-v-checkbox>
+          <mip-v-checkbox
+            m-bind:input-value.sync="mode"
+            label="Multi-line (mobile)"
+            value="multi-line"
+          ></mip-v-checkbox>
         </div>
 
         <div class="flex xs12 sm3">
-          <mip-v-checkbox m-bind:input-value.sync="mode" label="Vertical (mobile)" value="vertical"></mip-v-checkbox>
+          <mip-v-checkbox
+            m-bind:input-value.sync="mode"
+            label="Vertical (mobile)"
+            value="vertical"
+          ></mip-v-checkbox>
         </div>
 
         <div class="flex xs12 sm4 offset-sm4">
-          <mip-v-text-field m-bind:value.sync="text" label="Text" type="text"></mip-v-text-field>
+          <mip-v-text-field
+            m-bind:value.sync="text"
+            label="Text"
+            type="text"
+          ></mip-v-text-field>
         </div>
 
         <div class="flex xs12 sm4">
-          <mip-v-text-field m-bind:value.sync="timeout" label="Timeout" type="number"></mip-v-text-field>
+          <mip-v-text-field
+            m-bind:value.sync="timeout"
+            label="Timeout"
+            type="number"
+          ></mip-v-text-field>
         </div>
       </div>
 
     </div>
-    <mip-v-btn block color="primary" dark on="click:MIP.setData({ snackbar: true })">
+    <mip-v-btn
+      block
+      color="primary"
+      dark
+      on="click:MIP.setData({ snackbar: true })"
+    >
       Show Snackbar
     </mip-v-btn>
   </mip-v-card-text>
 
-  <mip-v-snackbar m-bind:value.sync="snackbar" m-bind:timeout="+timeout" m-bind:left="x === &apos;left&apos;" m-bind:right="x === &apos;right&apos;" m-bind:top="y === &apos;top&apos;" m-bind:bottom="y === &apos;bottom&apos;" m-bind:multi-line="mode === &apos;multi-line&apos;" m-bind:vertical="mode === &apos;vertical&apos;" toppx="44">
+  <mip-v-snackbar
+    m-bind:value.sync="snackbar"
+    m-bind:timeout="+timeout"
+    m-bind:left="x === &apos;left&apos;"
+    m-bind:right="x === &apos;right&apos;"
+    m-bind:top="y === &apos;top&apos;"
+    m-bind:bottom="y === &apos;bottom&apos;"
+    m-bind:multi-line="mode === &apos;multi-line&apos;"
+    m-bind:vertical="mode === &apos;vertical&apos;"
+    toppx="44"
+  >
     <span m-text="text"></span>
-    <mip-v-btn color="pink" flat on="click:MIP.setData({ snackbar: false })">
+    <mip-v-btn
+      color="pink"
+      flat
+      on="click:MIP.setData({ snackbar: false })"
+    >
       Close
     </mip-v-btn>
   </mip-v-snackbar>
@@ -116,35 +167,86 @@ vertical|boolean|/|垂直折叠全局提示的内容（移动设备）
     <div class="container fluid">
       <div class="layout row wrap">
         <div class="flex xs12">
-          <mip-v-radio-group m-bind:value.sync="color" row>
-            <mip-v-radio color="success" label="success" value="success"></mip-v-radio>
-            <mip-v-radio color="info" label="info" value="info"></mip-v-radio>
-            <mip-v-radio color="error" label="error" value="error"></mip-v-radio>
-            <mip-v-radio color="cyan darken-2" label="cyan darken-2" value="cyan darken-2"></mip-v-radio>
+          <mip-v-radio-group
+            m-bind:value.sync="color"
+            row
+          >
+            <mip-v-radio
+              color="success"
+              label="success"
+              value="success"
+            ></mip-v-radio>
+            <mip-v-radio
+              color="info"
+              label="info"
+              value="info"
+            ></mip-v-radio>
+            <mip-v-radio
+              color="error"
+              label="error"
+              value="error"
+            ></mip-v-radio>
+            <mip-v-radio
+              color="cyan darken-2"
+              label="cyan darken-2"
+              value="cyan darken-2"
+            ></mip-v-radio>
           </mip-v-radio-group>
         </div>
         <div class="flex xs12 sm3">
-          <mip-v-checkbox mip-v-model="mode" label="Multi-line (mobile)" value="multi-line"></mip-v-checkbox>
+          <mip-v-checkbox
+            mip-v-model="mode"
+            label="Multi-line (mobile)"
+            value="multi-line"
+          ></mip-v-checkbox>
         </div>
         <div class="flex xs12 sm3">
-          <mip-v-checkbox mip-v-model="mode" label="Vertical (mobile)" value="vertical"></mip-v-checkbox>
+          <mip-v-checkbox
+            mip-v-model="mode"
+            label="Vertical (mobile)"
+            value="vertical"
+          ></mip-v-checkbox>
         </div>
         <div class="flex xs12 sm4 offset-sm4">
-          <mip-v-text-field m-bind:value.sync="text0" label="Text" type="text"></mip-v-text-field>
+          <mip-v-text-field
+            m-bind:value.sync="text0"
+            label="Text"
+            type="text"
+          ></mip-v-text-field>
         </div>
         <div class="flex xs12 sm4">
-          <mip-v-text-field m-bind:value.sync="timeout0" label="Timeout" type="number"></mip-v-text-field>
+          <mip-v-text-field
+            m-bind:value.sync="timeout0"
+            label="Timeout"
+            type="number"
+          ></mip-v-text-field>
         </div>
       </div>
     </div>
 
-    <mip-v-btn block color="primary" dark on="click:MIP.setData({ snackbar0: true })">
+    <mip-v-btn
+      block
+      color="primary"
+      dark
+      on="click:MIP.setData({ snackbar0: true })"
+    >
       Show Snackbar0
     </mip-v-btn>
   </mip-v-card-text>
-  <mip-v-snackbar m-bind:value.sync="snackbar0" m-bind:color="color" m-bind:multi-line="mode === &apos;multi-line&apos;" m-bind:timeout="+timeout0" m-bind:vertical="mode === &apos;vertical&apos;" toppx="44">
+  <mip-v-snackbar
+    m-bind:value.sync="snackbar0"
+    m-bind:color="color"
+    m-bind:multi-line="mode === &apos;multi-line&apos;"
+    m-bind:timeout="+timeout0"
+    m-bind:vertical="mode === &apos;vertical&apos;"
+    toppx="44"
+  >
     <span m-text="text0"></span>
-    <mip-v-btn dark flat on="click:MIP.setData({ snackbar0: false })">
+    <mip-v-btn
+      dark
+      flat
+      on="click:MIP.setData({ snackbar0: false })"
+    >
       Close
     </mip-v-btn>
   </mip-v-snackbar>
