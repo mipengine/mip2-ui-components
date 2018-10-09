@@ -188,7 +188,7 @@ value|boolean|true|控制可见性
   <mip-v-btn
     color="primary"
     dark
-    m-bind:style="{ display: chip1 || chip2 || chip3 || chip4 ? &apos;none&apos; : &apos;inline-flex&apos; }"
+    m-bind:style="{ display: chip1 || chip2 || chip3 || chip4 ? 'none' : 'inline-flex' }"
     on="click:MIP.setData({ chip1: true, chip2: true, chip3: true, chip4: true })"
   >
     Reset Chips

@@ -436,8 +436,8 @@ value|any|/|输入值
 <mip-v-flex xs12>
   <mip-v-text-field
     m-bind:value.sync="message"
-    m-bind:append-icon="marker ? &apos;mdi-map-marker&apos; : &apos;mdi-map-marker-off&apos;"
-    m-bind:append-outer-icon="message ? &apos;mdi-send&apos; : &apos;mdi-microphone&apos;"
+    m-bind:append-icon="marker ? 'mdi-map-marker' : 'mdi-map-marker-off'"
+    m-bind:append-outer-icon="message ? 'mdi-send' : 'mdi-microphone'"
     m-bind:prepend-icon="icons[iconIndex]"
     box
     clear-icon="mdi-close-circle"
@@ -447,7 +447,7 @@ value|any|/|输入值
     on="click-append:MIP.setData({marker: !m.marker})
         click-append-outer:MIP.setData({sendMessage: true})
         click-prepend:MIP.setData({changeIcon: true})
-        click-clear:MIP.setData({message: &apos;&apos;})"
+        click-clear:MIP.setData({message: ''})"
   >
 </mip-v-text-field></mip-v-flex>
 ```
@@ -518,8 +518,8 @@ value|any|/|输入值
     <mip-v-text-field
       class="flex xs12 sm6"
       m-bind:value.sync="password"
-      m-bind:append-icon="show1 ? &apos;visibility_off&apos; : &apos;visibility&apos;"
-      m-bind:type="show1 ? &apos;text&apos; : &apos;password&apos;"
+      m-bind:append-icon="show1 ? 'visibility_off' : 'visibility'"
+      m-bind:type="show1 ? 'text' : 'password'"
       name="input-10-1"
       label="Normal with hint text"
       hint="At least 8 characters"
@@ -528,8 +528,8 @@ value|any|/|输入值
     ></mip-v-text-field>
     <mip-v-text-field
       class="flex xs12 sm6 input-group--focused"
-      m-bind:append-icon="show2 ? &apos;visibility_off&apos; : &apos;visibility&apos;"
-      m-bind:type="show2 ? &apos;text&apos; : &apos;password&apos;"
+      m-bind:append-icon="show2 ? 'visibility_off' : 'visibility'"
+      m-bind:type="show2 ? 'text' : 'password'"
       name="input-10-2"
       label="Visible"
       hint="At least 8 characters"
@@ -538,8 +538,8 @@ value|any|/|输入值
     ></mip-v-text-field>
     <mip-v-text-field
       class="flex xs12 sm6 input-group--focused"
-      m-bind:append-icon="show3 ? &apos;visibility_off&apos; : &apos;visibility&apos;"
-      m-bind:type="show3 ? &apos;text&apos; : &apos;password&apos;"
+      m-bind:append-icon="show3 ? 'visibility_off' : 'visibility'"
+      m-bind:type="show3 ? 'text' : 'password'"
       name="input-10-2"
       label="Not visible"
       hint="At least 8 characters"
@@ -548,8 +548,8 @@ value|any|/|输入值
     ></mip-v-text-field>
     <mip-v-text-field
       class="flex xs12 sm6"
-      m-bind:append-icon="show4 ? &apos;visibility_off&apos; : &apos;visibility&apos;"
-      m-bind:type="show4 ? &apos;text&apos; : &apos;password&apos;"
+      m-bind:append-icon="show4 ? 'visibility_off' : 'visibility'"
+      m-bind:type="show4 ? 'text' : 'password'"
       name="input-10-2"
       label="Error"
       hint="At least 8 characters"

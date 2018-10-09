@@ -534,7 +534,7 @@ multiple|boolean|/|允许选中多个按钮
           </mip-v-btn-toggle>
         </div>
         <div class="flex xs12 sm6 py-2">
-          <p>Text &amp; Icon Options</p>
+          <p>Text & Icon Options</p>
           <mip-v-btn-toggle m-bind:input-value.sync="icon">
             <mip-v-btn
               flat

@@ -4,8 +4,8 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
 
 ## 用例
 
-&#x6805;&#x683C;&#x7ED3;&#x6784;&#xFF1A;container -&gt; layout -&gt; flex&#xFF0C;&#x5176;&#x4E2D; flex &#x548C; layout &#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x5D4C;&#x5957;
-&#x54CD;&#x5E94;&#x5F0F;&#x65AD;&#x70B9;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;
+栅格结构：container -> layout -> flex，其中 flex 和 layout 可以互相嵌套
+响应式断点定义如下：
 
 ```html
 <div class="mb-5 v-card">
@@ -28,7 +28,7 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
 >phone_iphone</i><span>Extra small</span></td>
           <td><strong>xs</strong></td>
           <td>small to large handset</td>
-          <td>&lt; 600px</td>
+          <td>< 600px</td>
         </tr>
         <tr>
           <td><i
@@ -37,7 +37,7 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
 >tablet</i><span>Small</span></td>
           <td><strong>sm</strong></td>
           <td>small to medium tablet</td>
-          <td>600px &gt; &lt; 960px</td>
+          <td>600px > < 960px</td>
         </tr>
         <tr>
           <td><i
@@ -46,7 +46,7 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
 >laptop</i><span>Medium</span></td>
           <td><strong>md</strong></td>
           <td>large tablet to laptop</td>
-          <td>960px &gt; &lt; 1264*</td>
+          <td>960px > < 1264*</td>
         </tr>
         <tr>
           <td><i
@@ -55,7 +55,7 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
 >desktop_windows</i><span>Large</span></td>
           <td><strong>lg</strong></td>
           <td>desktop</td>
-          <td>1264 &gt; &lt; 1904px*</td>
+          <td>1264 > < 1904px*</td>
         </tr>
         <tr>
           <td><i
@@ -64,7 +64,7 @@ Vuetify拥有一个12点的栅格系统，它使用<kbd>flex-box</kbd>构建，�
 >tv</i><span>Extra large</span></td>
           <td><strong>xl</strong></td>
           <td>4k and ultra-wides</td>
-          <td>&gt; 1904px*</td>
+          <td>> 1904px*</td>
         </tr>
       </tbody>
       <tfoot>

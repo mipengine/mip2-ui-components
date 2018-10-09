@@ -7,7 +7,7 @@
 ```html
 <mip-v-footer class="pa-3">
   <mip-v-spacer></mip-v-spacer>
-  <div>&#xA9; <span m-text="year"></span></div>
+  <div>© <span m-text="year"></span></div>
 </mip-v-footer>
 <mip-script>
   MIP.setData({ year: new Date().getFullYear() })
@@ -86,7 +86,7 @@ light|boolean|/|应用明亮主题变体
     <mip-v-divider></mip-v-divider>
 
     <mip-v-card-text class="white--text">
-      &#xA9;2018 &#x2014; <strong>Vuetify</strong>
+      ©2018 — <strong>Vuetify</strong>
     </mip-v-card-text>
   </mip-v-card>
 </mip-v-footer>
@@ -143,7 +143,7 @@ light|boolean|/|应用明亮主题变体
     </div>
 
     <div class="v-card__actions grey darken-3 justify-center">
-      &#xA9;2018 &#x2014; <strong>Vuetify</strong>
+      ©2018 — <strong>Vuetify</strong>
     </div>
   </mip-v-card>
 </mip-v-footer>

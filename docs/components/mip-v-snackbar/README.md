@@ -100,12 +100,12 @@
   <mip-v-snackbar
     m-bind:value.sync="snackbar"
     m-bind:timeout="+timeout"
-    m-bind:left="x === &apos;left&apos;"
-    m-bind:right="x === &apos;right&apos;"
-    m-bind:top="y === &apos;top&apos;"
-    m-bind:bottom="y === &apos;bottom&apos;"
-    m-bind:multi-line="mode === &apos;multi-line&apos;"
-    m-bind:vertical="mode === &apos;vertical&apos;"
+    m-bind:left="x === 'left'"
+    m-bind:right="x === 'right'"
+    m-bind:top="y === 'top'"
+    m-bind:bottom="y === 'bottom'"
+    m-bind:multi-line="mode === 'multi-line'"
+    m-bind:vertical="mode === 'vertical'"
     toppx="44"
   >
     <span m-text="text"></span>
@@ -236,9 +236,9 @@ vertical|boolean|/|垂直折叠全局提示的内容（移动设备）
   <mip-v-snackbar
     m-bind:value.sync="snackbar0"
     m-bind:color="color"
-    m-bind:multi-line="mode === &apos;multi-line&apos;"
+    m-bind:multi-line="mode === 'multi-line'"
     m-bind:timeout="+timeout0"
-    m-bind:vertical="mode === &apos;vertical&apos;"
+    m-bind:vertical="mode === 'vertical'"
     toppx="44"
   >
     <span m-text="text0"></span>

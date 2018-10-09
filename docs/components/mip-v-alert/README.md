@@ -77,7 +77,7 @@ value|boolean|/|控制可见性
 
   <div class="text-xs-center">
     <mip-v-btn
-      m-bind:style="{ display: alert ? &apos;none&apos; : &apos;block&apos; }"
+      m-bind:style="{ display: alert ? 'none' : 'block' }"
       color="primary"
       dark
       on="tap:MIP.setData({ alert: true })"

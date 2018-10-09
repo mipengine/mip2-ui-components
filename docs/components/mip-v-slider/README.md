@@ -214,7 +214,7 @@ value|number / string|/|输入值
       <mip-v-slider
         m-bind:value.sync="slider"
         always-dirty
-        hint="Try set it to &apos;0&apos;"
+        hint="Try set it to '0'"
         persistent-hint
       >
         <script type="application/json">
@@ -369,7 +369,7 @@ value|number / string|/|输入值
   </script>
 </mip-data>
 <mip-v-card>
-  <div m-bind:style="{ height:&apos;300px&apos;,background:`rgb(${red}, ${green}, ${blue})`}"></div>
+  <div m-bind:style="{ height:'300px',background:`rgb(${red}, ${green}, ${blue})`}"></div>
 
   <mip-v-card-text>
     <div class="container fluid grid-list-lg">
