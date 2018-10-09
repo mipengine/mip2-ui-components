@@ -77,8 +77,7 @@ The `mip-v-autocomplete` component offers simple and flexible type-ahead functio
   <mip-v-autocomplete
     m-bind:value.sync="model"
     m-bind:items="stateNames"
-  >
-  </mip-v-autocomplete>
+  ></mip-v-autocomplete>
 </div>
 ```
 
