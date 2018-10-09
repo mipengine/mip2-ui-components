@@ -6,19 +6,19 @@
 
 ```html
 <div>
-  <mip-v-alert value="true" type="success">
+  <mip-v-alert value type="success">
     This is a success alert.
   </mip-v-alert>
 
-  <mip-v-alert value="true" type="info">
+  <mip-v-alert value type="info">
     This is a info alert.
   </mip-v-alert>
 
-  <mip-v-alert value="true" type="warning">
+  <mip-v-alert value type="warning">
     This is a warning alert.
   </mip-v-alert>
 
-  <mip-v-alert value="true" type="error">
+  <mip-v-alert value type="error">
     This is a error alert.
   </mip-v-alert>
 </div>
@@ -71,11 +71,11 @@ value|boolean|/|控制可见性
 
 ```html
 <div>
-  <mip-v-alert value="true" color="success" icon="new_releases">
+  <mip-v-alert value color="success" icon="new_releases">
     This is a success alert with a custom icon.
   </mip-v-alert>
 
-  <mip-v-alert value="true" color="error">
+  <mip-v-alert value color="error">
     This is an error alert with no icon.
   </mip-v-alert>
 </div>
@@ -107,16 +107,21 @@ value|boolean|/|控制可见性
 ### 轮廓
 
 ```html
-<mip-v-alert value="true" color="success" icon="check_circle" outline>
-  This is a success alert.
-</mip-v-alert>
-<mip-v-alert value="true" color="info" icon="info" outline>
-  This is an info alert.
-</mip-v-alert>
-<mip-v-alert value="true" color="warning" icon="priority_high" outline>
-  This is a warning alert.
-</mip-v-alert>
-<mip-v-alert value="true" color="error" icon="warning" outline>
-  This is a error alert.
-</mip-v-alert>
+<div>
+  <mip-v-alert value color="success" icon="check_circle" outline>
+    This is a success alert.
+  </mip-v-alert>
+
+  <mip-v-alert value color="info" icon="info" outline>
+    This is an info alert.
+  </mip-v-alert>
+
+  <mip-v-alert value color="warning" icon="priority_high" outline>
+    This is a warning alert.
+  </mip-v-alert>
+
+  <mip-v-alert value color="error" icon="warning" outline>
+    This is a error alert.
+  </mip-v-alert>
+</div>
 ```

@@ -529,13 +529,6 @@ multiple|boolean|/|允许选中多个按钮
 ### 加载器
 
 ```html
-<mip-data>
-  <script type="application/json">
-    {
-      "loading": false
-    }
-  </script>
-</mip-data>
 <style mip-custom>
   .custom-loader {
     animation: loader 1s infinite;
@@ -550,6 +543,13 @@ multiple|boolean|/|允许选中多个按钮
     }
   }
 </style>
+<mip-data>
+  <script type="application/json">
+    {
+      "loading": false
+    }
+  </script>
+</mip-data>
 <div class="text-xs-center">
   <mip-v-btn m-bind:loading="loading" m-bind:disabled="loading" color="secondary" on="click:MIP.setData({ loading: true })">
     Accept Terms

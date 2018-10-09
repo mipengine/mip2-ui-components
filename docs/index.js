@@ -66,6 +66,36 @@ const getOfficialDoc = async (name) => {
   return merge({}, await getDocByLang('en'), await getDocByLang('zhHans'))
 }
 
+const formatHtml = (html, data = {}) => {
+  const lines = html.split('\n')
+  const align = lines[lines.length - 1].match(/\s*/)[0].length
+  const alignedHtml = [lines[0], ...lines.slice(1).map(line => line.slice(align))].join('\n')
+
+  const dataHtml = JSON.stringify(
+    data,
+    (key, val) => val !== data[key] || Number.isInteger(+key) || html.search(new RegExp(`m-bind:[^=]+="[^"]*${key}[^"]*"`)) !== -1
+      ? val
+      : undefined,
+    2
+  )
+    .split('\n')
+    .join('\n    ')
+
+  return (
+    dataHtml === '{}' || dataHtml === 'null'
+      ? ''
+      : '<mip-data>\n  <script type="application/json">\n    ' +
+        dataHtml +
+        '\n  </script>\n</mip-data>\n'
+  ) +
+  alignedHtml +
+  (
+    html.includes('<mip-script>')
+      ? '\n<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>'
+      : ''
+  )
+}
+
 const parseExamples = async (tagName) => {
   const cheerio = require('cheerio')
 
@@ -80,7 +110,7 @@ const parseExamples = async (tagName) => {
         return examples.concat({
           title: $(node).text(),
           descriptions: [],
-          fragments: []
+          html: ''
         })
       }
 
@@ -91,50 +121,17 @@ const parseExamples = async (tagName) => {
         })
       }
 
-      const fragment = $('<div></div>').append(node).html()
+      const html = formatHtml($('<div></div>').append(node).html(), data)
 
       return examples.slice(0, -1).concat({
         ...current,
-        fragments: [...current.fragments, fragment]
+        html: current.html + (current.html ? '\n' : '') + html
       })
     }, [{
+      title: '',
       descriptions: [],
-      fragments: []
+      html: ''
     }])
-    .map(({ fragments, ...example }) => {
-      const html = fragments.map(fragment => {
-        const lines = fragment.split('\n')
-        const align = lines[lines.length - 1].match(/\s*/)[0].length
-
-        return [lines[0], ...lines.slice(1).map(line => line.slice(align))].join('\n')
-      }).join('\n')
-      const dataHtml = JSON.stringify(
-        data,
-        (key, val) => val !== data[key] || Number.isInteger(+key) || html.search(new RegExp(`m-bind:[^=]+="[^"]*${key}[^"]*"`)) !== -1
-          ? val
-          : undefined,
-        2
-      )
-        .split('\n')
-        .join('\n    ')
-
-      return {
-        ...example,
-        html: (
-          dataHtml === '{}' || dataHtml === 'null'
-            ? ''
-            : '<mip-data>\n  <script type="application/json">\n    ' +
-            dataHtml +
-            '\n  </script>\n</mip-data>\n'
-        ) +
-        html +
-        (
-          html.includes('<mip-script>')
-            ? '\n<script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>'
-            : ''
-        )
-      }
-    })
 
   return examples
 }
