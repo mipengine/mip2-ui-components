@@ -55,8 +55,13 @@
           ripple
         >
           <mip-v-list-tile-avatar>
-            <mip-img m-bind:src="items[0].avatar">
-          </mip-img></mip-v-list-tile-avatar>
+            <mip-img
+              layout="fixed"
+              width="40"
+              height="40"
+              m-bind:src="items[0].avatar"
+            ></mip-img>
+          </mip-v-list-tile-avatar>
 
           <mip-v-list-tile-content>
             <mip-v-list-tile-title m-text="items[0].title"></mip-v-list-tile-title>
@@ -72,8 +77,13 @@
           ripple
         >
           <mip-v-list-tile-avatar>
-            <mip-img m-bind:src="items[1].avatar">
-          </mip-img></mip-v-list-tile-avatar>
+            <mip-img
+              layout="fixed"
+              width="40"
+              height="40"
+              m-bind:src="items[1].avatar"
+            ></mip-img>
+          </mip-v-list-tile-avatar>
 
           <mip-v-list-tile-content>
             <mip-v-list-tile-title m-text="items[1].title"></mip-v-list-tile-title>
@@ -89,8 +99,13 @@
           ripple
         >
           <mip-v-list-tile-avatar>
-            <mip-img m-bind:src="items[2].avatar">
-          </mip-img></mip-v-list-tile-avatar>
+            <mip-img
+              layout="fixed"
+              width="40"
+              height="40"
+              m-bind:src="items[2].avatar"
+            ></mip-img>
+          </mip-v-list-tile-avatar>
 
           <mip-v-list-tile-content>
             <mip-v-list-tile-title m-text="items[2].title"></mip-v-list-tile-title>
@@ -240,7 +255,12 @@ tile|boolean|/|删除边看弧度
           </mip-v-list-tile-content>
 
           <mip-v-list-tile-avatar>
-            <img m-bind:src="items[0].avatar">
+            <mip-img
+              layout="fixed"
+              width="40"
+              height="40"
+              m-bind:src="items[0].avatar"
+            ></mip-img>
           </mip-v-list-tile-avatar>
         </mip-v-list-tile>
         <mip-v-list-tile
@@ -255,7 +275,12 @@ tile|boolean|/|删除边看弧度
           </mip-v-list-tile-content>
 
           <mip-v-list-tile-avatar>
-            <img m-bind:src="items[1].avatar">
+            <mip-img
+              layout="fixed"
+              width="40"
+              height="40"
+              m-bind:src="items[1].avatar"
+            ></mip-img>
           </mip-v-list-tile-avatar>
         </mip-v-list-tile>
         <mip-v-list-tile
@@ -270,7 +295,12 @@ tile|boolean|/|删除边看弧度
           </mip-v-list-tile-content>
 
           <mip-v-list-tile-avatar>
-            <img m-bind:src="items[2].avatar">
+            <mip-img
+              layout="fixed"
+              width="40"
+              height="40"
+              m-bind:src="items[2].avatar"
+            ></mip-img>
           </mip-v-list-tile-avatar>
         </mip-v-list-tile>
       </mip-v-list>

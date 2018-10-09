@@ -36,10 +36,11 @@
         m-bind:size="slider"
         color="grey lighten-4"
       >
-        <img
+        <mip-img
+          layout="fill"
           src="https://vuetifyjs.com/apple-touch-icon-180x180.png"
           alt="avatar"
-        >
+        ></mip-img>
       </mip-v-avatar>
     </div>
   </div>
@@ -69,10 +70,13 @@ tile|boolean|/|删除边看弧度
   </mip-v-avatar>
 
   <mip-v-avatar>
-    <img
+    <mip-img
+      layout="fixed"
+      width="48"
+      height="48"
       src="https://cdn.vuetifyjs.com/images/john.jpg"
       alt="John"
-    >
+    ></mip-img>
   </mip-v-avatar>
 
   <mip-v-badge overlap>

@@ -19,10 +19,13 @@
       <div class="text-xs-center">
         <mip-v-chip close>
           <mip-v-avatar>
-            <img
+            <mip-img
+              layout="fixed"
+              width="32"
+              height="32"
               src="https://randomuser.me/api/portraits/men/35.jpg"
               alt="trevor"
-            >
+            ></mip-img>
           </mip-v-avatar>
           Trevor Hansen
         </mip-v-chip>
