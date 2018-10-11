@@ -63,16 +63,6 @@ function genConfig (opts) {
               safari10: true
             }
           }
-        }),
-        new OptimizeCssAssetsPlugin({
-          assetNameRegExp: /\.css$/g,
-          cssProcessor: require('cssnano'),
-          cssProcessorOptions: {
-            discardComments: { removeAll: true },
-            postcssZindex: false,
-            reduceIdents: false
-          },
-          canPrint: false
         })
       ]
     }
