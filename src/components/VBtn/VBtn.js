@@ -135,7 +135,7 @@ export default {
     const children = [this.genContent()]
     tag === 'button' && (data.attrs.type = this.type)
     this.loading && children.push(this.genLoader())
-    data.attrs.value = ['string', 'number'].includes(typeof this.value) ? this.value : JSON.stringify(this.value)
+    data.attrs.value = ['string', 'number'].indexOf(typeof this.value) !== -1 ? this.value : JSON.stringify(this.value)
 
     data.class = fixClass(this.$element, data.class)
 

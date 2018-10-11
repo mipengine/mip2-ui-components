@@ -36,14 +36,16 @@ const Vuetify = {
       }
     })
     if (opts.transitions) {
-      Object.values(opts.transitions).forEach(transition => {
-        if (transition.name !== undefined && transition.name.startsWith('v-')) {
+      Object.keys(opts.transitions).forEach(key => {
+        const transition = opts.transitions[key]
+        if (transition.name !== undefined && transition.name.indexOf('v-') === 0) {
           Vue.component(transition.name, transition)
         }
       })
     }
     if (opts.directives) {
-      Object.values(opts.directives).forEach(directive => {
+      Object.keys(opts.directives).forEach(key => {
+        const directive = opts.directives[key]
         Vue.directive(directive.name, directive)
       })
     }
@@ -54,8 +56,9 @@ const Vuetify = {
       // add [data-app] attr to <body>, which is required in some components such as v-slider
       document.body.setAttribute('data-app', '')
 
-      Object.values(opts.components).forEach(component => {
-        if (!component.name || !component.name.toLowerCase().startsWith('v')) {
+      Object.keys(opts.components).forEach(key => {
+        const component = opts.components[key]
+        if (!component.name || !component.name.toLowerCase().indexOf('v') === 0) {
           return
         }
         MIP.registerVueCustomElement(`mip-${camelCaseToDash(component.name)}`, component)
@@ -75,7 +78,7 @@ function generateTheme ({theme: rawTheme, options, dark}) {
   for (let i = 0; i < colors.length; ++i) {
     const name = colors[i]
     const value = theme[name]
-    if (options.themeVariations.includes(name)) {
+    if (options.themeVariations.indexOf(name) !== -1) {
       css += Theme.genVariations(name, value).join('')
     } else {
       css += Theme.genBaseColor(name, value)

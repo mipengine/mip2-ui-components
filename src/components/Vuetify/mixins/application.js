@@ -24,6 +24,6 @@ export default {
     this.update(target)
   },
   update (target) {
-    this[target] = Object.values(this.components[target]).reduce((acc, cur) => acc + cur, 0)
+    this[target] = Object.keys(this.components[target]).reduce((acc, key) => acc + this.components[target][key], 0)
   }
 }

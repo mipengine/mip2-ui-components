@@ -40,7 +40,7 @@ export default {
       const activeElements = [...document.getElementsByClassName(this.stackClass)]
       // Get z-index for all active dialogs
       for (let index = 0; index < activeElements.length; index++) {
-        if (!exclude.includes(activeElements[index])) {
+        if (!exclude.indexOf(activeElements[index]) !== -1) {
           zis.push(getZIndex(activeElements[index]))
         }
       }

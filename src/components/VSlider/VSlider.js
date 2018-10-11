@@ -397,14 +397,14 @@ export default {
     parseKeyDown (e, value = this.internalValue) {
       if (this.disabled) return
       const { pageup, pagedown, end, home, left, right, down, up } = keyCodes
-      if (![pageup, pagedown, end, home, left, right, down, up].includes(e.keyCode)) return
+      if (![pageup, pagedown, end, home, left, right, down, up].indexOf(e.keyCode) !== -1) return
       e.preventDefault()
       const step = this.stepNumeric || 1
       const steps = (this.max - this.min) / step
-      if ([left, right, down, up].includes(e.keyCode)) {
+      if ([left, right, down, up].indexOf(e.keyCode) !== -1) {
         this.keyPressed += 1
         const increase = this.$vuetify.rtl ? [left, up] : [right, up]
-        let direction = increase.includes(e.keyCode) ? 1 : -1
+        let direction = increase.indexOf(e.keyCode) !== -1 ? 1 : -1
         const multiplier = e.shiftKey ? 3 : e.ctrlKey ? 2 : 1
         value = value + direction * step * multiplier
       } else if (e.keyCode === home) {

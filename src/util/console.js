@@ -9,7 +9,7 @@ function createMessage (message, vm, parent) {
   if (vm) {
     // Only show each message once per instance
     vm.$_alreadyWarned = vm.$_alreadyWarned || []
-    if (vm.$_alreadyWarned.includes(message)) return
+    if (vm.$_alreadyWarned.indexOf(message) !== -1) return
     vm.$_alreadyWarned.push(message)
   }
   return `[Vuetify] ${message}` + (vm ? generateComponentTrace(vm) : '')
@@ -66,7 +66,7 @@ function generateComponentTrace (vm) {
       tree.push(vm)
       vm = vm.$parent
     }
-    return '\n\nfound in\n\n' + tree.map((vm, i) => `${i === 0 ? '---> ' : ' '.repeat(5 + i * 2)}${Array.isArray(vm) ? `${formatComponentName(vm[0])}... (${vm[1]} recursive calls)` : formatComponentName(vm)}`).join('\n')
+    return '\n\nfound in\n\n' + tree.map((vm, i) => `${i === 0 ? '---> ' : Array(6 + i * 2).join(' ')}${Array.isArray(vm) ? `${formatComponentName(vm[0])}... (${vm[1]} recursive calls)` : formatComponentName(vm)}`).join('\n')
   } else {
     return `\n\n(found in ${formatComponentName(vm)})`
   }

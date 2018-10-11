@@ -111,7 +111,7 @@ export default {
       return this.box || this.isSolo || this.hasOutline || this.fullWidth
     },
     isLabelActive () {
-      return this.isDirty || dirtyTypes.includes(this.type)
+      return this.isDirty || dirtyTypes.indexOf(this.type) !== -1
     },
     isSingle () {
       return this.isSolo || this.singleLine

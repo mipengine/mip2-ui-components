@@ -21,7 +21,7 @@ export default {
       type: String,
       default: 'ampm',
       validator (val) {
-        return ['ampm', '24hr'].includes(val)
+        return ['ampm', '24hr'].indexOf(val) !== -1
       }
     },
     min: String,

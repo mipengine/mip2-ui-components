@@ -30,8 +30,8 @@ export default {
   },
   methods: {
     changeListIndex (e) {
-      if ([keyCodes.down, keyCodes.up, keyCodes.enter].includes(e.keyCode)) e.preventDefault()
-      if ([keyCodes.esc, keyCodes.tab].includes(e.keyCode)) {
+      if ([keyCodes.down, keyCodes.up, keyCodes.enter].indexOf(e.keyCode) !== -1) e.preventDefault()
+      if ([keyCodes.esc, keyCodes.tab].indexOf(e.keyCode) !== -1) {
         return this.isActive = false
       }
       // For infinite scroll and autocomplete, re-evaluate children

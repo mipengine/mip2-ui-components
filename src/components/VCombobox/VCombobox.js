@@ -43,7 +43,7 @@ export default {
     },
     onInternalSearchChanged (val) {
       if (val && this.multiple && this.delimiters) {
-        const delimiter = this.delimiters.find(d => val.endsWith(d))
+        const delimiter = this.delimiters.find(d => val.lastIndexOf(d) === val.length - d.length)
         if (delimiter == null) return
         this.internalSearch = val.slice(0, val.length - delimiter.length)
         this.updateTags()

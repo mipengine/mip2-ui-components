@@ -20,7 +20,7 @@ export default {
   watch: {
     errorBag: {
       handler () {
-        const errors = Object.values(this.errorBag).includes(true)
+        const errors = Object.keys(this.errorBag).map(key => this.errorBag[key]).indexOf(true) !== -1
         this.$emit('input', !errors)
       },
       deep: true,

@@ -182,7 +182,7 @@ export default {
       // Do not allow changing of selectedIndex
       // when search is dirty
       if (this.searchIsDirty) return
-      if (![keyCodes.backspace, keyCodes.left, keyCodes.right, keyCodes.delete].includes(keyCode)) return
+      if (![keyCodes.backspace, keyCodes.left, keyCodes.right, keyCodes.delete].indexOf(keyCode) !== -1) return
       const indexes = this.selectedItems.length - 1
       if (keyCode === keyCodes.left) {
         this.selectedIndex = this.selectedIndex === -1 ? indexes : this.selectedIndex - 1
@@ -193,7 +193,7 @@ export default {
         return
       }
       const currentItem = this.selectedItems[this.selectedIndex]
-      if ([keyCodes.backspace, keyCodes.delete].includes(keyCode) && !this.getDisabled(currentItem)) {
+      if ([keyCodes.backspace, keyCodes.delete].indexOf(keyCode) !== -1 && !this.getDisabled(currentItem)) {
         const newIndex = this.selectedIndex === indexes ? this.selectedIndex - 1 : this.selectedItems[this.selectedIndex + 1] ? this.selectedIndex : -1
         if (newIndex === -1) {
           this.internalValue = this.multiple ? [] : undefined

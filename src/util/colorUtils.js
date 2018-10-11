@@ -26,6 +26,6 @@ export function colorToInt (color) {
 }
 export function intToHex (color) {
   let hexColor = color.toString(16)
-  if (hexColor.length < 6) hexColor = '0'.repeat(6 - hexColor.length) + hexColor
+  if (hexColor.length < 6) hexColor = Array(7 - hexColor.length).join(0) + hexColor
   return '#' + hexColor
 }

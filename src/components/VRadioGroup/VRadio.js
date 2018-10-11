@@ -116,7 +116,7 @@ export default {
           change: this.onChange,
           focus: this.onFocus,
           keydown: e => {
-            if ([keyCodes.enter, keyCodes.space].includes(e.keyCode)) {
+            if ([keyCodes.enter, keyCodes.space].indexOf(e.keyCode) !== -1) {
               e.preventDefault()
               this.onChange()
             }

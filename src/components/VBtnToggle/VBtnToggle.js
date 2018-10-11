@@ -51,7 +51,7 @@ export default mixins(ButtonGroup, Themeable).extend({
       if (!this.multiple) {
         return this.inputValue === item
       }
-      return this.inputValue.includes(item)
+      return this.inputValue.indexOf(item) !== -1
     },
     onChange (nextValue) {
       this.$emit('change', nextValue)

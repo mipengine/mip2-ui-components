@@ -52,17 +52,6 @@ function genConfig (opts) {
   ])
 
   if (opts.env) {
-    config.plugins = config.plugins.concat([
-//       new webpack.BannerPlugin({
-//         banner: `/*!
-// * Vuetify v${version}
-// * Forged by John Leider
-// * Released under the MIT License.
-// */     `,
-//         raw: true,
-//         entryOnly: true
-//       })
-    ])
     config.optimization = {
       minimizer: [
         new UglifyJsPlugin({

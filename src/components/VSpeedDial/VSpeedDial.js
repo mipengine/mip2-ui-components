@@ -13,7 +13,7 @@ export default {
       type: String,
       default: 'top',
       validator: val => {
-        return ['top', 'right', 'bottom', 'left'].includes(val)
+        return ['top', 'right', 'bottom', 'left'].indexOf(val) !== -1
       }
     },
     openOnHover: Boolean,

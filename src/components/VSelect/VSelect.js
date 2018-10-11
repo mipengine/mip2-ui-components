@@ -455,7 +455,7 @@ export default {
     onKeyDown (e) {
       const keyCode = e.keyCode
       // If enter, space, up, or down is pressed, open menu
-      if (!this.isMenuActive && [keyCodes.enter, keyCodes.space, keyCodes.up, keyCodes.down].includes(keyCode)) this.activateMenu()
+      if (!this.isMenuActive && [keyCodes.enter, keyCodes.space, keyCodes.up, keyCodes.down].indexOf(keyCode) !== -1) this.activateMenu()
       // This should do something different
       if (keyCode === keyCodes.enter) return this.onEnterDown()
       // If escape deactivate the menu

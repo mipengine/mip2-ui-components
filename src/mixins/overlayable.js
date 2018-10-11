@@ -71,14 +71,14 @@ export default {
          */
     scrollListener (e) {
       if (e.type === 'keydown') {
-        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName) ||
+        if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(e.target.tagName) !== -1 ||
                 // https://github.com/vuetifyjs/vuetify/issues/4715
                 e.target.isContentEditable) return
         const up = [keyCodes.up, keyCodes.pageup]
         const down = [keyCodes.down, keyCodes.pagedown]
-        if (up.includes(e.keyCode)) {
+        if (up.indexOf(e.keyCode) !== -1) {
           e.deltaY = -1
-        } else if (down.includes(e.keyCode)) {
+        } else if (down.indexOf(e.keyCode) !== -1) {
           e.deltaY = 1
         } else {
           return
@@ -89,7 +89,7 @@ export default {
     hasScrollbar (el) {
       if (!el || el.nodeType !== Node.ELEMENT_NODE) return false
       const style = window.getComputedStyle(el)
-      return ['auto', 'scroll'].includes(style['overflow-y']) && el.scrollHeight > el.clientHeight
+      return ['auto', 'scroll'].indexOf(style['overflow-y']) !== -1 && el.scrollHeight > el.clientHeight
     },
     shouldScroll (el, delta) {
       if (el.scrollTop === 0 && delta < 0) return true

@@ -22,7 +22,7 @@ export default {
       for (let i = 0; i < colors.length; ++i) {
         const name = colors[i]
         const value = theme[name]
-        if (this.$vuetify.options.themeVariations.includes(name)) {
+        if (this.$vuetify.options.themeVariations.indexOf(name) !== -1) {
           css += Theme.genVariations(name, value).join('')
         } else {
           css += Theme.genBaseColor(name, value)

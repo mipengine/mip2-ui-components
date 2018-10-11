@@ -22,7 +22,7 @@ export default function lang (config = {}) {
     locales: Object.assign({ en }, config.locales),
     current: config.current || 'en',
     t (key, ...params) {
-      if (!key.startsWith(LANG_PREFIX)) return key
+      if (!key.indexOf(LANG_PREFIX) === 0) return key
       if (config.t) return config.t(key, ...params)
       const translation = getTranslation(this.locales[this.current], key)
       return translation.replace(/\{(\d+)\}/g, (match, index) => {

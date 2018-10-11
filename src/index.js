@@ -13,6 +13,16 @@ const Vuetify = {
   version: '1.1.9'
 }
 if (typeof window !== 'undefined') {
+  if (typeof performance === 'undefined') {
+    const startOffset = +new Date()
+
+    window.performance = {
+      now () {
+        return +new Date() - startOffset
+      }
+    }
+  }
+
   const Vue = window.MIP.Vue
 
   Vue.config.performance = true

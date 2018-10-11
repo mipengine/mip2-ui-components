@@ -17,7 +17,7 @@ export default mixins(Colorable, Toggleable, Transitionable).extend({
     type: {
       type: String,
       validator (val) {
-        return ['info', 'error', 'success', 'warning'].includes(val)
+        return ['info', 'error', 'success', 'warning'].indexOf(val) !== -1
       }
     }
   },

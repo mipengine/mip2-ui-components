@@ -36,7 +36,7 @@ export default {
     activator: {
       default: null,
       validator: val => {
-        return ['string', 'object'].includes(typeof val)
+        return ['string', 'object'].indexOf(typeof val) !== -1
       }
     },
     allowOverflow: Boolean,

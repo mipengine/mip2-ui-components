@@ -7,7 +7,7 @@ const padStart = (string, targetLength, padString) => {
   }
   targetLength = targetLength - string.length
   if (targetLength > padString.length) {
-    padString += padString.repeat(targetLength / padString.length)
+    padString += Array(targetLength / padString.length + 1).join(padString)
   }
   return padString.slice(0, targetLength) + String(string)
 }
