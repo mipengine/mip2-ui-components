@@ -2,7 +2,7 @@
   "presets": [
     ["env", {
       "targets": {
-        "safari": 8
+        "browser": [">0.5%", "last 2 versions", "safari 8"]
       },
       "modules": false
     }]
