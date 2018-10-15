@@ -1,11 +1,15 @@
 import '../../../stylus/components/_date-picker-table.styl'
+
 // Directives
 import Touch from '../../../directives/touch'
+
 // Utils
 import isDateAllowed from '.././util/isDateAllowed'
+
 /* @vue/component */
 export default {
   directives: { Touch },
+
   props: {
     allowedDates: Function,
     current: String,
@@ -25,18 +29,17 @@ export default {
       type: String,
       required: true
     },
-    value: {
-      type: String,
-      required: false
-    }
+    value: [String, Array]
   },
+
   data: () => ({
     defaultColor: 'accent',
     isReversing: false
   }),
+
   computed: {
     computedTransition () {
-      return this.isReversing === !this.$vuetify.rtl ? 'tab-reverse-transition' : 'tab-transition'
+      return (this.isReversing === !this.$vuetify.rtl) ? 'tab-reverse-transition' : 'tab-transition'
     },
     displayedMonth () {
       return this.tableDate.split('-')[1] - 1
@@ -45,31 +48,36 @@ export default {
       return this.tableDate.split('-')[0] * 1
     }
   },
+
   watch: {
     tableDate (newVal, oldVal) {
       this.isReversing = newVal < oldVal
     }
   },
+
   methods: {
     genButtonClasses (value, isAllowed, isFloating) {
-      const isSelected = value === this.value
+      const isSelected = value === this.value || (Array.isArray(this.value) && this.value.indexOf(value) !== -1)
       const isCurrent = value === this.current
+
       const classes = {
         'v-btn--active': isSelected,
         'v-btn--flat': !isSelected,
         'v-btn--icon': isSelected && isAllowed && isFloating,
         'v-btn--floating': isFloating,
         'v-btn--depressed': !isFloating && isSelected,
-        'v-btn--disabled': !isAllowed || this.disabled && isSelected,
+        'v-btn--disabled': !isAllowed || (this.disabled && isSelected),
         'v-btn--outline': isCurrent && !isSelected,
         ...this.themeClasses
       }
+
       if (isSelected) return this.addBackgroundColorClassChecks(classes)
       if (isCurrent) return this.addTextColorClassChecks(classes)
       return classes
     },
     genButton (value, isFloating) {
       const isAllowed = isDateAllowed(value, this.min, this.max, this.allowedDates)
+
       return this.$createElement('button', {
         staticClass: 'v-btn',
         'class': this.genButtonClasses(value, isAllowed, isFloating),
@@ -80,7 +88,7 @@ export default {
           disabled: !isAllowed,
           innerHTML: `<div class="v-btn__content">${this.formatter(value)}</div>`
         },
-        on: this.disabled || !isAllowed ? {} : {
+        on: (this.disabled || !isAllowed) ? {} : {
           click: () => this.$emit('input', value)
         }
       })
@@ -96,13 +104,15 @@ export default {
       const transition = this.$createElement('transition', {
         props: { name: this.computedTransition }
       }, [this.$createElement('table', { key: this.tableDate }, children)])
+
       const touchDirective = {
         name: 'touch',
         value: {
-          left: e => e.offsetX < -15 && this.touch(1),
-          right: e => e.offsetX > 15 && this.touch(-1)
+          left: e => (e.offsetX < -15) && this.touch(1),
+          right: e => (e.offsetX > 15) && this.touch(-1)
         }
       }
+
       return this.$createElement('div', {
         staticClass,
         class: this.themeClasses,

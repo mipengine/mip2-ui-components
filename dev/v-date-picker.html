@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VDatePicker</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link href="http://bos.nj.bpc.baidu.com/assets/mip/projects/vuetify/mip.css" rel="stylesheet">
+  </head>
+  <body>
+    <mip-shell>
+      <script type="application/json">
+      {
+        "transitionContainsHeader": false,
+        "routes": [
+          {
+            "pattern": "*",
+            "meta": {
+              "header": {
+                "show": true
+              },
+              "view": {
+                "isIndex": false
+              }
+            }
+          }
+        ]
+      }
+      </script>
+    </mip-shell>
+    <mip-data>
+      <script type="application/json">
+      {
+        "picker": null,
+        "landscape": false,
+        "reactive": false
+      }
+      </script>
+    </mip-data>
+
+    <h2>基础样式</h2>
+    <div>
+      <div class="layout row wrap">
+        <div class="flex xs12 sm3">
+          <mip-v-checkbox m-bind:input-value.sync="landscape" hide-details label="Landscape"></mip-v-checkbox>
+        </div>
+        <div class="flex xs12 sm3">
+          <mip-v-checkbox m-bind:input-value.sync="reactive" hide-details label="Reactive"></mip-v-checkbox>
+        </div>
+      </div>
+      <mip-v-date-picker m-bind:value.sync="picker" m-bind:landscape="landscape" m-bind:reactive="reactive"></mip-v-date-picker>
+    </div>
+
+    <h2>Colors</h2>
+    <div class="layout row wrap">
+      <div class="flex xs12 sm6">
+        <mip-v-date-picker m-bind:value.sync="picker" color="green lighten-1"></mip-v-date-picker>
+      </div>
+      <div class="flex xs12 sm6">
+          <mip-v-date-picker m-bind:value.sync="picker" color="green lighten-1" header-color="primary"></mip-v-date-picker>
+        </div>
+    </div>
+
+    <script src="http://bos.nj.bpc.baidu.com/assets/mip/projects/vuetify/mip.js"></script>
+    <script src="/dev/main.js"></script>
+    <script src="https://c.mipcdn.com/static/v2/mip-script/mip-script.js"></script>
+  </body>
+</html>
