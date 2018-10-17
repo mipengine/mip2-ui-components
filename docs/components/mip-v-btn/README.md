@@ -860,7 +860,7 @@ multiple|boolean|/|允许选中多个按钮
   </mip-v-btn>
 </div>
 <mip-script>
-  MIP.watch('loading', (val) => {
+  MIP.watch('loading', val => {
     if (val) {
       setTimeout(() => MIP.setData({ loading: false }), 2000)
     }
