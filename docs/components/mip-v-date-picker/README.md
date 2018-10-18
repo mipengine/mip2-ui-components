@@ -339,7 +339,7 @@ year-icon|string|/|Generates an icon next to the year
     <mip-v-menu
       id="multiple-menu"
       m-bind:value.sync="multipleMenu"
-      m-bind:return-value.sync="“dates”"
+      m-bind:return-value.sync="dates"
       close-on-content-click="false"
       nudge-right="40"
       lazy
