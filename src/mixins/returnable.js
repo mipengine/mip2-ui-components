@@ -16,6 +16,9 @@ export default {
       }
     }
   },
+  mounted () {
+    this.$on('save', (event, value) => this.save(this.returnValue))
+  },
   methods: {
     save (value) {
       this.originalValue = value
